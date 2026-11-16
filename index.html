@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ON FAIT QUOI? — Mons & Borinage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,900&family=Big+Shoulders+Display:wght@600;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4EFE6; --paper-2:#EAE4D7; --card:#FBF9F4; --ink:#161513; --ink-2:#3B3833; --muted:#6E685D; --line:#D9D1C1;
+  --standup:#F2B84B; --theatre:#E06A3F; --concert:#7FB2E5; --soiree:#C9A6F2; --festival:#8FA87A; --braderie:#E8C9A0; --famille:#9ED3C6; --expo:#D9D4CA; --sport:#C2DB5A; --loisirs:#0F8C8C; --braise:#E06A3F; --ok:#4E6B3A;
+  --radius:14px; --safe-b:env(safe-area-inset-bottom,0px); --safe-t:env(safe-area-inset-top,0px);
+  --display:'Big Shoulders Display', 'Arial Narrow', sans-serif; --body:'Manrope', system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --paper:#151412; --paper-2:#1F1D1A; --card:#1C1B18; --ink:#F1ECE2; --ink-2:#D8D2C6; --muted:#9C958A; --line:#34312C; }
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.45;overflow:hidden}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+input,select,textarea{font:inherit;color:inherit}
+a{color:inherit}
+.app{height:100%;display:flex;flex-direction:column;max-width:560px;margin:0 auto;position:relative;background:var(--paper)}
+@media (min-width:600px){ body{background:var(--paper-2)} .app{box-shadow:0 0 0 1px var(--line)} }
+
+/* header */
+.top{padding:calc(14px + var(--safe-t)) 18px 10px;display:flex;align-items:center;gap:10px}
+.logo{display:flex;white-space:nowrap;align-items:center;gap:7px;font-family:'Archivo',sans-serif;font-stretch:125%;font-weight:900;font-size:19px;line-height:1;flex:none}
+.logo svg{width:19px;height:31px}
+.top .where{margin-left:auto;white-space:nowrap;max-width:46%;overflow:hidden;text-overflow:ellipsis;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);border:1.5px solid var(--line);border-radius:999px;padding:6px 10px}
+.views{flex:1;overflow:hidden;position:relative}
+.view{position:absolute;inset:0;overflow-y:auto;overflow-x:hidden;padding:0 18px calc(96px + var(--safe-b));display:none;-webkit-overflow-scrolling:touch}
+.view.on{display:block}
+.view.map-view{padding:0;overflow:hidden}
+
+/* tabbar */
+.tabs{position:absolute;left:12px;right:12px;bottom:calc(10px + var(--safe-b));display:flex;background:var(--ink);color:var(--paper);border-radius:20px;padding:6px;z-index:30;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.tabs button{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:7px 0 5px;border-radius:14px;font-size:10.5px;font-weight:700;letter-spacing:.04em;opacity:.62}
+.tabs button svg{width:22px;height:22px}
+.tabs button.on{opacity:1;background:rgba(255,255,255,.1)}
+@media (prefers-color-scheme: dark){ .tabs button.on{background:rgba(0,0,0,.08)} }
+
+/* type */
+h1.big{font-family:var(--display);font-weight:900;font-size:44px;line-height:.92;letter-spacing:.3px;text-transform:uppercase;margin:6px 0 4px}
+h2.sec{font-family:var(--display);font-weight:800;font-size:24px;text-transform:uppercase;letter-spacing:.4px;margin:26px 0 10px;display:flex;align-items:baseline;gap:8px}
+h2.sec small{font-family:var(--body);font-size:12px;font-weight:600;color:var(--muted);text-transform:none;letter-spacing:0}
+.lead{color:var(--muted);font-size:14px}
+
+/* chips */
+.chips{display:flex;gap:8px;overflow-x:auto;padding:4px 0 6px;margin:0 -18px;padding-left:18px;padding-right:18px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;display:inline-flex;align-items:center;gap:7px;padding:8px 13px;border-radius:999px;border:1.5px solid var(--line);font-weight:700;font-size:13px;white-space:nowrap;background:var(--card);transition:transform .12s, background .15s}
+.chip:active{transform:scale(.96)}
+.chip .dot{width:9px;height:9px;border-radius:50%;background:var(--c,var(--ink))}
+.chip.on{background:var(--c,var(--ink));border-color:var(--c,var(--ink));color:#161513}
+.chip.on .dot{background:#161513}
+.chip.plain.on .dot{background:var(--paper)}
+.chip.plain.on{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.seg{display:flex;background:var(--paper-2);border-radius:12px;padding:4px;gap:4px;margin:12px 0 4px}
+.seg button{flex:1;padding:8px 4px;border-radius:9px;font-weight:700;font-size:13px;color:var(--muted)}
+.seg button.on{background:var(--card);color:var(--ink);box-shadow:0 1px 0 var(--line)}
+
+/* event rows */
+.list{display:flex;flex-direction:column}
+.ev{display:grid;grid-template-columns:54px 1fr auto;gap:12px;align-items:center;padding:13px 0;border-bottom:1px solid var(--line);text-align:left;width:100%}
+.ev .d{display:flex;flex-direction:column;align-items:center;justify-content:center;height:58px;border-radius:12px;background:var(--card);border:1.5px solid var(--line);position:relative;overflow:hidden}
+.ev .d::before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:var(--c)}
+.ev .d b{font-family:var(--display);font-weight:900;font-size:26px;line-height:1;margin-top:3px}
+.ev .d span{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.ev .t{font-weight:800;font-size:15.5px;line-height:1.25}
+.ev .m{font-size:12.5px;color:var(--muted);margin-top:3px;display:flex;flex-wrap:wrap;gap:4px 10px}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--ink)}
+.tag::before{content:"";width:10px;height:10px;border-radius:3px;background:var(--c);box-shadow:inset 0 0 0 1px rgba(0,0,0,.18)}
+.badge{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;padding:2px 6px;border-radius:5px;border:1px solid var(--line);color:var(--muted)}
+.badge.free{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.chip.free .dot{border-radius:3px}
+.badge.ok{border-color:var(--ok);color:var(--ok)}
+.fav{width:36px;height:36px;display:grid;place-items:center;border-radius:50%}
+.fav svg{width:20px;height:20px}
+.fav.on svg{fill:var(--braise);stroke:var(--braise)}
+
+/* top 5 */
+.top5{display:flex;gap:12px;overflow-x:auto;margin:0 -18px;padding:4px 18px 8px;scroll-snap-type:x mandatory;scrollbar-width:none}
+.top5::-webkit-scrollbar{display:none}
+.t5{flex:none;width:72%;max-width:300px;scroll-snap-align:start;border-radius:18px;padding:16px;color:#161513;background:var(--c);position:relative;min-height:170px;display:flex;flex-direction:column;text-align:left;overflow:hidden}
+.t5 .n{font-family:var(--display);font-weight:900;font-size:76px;line-height:.8;position:absolute;right:10px;bottom:-6px;opacity:.25}
+.t5 .k{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;opacity:.9}
+.t5 .tt{font-family:var(--display);font-weight:800;font-size:27px;line-height:1;text-transform:uppercase;margin:8px 0 auto;max-width:90%}
+.t5 .w{font-size:12.5px;font-weight:600;margin-top:12px;opacity:.95}
+
+/* activity tiles */
+.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.tile{border:1.5px solid var(--line);background:var(--card);border-radius:14px;padding:12px 12px 10px;text-align:left;display:flex;flex-direction:column;gap:6px;min-height:78px;position:relative}
+.tile b{font-family:var(--display);font-weight:800;font-size:21px;line-height:1;text-transform:uppercase}
+.tile span{font-size:12px;color:var(--muted);font-weight:600}
+.tile.on{background:var(--loisirs);border-color:var(--loisirs);color:#fff}
+.tile.on span{color:#fff;opacity:.85}
+.tile.zero b{color:var(--muted)}
+
+/* places */
+.pl{display:grid;grid-template-columns:1fr auto;gap:8px;padding:13px 0;border-bottom:1px solid var(--line);text-align:left;width:100%}
+.pl .t{font-weight:800}
+.pl .a{font-size:12.5px;color:var(--muted)}
+.acts{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+.acts i{font-style:normal;font-size:11px;font-weight:700;padding:2px 7px;border-radius:6px;background:var(--paper-2);color:var(--ink-2)}
+
+/* search */
+.search{display:flex;align-items:center;gap:8px;background:var(--card);border:1.5px solid var(--ink);border-radius:14px;padding:11px 13px;margin:6px 0 10px}
+.search svg{width:20px;height:20px;flex:none}
+.search input{border:0;outline:0;background:transparent;flex:1;font-size:16px;font-weight:600}
+.lbl{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:14px 0 4px}
+
+/* calendar */
+.calhead{display:flex;align-items:center;justify-content:space-between;margin:6px 0 10px}
+.calhead h1{font-family:var(--display);font-weight:900;font-size:38px;text-transform:uppercase;line-height:1}
+.calhead .nav{display:flex;gap:6px}
+.calhead .nav button{width:40px;height:40px;border-radius:12px;border:1.5px solid var(--line);display:grid;place-items:center;font-size:20px;font-weight:800;background:var(--card)}
+.calhead .nav button:disabled{opacity:.3}
+.grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;width:100%}
+.grid .h{font-size:10.5px;font-weight:800;text-align:center;color:var(--muted);text-transform:uppercase;padding:4px 0}
+.day{min-width:0;aspect-ratio:1/1.08;border-radius:10px;background:var(--card);border:1.5px solid transparent;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:6px;gap:4px;font-weight:800;font-size:14px}
+.day.out{background:transparent;color:var(--line);pointer-events:none}
+.day.past{opacity:.35;pointer-events:none}
+.day.today{border-color:var(--ink)}
+.day.sel{background:var(--ink);color:var(--paper)}
+.day .dots{display:flex;gap:2px;flex-wrap:wrap;justify-content:center;max-width:30px}
+.day .dots i{width:7px;height:7px;border-radius:50%;background:var(--c);box-shadow:inset 0 0 0 1px rgba(0,0,0,.28)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;margin:12px 0 0;font-size:12px;font-weight:700;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend span::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--c)}
+
+/* map */
+.mapwrap{position:absolute;inset:0;background:#E9E3D3;touch-action:none;overflow:hidden}
+@media (prefers-color-scheme: dark){ .mapwrap{background:#1d1c19} }
+.mapwrap svg{width:100%;height:100%;display:block;cursor:grab}
+.mapwrap svg.drag{cursor:grabbing}
+.mapui{position:absolute;left:0;right:0;top:0;padding:8px 14px 0;z-index:5;pointer-events:none}
+.mapui > *{pointer-events:auto}
+.mapui .chips{margin:0 -14px;padding-left:14px;padding-right:14px}
+.mapui .chip{box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.zoom{position:absolute;right:14px;bottom:calc(150px + var(--safe-b));display:flex;flex-direction:column;gap:8px;z-index:5}
+.zoom button{width:44px;height:44px;border-radius:14px;background:var(--card);border:1.5px solid var(--line);font-size:22px;font-weight:800;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.jump{position:absolute;left:14px;bottom:calc(98px + var(--safe-b));display:flex;gap:8px;z-index:5}
+.jump button{padding:9px 12px;border-radius:12px;background:var(--card);border:1.5px solid var(--line);font-size:12.5px;font-weight:800;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.mapnote{position:absolute;right:14px;bottom:calc(100px + var(--safe-b));font-size:10px;color:var(--muted);font-weight:600;z-index:4;text-align:right;max-width:150px;line-height:1.2}
+.pin{cursor:pointer}
+.pin:hover circle.ring{stroke-width:3}
+
+/* sheet */
+.scrim{position:absolute;inset:0;background:rgba(20,18,15,.38);opacity:0;pointer-events:none;transition:opacity .2s;z-index:40}
+.scrim.on{opacity:1;pointer-events:auto}
+.sheet{position:absolute;left:0;right:0;bottom:0;background:var(--card);border-radius:22px 22px 0 0;z-index:41;transform:translateY(105%);transition:transform .28s cubic-bezier(.2,.8,.2,1);max-height:86%;overflow-y:auto;padding:10px 20px calc(24px + var(--safe-b))}
+.sheet.on{transform:none}
+.sheet .grab{width:42px;height:5px;border-radius:3px;background:var(--line);margin:0 auto 14px}
+.sheet .band{height:8px;border-radius:4px;background:var(--c);margin-bottom:14px;width:64px}
+.sheet h3{font-family:var(--display);font-weight:900;font-size:34px;line-height:.95;text-transform:uppercase;margin:6px 0 12px}
+.facts{display:flex;flex-direction:column;gap:10px;margin:8px 0 16px}
+.facts div{display:flex;gap:10px;align-items:flex-start;font-weight:600}
+.facts svg{width:18px;height:18px;flex:none;margin-top:2px;color:var(--muted)}
+.sheet p.desc{color:var(--ink-2);margin-bottom:16px}
+.actions{display:flex;gap:8px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border-radius:13px;font-weight:800;font-size:14px;border:1.5px solid var(--ink);text-decoration:none}
+.btn.pri{background:var(--ink);color:var(--paper)}
+.btn svg{width:18px;height:18px}
+.evlink{color:var(--ink);font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.src{font-size:12px;color:var(--muted);margin-top:16px}
+.src a{font-weight:700}
+
+/* form */
+.form label{display:block;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:12px 0 5px}
+.form input,.form select,.form textarea{width:100%;padding:11px 12px;border-radius:11px;border:1.5px solid var(--line);background:var(--paper);font-size:15px;outline:none}
+.form input:focus,.form select:focus,.form textarea:focus{border-color:var(--ink)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+
+.empty{padding:26px 16px;text-align:center;color:var(--muted);border:1.5px dashed var(--line);border-radius:14px;margin:8px 0}
+.empty b{display:block;color:var(--ink);font-family:var(--display);font-size:22px;text-transform:uppercase;margin-bottom:4px}
+.empty button{margin-top:10px}
+.toast{position:absolute;left:50%;bottom:calc(100px + var(--safe-b));transform:translate(-50%,20px);background:var(--ink);color:var(--paper);padding:11px 16px;border-radius:12px;font-weight:700;font-size:13.5px;opacity:0;transition:.25s;z-index:60;pointer-events:none;white-space:nowrap}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.cta{display:flex;align-items:center;gap:14px;background:var(--ink);color:var(--paper);border-radius:18px;padding:16px;margin:26px 0 8px;text-align:left;width:100%}
+.cta b{font-family:var(--display);font-size:22px;text-transform:uppercase;display:block;line-height:1}
+.cta span{font-size:12.5px;opacity:.75}
+.cta .plus{margin-left:auto;width:40px;height:40px;border-radius:12px;background:var(--standup);color:#1b1a17;display:grid;place-items:center;font-size:24px;font-weight:900;flex:none}
+.demo{font-size:11.5px;color:var(--muted);background:var(--paper-2);border-radius:10px;padding:8px 10px;margin:4px 0 6px;font-weight:600}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <header class="top">
+    <div class="logo" aria-label="ON FAIT QUOI?">
+      <span>ON FAIT QUOI</span>
+      <svg viewBox="331 217 362 588" aria-hidden="true"><path d="M381 399 A131 131 0 1 1 612.4 483.2 C 580.2 521.5 512 540 512 590 L512 628" fill="none" stroke="#C1532E" stroke-width="90"/><path d="M512 678 L577 800 L446 800 Z" fill="#C1532E"/></svg>
+    </div>
+    <button class="where" id="whereBtn" aria-label="Choisir la commune">Région</button>
+  </header>
+
+  <main class="views">
+    <!-- ACCUEIL -->
+    <section class="view" id="v-accueil">
+      <h1 class="big" id="hello">On sort<br>quand&nbsp;?</h1>
+      <div class="seg" id="when">
+        <button data-w="today">Aujourd'hui</button>
+        <button data-w="week" class="on">Cette semaine</button>
+        <button data-w="next">Semaine pro.</button>
+      </div>
+      <h2 class="sec">Le top 5 <small id="t5sub"></small></h2>
+      <div class="top5" id="top5"></div>
+      <div class="chips" id="homeCats"></div>
+      <div class="list" id="homeList"></div>
+      <button class="cta" id="ctaPropose"><div><b>Tu organises un truc&nbsp;?</b><span>Ajoute ton événement ou ton lieu gratuitement</span></div><div class="plus">+</div></button>
+      <button id="ctaReport" style="display:block;margin:14px auto 8px;background:none;border:0;color:var(--muted);font:inherit;font-size:14px;text-decoration:underline;cursor:pointer">Une erreur ? Signaler un problème</button>
+    </section>
+
+    <!-- LIEUX -->
+    <section class="view" id="v-lieux">
+      <h1 class="big">Les lieux</h1>
+      <p class="lead">Bars, salles, padel, piscine… « Y aller » ouvre l’itinéraire dans ton appli GPS.</p>
+      <div class="chips" id="lieuxCities" style="margin-top:12px"></div>
+      <div id="lieuxList"></div>
+    </section>
+
+    <!-- AGENDA -->
+    <section class="view" id="v-agenda">
+      <div class="calhead"><h1 id="calTitle"></h1><div class="nav"><button id="calPrev" aria-label="Mois précédent">‹</button><button id="calNext" aria-label="Mois suivant">›</button></div></div>
+      <div class="chips" id="calCats"></div>
+      <div class="grid" id="calGrid"></div>
+      <div class="legend" id="calLegend" style="display:none"></div>
+      <h2 class="sec" id="calDayTitle"></h2>
+      <div class="list" id="calList"></div>
+    </section>
+
+    <!-- RECHERCHE -->
+    <section class="view" id="v-recherche">
+      <h1 class="big">Cherche</h1>
+      <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="Billard, stand-up, Dour, gratuit…" autocomplete="off"></label>
+      <div class="lbl">Thèmes</div>
+      <div class="chips" id="searchCats"></div>
+      <div class="lbl">Commune</div>
+      <div class="chips" id="searchCities"></div>
+      
+      <h2 class="sec">Où faire quoi&nbsp;? <small>activités à l'année</small></h2>
+      <div class="tiles" id="tiles"></div>
+      <div id="results"></div>
+    </section>
+
+    <!-- FAVORIS -->
+    <section class="view" id="v-favoris">
+      <h1 class="big">Mes<br>sorties</h1>
+      <p class="lead">Les événements et lieux que tu as gardés. Ils restent sur cet appareil.</p>
+      <div id="favs"></div>
+    </section>
+  </main>
+
+  <nav class="tabs" id="tabs">
+    <button data-v="accueil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M3 11 12 4l9 7v9h-6v-6H9v6H3z"/></svg>Accueil</button>
+    <button data-v="agenda"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4" stroke-linecap="round"/></svg>Agenda</button>
+    <button data-v="recherche"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Recherche</button>
+    <button data-v="favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/></svg>Favoris</button>
+    <button data-v="lieux"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg>Lieux</button>
+  </nav>
+
+  <div class="scrim" id="scrim"></div>
+  <div class="sheet" id="sheet" role="dialog" aria-modal="true"></div>
+  <div class="toast" id="toast"></div>
+</div>
+
+<script>
+/* =========================================================
+   ON FAIT QUOI? — V1 prototype fonctionnel (web, mobile-first)
+   Données : lieux réels repérés en ligne (à vérifier avant lancement)
+   + événements "Exemple" pour la démo, sauf ceux marqués "Vérifié".
+   ========================================================= */
+const CATS = {
+  soiree:   {label:'Soirées',    color:'var(--soiree)',   hex:'#C9A6F2'},
+  standup:  {label:'Stand-up',   color:'var(--standup)',  hex:'#F2B84B'},
+  theatre:  {label:'Théâtre',    color:'var(--theatre)',  hex:'#E06A3F'},
+  concert:  {label:'Concerts',   color:'var(--concert)',  hex:'#7FB2E5'},
+  festival: {label:'Festivals',  color:'var(--festival)', hex:'#8FA87A'},
+  braderie: {label:'Marchés & braderies',  color:'var(--braderie)', hex:'#E8C9A0'},
+  famille:  {label:'Famille',    color:'var(--famille)',  hex:'#9ED3C6'},
+  expo:     {label:'Expos & conférences', color:'var(--expo)', hex:'#D9D4CA'},
+  sport:    {label:'Sport',      color:'var(--sport)',    hex:'#C2DB5A'},
+};
+const LOISIRS = {label:'Loisirs', color:'var(--loisirs)', hex:'#0F8C8C'};
+const COMMUNES = ['Mons','Saint-Ghislain','Boussu','Quaregnon','Frameries','Colfontaine','Dour'];
+
+/* ---------- Lieux ---------- */
+const PLACES = [
+ {id:'monkeys', name:"Monkey's Café", commune:'Mons', loc:'Mons centre', addr:'Rue de la Chaussée 32, 7000 Mons', lat:50.4536, lng:3.9531, kind:'Bar ludique', acts:['Jeux de société','Billard','Jeux vidéo','Stand-up'], src:'https://www.schlouk-map.com/fr/places/monkeys-cafe'},
+ {id:'lorgnette', name:'La Lorgnette', commune:'Mons', loc:'Mons centre', addr:'Rue des Clercs 2, 7000 Mons', lat:50.4547, lng:3.9506, kind:'Bar rock', acts:['Bar à bières','Concerts'], src:'https://visitmons.be/en/bars/la-lorgnette-991959'},
+ {id:'catschill', name:'Cats & Chill', commune:'Mons', loc:'Mons centre', addr:'Rue de Houdain 3, 7000 Mons', lat:50.4561, lng:3.9534, kind:'Café à chats', acts:['Café à chats','Jeux de société','Coworking'], src:'https://visitmons.co.uk/see-do/leisure?listpage=3'},
+ {id:'central', name:'Le Central', commune:'Mons', loc:'Grand-Place', addr:'Grand-Place 18, 7000 Mons', lat:50.4540, lng:3.9522, kind:'Bar · café-théâtre', acts:['Stand-up','Fléchettes','Bar à bières'], note:'Fléchettes : info locale (Sandra). Comedy club « What The Fun » un samedi sur deux.', src:'https://www.facebook.com/events/1072085588524089/'},
+ {id:'getapinte', name:'Get a Pinte', commune:'Mons', loc:'Mons centre', addr:'Marché aux Herbes 22, 7000 Mons', lat:50.4529, lng:3.9547, kind:'Bar & salon de tatouage', acts:['Fléchettes','Bar à bières'], note:'Fléchettes : info locale (Sandra), à confirmer avec le lieu.', src:'https://evendo.com/locations/belgium/mons/attraction/oeuvre-de-poni/best-bars'},
+ {id:'padelnimy', name:'RTC Nimy Padel Club', commune:'Mons', loc:'Nimy', addr:'Rue de la Clairière 31, 7020 Nimy', lat:50.4790, lng:3.9500, kind:'Club de padel & tennis', acts:['Padel','Tennis'], src:'https://www.brusselspremierpadel.be/wp-content/uploads/2023/12/BPP24-Action-Clubs-Liste-site-1.pdf'},
+ {id:'dock79', name:'Dock 79', commune:'Saint-Ghislain', loc:'Tertre', addr:'Rue de la Hamaide 79, 7333 Tertre', lat:50.4690, lng:3.8100, kind:'Centre sportif & loisirs', acts:['Padel','Escalade','Accrobranche'], src:'https://visitmons.be/en/que-faire/article/dock-79-801294'},
+ {id:'herbieres', name:'Padel des Herbières', commune:'Saint-Ghislain', loc:'Tertre', addr:'Rue de la Hamaide 75, 7333 Tertre', lat:50.4686, lng:3.8090, kind:'Club de padel', acts:['Padel'], src:'https://playtomic.com/clubs/tennis-padel-club-des-herbieres'},
+ {id:'padeldour', name:'Padel de Dour', commune:'Dour', loc:'Dour Sports', addr:'Site de la Machine à Feu (Dour Sports), 7370 Dour', lat:50.3985, lng:3.7900, kind:'Salle de padel', acts:['Padel','Pickleball'], todo:true, src:'https://www.dhnet.be/regions/mons/borinage/2024/09/30/du-padel-et-du-pickleball-a-dour-un-permis-valide-pour-un-nouveau-hangar-sportif-36Y3Q2KGLNGGRMUNR2YJJD6ZJM/'},
+ {id:'lago', name:'LAGO Mons — Piscine du Grand Large', commune:'Mons', loc:'Grand Large', addr:'Avenue de la Sapinette 20, 7000 Mons', lat:50.4685, lng:3.9370, kind:'Centre aquatique', acts:['Piscine','Famille'], src:'https://www.lago.be/media/uploads/froala_editor/files/R%C3%A8glement%20interne%202025.pdf'},
+ {id:'esplanade', name:'Esplanade des Congrès', commune:'Mons', loc:'Mons gare', addr:'Esplanade des Congrès, 7000 Mons', lat:50.4532, lng:3.9395, kind:'Place publique', acts:[]},
+ {id:'abeldubois', name:'Auditorium Abel Dubois', commune:'Mons', loc:'Mons centre', addr:'Esplanade Anne-Charlotte de Lorraine, 7000 Mons', lat:50.4527, lng:3.9455, kind:'Salle de concert', acts:['Concerts']},
+ {id:'bam', name:'BAM — Beaux-Arts Mons', commune:'Mons', loc:'Mons centre', addr:'Rue Neuve 8, 7000 Mons', lat:50.4535, lng:3.9493, kind:'Musée', acts:['Musée','Expos']},
+ {id:'placeleopold', name:'Place Léopold', commune:'Mons', loc:'Mons gare', addr:'Place Léopold, 7000 Mons', lat:50.4549, lng:3.9432, kind:'Place publique', acts:[]},
+ {id:'soho', name:'Soho', commune:'Mons', loc:'Marché aux Herbes', addr:'Marché aux Herbes 20, 7000 Mons', lat:50.4528, lng:3.9549, kind:'Bar à cocktails & soirées', acts:['Soirées','Cocktails'], note:'Tél. 0472 75 19 68 · soirées annoncées sur sa page Facebook.', src:'https://www.facebook.com/profile.php?id=61555905931146'},
+ {id:'theplay', name:'The Play', commune:'Mons', loc:'Marché aux Herbes', addr:'Place du Marché aux Herbes 24, 7000 Mons', lat:50.4530, lng:3.9545, kind:'Bar (gin, rhum, cocktails)', acts:['Soirées','Cocktails'], src:'https://www.facebook.com/theplaymons'},
+ {id:'arnak', name:'ARNAK', commune:'Mons', loc:'Marché aux Herbes', addr:'Marché aux Herbes 25, 7000 Mons', lat:50.4531, lng:3.9548, kind:'Bar — soirées DJ, terrasse chauffée', acts:['Soirées'], note:'Pas de soirée annoncée sur Facebook pour l’instant.', src:'https://www.facebook.com/ARNVKMONS'},
+ {id:'calva', name:'Salle CALVA', commune:'Mons', loc:'Spiennes', addr:'Salle CALVA, Spiennes (7032 Mons)', lat:50.4290, lng:3.9840, kind:'Salle des fêtes', acts:[]},
+ {id:'frameriesloc', name:'Frameries', commune:'Frameries', loc:'Frameries', addr:'Frameries — point de départ à confirmer', lat:50.4065, lng:3.8955, kind:'Lieu à confirmer', acts:[], todo:true},
+ {id:'stghloc', name:'Saint-Ghislain', commune:'Saint-Ghislain', loc:'Saint-Ghislain', addr:'Saint-Ghislain — lieu à confirmer', lat:50.4475, lng:3.8180, kind:'Lieu à confirmer', acts:[], todo:true},
+ {id:'vandervalk', name:'Van der Valk Hotel Mons Congrès & Spa', commune:'Mons', loc:'Mons gare', addr:'Avenue Melina Mercouri 7, 7000 Mons', lat:50.4538, lng:3.9378, kind:'Hôtel & salle', acts:[]},
+ {id:'micx', name:'Palais des Congrès (MICX)', commune:'Mons', loc:'Mons gare', addr:'Avenue Melina Mercouri 9, 7000 Mons', lat:50.4530, lng:3.9385, kind:'Salle d’événements', acts:[]},
+ {id:'fucam', name:'Ateliers des FUCaM', commune:'Mons', loc:'Mons centre', addr:'Mons (adresse à compléter)', lat:50.4560, lng:3.9470, kind:'Salle culturelle', acts:[], todo:true},
+ {id:'ccquaregnon', name:'Maison Culturelle de Quaregnon', commune:'Quaregnon', loc:'Quaregnon', addr:'Grand-Place 1, 7390 Quaregnon', lat:50.4405, lng:3.8650, kind:'Centre culturel', acts:['Spectacles','Concerts'], src:'https://www.facebook.com/maisonculturelle'},
+ {id:'ccframeries', name:'Centre culturel de Frameries', commune:'Frameries', loc:'Eugies', addr:'Rue des Alliés 41, 7080 Eugies (Frameries)', lat:50.4000, lng:3.8970, kind:'Centre culturel', acts:['Spectacles'], src:'https://www.facebook.com/centreculturelframeries'},
+ {id:'cccolfontaine', name:'Centre culturel de Colfontaine', commune:'Colfontaine', loc:'Colfontaine', addr:'Rue du Pont d’Arcole 12, 7340 Colfontaine', lat:50.4100, lng:3.8550, kind:'Centre culturel', acts:['Spectacles','Concerts'], src:'https://www.facebook.com/cccolfontaine'},
+ {id:'ccboussu', name:'Centre culturel de Boussu', commune:'Boussu', loc:'Boussu', addr:'Rue F. Dorzée 3, 7300 Boussu', lat:50.4345, lng:3.7965, kind:'Centre culturel', acts:['Spectacles','Cinéma'], src:'https://www.facebook.com/profile.php?id=100063610568552'},
+ {id:'ccdour', name:'Centre culturel de Dour', commune:'Dour', loc:'Dour', addr:'Rue du Marché 1, 7370 Dour', lat:50.3958, lng:3.7785, kind:'Centre culturel', acts:['Spectacles','Concerts'], src:'https://www.facebook.com/centrecultureldour'},
+ {id:'manege', name:'Théâtre le Manège', commune:'Mons', loc:'Mons centre', addr:'Rue des Passages, 7000 Mons', lat:50.4550, lng:3.9470, kind:'Théâtre', acts:['Théâtre'], src:'https://www.facebook.com/surmars7000'},
+ {id:'maisonfolie', name:'La Maison Folie', commune:'Mons', loc:'Mons centre', addr:'Mons (adresse à compléter)', lat:50.4565, lng:3.9520, kind:'Lieu culturel', acts:['Spectacles'], todo:true, src:'https://www.facebook.com/surmars7000'},
+ {id:'theatredesrues', name:'Théâtre des Rues', commune:'Mons', loc:'Mons', addr:'Mons (adresse à compléter)', lat:50.4520, lng:3.9560, kind:'Théâtre', acts:['Théâtre'], todo:true},
+ {id:'citizenfox', name:'Citizen Fox', commune:'Mons', loc:'Mons centre', addr:'Rue de la Coupe 7, 7000 Mons', lat:50.4540, lng:3.9495, kind:'Bar-restaurant', acts:['Soirées']},
+ {id:'leopold', name:'Le Léopold', commune:'Mons', loc:'Mons gare', addr:'Place Léopold 4, 7000 Mons', lat:50.4546, lng:3.9428, kind:'Brasserie', acts:['Brasserie'], src:'https://www.visitmons.be/en/restaurants/brasserie-le-leopold-401743'},
+ {id:'theatre', name:'Théâtre Royal de Mons', commune:'Mons', loc:'Grand-Place', addr:'Grand-Place 22, 7000 Mons', lat:50.4543, lng:3.9518, kind:'Salle de spectacle', acts:['Théâtre','Stand-up'], src:'https://www.quefaire.be/philippe-caveriviere-8771952.shtml'},
+ {id:'mundaneum', name:'Mundaneum', commune:'Mons', loc:'Mons centre', addr:'Rue de Nimy 76, 7000 Mons', lat:50.4568, lng:3.9500, kind:'Musée', acts:['Musée']},
+ {id:'arsonic', name:'Arsonic', commune:'Mons', loc:'Mons centre', addr:'Rue de Nimy 138, 7000 Mons', lat:50.4590, lng:3.9488, kind:'Salle de concert', acts:['Concerts']},
+ {id:'memorial', name:'Mons Memorial Museum', commune:'Mons', loc:'Mons centre', addr:'Boulevard Dolez 51, 7000 Mons', lat:50.4521, lng:3.9445, kind:'Musée', acts:['Musée']},
+ {id:'imagix', name:'Imagix Mons', commune:'Mons', loc:'Grands Prés', addr:'Boulevard André Delvaux 1, 7000 Mons (complexe Imagix)', lat:50.4603, lng:3.9290, kind:'Cinéma', acts:['Cinéma']},
+ {id:'brassetemps', name:'Le Brasse-Temps', commune:'Mons', loc:'Grands Prés', addr:'Boulevard André Delvaux 1/2, 7000 Mons (complexe Imagix)', lat:50.4598, lng:3.9282, kind:'Microbrasserie', acts:['Bar à bières','Brasserie'], src:'https://www.visitmons.be/en/sports-et-loisirs/excursion-mons-in-foam-208504'},
+ {id:'lge', name:'Laser Game Evolution', commune:'Mons', loc:'Grands Prés', addr:'Complexe Imagix, Les Grands Prés, Mons', lat:50.4610, lng:3.9300, kind:'Loisir', acts:['Laser game'], src:'https://www.visitmons.be/en/sports-et-loisirs/laser-game-evolution-mons-666300'},
+ {id:'goolfy', name:'Goolfy Mons', commune:'Mons', loc:'Ghlin', addr:'Rue de Mons 353, 7011 Ghlin', lat:50.4745, lng:3.9165, kind:'Complexe de loisirs', acts:['Mini-golf','Laser game','Escape game','Quiz room'], src:'https://visitmons.co.uk/see-do/leisure?listpage=3'},
+ {id:'newjump', name:'New Jump Mons', commune:'Mons', loc:'Nimy', addr:'Rue Grande 208, 7020 Nimy', lat:50.4710, lng:3.9560, kind:'Trampoline park', acts:['Trampoline'], src:'https://visitmons.co.uk/see-do/leisure?listpage=3'},
+ {id:'barriere', name:'Bowling La Barrière', commune:'Mons', loc:'Mons', addr:'Adresse à compléter — Mons', lat:50.4495, lng:3.9650, kind:'Bowling', acts:['Bowling','Billard'], todo:true, src:'https://www.visitmons.be/en/sports-et-loisirs/bowling-la-barriere-920459'},
+ {id:'inroom', name:'In The Room', commune:'Mons', loc:'Mons', addr:'Adresse à compléter — Mons', lat:50.4510, lng:3.9560, kind:'Escape game', acts:['Escape game'], todo:true, src:'https://www.visitmons.be/en/sports-et-loisirs/in-the-room-512897'},
+ {id:'battlekart', name:'BattleKart Mons', commune:'Mons', loc:'Jemappes', addr:'Adresse à compléter — Jemappes', lat:50.4600, lng:3.8930, kind:'Karting', acts:['Karting'], todo:true, src:'https://www.quefaire.be/interieur/bon-secours?com=33'},
+ {id:'vangogh', name:'Maison Van Gogh', commune:'Mons', loc:'Cuesmes', addr:'Cuesmes, 7033 Mons', lat:50.4380, lng:3.9250, kind:'Musée', acts:['Musée']},
+ {id:'tondreau', name:'Stade Charles Tondreau', commune:'Mons', loc:'Mons', addr:'Stade du RAEC Mons, Mons', lat:50.4470, lng:3.9620, kind:'Stade', acts:['Football']},
+ {id:'grandhornu', name:'Site du Grand-Hornu', commune:'Boussu', loc:'Hornu', addr:'Rue Sainte-Louise 82, 7301 Hornu', lat:50.4356, lng:3.8386, kind:'Patrimoine & expos', acts:['Musée','Expos']},
+ {id:'biblio', name:'La Bibliothèque', commune:'Saint-Ghislain', loc:'Saint-Ghislain', addr:'Grand-Place 36, 7330 Saint-Ghislain', lat:50.4497, lng:3.8187, kind:'Bar', acts:['Bar à bières'], src:'https://livetheworld.com/post/beer-bars-and-rock-n-roll-in-mons-2rxa'},
+ {id:'sparkoh', name:'Sparkoh!', commune:'Frameries', loc:'Frameries', addr:'Frameries (adresse à compléter)', lat:50.4085, lng:3.8960, kind:'Centre de sciences', acts:['Sciences','Famille'], todo:true},
+ {id:'saintcharles', name:'Local des Scouts Saint-Charles', commune:'Mons', loc:'Mons centre', addr:'Rue des Clercs 34, 7000 Mons', lat:50.4549, lng:3.9508, kind:'Local scout', acts:[]},
+ {id:'ajbeffroi', name:'Auberge de Jeunesse du Beffroi', commune:'Mons', loc:'Mons centre', addr:'Rampe du Château 2, 7000 Mons', lat:50.4535, lng:3.9502, kind:'Auberge de jeunesse', acts:[]},
+ {id:'beffroi', name:'Beffroi de Mons', commune:'Mons', loc:'Mons centre', addr:'Rue des Gades, 7000 Mons', lat:50.4538, lng:3.9496, kind:'Monument', acts:[]},
+ {id:'lottoexpo', name:'Lotto Mons Expo', commune:'Mons', loc:'Grands Prés', addr:'Avenue Thomas Edison 2, 7000 Mons', lat:50.4590, lng:3.9270, kind:'Salle d’événements', acts:[]},
+ {id:'grandplace', name:'Grand-Place de Mons', commune:'Mons', loc:'Grand-Place', addr:'Grand-Place, 7000 Mons', lat:50.4542, lng:3.9516, kind:'Place publique', acts:[]},
+];
+const P = Object.fromEntries(PLACES.map(p=>[p.id,p]));
+/* activités recherchées même sans lieu répertorié (pour inviter à proposer) */
+const WANTED = ['Jeux de société','Billard','Fléchettes','Bowling','Escape game','Laser game','Karting','Quiz room','Mini-golf','Trampoline','Café à chats','Jeux vidéo','Bar à bières','Concerts','Cinéma','Musée','Théâtre','Padel','Piscine','Escalade'];
+
+/* ---------- Dates ---------- */
+const DAY = 864e5;
+const today = (()=>{const d=new Date(); d.setHours(0,0,0,0); return d})();
+const endRange = (()=>{const d=new Date(today); d.setMonth(d.getMonth()+3); return d})();
+const key = d => d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+const parse = s => {const [y,m,d]=s.split('-').map(Number); return new Date(y,m-1,d)};
+const add = (d,n) => {const x=new Date(d); x.setDate(x.getDate()+n); return x};
+const MOIS = ['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+const JOURS = ['dim.','lun.','mar.','mer.','jeu.','ven.','sam.'];
+const JOURSL = ['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
+
+/* ---------- Événements ---------- */
+let EVENTS = [];
+let uid = 0;
+function ev(o){ EVENTS.push(Object.assign({id:'e'+(++uid), verified:false}, o)); }
+function weekly(dow, step, offset, fn){ // dow 0=dim
+  let d = new Date(today); while(d.getDay()!==dow) d=add(d,1);
+  let i=0; for(; d<endRange; d=add(d,7), i++){ if((i+offset)%step===0) fn(new Date(d), i); }
+}
+function nthWeekday(n,dow,fn){ // n-ième jour dow de chaque mois
+  for(let m=0;m<4;m++){ const first=new Date(today.getFullYear(), today.getMonth()+m, 1); let d=new Date(first); while(d.getDay()!==dow) d=add(d,1); d=add(d,7*(n-1)); if(d>=today && d<endRange) fn(d); }
+}
+function fixed(str, o){ const d=parse(str); if(d>=today && d<endRange) ev(Object.assign({date:str},o)); }
+
+// ===== Uniquement des événements réels, avec leur source =====
+const V = o => ev(Object.assign({verified:true}, o));
+/* Top 5 éditorial : mêmes choix que le carrousel Instagram de la semaine (clé = lundi) */
+const TOP5_WEEKS={
+  '2026-11-16':[['2026-11-19',/Afters Soho/],['2026-11-20',/Maman va danser/],['2026-11-21',/Saint-Nicolas à la foire/],['2026-11-21',/^Karaoké Party$/],['2026-11-22',/Mini Mondial/]]
+};
+function weekStart(d){ const x=new Date(d); x.setHours(0,0,0,0); x.setDate(x.getDate()-((x.getDay()+6)%7)); return x; }
+// Foire d'automne 2026
+V({date:'2026-11-06',end:'2026-11-29',title:"Foire d'automne — Grand-Place",cat:'marche',place:'grandplace',time:'après-midi et soirée',price:'Entrée libre · attractions payantes',free:true,desc:"La foire de Mons, tradition qui remonte au XIXe siècle. Sur la Grand-Place jusqu'au 29 novembre.",src:'https://www.dhnet.be/dernieres-depeches/2026/11/05/mons-la-foire-dautomne-sera-lancee-vendredi-QMBMT2HMAZELPL6VIKTCRSJKNE/'});
+V({date:'2026-11-06',end:'2026-12-06',title:"Foire d'automne — Esplanade des Congrès",cat:'marche',place:'esplanade',time:'après-midi et soirée',price:'Entrée libre · attractions payantes',free:true,desc:"Second site de la foire de Mons, ouvert jusqu'au 6 décembre.",src:'https://www.dhnet.be/dernieres-depeches/2026/11/05/mons-la-foire-dautomne-sera-lancee-vendredi-QMBMT2HMAZELPL6VIKTCRSJKNE/'});
+V({date:'2026-11-18',title:'Playmobil Parade',cat:'marche',place:'grandplace',time:'16:00',price:'Gratuit',free:true,desc:"Parade dans le cadre de la Foire d'automne.",src:'https://www.dhnet.be/dernieres-depeches/2026/11/05/mons-la-foire-dautomne-sera-lancee-vendredi-QMBMT2HMAZELPL6VIKTCRSJKNE/'});
+V({date:'2026-11-21',title:'Saint-Nicolas à la foire',cat:'marche',place:'esplanade',time:'17:00',price:'Gratuit',free:true,desc:"Visite de Saint-Nicolas sur le site de l'Esplanade des Congrès.",src:'https://www.dhnet.be/dernieres-depeches/2026/11/05/mons-la-foire-dautomne-sera-lancee-vendredi-QMBMT2HMAZELPL6VIKTCRSJKNE/'});
+V({date:'2026-11-25',title:'Saint-Nicolas à la foire',cat:'marche',place:'grandplace',time:'15:00',price:'Gratuit',free:true,desc:"Visite de Saint-Nicolas sur la Grand-Place.",src:'https://www.dhnet.be/dernieres-depeches/2026/11/05/mons-la-foire-dautomne-sera-lancee-vendredi-QMBMT2HMAZELPL6VIKTCRSJKNE/'});
+// Marché de Noël
+V({date:'2026-12-05',end:'2027-01-03',title:'Mons Cœur en Neige — Marché de Noël',cat:'marche',place:'grandplace',time:'horaires à confirmer',price:'Accès libre',free:true,desc:"Marché de Noël autour de la Grand-Place, du Marché aux Herbes et de la place Léopold. Détails 2026 (patinoire, animations) à confirmer sur monscoeurenneige.be.",src:'https://www.info-lux.com/?p=1742483'});
+// Théâtre Royal
+V({date:'2026-12-01',title:'Typh Barrow — Dreama Tour',cat:'culture',place:'theatre',time:'20:00',price:'Payant',desc:'Concert.',src:'https://www.info-lux.com/?p=1731062'});
+V({date:'2026-12-02',title:'Typh Barrow — Dreama Tour',cat:'culture',place:'theatre',time:'20:00',price:'Payant',desc:'Concert (2e date).',src:'https://www.info-lux.com/?p=1731062'});
+V({date:'2026-12-04',title:'Laurent Gerra — « Se met à table ! »',cat:'standup',place:'theatre',time:'20:00',price:'Payant',desc:'Spectacle d’humour.',src:'https://www.info-lux.com/?p=1731062'});
+V({date:'2026-12-05',title:'LION — Le Roi est de retour',cat:'culture',place:'theatre',time:'18:30',price:'Payant',desc:'Spectacle.',src:'https://www.info-lux.com/?p=1731062'});
+V({date:'2026-12-06',end:'2026-12-07',title:'Olivier de Benoist',cat:'standup',place:'theatre',time:'20:00',price:'Payant',desc:'Spectacle d’humour, deux dates.',src:'https://www.info-lux.com/?p=1716874'});
+V({date:'2026-12-12',title:'Arnaud Tsamère',cat:'standup',place:'theatre',time:'20:00',price:'Payant',desc:'Spectacle de stand-up.',src:'https://www.quefaire.be/Arnaud-Tsamere-8631339.shtml'});
+V({date:'2026-12-14',title:'Damien Gillard — « Rude »',cat:'standup',place:'theatre',time:'20:00',price:'Payant',desc:'Spectacle de stand-up.',src:'https://www.quefaire.be/Damien-Gillard-Rude-8746308.shtml'});
+V({date:'2026-12-15',title:'GuiHome vous détend',cat:'standup',place:'theatre',time:'20:00',price:'Payant',desc:'Spectacle humoristique.',src:'https://quefaire.be/guihome-vous-detend-8716422.shtml'});
+V({date:'2026-12-19',title:'Il Cello',cat:'standup',place:'theatre',time:'20:00',price:'Payant',desc:'Spectacle d’humour musical.',src:'https://www.info-lux.com/?p=1731062'});
+V({date:'2026-12-20',title:'Il Cello',cat:'standup',place:'theatre',time:'20:30',price:'Payant',desc:'Spectacle d’humour musical (2e date).',src:'https://www.info-lux.com/?p=1731062'});
+V({date:'2026-12-10',title:'Brel ! Le Spectacle',cat:'culture',place:'grandplace',venue:'Mons — salle à confirmer',time:'20:00',price:'Payant',desc:"Spectacle musical autour de Jacques Brel. Salle à confirmer auprès de l'organisateur.",src:'https://www.quefaire.be/brel-le-spectacle-8658332.shtml'});
+// Arsonic
+V({date:'2026-11-26',title:'En miroir des temps',cat:'culture',place:'arsonic',time:'19:00',price:'Tarif à confirmer',desc:'Concert à Arsonic.',src:'https://www.info-lux.com/?p=1716766'});
+V({date:'2026-12-17',title:'Soyons festifs — le Swing classique',cat:'culture',place:'arsonic',time:'20:00',price:'Tarif à confirmer',desc:'Animation musicale à Arsonic.',src:'https://www.info-lux.com/?p=1716963'});
+// Auditorium Abel Dubois
+V({date:'2026-11-27',title:'Candlelight — Disney Chansons d’amour',cat:'culture',place:'abeldubois',time:'21:00',price:'dès 19 €',desc:'Concert à la bougie.',src:'https://www.info-lux.com/?p=1729046'});
+V({date:'2026-12-11',title:'Candlelight — Disney Chansons d’amour',cat:'culture',place:'abeldubois',time:'19:00',price:'dès 19 €',desc:'Concert à la bougie (2e date).',src:'https://www.info-lux.com/?p=1729046'});
+V({date:'2026-12-11',title:'Candlelight — Les classiques de Noël',cat:'culture',place:'abeldubois',time:'21:00',price:'dès 17,50 €',desc:'Concert à la bougie.',src:'https://www.info-lux.com/?p=1742483'});
+// BAM
+V({date:'2026-12-10',end:'2027-01-21',title:'Marc Chagall. Matières',cat:'culture',place:'bam',time:'voir horaires du musée',price:'Payant',desc:'Exposition, avec des lectures « Rêveries littéraires ».',src:'https://www.info-lux.com/?p=1716886'});
+// Ce week-end et fin novembre
+V({date:'2026-11-19',title:'Clément Viktorovitch — « L’art de ne pas dire »',cat:'culture',place:'grandplace',venue:'Mons — salle à confirmer',time:'horaire à confirmer',price:'Payant',desc:'Spectacle autour de la rhétorique politique.',src:'https://www.info-lux.com/que-faire-a-mons-ce-mois-ci-agenda-evenements/pays/belgique/wallonie/hainaut/mons/'});
+V({date:'2026-11-21',title:'Félix Radu',cat:'culture',place:'theatre',time:'20:00',price:'39 € à 55 €',desc:'Spectacle de Félix Radu, entre théâtre, poésie et humour.',src:'https://billetterie.arena-tour.fr/artistes/billets-felix-radu-70729/mons-theatre-royal-2026-11-21-38255'});
+V({date:'2026-11-20',title:'« Noble Pagaille » — Les Illuminés',cat:'culture',place:'calva',time:'20:00',price:'Réservation billetweb',desc:'Nouvelle création 2026 de la troupe Les Illuminés. Réservations : billetweb.fr/noblepagaille',src:'https://monsblog.be/information/noble-pagaille-2021-et-22-novembre-2026-salle-calva-de-spiennes/'});
+V({date:'2026-11-21',title:'« Noble Pagaille » — Les Illuminés',cat:'culture',place:'calva',time:'20:00',price:'Réservation billetweb',desc:'Nouvelle création 2026 de la troupe Les Illuminés.',src:'https://monsblog.be/information/noble-pagaille-2021-et-22-novembre-2026-salle-calva-de-spiennes/'});
+V({date:'2026-11-22',title:'« Noble Pagaille » — Les Illuminés',cat:'culture',place:'calva',time:'15:00',price:'Réservation billetweb',desc:'Nouvelle création 2026 de la troupe Les Illuminés.',src:'https://monsblog.be/information/noble-pagaille-2021-et-22-novembre-2026-salle-calva-de-spiennes/'});
+V({date:'2026-11-21',title:'Marche canine solidaire',cat:'sport',place:'frameriesloc',time:'horaire à confirmer',price:'à confirmer',desc:'Deux parcours, avec ou sans chien, au profit des associations locales de bien-être animal. Possibilité de promener un chien de refuge.',src:'https://www.dhnet.be/regions/mons/borinage/2026/10/29/une-premiere-marche-canine-solidaire-organisee-a-frameries-largent-sera-distribue-aux-associations-participantes-OALSOTFEXVCM5HSC3SFTEMHB24/'});
+V({date:'2026-11-13',end:'2026-11-20',title:'Repas dans le noir',cat:'soiree',place:'stghloc',time:'17:00–22:00',price:'à confirmer',desc:'Repas servi dans l’obscurité totale.',src:'https://www.quefaire.be/mons'});
+V({date:'2026-11-26',title:'Sttellla',cat:'culture',place:'theatre',time:'20:00',price:'Payant',desc:'Concert.',src:'https://gigora.live/concerts-in/belgium/mons'});
+V({date:'2026-11-26',title:'Vanessa Wagner',cat:'culture',place:'arsonic',time:'horaire à confirmer',price:'Payant',desc:'Récital de piano.',src:'https://www.songkick.com/fr/metro-areas/26864-belgium-mons'});
+V({date:'2026-11-27',title:'Linh',cat:'culture',place:'theatre',time:'20:00',price:'Payant',desc:'Concert.',src:'https://www.info-lux.com/mons-concert-linh/pays/belgique/wallonie/hainaut/mons/'});
+V({date:'2026-11-29',title:'Cœur de Pirate',cat:'culture',place:'theatre',time:'horaire à confirmer',price:'Payant',desc:'Concert.',src:'https://gigora.live/concerts-in/belgium/mons'});
+// Trouvés sur Facebook (événements publics)
+V({date:'2026-11-21',title:'Soirée Valkissimo — soirée italienne',cat:'soiree',place:'vandervalk',time:'dès 19:00',price:'65 € / pers.',desc:'Buffet et boissons à volonté, concert live du groupe Ciao Italia (variété italienne), puis soirée dansante avec DJ.',src:'https://www.facebook.com/events/4629979693950860/'});
+V({date:'2026-11-27',title:'Soirée spéciale Noël puis spéciale Brassens',cat:'culture',place:'fucam',time:'18:30',price:'à confirmer',desc:'Soirée musicale aux Ateliers des FUCaM (événement Facebook).',src:'https://www.facebook.com/events/search/?q=soir%C3%A9e%20Mons'});
+V({date:'2027-02-14',title:'ENTO-MONS 2027',cat:'marche',place:'micx',time:'09:30',price:'à confirmer',desc:'Bourse aux insectes (événement Facebook).',src:'https://www.facebook.com/events/search/?q=Mons'});
+// Soirées récurrentes annoncées sur Facebook par les bars eux-mêmes
+weekly(1,1,0,d=>{ if(d<=parse('2027-01-25')) V({date:key(d),title:'NGOMA — tous les lundis',cat:'soiree',place:'theplay',time:'22:00',price:'à confirmer',desc:'Soirée hebdomadaire du lundi au The Play.',src:'https://www.facebook.com/theplaymons/events'}); });
+weekly(2,1,0,d=>{ if(d<=parse('2027-01-26')) V({date:key(d),title:'LA VILLA — la soirée célibataires',cat:'soiree',place:'theplay',time:'21:00',price:'à confirmer',desc:'Soirée célibataires du mardi au The Play.',src:'https://www.facebook.com/theplaymons/events'}); });
+weekly(4,1,0,d=>V({date:key(d),title:'Les Afters Soho — tous les jeudis',cat:'soiree',place:'soho',time:'22:00',price:'à confirmer',desc:'Soirée hebdomadaire du jeudi annoncée par le Soho (« tous les jeudis »). Vérifie la page Facebook pour une date précise.',src:'https://www.facebook.com/profile.php?id=61555905931146&sk=events'}));
+// Trouvés sur les pages Facebook des lieux (16/11/2026)
+V({"date": "2026-11-18", "title": "Blind Test", "cat": "soiree", "place": "monkeys", "time": "20:00", "price": "voir la page de l’événement", "desc": "Blind test au Monkey’s Café.", "src": "https://www.facebook.com/monkeyscafemons/events"});
+V({"date": "2026-11-21", "title": "Karaoké Party", "cat": "soiree", "place": "monkeys", "time": "20:00", "price": "Gratuit", "free": true, "desc": "Soirée karaoké, entrée gratuite.", "src": "https://www.facebook.com/events/1771910494109520/"});
+V({"date": "2026-11-25", "title": "Ce soir, c’est Nanar ! — Street Fighter", "cat": "soiree", "place": "monkeys", "time": "20:00", "price": "voir la page de l’événement", "desc": "Soirée nanar : projection de Street Fighter.", "src": "https://www.facebook.com/monkeyscafemons/events"});
+V({"date": "2026-11-27", "title": "Just Dance Party", "cat": "soiree", "place": "monkeys", "time": "20:00", "price": "voir la page de l’événement", "desc": "Soirée Just Dance.", "src": "https://www.facebook.com/monkeyscafemons/events"});
+V({"date": "2026-11-28", "title": "Tournoi de Ginza", "cat": "soiree", "place": "monkeys", "time": "20:00", "price": "voir la page de l’événement", "desc": "Tournoi de jeu de société.", "src": "https://www.facebook.com/monkeyscafemons/events"});
+V({"date": "2026-11-20", "title": "« Le point zéro » @ Séryam — vernissage", "cat": "culture", "place": "ccdour", "time": "19:00", "price": "voir la page de l’événement", "desc": "Vernissage d’exposition.", "src": "https://www.facebook.com/centrecultureldour/events"});
+V({"date": "2026-11-21", "title": "Weekend musical de Blue Swing", "cat": "culture", "place": "ccdour", "time": "19:00", "price": "voir la page de l’événement", "desc": "Concert (organisé par Blue Swing - Dour).", "src": "https://www.facebook.com/centrecultureldour/events"});
+V({"date": "2026-11-27", "title": "Hyper — Harmonie Rouffiange", "cat": "culture", "place": "ccdour", "time": "20:00", "price": "voir la page de l’événement", "desc": "Concert.", "src": "https://www.facebook.com/centrecultureldour/events"});
+V({"date": "2026-12-06", "title": "Les Matins Famille", "cat": "culture", "place": "ccdour", "time": "09:30", "price": "voir la page de l’événement", "desc": "Activité en famille.", "src": "https://www.facebook.com/centrecultureldour/events"});
+V({"date": "2026-12-13", "title": "La mémoire de Papy — spectacle familial", "cat": "culture", "place": "ccdour", "time": "12:00", "price": "voir la page de l’événement", "desc": "Spectacle familial.", "src": "https://www.facebook.com/centrecultureldour/events"});
+V({"date": "2027-01-23", "title": "Pour bien faire (hommage à Brel & Nougaro)", "cat": "culture", "place": "ccdour", "time": "20:00", "price": "voir la page de l’événement", "desc": "Concert-hommage.", "src": "https://www.facebook.com/centrecultureldour/events"});
+V({"date": "2027-02-05", "title": "Colibri — Dave Hellebrandt (Doux Rire Festival)", "cat": "standup", "place": "ccdour", "time": "20:00", "price": "voir la page de l’événement", "desc": "Humour, dans le cadre du Doux Rire Festival.", "src": "https://www.facebook.com/centrecultureldour/events"});
+V({"date": "2027-02-06", "title": "Doux Rire Festival 2027 — Plateau", "cat": "standup", "place": "ccdour", "time": "20:00", "price": "voir la page de l’événement", "desc": "Plateau d’humoristes.", "src": "https://www.facebook.com/centrecultureldour/events"});
+V({"date": "2026-11-22", "title": "Philippe Raposo Trio", "cat": "culture", "place": "cccolfontaine", "time": "17:00", "price": "voir la page de l’événement", "desc": "Concert à la salle culturelle.", "src": "https://www.facebook.com/cccolfontaine/events"});
+V({"date": "2026-11-28", "title": "Casse-noisette — International Natraaj Youth Ballet", "cat": "culture", "place": "cccolfontaine", "time": "18:30", "price": "voir la page de l’événement", "desc": "Spectacle de ballet.", "src": "https://www.facebook.com/cccolfontaine/events"});
+V({"date": "2026-11-19", "title": "Palestiniens et Israéliens : dire l’histoire", "cat": "culture", "place": "ccboussu", "time": "19:30", "price": "voir la page de l’événement", "desc": "Conférence-débat (Festival de Résistance Mons-Borinage).", "src": "https://www.facebook.com/profile.php?id=100063610568552&sk=events"});
+V({"date": "2026-11-22", "title": "From Gaza — Festival de Résistance", "cat": "culture", "place": "theatredesrues", "time": "16:00", "price": "voir la page de l’événement", "desc": "Spectacle (Festival de Résistance Mons-Borinage).", "src": "https://www.facebook.com/profile.php?id=100063610568552&sk=events"});
+V({"date": "2026-11-24", "title": "Espagne, une politique à contre-courant ?", "cat": "culture", "place": "ccboussu", "time": "19:30", "price": "voir la page de l’événement", "desc": "Conférence (Festival de Résistance Mons-Borinage).", "src": "https://www.facebook.com/profile.php?id=100063610568552&sk=events"});
+V({"date": "2026-11-26", "title": "Pauvres fous ! — spectacle", "cat": "culture", "place": "ccboussu", "time": "19:30", "price": "voir la page de l’événement", "desc": "Spectacle (Festival de Résistance Mons-Borinage).", "src": "https://www.facebook.com/profile.php?id=100063610568552&sk=events"});
+V({"date": "2026-11-27", "title": "Éditer, c’est résister ! — 40 ans des éditions du Cerisier", "cat": "culture", "place": "ccboussu", "time": "19:30", "price": "voir la page de l’événement", "desc": "Soirée (Festival de Résistance Mons-Borinage).", "src": "https://www.facebook.com/profile.php?id=100063610568552&sk=events"});
+V({"date": "2026-11-28", "title": "Palestine, voix de résistance", "cat": "culture", "place": "ccboussu", "time": "19:30", "price": "voir la page de l’événement", "desc": "Soirée (Festival de Résistance Mons-Borinage).", "src": "https://www.facebook.com/profile.php?id=100063610568552&sk=events"});
+V({"date": "2026-11-17", "title": "Les Midis d’ARTS² #3 — Art nouveau, Jugendstil & musique", "cat": "culture", "place": "arsonic", "time": "12:15", "price": "voir la page de l’événement", "desc": "Concert du midi.", "src": "https://www.facebook.com/surmars7000/events"});
+V({"date": "2026-11-17", "title": "Rendez-vous soins et sons avec Marie Franquet", "cat": "culture", "place": "arsonic", "time": "18:00", "price": "voir la page de l’événement", "desc": "Rendez-vous musical.", "src": "https://www.facebook.com/surmars7000/events"});
+V({"date": "2026-11-17", "title": "Œdipus — Héloïse Ravet / Saintes Patronnes", "cat": "culture", "place": "manege", "time": "20:00", "price": "voir la page de l’événement", "desc": "Théâtre.", "src": "https://www.facebook.com/surmars7000/events"});
+V({"date": "2026-11-17", "title": "Catch littéraire", "cat": "culture", "place": "abeldubois", "time": "20:00", "price": "Gratuit", "desc": "Joute littéraire, entrée gratuite.", "src": "https://www.facebook.com/surmars7000/events", "free": true});
+V({"date": "2026-11-19", "title": "Aleph Quintet", "cat": "culture", "place": "arsonic", "time": "20:00", "price": "voir la page de l’événement", "desc": "Concert de jazz.", "src": "https://www.facebook.com/surmars7000/events"});
+V({"date": "2026-11-22", "title": "15e Mini Mondial de l’Impro — grande finale", "cat": "standup", "place": "manege", "time": "15:00–18:00", "price": "18 € · étudiants 14 € · -12 ans 10 €", "desc": "Festival international d’improvisation théâtrale (Belgique, France, Suisse, Québec). 15h : spectacle des 3e et 4e. 16h : grande finale.", "src": "https://www.facebook.com/events/4389774394666825/", "book": "https://www.billetweb.fr/15e-mini-mondial-de-limpro-grande-finale"});
+V({"date": "2027-01-28", "title": "Scène slam", "cat": "culture", "place": "maisonfolie", "time": "20:00", "price": "voir la page de l’événement", "desc": "Scène slam (deux dates, la 2e à confirmer).", "src": "https://www.facebook.com/surmars7000/events"});
+V({"date": "2026-11-19", "title": "Slam en borain", "cat": "culture", "place": "ccquaregnon", "time": "18:00", "price": "voir la page de l’événement", "desc": "Slam en langue boraine.", "src": "https://www.facebook.com/maisonculturelle/events"});
+V({"date": "2026-11-27", "title": "Toine Thys & Motoï Kanamori", "cat": "culture", "place": "ccquaregnon", "time": "20:00", "price": "voir la page de l’événement", "desc": "Concert jazz.", "src": "https://www.facebook.com/maisonculturelle/events"});
+V({"date": "2026-12-04", "title": "West Music Club", "cat": "culture", "place": "ccquaregnon", "time": "20:00", "price": "voir la page de l’événement", "desc": "Concert.", "src": "https://www.facebook.com/maisonculturelle/events"});
+V({"date": "2026-12-09", "title": "Au pied des montagnes — goûter littéraire", "cat": "culture", "place": "ccquaregnon", "time": "14:00", "price": "voir la page de l’événement", "desc": "Goûter littéraire.", "src": "https://www.facebook.com/maisonculturelle/events"});
+V({"date": "2026-12-11", "title": "Borinage Comedy Club", "cat": "standup", "place": "ccquaregnon", "time": "20:00", "price": "voir la page de l’événement", "desc": "Soirée humour.", "src": "https://www.facebook.com/maisonculturelle/events"});
+V({"date": "2026-12-16", "title": "Le jour le plus court — cinéma en famille", "cat": "culture", "place": "ccquaregnon", "time": "15:00", "price": "voir la page de l’événement", "desc": "Cinéma en famille.", "src": "https://www.facebook.com/maisonculturelle/events"});
+V({date:'2026-11-19',title:'Blind Test au Citizen Fox 🎶',cat:'soiree',place:'citizenfox',time:'20:00',price:'à confirmer · bière offerte pour un repas acheté',desc:'Blind test par équipes, à l’étage. Prix pour les 3 meilleures équipes. Réservation par e-mail : CitizenFoxMons@gmail.com.',src:'https://www.instagram.com/p/Dfz1MNIIr0N/'});
+V({date:'2026-11-20',title:'Maman va danser 🪩 — Wild & Glamour (5e édition)',cat:'soiree',place:'citizenfox',time:'18:30–00:30',price:'à confirmer',desc:'Soirée dansante entre mamans et copines, thème léopard, paillettes et boules à facettes. Organisée par Les copines Montoises ASBL.',src:'https://www.facebook.com/events/1490135003254281/'});
+V({date:'2026-11-21',title:'Maman va danser 🪩 — 2e soirée + Girls Meeting',cat:'soiree',place:'citizenfox',time:'Girls Meeting 17:00–18:00, puis soirée',price:'à confirmer · Girls Meeting +3 €',desc:'Deuxième soirée de la 5e édition. Nouveauté : un « Girls Meeting » de 17h à 18h (verre de bienvenue, surprise, rencontres en petit groupe), en option.',src:'https://www.facebook.com/events/1490135003254281/'});
+// What The Fun au Central — comedy club un samedi sur deux (2 séances)
+(function(){ for(let d=parse('2026-11-21'); d<endRange; d=add(d,14)){ if(d<today) continue;
+  ['18:30','21:00'].forEach(t=>V({date:key(d),title:'What The Fun — Central Comedy Club',cat:'standup',place:'central',time:t+(t==='18:30'?'–20:00':''),price:'16 €',desc:'Le comedy club du Central : 4 humoristes de la nouvelle vague du stand-up belge par soirée. Deux séances : 18h30 et 21h. Un samedi sur deux.',src:'https://www.facebook.com/events/1072085588524089/',book:'https://www.billetweb.fr/central-comedy-club'}));
+}})();
+// Scouts, étudiants, Noël (vérifiés sur Facebook le 16/11)
+V({date:'2026-11-21',title:'Soirée Beaujolais des scouts Saint-Charles',cat:'soiree',place:'saintcharles',time:'18:00',price:'à confirmer',desc:'Le retour de la soirée beaujolais des pionniers de l’unité scoute Saint-Charles, au cœur de Mons. Soirée scouts.',src:'https://www.facebook.com/events/1166762129243526/'});
+V({date:'2026-11-20',title:'L’étrange Before des Jack’s — GET Mons',cat:'soiree',place:'getapinte',time:'21:00',price:'à confirmer',desc:'Before du marché de Noël des Jack’s, ambiance 100 % pop rock. Organisé par le GET et A l’ancienne.',src:'https://www.facebook.com/events/1867193607606619/'});
+V({date:'2026-11-26',title:'TD St-Nic de la Coupe du Mons',cat:'soiree',place:'lottoexpo',time:'20:30',price:'à confirmer',desc:'Le traditionnel TD (soirée étudiante) de Saint-Nicolas organisé par la Coupe du Mons, le tournoi de foot estudiantin montois. Soirée étudiante.',src:'https://www.facebook.com/events/1639537000886022/'});
+V({date:'2026-12-12',title:'Marché de Noël des scouts Saint-Charles',cat:'braderie',place:'saintcharles',time:'18:00',price:'Entrée libre',free:true,desc:'3e édition du marché de Noël de l’unité scoute Saint-Charles. Marché de Noël, scouts.',src:'https://www.facebook.com/events/1649337296637248/'});
+V({date:'2026-12-12',title:'Marché de Noël des jeunes créateurs (4e édition)',cat:'braderie',place:'ajbeffroi',time:'14:00–20:00',price:'Entrée libre',free:true,desc:'Marché de Noël spécial jeunes créateurs à l’Auberge de Jeunesse du Beffroi.',src:'https://www.facebook.com/events/3535807600141197/'});
+V({date:'2026-12-12',title:'Noël au Beffroi',cat:'famille',place:'beffroi',time:'dès 14:00',price:'à confirmer',desc:'Le Père Noël donne rendez-vous au Beffroi. Une tradition montoise, organisée par la Ville de Mons.',src:'https://www.facebook.com/events/1096305956738613/'});
+V({date:'2026-12-13',title:'Jingle Run — Corrida Mons Cœur en Neige',cat:'sport',place:'grandplace',time:'11:00',price:'à confirmer',desc:'Course festive de Noël au départ de la Grand-Place.',src:'https://www.facebook.com/events/2192935808312735/'});
+
+// Mons en Lumières
+V({date:'2027-01-27',end:'2027-01-31',title:'Mons en Lumières — « Créateurs de temps »',cat:'culture',place:'placeleopold',time:'mer.–jeu. 18h–23h · ven.–dim. 18h–minuit',price:'Gratuit',free:true,desc:"4e édition du festival de lumière, départ place Léopold.",src:'https://www.info-lux.com/mons-festival-de-lumiere-mons-en-lumieres-2027-createurs-de-temps/pays/belgique/wallonie/hainaut/mons/'});
+
+// supprime ce qui sort de la fenêtre des 3 mois
+// Reclassement selon les catégories de la charte
+const RECAT=[
+ [/Cœur en Neige — Marché|Marché de Noël/i,'braderie'],
+ [/Foire d.automne|Mons en Lumières/i,'festival'],
+ [/Saint-Nicolas|Playmobil|Matins Famille|mémoire de Papy|jour le plus court/i,'famille'],
+ [/ENTO-MONS/i,'braderie'],
+ [/Chagall|vernissage|point zéro|Palestiniens|Espagne, une politique|Éditer, c.est|voix de résistance|goûter littéraire|Au pied des montagnes/i,'expo'],
+ [/LION|Viktorovitch|Félix Radu|Noble Pagaille|Casse-noisette|From Gaza|Pauvres fous|Œdipus|Catch littéraire|slam/i,'theatre'],
+ [/Marche canine/i,'sport'],
+];
+EVENTS.forEach(e=>{
+  for(const [re,c] of RECAT){ if(re.test(e.title)){ e.cat=c; break; } }
+  if(e.cat==='culture') e.cat='concert';
+  if(e.cat==='marche') e.cat='festival';
+  if(!CATS[e.cat]) e.cat='soiree';
+});
+const EVENT_LINKS=[["Blind Test", "https://www.facebook.com/events/1196582866054799/"], ["Karaoké Party", "https://www.facebook.com/events/1771910494109520/"], ["Nanar", "https://www.facebook.com/events/999138423236966/"], ["Just Dance", "https://www.facebook.com/events/1141038948404980/"], ["Ginza", "https://www.facebook.com/events/1129652419550294/"], ["point zéro", "https://www.facebook.com/events/1356745506432094/"], ["Blue Swing", "https://www.facebook.com/events/1671176158043696/"], ["Harmonie Rouffiange", "https://www.facebook.com/events/1386526993536616/"], ["Matins Famille", "https://www.facebook.com/events/1068950752584795/"], ["mémoire de Papy", "https://www.facebook.com/events/28401101759517777/"], ["Pour bien faire", "https://www.facebook.com/events/1679818300425179/"], ["Colibri", "https://www.facebook.com/events/28918750094482019/"], ["Doux Rire Festival 2027", "https://www.facebook.com/events/1436350142005391/"], ["Raposo", "https://www.facebook.com/events/1089943693999908/"], ["Casse-noisette", "https://www.facebook.com/events/1667376584919640/"], ["Palestiniens et Israéliens", "https://www.facebook.com/events/1437405715012957/"], ["From Gaza", "https://www.facebook.com/events/1561576362404693/"], ["Espagne, une politique", "https://www.facebook.com/events/1419884752958297/"], ["Pauvres fous", "https://www.facebook.com/events/1896192508455186/"], ["Éditer, c’est résister", "https://www.facebook.com/events/1466670215337756/"], ["Palestine, voix", "https://www.facebook.com/events/1754048678986846/"], ["Scène slam", "https://www.facebook.com/events/1853905679326358/"], ["Midis d’ARTS", "https://www.facebook.com/events/2146877199590877/"], ["soins et sons", "https://www.facebook.com/events/1104066775319263/"], ["Œdipus", "https://www.facebook.com/events/1634663794858107/"], ["Catch littéraire", "https://www.facebook.com/events/2224138181850448/"], ["Aleph Quintet", "https://www.facebook.com/events/1098463133111469/"], ["Mini Mondial", "https://www.facebook.com/events/4389774394666825/"], ["En miroir des temps", "https://www.facebook.com/events/1412276134094478/"], ["Cœur de Pirate", "https://www.facebook.com/events/1203640164975152/"], ["Slam en borain", "https://www.facebook.com/events/1056575320617318/"], ["Toine Thys", "https://www.facebook.com/events/27693399750360516/"], ["West Music Club", "https://www.facebook.com/events/38227567850192271/"], ["Au pied des montagnes", "https://www.facebook.com/events/1450866206881355/"], ["Borinage Comedy Club", "https://www.facebook.com/events/1730404294907348/"], ["jour le plus court", "https://www.facebook.com/events/1406538204708376/"], ["NGOMA", "https://www.facebook.com/events/974314918846137/"], ["LA VILLA", "https://www.facebook.com/events/29475386508724226/"], ["ENTO-MONS", "https://www.facebook.com/events/28600702569612834/"]];
+EVENTS.forEach(e=>{ if(/facebook\.com\/events\/\d|instagram\.com\/p\//.test(e.src||'')){ e.page=e.src; return; } for(const [t,u] of EVENT_LINKS){ if(e.title.toLowerCase().includes(t.toLowerCase())){ if(e.src!==u){ e.page=u; } break; } } if(!e.page && /facebook\.com\/events\/\d/.test(e.src||'')) e.page=e.src; });
+EVENTS = EVENTS.filter(e=>{const s=parse(e.date), en=e.end?parse(e.end):s; return en>=today && s<endRange});
+EVENTS.forEach(e=>{ const p=P[e.place]; e.commune=p.commune; e.venue=e.venue||p.name; });
+
+/* propositions locales */
+function store(k,v){ try{ if(v===undefined) return JSON.parse(localStorage.getItem(k)||'null'); localStorage.setItem(k,JSON.stringify(v)); }catch(_){ return null } }
+
+
+/* ---------- état ---------- */
+const S = {
+  view:'accueil', when:'week', homeCat:null, commune:null,
+  sCats:new Set(), sCity:null, free:false, q:'', act:null,
+  calMonth:new Date(today.getFullYear(),today.getMonth(),1), calSel:key(today),
+  mapMode:'events', mapCats:new Set(),
+  favs:new Set(store('ofq_favs')||[]),
+};
+const $ = s=>document.querySelector(s);
+const esc = s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function occursOn(e,d){ const s=parse(e.date), en=e.end?parse(e.end):s; return d>=s && d<=en; }
+function eventsOn(d){ return EVENTS.filter(e=>occursOn(e,d) && (!S.commune||e.commune===S.commune) && (!S.free||e.free)).sort((a,b)=>a.time.localeCompare(b.time)); }
+function eventsBetween(a,b){ // occurrences (event, date) sur la période
+  const out=[]; for(let d=new Date(a); d<=b; d=add(d,1)){ eventsOn(d).forEach(e=>{ if(!out.some(o=>o.e===e)) out.push({e,d:new Date(d)}) }); } return out;
+}
+function windowFor(w){
+  if(w==='today') return [today,today];
+  // semaines complètes, du lundi au dimanche
+  const dow=(today.getDay()+6)%7; // 0 = lundi
+  const monday=add(today,-dow), sunday=add(monday,6);
+  if(w==='next') return [add(monday,7),add(sunday,7)];
+  return [today,sunday]; // cette semaine : d'aujourd'hui à dimanche
+}
+
+/* ---------- rendus communs ---------- */
+const ICON = {
+  heart:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/></svg>',
+  pin:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>',
+  cal:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>',
+  clock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>',
+  euro:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M17 6.5A6.5 6.5 0 1 0 17 17.5M4.5 10.5h9M4.5 13.5h9"/></svg>',
+  go:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
+};
+const vc=(v,c)=> (!v||v===c) ? esc(c) : esc(v)+' · '+esc(c);
+function evRow(e,d){
+  d = d || parse(e.date); const c=CATS[e.cat];
+  const multi = e.end ? `jusqu'au ${parse(e.end).getDate()} ${['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'][parse(e.end).getMonth()]}` : e.time;
+  return `<div class="ev" data-ev="${e.id}" role="button" tabindex="0" style="--c:${c.color}">
+    <div class="d"><b>${d.getDate()}</b><span>${JOURS[d.getDay()]}</span></div>
+    <div><div class="t">${esc(e.title)}</div>
+      <div class="m"><span class="tag" style="--c:${c.color}">${c.label}</span><span>${vc(e.venue,e.commune)}</span><span>${esc(multi)}</span>${e.free?'<span class="badge free">Gratuit</span>':''}</div>
+    </div>
+    <button class="fav ${S.favs.has(e.id)?'on':''}" data-fav="${e.id}" aria-label="Ajouter aux favoris">${ICON.heart}</button>
+  </div>`;
+}
+function plRow(p){
+  return `<div class="pl" data-pl="${p.id}" role="button" tabindex="0">
+    <div><div class="t">${esc(p.name)}</div><div class="a">${esc(p.kind)} · ${esc(p.loc)}${p.todo?' · <em>adresse à compléter</em>':''}</div>
+    ${p.acts.length?`<div class="acts">${p.acts.map(a=>`<i>${esc(a)}</i>`).join('')}</div>`:''}</div>
+    <button class="fav ${S.favs.has(p.id)?'on':''}" data-fav="${p.id}" aria-label="Ajouter aux favoris">${ICON.heart}</button></div>`;
+}
+function catChips(el, selected, multi, onTap, extra){
+  const list = Object.entries(CATS).map(([k,c])=>`<button class="chip ${(multi?selected.has(k):selected===k)?'on':''}" data-k="${k}" style="--c:${c.color}"><span class="dot"></span>${c.label}</button>`);
+  const nFree=EVENTS.filter(e=>e.free&&(!S.commune||e.commune===S.commune)).length;
+  list.unshift(`<button class="chip free ${S.free?'on':''}" data-free style="--c:var(--ink)"><span class="dot"></span>Gratuit <small style="opacity:.7">${nFree}</small></button>`);
+  if(extra) list.push(extra);
+  el.innerHTML = list.join('');
+  el.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>onTap(b.dataset.k));
+  el.querySelector('[data-free]').onclick=()=>{ S.free=!S.free; toast(S.free?'Seulement les sorties gratuites':'Toutes les sorties'); renderAll(); if(mapBuilt) renderMapUI(); };
+}
+
+/* ---------- ACCUEIL ---------- */
+function renderHome(){
+  const [a,b]=windowFor(S.when);
+  const occ = eventsBetween(a,b);
+  const sub = S.when==='today' ? `${JOURSL[a.getDay()]} ${a.getDate()} ${MOIS[a.getMonth()]}` : `du ${a.getDate()} au ${b.getDate()} ${MOIS[b.getMonth()]}`;
+  $('#t5sub').textContent = sub;
+  // top 5 : sélection de la semaine (celle du carrousel Instagram) si elle existe
+  const picked=[], seen=new Set();
+  const wk=TOP5_WEEKS[key(weekStart(a))];
+  if(wk && S.when==='week'){ wk.forEach(([d,re])=>{ const o=occ.find(o=>key(o.d)===d && re.test(o.e.title)); if(o) picked.push(o); }); }
+  else {
+  const occT=occ.filter(o=>!/scout/i.test(o.e.title+' '+(o.e.desc||'')));
+  [...occT].sort((x,y)=>(y.e.verified-x.e.verified)||(x.d-y.d)).forEach(o=>{ if(picked.length<5 && !seen.has(o.e.cat)){picked.push(o);seen.add(o.e.cat)} });
+  occT.forEach(o=>{ if(picked.length<5 && !picked.includes(o)) picked.push(o) });
+  }
+  $('#top5').innerHTML = picked.length ? picked.map((o,i)=>`<button class="t5" data-ev="${o.e.id}" style="--c:${CATS[o.e.cat].color}">
+      <span class="k">${CATS[o.e.cat].label} · ${JOURS[o.d.getDay()]} ${o.d.getDate()}</span>
+      <span class="tt">${esc(o.e.title)}</span>
+      <span class="w">${vc(o.e.venue,o.e.commune)}<br>${esc(o.e.price)}</span>
+      <span class="n">${i+1}</span></button>`).join('') : `<div class="empty" style="width:100%"><b>Rien pour l'instant</b>Essaie une autre période.</div>`;
+  catChips($('#homeCats'), S.homeCat, false, k=>{S.homeCat = S.homeCat===k?null:k; renderHome();});
+  const rows = occ.filter(o=>!S.homeCat||o.e.cat===S.homeCat);
+  $('#homeList').innerHTML = rows.length ? rows.map(o=>evRow(o.e,o.d)).join('') : `<div class="empty"><b>Calme plat</b>Aucun événement de ce thème sur la période.</div>`;
+}
+$('#when').onclick = e=>{ const b=e.target.closest('button'); if(!b) return; S.when=b.dataset.w; $('#when').querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b)); renderHome(); };
+
+/* ---------- AGENDA ---------- */
+function renderCal(){
+  const m=S.calMonth, first=new Date(m), last=new Date(m.getFullYear(),m.getMonth()+1,0);
+  $('#calTitle').textContent = MOIS[m.getMonth()]+(m.getFullYear()!==today.getFullYear()?' '+m.getFullYear():'');
+  const minM=new Date(today.getFullYear(),today.getMonth(),1), maxM=new Date(endRange.getFullYear(),endRange.getMonth(),1);
+  $('#calPrev').disabled = m<=minM; $('#calNext').disabled = m>=maxM;
+  let h = ['lun','mar','mer','jeu','ven','sam','dim'].map(x=>`<div class="h">${x}</div>`).join('');
+  const lead=(first.getDay()+6)%7; for(let i=0;i<lead;i++) h+='<div class="day out"></div>';
+  for(let d=new Date(first); d<=last; d=add(d,1)){
+    const k=key(d), evs=eventsOn(d).filter(e=>!S.calCat||e.cat===S.calCat), past=d<today||d>=endRange;
+    const cats=[...new Set(evs.map(e=>e.cat))];
+    h+=`<button class="day ${past?'past':''} ${k===key(today)?'today':''} ${k===S.calSel?'sel':''}" data-day="${k}">${d.getDate()}<span class="dots">${cats.slice(0,6).map(c=>`<i style="--c:${CATS[c].color}"></i>`).join('')}</span></button>`;
+  }
+  $('#calGrid').innerHTML=h;
+  $('#calGrid').querySelectorAll('[data-day]').forEach(b=>b.onclick=()=>{S.calSel=b.dataset.day; renderCal();});
+  catChips($('#calCats'), S.calCat, false, k=>{S.calCat=S.calCat===k?null:k; renderCal();});
+  $('#calLegend').innerHTML = Object.values(CATS).map(c=>`<span style="--c:${c.color}">${c.label}</span>`).join('');
+  const sd=parse(S.calSel), evs=eventsOn(sd).filter(e=>!S.calCat||e.cat===S.calCat);
+  $('#calDayTitle').innerHTML = `${JOURSL[sd.getDay()]} ${sd.getDate()} ${MOIS[sd.getMonth()]} <small>${evs.length} sortie${evs.length>1?'s':''}</small>`;
+  $('#calList').innerHTML = evs.length? evs.map(e=>evRow(e,sd)).join('') : `<div class="empty"><b>Journée libre</b>Rien de prévu ce jour-là (pour l'instant).</div>`;
+}
+$('#calPrev').onclick=()=>{S.calMonth=new Date(S.calMonth.getFullYear(),S.calMonth.getMonth()-1,1); renderCal();};
+$('#calNext').onclick=()=>{S.calMonth=new Date(S.calMonth.getFullYear(),S.calMonth.getMonth()+1,1); renderCal();};
+
+/* ---------- RECHERCHE ---------- */
+const norm = s=>String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+function renderSearch(){
+  catChips($('#searchCats'), S.sCats, true, k=>{ S.sCats.has(k)?S.sCats.delete(k):S.sCats.add(k); renderSearch(); });
+  $('#searchCities').innerHTML = COMMUNES.map(c=>`<button class="chip plain ${S.sCity===c?'on':''}" data-c="${c}">${c}</button>`).join('');
+  $('#searchCities').querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{S.sCity=S.sCity===b.dataset.c?null:b.dataset.c; renderSearch();});
+  // tuiles activités
+  const counts={}; PLACES.forEach(p=>p.acts.forEach(a=>counts[a]=(counts[a]||0)+1));
+  const acts=[...new Set([...WANTED,...Object.keys(counts)])].filter(a=>!['Coworking','Expos','Brasserie','Famille','Sciences','Spectacles','Football','Stand-up','Tennis','Accrobranche','Pickleball'].includes(a));
+  acts.sort((a,b)=>(counts[b]||0)-(counts[a]||0));
+  $('#tiles').innerHTML = acts.map(a=>`<button class="tile ${S.act===a?'on':''} ${counts[a]?'':'zero'}" data-a="${esc(a)}"><b>${esc(a)}</b><span>${counts[a]?counts[a]+' lieu'+(counts[a]>1?'x':''):'à découvrir'}</span></button>`).join('');
+  $('#tiles').querySelectorAll('[data-a]').forEach(b=>b.onclick=()=>{S.act=S.act===b.dataset.a?null:b.dataset.a; renderSearch(); if(S.act) setTimeout(()=>{const v=$('#v-recherche'); v.scrollTo({top:$('#results').offsetTop-10,behavior:'smooth'});},50);});
+  // résultats
+  const q=norm(S.q.trim()), filtering = q||S.sCats.size||S.sCity||S.free||S.act;
+  let out='';
+  if(S.act){
+    const pl=PLACES.filter(p=>p.acts.includes(S.act)&&(!S.sCity||p.commune===S.sCity));
+    out+=`<h2 class="sec">${esc(S.act)} <small>${pl.length} lieu${pl.length>1?'x':''}</small></h2>`;
+    out+= pl.length? `<div class="list">${pl.map(plRow).join('')}</div>` : `<div class="empty"><b>On cherche encore</b>Aucun lieu « ${esc(S.act)} » répertorié${S.sCity?' à '+esc(S.sCity):''}. Tu en connais un&nbsp;?<br><button class="btn pri" data-propose="place">Proposer un lieu</button></div>`;
+  }
+  if(filtering && !S.act || (S.act && (q||S.sCats.size))){
+    const evs=EVENTS.filter(e=>{
+      if(S.sCats.size&&!S.sCats.has(e.cat)) return false;
+      if(S.sCity&&e.commune!==S.sCity) return false;
+      if(S.free&&!e.free) return false;
+      if(q&&!norm([e.title,e.venue,e.commune,e.desc,CATS[e.cat].label,e.price,e.free?'gratuit free':''].join(' ')).includes(q)) return false;
+      return true;
+    }).sort((a,b)=>Math.max(parse(a.date),today)-Math.max(parse(b.date),today));
+    out+=`<h2 class="sec">Événements <small>${evs.length} résultat${evs.length>1?'s':''}</small></h2>`;
+    out+= evs.length? `<div class="list">${evs.slice(0,60).map(e=>evRow(e, parse(e.date)<today?today:parse(e.date))).join('')}</div>` : `<div class="empty"><b>Aucun résultat</b>Essaie un autre mot ou retire un filtre.</div>`;
+    if(q && !S.act){
+      const pl=PLACES.filter(p=>(!S.sCity||p.commune===S.sCity) && norm([p.name,p.kind,p.loc,p.commune,...p.acts].join(' ')).includes(q));
+      if(pl.length) out+=`<h2 class="sec">Lieux <small>${pl.length}</small></h2><div class="list">${pl.map(plRow).join('')}</div>`;
+    }
+  }
+  $('#results').innerHTML=out;
+}
+$('#q').oninput=e=>{S.q=e.target.value; renderSearch();};
+
+/* ---------- FAVORIS ---------- */
+function renderFavs(){
+  const evs=EVENTS.filter(e=>S.favs.has(e.id)), pl=PLACES.filter(p=>S.favs.has(p.id));
+  let h='';
+  if(!evs.length&&!pl.length) h=`<div class="empty" style="margin-top:20px"><b>Rien de gardé</b>Touche le cœur sur un événement ou un lieu pour le retrouver ici.</div>`;
+  if(evs.length) h+=`<h2 class="sec">Événements</h2><div class="list">${evs.map(e=>evRow(e)).join('')}</div>`;
+  if(pl.length) h+=`<h2 class="sec">Lieux</h2><div class="list">${pl.map(plRow).join('')}</div>`;
+  $('#favs').innerHTML=h;
+}
+
+/* ---------- CARTE (plan schématique SVG) ---------- */
+const BOUNDS={w:3.74,e:4.00,s:50.375,n:50.49}, MW=1000, MH=Math.round(MW*((BOUNDS.n-BOUNDS.s)*111)/((BOUNDS.e-BOUNDS.w)*111*Math.cos(50.44*Math.PI/180)));
+const proj=(lat,lng)=>[(lng-BOUNDS.w)/(BOUNDS.e-BOUNDS.w)*MW, (BOUNDS.n-lat)/(BOUNDS.n-BOUNDS.s)*MH];
+const M={s:1,tx:0,ty:0};
+function line(pts){ return 'M'+pts.map(([la,ln])=>proj(la,ln).map(v=>v.toFixed(1)).join(',')).join(' L'); }
+function buildMap(){
+  const towns=[['Mons',50.4542,3.9516,46],['Saint-Ghislain',50.4475,3.8185,26],['Boussu',50.434,3.796,24],['Hornu',50.4345,3.835,16],['Quaregnon',50.4405,3.865,24],['Jemappes',50.4515,3.887,22],['Frameries',50.4065,3.8955,26],['Colfontaine',50.4065,3.856,24],['Dour',50.3955,3.778,24],['Cuesmes',50.4365,3.924,18],['Ghlin',50.4745,3.908,18],['Nimy',50.4725,3.954,18],['Baudour',50.4825,3.833,18]];
+  const terrils=[[50.413,3.873],[50.418,3.905],[50.403,3.840],[50.398,3.802],[50.428,3.858],[50.425,3.812],[50.440,3.885],[50.412,3.785],[50.420,3.928]];
+  const bg = getComputedStyle(document.documentElement);
+  let s=`<svg id="map" viewBox="0 0 ${MW} ${MH}" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg"><g id="mg">`;
+  s+=`<rect x="-2000" y="-2000" width="${MW+4000}" height="${MH+4000}" fill="transparent"/>`;
+  // zones urbaines
+  towns.forEach(([n,la,ln,r])=>{const [x,y]=proj(la,ln); s+=`<circle cx="${x}" cy="${y}" r="${r}" fill="currentColor" opacity=".07"/>`;});
+  // eau : Haine + canal
+  s+=`<path d="${line([[50.462,4.00],[50.459,3.97],[50.455,3.94],[50.452,3.91],[50.449,3.88],[50.446,3.85],[50.442,3.82],[50.438,3.79],[50.436,3.74]])}" fill="none" stroke="#8DB6D9" stroke-width="3" stroke-linecap="round" opacity=".8"/>`;
+  s+=`<path d="${line([[50.470,4.00],[50.468,3.97],[50.465,3.94],[50.4635,3.91],[50.4605,3.88],[50.4575,3.85],[50.455,3.82],[50.4525,3.79],[50.450,3.74]])}" fill="none" stroke="#8DB6D9" stroke-width="5" stroke-linecap="round" opacity=".55"/>`;
+  // autoroute E19/E42
+  s+=`<path d="${line([[50.476,4.00],[50.474,3.97],[50.471,3.94],[50.468,3.91],[50.466,3.88],[50.464,3.85],[50.462,3.82],[50.459,3.79],[50.455,3.74]])}" fill="none" stroke="#F0B23B" stroke-width="5" stroke-linecap="round" opacity=".75"/>`;
+  s+=`<text x="${proj(50.4795,3.985)[0]}" y="${proj(50.4795,3.985)[1]}" font-size="12" font-weight="800" fill="#B07A10" font-family="Manrope">E19 · E42</text>`;
+  // routes principales
+  [[[50.4542,3.9516],[50.4475,3.8185],[50.434,3.796],[50.3955,3.778]],[[50.4542,3.9516],[50.4365,3.924],[50.4065,3.8955]],[[50.4542,3.9516],[50.4745,3.908]],[[50.4542,3.9516],[50.40,3.99]],[[50.4405,3.865],[50.4065,3.856]]].forEach(r=>{ s+=`<path d="${line(r)}" fill="none" stroke="currentColor" stroke-width="1.6" opacity=".22" stroke-linecap="round"/>`; });
+  // boulevards de Mons (ring)
+  const [cx,cy]=proj(50.4542,3.9500); s+=`<ellipse cx="${cx}" cy="${cy}" rx="33" ry="29" fill="none" stroke="currentColor" stroke-width="2" opacity=".35"/>`;
+  // terrils
+  terrils.forEach(([la,ln])=>{const [x,y]=proj(la,ln); s+=`<path d="M${x-13},${y+7} L${x-3},${y-8} L${x+3},${y-8} L${x+13},${y+7} Z" fill="currentColor" opacity=".55"/>`;});
+  // noms
+  towns.forEach(([n,la,ln,r])=>{const [x,y]=proj(la,ln); const big=r>=24; s+=`<text x="${x}" y="${y+r+ (big?16:13)}" text-anchor="middle" font-family="Big Shoulders Display, sans-serif" font-weight="800" font-size="${big?18:13}" letter-spacing=".5" fill="currentColor" opacity="${big?.75:.5}" style="text-transform:uppercase">${n.toUpperCase()}</text>`;});
+  s+=`</g><g id="pins"></g></svg>`;
+  $('#mapwrap').innerHTML=s+`<div class="mapnote">Plan schématique · positions approximatives</div>`;
+  $('#mapwrap').style.color='var(--ink)';
+  wireMap();
+}
+function applyM(){
+  $('#mg').setAttribute('transform',`translate(${M.tx},${M.ty}) scale(${M.s})`);
+  renderPins();
+}
+function renderPins(){
+  const g=$('#pins'); if(!g) return;
+  let items=[];
+  if(S.mapMode==='events'){
+    const occ=eventsBetween(today,add(today,30));
+    const byPlace={};
+    occ.forEach(({e})=>{ if(S.mapCats.size&&!S.mapCats.has(e.cat)) return; (byPlace[e.place]=byPlace[e.place]||[]).push(e); });
+    items=Object.entries(byPlace).map(([pid,evs])=>({p:P[pid],evs,color:CATS[evs[0].cat].hex,n:evs.length}));
+  } else {
+    items=PLACES.filter(p=>p.acts.length).map(p=>({p,color:LOISIRS.hex,n:0}));
+  }
+  const svg=$('#map'), rc=svg.getBoundingClientRect(), vb=svg.viewBox.baseVal; const k=Math.min(rc.width/vb.width, rc.height/vb.height)||1; const r=11/k, fs=12/k;
+  g.innerHTML = items.map(it=>{ const [x,y]=proj(it.p.lat,it.p.lng); const X=x*M.s+M.tx, Y=y*M.s+M.ty;
+    return `<g class="pin" data-pin="${it.p.id}" transform="translate(${X.toFixed(1)},${Y.toFixed(1)})">
+      <circle r="${r*1.5}" fill="${it.color}" opacity=".18"/><circle class="ring" r="${r}" fill="${it.color}" stroke="#161513" stroke-width="${1.6/k}"/>
+      ${it.n>1?`<text y="${r*0.36}" text-anchor="middle" font-size="${r}" font-weight="800" fill="#161513" font-family="Manrope">${it.n}</text>`:''}
+      ${M.s>=5?`<text x="${r*1.4}" y="${fs*0.35}" font-size="${fs}" font-weight="800" fill="currentColor" font-family="Manrope" paint-order="stroke" style="stroke:var(--paper)" stroke-width="${3/k}">${esc(it.p.name)}</text>`:''}</g>`;}).join('');
+  g.querySelectorAll('[data-pin]').forEach(el=>el.addEventListener('click',ev=>{ev.stopPropagation(); openPlace(el.dataset.pin, S.mapMode==='events');}));
+}
+function fitTo(lat,lng,s){
+  const svg=$('#map'), vb=svg.viewBox.baseVal; const [x,y]=proj(lat,lng);
+  M.s=s; M.tx=vb.width/2 - x*s; M.ty=vb.height/2 - y*s; applyM();
+}
+function wireMap(){
+  const svg=$('#map'); const pts=new Map(); let last=null, pinch=null, moved=0;
+  const toSvg=(cx,cy)=>{ const r=svg.getBoundingClientRect(), vb=svg.viewBox.baseVal; const k=Math.min(r.width/vb.width, r.height/vb.height); const ox=(r.width-vb.width*k)/2, oy=(r.height-vb.height*k)/2; return [(cx-r.left-ox)/k,(cy-r.top-oy)/k,k]; };
+  const zoomAt=(f,cx,cy)=>{ const [x,y]=toSvg(cx,cy); const ns=Math.min(14,Math.max(1,M.s*f)); f=ns/M.s; M.tx=x-(x-M.tx)*f; M.ty=y-(y-M.ty)*f; M.s=ns; applyM(); };
+  svg.addEventListener('pointerdown',e=>{ pts.set(e.pointerId,[e.clientX,e.clientY]); moved=0; svg.classList.add('drag'); if(pts.size===2){ const [a,b]=[...pts.values()]; pinch={d:Math.hypot(a[0]-b[0],a[1]-b[1])}; } last=[e.clientX,e.clientY]; });
+  svg.addEventListener('pointermove',e=>{ if(!pts.has(e.pointerId)) return; pts.set(e.pointerId,[e.clientX,e.clientY]);
+    if(pts.size===2&&pinch){ const [a,b]=[...pts.values()]; const d=Math.hypot(a[0]-b[0],a[1]-b[1]); zoomAt(d/pinch.d,(a[0]+b[0])/2,(a[1]+b[1])/2); pinch.d=d; moved+=10; return; }
+    if(pts.size===1&&last){ const k=toSvg(0,0)[2]; const dx=(e.clientX-last[0])/k, dy=(e.clientY-last[1])/k; moved+=Math.abs(dx)+Math.abs(dy); if(moved>3){ if(!svg.hasPointerCapture(e.pointerId)) svg.setPointerCapture(e.pointerId); M.tx+=dx; M.ty+=dy; applyM(); } last=[e.clientX,e.clientY]; } });
+  const up=e=>{ pts.delete(e.pointerId); if(pts.size<2) pinch=null; if(!pts.size){ svg.classList.remove('drag'); last=null; } else last=[...pts.values()][0]; };
+  svg.addEventListener('pointerup',up); svg.addEventListener('pointercancel',up);
+  svg.addEventListener('wheel',e=>{ e.preventDefault(); zoomAt(e.deltaY<0?1.15:1/1.15,e.clientX,e.clientY); },{passive:false});
+  $('#zin').onclick=()=>{const r=svg.getBoundingClientRect(); zoomAt(1.4,r.left+r.width/2,r.top+r.height/2);};
+  $('#zout').onclick=()=>{const r=svg.getBoundingClientRect(); zoomAt(1/1.4,r.left+r.width/2,r.top+r.height/2);};
+  $('#jMons').onclick=()=>fitTo(50.4555,3.948,7);
+  $('#jAll').onclick=()=>fitTo(50.437,3.882,1.55);
+}
+function renderMapUI(){
+  catChips($('#mapCats'), S.mapCats, true, k=>{ S.mapCats.has(k)?S.mapCats.delete(k):S.mapCats.add(k); renderMapUI(); });
+  $('#mapCats').style.display = S.mapMode==='events'?'flex':'none';
+  renderPins();
+}
+if($('#mapMode')) $('#mapMode').onclick=e=>{const b=e.target.closest('button'); if(!b) return; S.mapMode=b.dataset.m; $('#mapMode').querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b)); renderMapUI();};
+
+/* ---------- fiches (bottom sheet) ---------- */
+const mapsUrl = p => 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(p.todo? p.name+' '+p.loc : p.name+', '+p.addr);
+function openSheet(html){ $('#sheet').innerHTML='<div class="grab"></div>'+html; $('#sheet').classList.add('on'); $('#scrim').classList.add('on'); $('#sheet').scrollTop=0; wireLists($('#sheet')); }
+function closeSheet(){ $('#sheet').classList.remove('on'); $('#scrim').classList.remove('on'); }
+$('#scrim').onclick=closeSheet;
+function openEvent(id){
+  const e=EVENTS.find(x=>x.id===id); if(!e) return; const p=P[e.place], c=CATS[e.cat];
+  const d=parse(e.date);
+  const when = e.end ? `Du ${d.getDate()} ${MOIS[d.getMonth()]} au ${parse(e.end).getDate()} ${MOIS[parse(e.end).getMonth()]}` : `${JOURSL[d.getDay()]} ${d.getDate()} ${MOIS[d.getMonth()]} ${d.getFullYear()}`;
+  openSheet(`<div class="band" style="--c:${c.color}"></div><span class="tag" style="--c:${c.color}">${c.label}</span> 
+    <h3>${esc(e.title)}</h3>
+    <div class="facts"><div>${ICON.cal}<span style="text-transform:capitalize">${when}</span></div><div>${ICON.clock}<span>${esc(e.time)}</span></div><div>${ICON.pin}<span>${esc(e.venue)}<br><small style="color:var(--muted)">${esc(p.addr)}</small></span></div><div>${ICON.euro}<span>${(!e.free&&/voir la page|à confirmer/i.test(e.price)&&(e.book||e.page||e.src))?`${/à confirmer/i.test(e.price)?esc(e.price)+' · ':''}<a class="evlink" href="${e.page||e.book||e.src}" target="_blank" rel="noopener">Infos &amp; billets ↗</a>`:esc(e.price)}</span></div></div>
+    <p class="desc">${esc(e.desc||'')}</p>
+    <div class="actions">${e.free?'':(e.book?`<a class="btn pri" href="${e.book}" target="_blank" rel="noopener">🎟️ Réserver</a>`:((e.page||e.src)?`<a class="btn pri" href="${e.page||e.src}" target="_blank" rel="noopener">🎟️ Infos &amp; billets ↗</a>`:''))}<a class="btn" href="${mapsUrl(p)}" target="_blank" rel="noopener">${ICON.go} Itinéraire</a>
+      <button class="btn" data-fav="${e.id}">${ICON.heart} ${S.favs.has(e.id)?'Retirer':'Garder'}</button>
+      <button class="btn" data-openpl="${p.id}">Voir le lieu</button></div>
+    ${e.src?`<p class="src">Source : <a href="${e.src}" target="_blank" rel="noopener">${new URL(e.src).hostname}</a></p>`:''}`);
+}
+function openPlace(id, withEvents){
+  const p=P[id]; if(!p) return;
+  const up=EVENTS.filter(e=>e.place===id && (e.end?parse(e.end):parse(e.date))>=today).sort((a,b)=>parse(a.date)-parse(b.date));
+  openSheet(`<div class="band" style="--c:${LOISIRS.color}"></div><span class="tag" style="--c:${LOISIRS.color}">${esc(p.kind)}</span>${p.todo?' <span class="badge">Fiche à compléter</span>':''}
+    <h3>${esc(p.name)}</h3>
+    <div class="facts"><div>${ICON.pin}<span>${esc(p.addr)}</span></div></div>
+    ${p.acts.length?`<div class="acts" style="margin-bottom:16px">${p.acts.map(a=>`<i>${esc(a)}</i>`).join('')}</div>`:''}
+    <div class="actions"><a class="btn pri" href="${mapsUrl(p)}" target="_blank" rel="noopener">${ICON.go} Itinéraire</a><button class="btn" data-fav="${p.id}">${ICON.heart} ${S.favs.has(p.id)?'Retirer':'Garder'}</button></div>
+    ${up.length?`<h2 class="sec">À venir ici <small>${up.length}</small></h2><div class="list">${up.slice(0,8).map(e=>evRow(e, parse(e.date)<today?today:parse(e.date))).join('')}</div>`:''}
+    ${p.note?`<p class="src">${esc(p.note)}</p>`:''}
+    ${p.src?`<p class="src">Info repérée sur : <a href="${p.src}" target="_blank" rel="noopener">${new URL(p.src).hostname}</a> — à confirmer avec le lieu.</p>`:''}`);
+}
+const IG_DM='https://ig.me/m/onfaitquoi.be';
+function openPropose(type){
+  const place=type==='place';
+  const lines=place?['Le nom du lieu','L’adresse complète','Les activités proposées (fléchettes, billard…)','Les jours et horaires d’ouverture']
+    :['Le nom de l’événement','La date et l’heure','Le lieu et l’adresse','Le prix (ou « gratuit »)','Le lien de la billetterie ou de l’événement'];
+  openSheet(`<h3>${place?'Proposer un lieu':'Ajouter ton événement'}</h3>
+   <p style="margin:6px 0 14px;color:var(--muted)">C’est gratuit. Envoie-nous un message sur Instagram avec :</p>
+   <ul style="margin:0 0 16px 18px;padding:0;line-height:1.7">${lines.map(l=>`<li>${l}</li>`).join('')}</ul>
+   <p style="margin:0 0 16px;color:var(--muted);font-size:14px">On vérifie chaque info avant de l’ajouter à l’agenda.</p>
+   <a class="btn pri" href="${IG_DM}" target="_blank" rel="noopener" style="display:flex;justify-content:center;text-decoration:none">Écrire à @onfaitquoi.be ↗</a>
+   <div class="seg" id="ptype" style="margin-top:14px"><button data-t="event" class="${!place?'on':''}">Événement</button><button data-t="place" class="${place?'on':''}">Lieu</button></div>`);
+  $('#ptype').onclick=e=>{const b=e.target.closest('button'); if(b) openPropose(b.dataset.t);};
+}
+function openReport(){
+  openSheet(`<h3>Signaler un problème</h3>
+   <p style="margin:6px 0 14px;color:var(--muted)">Une info fausse, un événement annulé, un bouton qui ne marche pas ? Dis-le-nous sur Instagram, en précisant l’événement ou l’écran concerné. Une capture d’écran nous aide beaucoup.</p>
+   <a class="btn pri" href="${IG_DM}" target="_blank" rel="noopener" style="display:flex;justify-content:center;text-decoration:none">Écrire à @onfaitquoi.be ↗</a>`);
+}
+
+/* ---------- interactions globales ---------- */
+function toggleFav(id){ S.favs.has(id)?S.favs.delete(id):S.favs.add(id); store('ofq_favs',[...S.favs]); toast(S.favs.has(id)?'Gardé dans tes favoris':'Retiré des favoris'); renderAll(); if($('#sheet').classList.contains('on')){ document.querySelectorAll(`#sheet [data-fav="${id}"]`).forEach(b=>{ b.classList.toggle('on',S.favs.has(id)); if(b.classList.contains('btn')) b.innerHTML=`${ICON.heart} ${S.favs.has(id)?'Retirer':'Garder'}`; }); } }
+function wireLists(root){ root.addEventListener('click',e=>{
+  if(e.target.closest('a[href]')) return;
+  const f=e.target.closest('[data-fav]'); if(f){ e.stopPropagation(); toggleFav(f.dataset.fav); return; }
+  const op=e.target.closest('[data-openpl]'); if(op){ openPlace(op.dataset.openpl); return; }
+  const pr=e.target.closest('[data-propose]'); if(pr){ openPropose(pr.dataset.propose); return; }
+  const ev=e.target.closest('[data-ev]'); if(ev){ openEvent(ev.dataset.ev); return; }
+  const pl=e.target.closest('[data-pl]'); if(pl){ openPlace(pl.dataset.pl); return; }
+}); }
+document.querySelectorAll('.view').forEach(wireLists);
+$('#ctaPropose').onclick=e=>{e.stopPropagation(); openPropose('event');};
+$('#ctaReport').onclick=e=>{e.stopPropagation(); openReport();};
+let tt; function toast(m){ const t=$('#toast'); t.textContent=m; t.classList.add('on'); clearTimeout(tt); tt=setTimeout(()=>t.classList.remove('on'),2000); }
+
+// sélecteur de commune (en-tête)
+$('#whereBtn').onclick=()=>{
+  openSheet(`<h3>Où ça&nbsp;?</h3><div class="list">${[null,...COMMUNES].map(c=>`<button class="pl" data-commune="${c||''}" style="grid-template-columns:1fr auto"><div class="t">${c||'Toute la région'}</div><div>${S.commune===c?'✓':''}</div></button>`).join('')}</div>`);
+  $('#sheet').querySelectorAll('[data-commune]').forEach(b=>b.onclick=()=>{ S.commune=b.dataset.commune||null; $('#whereBtn').textContent=S.commune||'Région'; closeSheet(); renderAll(); });
+};
+
+/* ---------- LIEUX (remplace la carte) ---------- */
+S.lCity=null;
+function renderLieux(){
+  $('#lieuxCities').innerHTML=[null,...COMMUNES].map(c=>`<button class="chip plain ${S.lCity===c?'on':''}" data-lc="${c||''}">${c||'Toutes'}</button>`).join('');
+  $('#lieuxCities').querySelectorAll('[data-lc]').forEach(b=>b.onclick=()=>{ S.lCity=b.dataset.lc||null; renderLieux(); });
+  const cities=S.lCity?[S.lCity]:COMMUNES;
+  $('#lieuxList').innerHTML=cities.map(c=>{
+    const pl=PLACES.filter(p=>p.commune===c && (p.acts.length || EVENTS.some(e=>e.place===p.id))).sort((a,b)=>a.name.localeCompare(b.name,'fr'));
+    if(!pl.length) return '';
+    return `<h2 class="sec">${esc(c)} <small>${pl.length} lieu${pl.length>1?'x':''}</small></h2><div class="list">${pl.map(p=>`<div class="pl" data-pl="${p.id}" role="button" tabindex="0">
+      <div><div class="t">${esc(p.name)}</div><div class="a">${p.todo?'<em>adresse à compléter</em>':esc(p.addr)}</div>
+      ${p.acts.length?`<div class="acts">${p.acts.map(a=>`<i>${esc(a)}</i>`).join('')}</div>`:''}</div>
+      <a class="btn go" href="${mapsUrl(p)}" target="_blank" rel="noopener" style="align-self:center;min-height:40px;padding:0 12px;font-size:12.5px;white-space:nowrap">${ICON.go} Y aller</a></div>`).join('')}</div>`;
+  }).join('') || '<div class="empty"><b>Aucun lieu ici pour l’instant</b>Tu en connais un ? Écris-nous sur Insta.</div>';
+}
+
+/* ---------- navigation (hash) ---------- */
+const VIEWS=['accueil','agenda','recherche','favoris','lieux'];
+let mapBuilt=false;
+function go(v){
+  if(v==='carte') v='lieux';
+  if(!VIEWS.includes(v)) v='accueil'; S.view=v;
+  document.querySelectorAll('.view').forEach(x=>x.classList.toggle('on',x.id==='v-'+v));
+  document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));
+  if(v==='lieux') renderLieux();
+  if(v==='favoris') renderFavs();
+  try{ if(location.hash.slice(1)!==v) history.replaceState(null,'','#'+v); }catch(_){}
+  closeSheet();
+}
+document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>go(b.dataset.v));
+window.addEventListener('hashchange',()=>go(location.hash.slice(1)));
+function renderAll(){ renderHome(); renderCal(); renderSearch(); if(S.view==='favoris') renderFavs(); if(S.view==='lieux') renderLieux(); }
+renderAll(); go(location.hash.slice(1)||'accueil');
+</script>
+</body>
+</html>
