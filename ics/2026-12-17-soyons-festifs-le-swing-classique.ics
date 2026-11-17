@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-17-soyons-festifs-le-swing-classique@onfaitquoi.be
-DTSTAMP:20261117T214917Z
+DTSTAMP:20261117T215359Z
 DTSTART:20261217T190000Z
 DTEND:20261217T220000Z
 SUMMARY:Soyons festifs — le Swing classique
 LOCATION:Arsonic\, Rue de Nimy 138\, 7000 Mons
-DESCRIPTION:Animation musicale à Arsonic.\nPrix : Tarif à confirmer\nhttps://surmars.be/nos-lieux/arsonic\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Animation musicale à Arsonic.\nPrix : Tarif à confirmer\nhttps://surmars.be/agenda/2026-12/musique/soyons-festifs-le-swing-classique\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Soyons festifs — le Swing classique demain
