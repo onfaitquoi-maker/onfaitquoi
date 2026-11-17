@@ -291,7 +291,7 @@ const COMMUNES = ['Mons','Saint-Ghislain','Boussu','Quaregnon','Frameries','Colf
 
 /* ---------- Lieux ---------- */
 const PLACES = [
- {id:'monkeys', name:"Monkey's Café", commune:'Mons', loc:'Mons centre', addr:'Rue de la Chaussée 32, 7000 Mons', lat:50.4536, lng:3.9531, kind:'Bar ludique', acts:['Jeux de société','Billard','Jeux vidéo','Stand-up','Blind test'], note:'Blind tests réguliers, gratuits (info locale Sandra).', src:'https://www.schlouk-map.com/fr/places/monkeys-cafe'},
+ {id:'monkeys', name:"Monkey's Café", commune:'Mons', loc:'Mons centre', addr:'Rue de la Chaussée 32, 7000 Mons', lat:50.4536, lng:3.9531, kind:'Bar ludique', acts:['Jeux de société','Billard','Jeux vidéo','Blind test'], note:'Blind tests réguliers, gratuits (info locale Sandra).', src:'https://www.schlouk-map.com/fr/places/monkeys-cafe'},
  {id:'lorgnette', name:'La Lorgnette', commune:'Mons', loc:'Mons centre', addr:'Rue des Clercs 2, 7000 Mons', lat:50.4547, lng:3.9506, kind:'Bar rock', acts:['Bar à bières','Concerts'], src:'https://visitmons.be/en/bars/la-lorgnette-991959'},
  {id:'catschill', name:'Cats & Chill', commune:'Mons', loc:'Mons centre', addr:'Rue de Houdain 3, 7000 Mons', lat:50.4561, lng:3.9534, kind:'Café à chats', acts:['Café à chats','Jeux de société','Coworking'], src:'https://visitmons.co.uk/see-do/leisure?listpage=3'},
  {id:'central', name:'Le Central', commune:'Mons', loc:'Grand-Place', addr:'Grand-Place 18, 7000 Mons', lat:50.4540, lng:3.9522, kind:'Bar · café-théâtre', acts:['Stand-up','Fléchettes','Bar à bières'], note:'Fléchettes : info locale (Sandra). Comedy club « What The Fun » un samedi sur deux.', src:'https://www.facebook.com/events/1072085588524089/'},
@@ -324,7 +324,7 @@ const PLACES = [
  {id:'theatredesrues', name:'Théâtre des Rues', commune:'Mons', loc:'Mons', addr:'Mons (adresse à compléter)', lat:50.4520, lng:3.9560, kind:'Théâtre', acts:['Théâtre'], todo:true},
  {id:'citizenfox', name:'Citizen Fox', commune:'Mons', loc:'Mons centre', addr:'Rue de la Coupe 7, 7000 Mons', lat:50.4540, lng:3.9495, kind:'Bar-restaurant', acts:['Soirées']},
  {id:'leopold', name:'Le Léopold', commune:'Mons', loc:'Mons gare', addr:'Place Léopold 4, 7000 Mons', lat:50.4546, lng:3.9428, kind:'Brasserie', acts:['Brasserie'], src:'https://www.visitmons.be/en/restaurants/brasserie-le-leopold-401743'},
- {id:'theatre', name:'Théâtre Royal de Mons', commune:'Mons', loc:'Grand-Place', addr:'Grand-Place 22, 7000 Mons', lat:50.4543, lng:3.9518, kind:'Salle de spectacle', acts:['Théâtre','Stand-up'], src:'https://www.quefaire.be/philippe-caveriviere-8771952.shtml'},
+ {id:'theatre', name:'Théâtre Royal de Mons', commune:'Mons', loc:'Grand-Place', addr:'Grand-Place 22, 7000 Mons', lat:50.4543, lng:3.9518, kind:'Salle de spectacle', acts:['Théâtre','Humour'], src:'https://www.quefaire.be/philippe-caveriviere-8771952.shtml'},
  {id:'mundaneum', name:'Mundaneum', commune:'Mons', loc:'Mons centre', addr:'Rue de Nimy 76, 7000 Mons', lat:50.4568, lng:3.9500, kind:'Musée', acts:['Musée']},
  {id:'arsonic', name:'Arsonic', commune:'Mons', loc:'Mons centre', addr:'Rue de Nimy 138, 7000 Mons', lat:50.4590, lng:3.9488, kind:'Salle de concert', acts:['Concerts']},
  {id:'memorial', name:'Mons Memorial Museum', commune:'Mons', loc:'Mons centre', addr:'Boulevard Dolez 51, 7000 Mons', lat:50.4521, lng:3.9445, kind:'Musée', acts:['Musée']},
@@ -353,7 +353,7 @@ const PLACES = [
 ];
 const P = Object.fromEntries(PLACES.map(p=>[p.id,p]));
 /* activités recherchées même sans lieu répertorié (pour inviter à proposer) */
-const WANTED = ['Jeux de société','Blind test','Billard','Fléchettes','Bowling','Escape game','Laser game','Karting','Quiz room','Mini-golf','Trampoline','Café à chats','Jeux vidéo','Bar à bières','Concerts','Cinéma','Musée','Théâtre','Padel','Piscine','Escalade'];
+const WANTED = ['Jeux de société','Blind test','Stand-up','Billard','Fléchettes','Bowling','Escape game','Laser game','Karting','Quiz room','Mini-golf','Trampoline','Café à chats','Jeux vidéo','Bar à bières','Concerts','Cinéma','Musée','Théâtre','Padel','Piscine','Escalade'];
 
 /* ---------- Dates ---------- */
 const DAY = 864e5;
@@ -655,7 +655,7 @@ function renderSearch(){
   $('#searchCities').querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{S.sCity=S.sCity===b.dataset.c?null:b.dataset.c; renderSearch();});
   // tuiles activités
   const counts={}; PLACES.forEach(p=>p.acts.forEach(a=>counts[a]=(counts[a]||0)+1));
-  const acts=[...new Set([...WANTED,...Object.keys(counts)])].filter(a=>!['Coworking','Expos','Brasserie','Famille','Sciences','Spectacles','Football','Stand-up','Tennis','Accrobranche','Pickleball'].includes(a));
+  const acts=[...new Set([...WANTED,...Object.keys(counts)])].filter(a=>!['Coworking','Expos','Brasserie','Famille','Sciences','Spectacles','Football','Humour','Tennis','Accrobranche','Pickleball'].includes(a));
   acts.sort((a,b)=>(counts[b]||0)-(counts[a]||0));
   $('#tiles').innerHTML = acts.map(a=>`<button class="tile ${S.act===a?'on':''} ${counts[a]?'':'zero'}" data-a="${esc(a)}"><b>${esc(a)}</b><span>${counts[a]?counts[a]+' lieu'+(counts[a]>1?'x':''):'à découvrir'}</span></button>`).join('');
   $('#tiles').querySelectorAll('[data-a]').forEach(b=>b.onclick=()=>{S.act=S.act===b.dataset.a?null:b.dataset.a; renderSearch(); if(S.act) setTimeout(()=>{const v=$('#v-recherche'); v.scrollTo({top:$('#results').offsetTop-10,behavior:'smooth'});},50);});
