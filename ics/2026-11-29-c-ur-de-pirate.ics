@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-29-c-ur-de-pirate@onfaitquoi.be
-DTSTAMP:20261117T214727Z
+DTSTAMP:20261117T214740Z
 DTSTART;VALUE=DATE:20261129
 DTEND;VALUE=DATE:20261130
 SUMMARY:Cœur de Pirate
 LOCATION:Théâtre Royal de Mons\, Grand-Place 22\, 7000 Mons
-DESCRIPTION:Concert.\nPrix : Payant\nhttps://gigora.live/concerts-in/belgium/mons\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Concert de Cœur de Pirate au Théâtre Royal.\nPrix : Tarif sur la billetterie en ligne\nhttps://www.ticketmaster.be/event/cur-de-pirate-tickets/54015110?language=fr-be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Cœur de Pirate
