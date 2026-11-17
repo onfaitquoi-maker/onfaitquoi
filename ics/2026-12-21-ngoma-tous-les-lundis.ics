@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-21-ngoma-tous-les-lundis@onfaitquoi.be
-DTSTAMP:20261117T150550Z
+DTSTAMP:20261117T150929Z
 DTSTART:20261221T210000Z
 DTEND:20261222T000000Z
 SUMMARY:NGOMA — tous les lundis
 LOCATION:The Play\, Place du Marché aux Herbes 24\, 7000 Mons
-DESCRIPTION:Soirée du lundi au The Play : shatta\, afro et dancehall jusqu’au bout de la nuit. Promo : 1 bière spéciale achetée = 1 offerte. Tenue correcte exigée.\nPrix : à confirmer\nhttps://www.facebook.com/events/974314918846137/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Soirée du lundi au The Play : shatta\, afro et dancehall jusqu’au bout de la nuit. Promo : 1 bière spéciale achetée = 1 offerte. Tenue correcte exigée.\nPrix : Entrée gratuite\nhttps://www.facebook.com/events/974314918846137/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:NGOMA — tous les lundis demain
