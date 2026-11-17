@@ -90,6 +90,7 @@ h2.sec small{font-family:var(--body);font-size:12px;font-weight:600;color:var(--
 .t5 .k{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;opacity:.9}
 .t5 .tt{font-family:var(--display);font-weight:800;font-size:27px;line-height:1;text-transform:uppercase;margin:8px 0 auto;max-width:90%}
 .t5 .w{font-size:12.5px;font-weight:600;margin-top:12px;opacity:.95}
+.t5.bonus{box-shadow:inset 0 0 0 3px #C2532F}.t5.bonus .n{color:#C2532F;opacity:.85;font-size:60px;bottom:4px}
 
 /* activity tiles */
 .tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
@@ -208,7 +209,7 @@ h2.sec small{font-family:var(--body);font-size:12px;font-weight:600;color:var(--
         <button data-w="week" class="on">Cette semaine</button>
         <button data-w="next">Semaine pro.</button>
       </div>
-      <h2 class="sec">Le top 5 <small id="t5sub"></small></h2>
+      <h2 class="sec"><span id="t5h">Le top 5</span> <small id="t5sub"></small></h2>
       <div class="top5" id="top5"></div>
       <div class="chips" id="homeCats"></div>
       <div class="list" id="homeList"></div>
@@ -382,6 +383,9 @@ function fixed(str, o){ const d=parse(str); if(d>=today && d<endRange) ev(Object
 // ===== Uniquement des événements réels, avec leur source =====
 const V = o => ev(Object.assign({verified:true}, o));
 /* Top 5 éditorial : mêmes choix que le carrousel Instagram de la semaine (clé = lundi) */
+const BONUS_WEEKS={
+  '2026-11-16':[['2026-11-21',/Maman va danser/],['2026-11-21',/What The Fun/]]
+};
 const TOP5_WEEKS={
   '2026-11-16':[['2026-11-19',/Afters Soho/],['2026-11-20',/Before des Jack/],['2026-11-21',/Saint-Nicolas à la foire/],['2026-11-21',/^Karaoké Party$/],['2026-11-22',/Mini Mondial/]]
 };
@@ -605,17 +609,24 @@ function renderHome(){
   // top 5 : sélection de la semaine (celle du carrousel Instagram) si elle existe
   const picked=[], seen=new Set();
   const wk=TOP5_WEEKS[key(weekStart(a))];
-  if(wk && S.when==='week'){ wk.forEach(([d,re])=>{ const o=occ.find(o=>key(o.d)===d && re.test(o.e.title)); if(o) picked.push(o); }); }
+  const bonus=[];
+  if(wk && S.when==='week'){ wk.forEach(([d,re])=>{ const o=occ.find(o=>key(o.d)===d && re.test(o.e.title)); if(o) picked.push(o); });
+    (BONUS_WEEKS[key(weekStart(a))]||[]).forEach(([d,re])=>{ const o=occ.find(o=>key(o.d)===d && re.test(o.e.title)); if(o) bonus.push(o); }); }
   else {
   const occT=occ.filter(o=>!/scout/i.test(o.e.title+' '+(o.e.desc||'')));
   [...occT].sort((x,y)=>(y.e.verified-x.e.verified)||(x.d-y.d)).forEach(o=>{ if(picked.length<5 && !seen.has(o.e.cat)){picked.push(o);seen.add(o.e.cat)} });
   occT.forEach(o=>{ if(picked.length<5 && !picked.includes(o)) picked.push(o) });
   }
+  $('#t5h').innerHTML = bonus.length ? `Le top 5 <span style="color:#C2532F">+ ${bonus.length} ♥</span>` : 'Le top 5';
   $('#top5').innerHTML = picked.length ? picked.map((o,i)=>`<button class="t5" data-ev="${o.e.id}" style="--c:${CATS[o.e.cat].color}">
       <span class="k">${CATS[o.e.cat].label} · ${JOURS[o.d.getDay()]} ${o.d.getDate()}</span>
       <span class="tt">${esc(o.e.title)}</span>
       <span class="w">${vc(o.e.venue,o.e.commune)}${/confirmer|voir la page/i.test(o.e.price||'')?'':'<br>'+esc(o.e.price)}</span>
-      <span class="n">${i+1}</span></button>`).join('') : `<div class="empty" style="width:100%"><b>Rien pour l'instant</b>Essaie une autre période.</div>`;
+      <span class="n">${i+1}</span></button>`).join('') + bonus.map(o=>`<button class="t5 bonus" data-ev="${o.e.id}" style="--c:${CATS[o.e.cat].color}">
+      <span class="k">Coup de ♥ · ${JOURS[o.d.getDay()]} ${o.d.getDate()}</span>
+      <span class="tt">${esc(o.e.title)}</span>
+      <span class="w">${vc(o.e.venue,o.e.commune)}${/confirmer|voir la page/i.test(o.e.price||'')?'':'<br>'+esc(o.e.price)}</span>
+      <span class="n">♥</span></button>`).join('') : `<div class="empty" style="width:100%"><b>Rien pour l'instant</b>Essaie une autre période.</div>`;
   catChips($('#homeCats'), S.homeCat, false, k=>{S.homeCat = S.homeCat===k?null:k; renderHome();});
   const rows = occ.filter(o=>!S.homeCat||o.e.cat===S.homeCat);
   $('#homeList').innerHTML = rows.length ? rows.map(o=>evRow(o.e,o.d)).join('') : `<div class="empty"><b>Calme plat</b>Aucun événement de ce thème sur la période.</div>`;
