@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-28-tournoi-de-ginza@onfaitquoi.be
-DTSTAMP:20261117T223339Z
+DTSTAMP:20261117T223350Z
 DTSTART:20261128T190000Z
 DTEND:20261128T220000Z
 SUMMARY:Tournoi de Ginza
 LOCATION:Monkey's Café\, Rue de la Chaussée 32\, 7000 Mons
-DESCRIPTION:Tournoi de jeu de société.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Tournoi de jeu de société.\nPrix : Gratuit\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Tournoi de Ginza demain
