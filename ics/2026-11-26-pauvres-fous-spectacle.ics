@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-26-pauvres-fous-spectacle@onfaitquoi.be
-DTSTAMP:20261117T183024Z
+DTSTAMP:20261117T183254Z
 DTSTART:20261126T183000Z
 DTEND:20261126T213000Z
 SUMMARY:Pauvres fous ! — spectacle
 LOCATION:Centre culturel de Boussu\, Rue F. Dorzée 3\, 7300 Boussu
-DESCRIPTION:Spectacle (Festival de Résistance Mons-Borinage).\nPrix : voir la page de l’événement\nhttps://www.facebook.com/events/1896192508455186/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Comment tenir debout quand la précarité fragilise toute une vie ? Le Théâtre du Copion\, avec La Marche des Migrant·e·s et Alvéole Théâtre\, porte à la scène les histoires d’une mère seule\, d’une femme endettée\, d’une travailleuse sociale à bout de souffle et d’un bénévole épuisé\, nourries de témoignages réels. Dans le cadre du Festival de Résistance. Salle culturelle de l’Administration communale (2e étage).\nPrix : Entrée libre · inscription souhaitée\nhttps://forms.cloud.microsoft/e/7x3NeRTrut\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Pauvres fous ! — spectacle demain
