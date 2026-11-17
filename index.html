@@ -921,8 +921,7 @@ function openEvent(id){
     <div class="facts"><div>${ICON.cal}<span style="text-transform:capitalize">${when}</span></div><div>${ICON.clock}<span>${esc(e.time)}</span></div><div>${ICON.pin}<span>${esc(e.venue)}<br><small style="color:var(--muted)">${esc(p.addr)}</small></span></div><div>${ICON.euro}<span>${(!e.free&&/voir la page|à confirmer/i.test(e.price)&&(e.book||e.page||e.src))?`${/à confirmer/i.test(e.price)?esc(e.price)+' · ':''}<a class="evlink" href="${e.page||e.book||e.src}" target="_blank" rel="noopener">Plus d’infos ↗</a>`:esc(e.price)}</span></div></div>
     <p class="desc">${esc(e.desc||'')}</p>
     <div class="actions">${e.book?`<a class="btn pri" href="${e.book}" target="_blank" rel="noopener">${esc(e.bookLabel||'🎟️ Réserver')} ↗</a>`:(e.free?'':((e.page||e.src)?`<a class="btn pri" href="${e.page||e.src}" target="_blank" rel="noopener">ℹ️ Plus d’infos ↗</a>`:''))}<a class="btn" href="${mapsUrl(p)}" target="_blank" rel="noopener">${ICON.go} Itinéraire</a>
-      <button class="btn" data-fav="${e.id}">${ICON.heart} ${S.favs.has(e.id)?'Retirer':'Garder'}</button>
-      <button class="btn" data-openpl="${p.id}">Voir le lieu</button></div>
+      <button class="btn" data-fav="${e.id}">${ICON.heart} ${S.favs.has(e.id)?'Retirer':'Garder'}</button></div>
     ${(e.end?parse(e.end):parse(e.date))>=today?calBlock(e):''}
     ${e.src?`<p class="src">Source : <a href="${e.src}" target="_blank" rel="noopener">${new URL(e.src).hostname}</a></p>`:''}`);
 }
