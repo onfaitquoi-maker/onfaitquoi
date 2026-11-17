@@ -958,5 +958,16 @@ window.addEventListener('hashchange',()=>go(location.hash.slice(1)));
 function renderAll(){ renderHome(); renderCal(); renderSearch(); if(S.view==='favoris') renderFavs(); if(S.view==='lieux') renderLieux(); }
 renderAll(); go(location.hash.slice(1)||'accueil');
 </script>
+<script>
+/* Statistiques de visite (GoatCounter, sans cookies) — uniquement sur le site public */
+(function(){ if(!/github\.io$/.test(location.hostname)) return;
+  var s=document.createElement('script'); s.async=true; s.src='https://gc.zgo.at/count.js';
+  s.setAttribute('data-goatcounter','https://onfaitquoi.goatcounter.com/count');
+  s.setAttribute('data-goatcounter-settings','{"no_onload": true}');
+  s.onload=function(){ var page=function(){ return '/'+((location.hash||'#accueil').slice(1).split(/[?&]/)[0]||'accueil'); };
+    window.goatcounter.count({path: page()});
+    window.addEventListener('hashchange', function(){ window.goatcounter.count({path: page()}); }); };
+  document.head.appendChild(s); })();
+</script>
 </body>
 </html>
