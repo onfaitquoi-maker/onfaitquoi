@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-11-borinage-comedy-club-7e-edition@onfaitquoi.be
+DTSTAMP:20261117T234429Z
+DTSTART:20261211T190000Z
+DTEND:20261211T220000Z
+SUMMARY:Borinage Comedy Club — 7e édition
+LOCATION:Salle Allard L’Olivier (Hôtel de Ville de Quaregnon)\, Grand-Place 1\, 7390 Quaregnon
+DESCRIPTION:Septième édition du Borinage Comedy Club : les élèves de l’École de l’Humour montent sur scène\, encadrés par Benoît De Labie.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Borinage Comedy Club — 7e édition demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Borinage Comedy Club — 7e édition dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
