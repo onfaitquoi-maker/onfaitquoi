@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-18-hiba-tawaji-invite-ibrahim-maalouf-a-la-@onfaitquoi.be
-DTSTAMP:20261117T215416Z
+DTSTAMP:20261117T215428Z
 DTSTART:20261218T190000Z
 DTEND:20261218T220000Z
 SUMMARY:Hiba Tawaji invite Ibrahim Maalouf\, à la française
 LOCATION:Mons — salle à confirmer (Mars)\, Grand-Place\, 7000 Mons
-DESCRIPTION:La chanteuse Hiba Tawaji invite le trompettiste Ibrahim Maalouf pour un concert autour de la chanson française.\nPrix : Tarif sur la billetterie en ligne\nhttps://surmars.be/agenda/2026-12/musique/hiba-tawaji-invite-ibrahim-maalouf-la-francaise\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Concert de la chanteuse Hiba Tawaji\, avec le trompettiste Ibrahim Maalouf en invité.\nPrix : Tarif sur la billetterie en ligne\nhttps://surmars.be/agenda/2026-12/musique/hiba-tawaji-invite-ibrahim-maalouf-la-francaise\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Hiba Tawaji invite Ibrahim Maalouf\, à la française demain
