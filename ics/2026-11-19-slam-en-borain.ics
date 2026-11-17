@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-19-slam-en-borain@onfaitquoi.be
-DTSTAMP:20261117T204617Z
+DTSTAMP:20261117T204838Z
 DTSTART:20261119T170000Z
 DTEND:20261119T200000Z
 SUMMARY:Slam en borain
 LOCATION:Maison Culturelle de Quaregnon\, Grand-Place 1\, 7390 Quaregnon
-DESCRIPTION:Les rendez-vous Slam reviennent pour une nouvelle saison\, avec cette fois une soirée spéciale en borain\, le dialecte de notre région : une façon de célébrer notre patrimoine vivant par la poésie et l’oralité. 18h : ateliers d’écriture. 20h : scène ouverte. Proposé par la Maison Culturelle de Quaregnon et le Centre culturel de Frameries\, en collaboration avec ScènZenvies.\nPrix : Tarif sur la billetterie en ligne\nhttps://shop.utick.net/?pos=MAISONCULTURELLEQUAREGNON&module=ACTIVITYSERIEDETAILS&s=236E7BD9-D8B6-1CB3-6A65-FF27B01717DD\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Les rendez-vous Slam reviennent pour une nouvelle saison\, avec cette fois une soirée spéciale en borain\, le dialecte de notre région : une façon de célébrer notre patrimoine vivant par la poésie et l’oralité. 18h : ateliers d’écriture. 20h : scène ouverte. Proposé par la Maison Culturelle de Quaregnon et le Centre culturel de Frameries\, en collaboration avec ScènZenvies.\nPrix : Gratuit · réservation conseillée\nhttps://shop.utick.net/?pos=MAISONCULTURELLEQUAREGNON&module=ACTIVITYSERIEDETAILS&s=236E7BD9-D8B6-1CB3-6A65-FF27B01717DD\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Slam en borain demain
