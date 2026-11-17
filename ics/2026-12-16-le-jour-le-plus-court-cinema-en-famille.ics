@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-16-le-jour-le-plus-court-cinema-en-famille@onfaitquoi.be
-DTSTAMP:20261117T235635Z
+DTSTAMP:20261117T235845Z
 DTSTART:20261216T140000Z
 DTEND:20261216T170000Z
 SUMMARY:Le jour le plus court — cinéma en famille
 LOCATION:Maison Culturelle de Quaregnon\, Grand-Place 1\, 7390 Quaregnon
-DESCRIPTION:Cinéma en famille.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Séance de cinéma en famille à la Maison culturelle de Quaregnon.\nPrix : Gratuit · réservation en ligne\nhttps://shop.utick.net/?pos=MAISONCULTURELLEQUAREGNON&module=ACTIVITYSERIEDETAILS&s=FB4F21DA-EC1B-C161-82E9-84B1B8AA55A8\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Le jour le plus court — cinéma en famille demain
