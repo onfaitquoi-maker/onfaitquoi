@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-16-p-tit-marche-de-noel-3@onfaitquoi.be
-DTSTAMP:20261117T235424Z
+DTSTAMP:20261117T235544Z
 DTSTART:20261216T130000Z
 DTEND:20261216T160000Z
 SUMMARY:P’tit marché de Noël #3
-LOCATION:Mons — salle à confirmer (Mars)\, Grand-Place\, 7000 Mons
-DESCRIPTION:Troisième édition du petit marché de Noël de Mars – Mons arts de la scène.\nPrix : Tarif sur la billetterie en ligne\nhttps://surmars.be/agenda/2026-12/rendez-vous/ptit-marche-de-noel-3\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+LOCATION:La Maison Folie\, Rue des Arbalestriers 8\, 7000 Mons
+DESCRIPTION:Troisième édition du petit marché de Noël de Mars – Mons arts de la scène.\nPrix : Gratuit\nhttps://surmars.be/agenda/2026-12/rendez-vous/ptit-marche-de-noel-3\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:P’tit marché de Noël #3 demain
