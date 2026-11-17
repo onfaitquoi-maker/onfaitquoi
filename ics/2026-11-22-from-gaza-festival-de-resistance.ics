@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-22-from-gaza-festival-de-resistance@onfaitquoi.be
-DTSTAMP:20261117T183656Z
+DTSTAMP:20261117T185656Z
 DTSTART:20261122T150000Z
 DTEND:20261122T180000Z
 SUMMARY:From Gaza — Festival de Résistance
-LOCATION:Théâtre des Rues\, Mons (adresse à compléter)
-DESCRIPTION:Spectacle (Festival de Résistance Mons-Borinage).\nPrix : voir la page de l’événement\nhttps://www.facebook.com/events/1561576362404693/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+LOCATION:Théâtre des Rues\, Rue du Cerisier 20\, 7033 Cuesmes
+DESCRIPTION:Le récit de l’exil et du déracinement rencontre notre propre regard occidental sur le conflit. Deux figures majeures du théâtre palestinien\, aujourd’hui en exil au Caire\, partagent la scène avec deux comédiens belges. Entre théâtre d’images et interpellation directe\, le spectacle fait du vécu de la guerre une réflexion sur la perte\, l’espoir et notre humanité commune. Durée : environ 1h20. À partir de 16 ans. Dans le cadre du Festival de Résistance et du FITA (Festival international de Théâtre Action).\nPrix : Entrée libre · inscription souhaitée\nhttps://forms.cloud.microsoft/e/7x3NeRTrut\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:From Gaza — Festival de Résistance demain
