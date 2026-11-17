@@ -5,16 +5,21 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-21-marche-canine-solidaire@onfaitquoi.be
-DTSTAMP:20261117T182436Z
-DTSTART;VALUE=DATE:20261121
-DTEND;VALUE=DATE:20261122
+DTSTAMP:20261117T182847Z
+DTSTART:20261121T080000Z
+DTEND:20261121T130000Z
 SUMMARY:Marche canine solidaire
-LOCATION:Frameries\, Frameries — point de départ à confirmer
-DESCRIPTION:Deux parcours\, avec ou sans chien\, au profit des associations locales de bien-être animal. Possibilité de promener un chien de refuge.\nPrix : à confirmer\nhttps://www.dhnet.be/regions/mons/borinage/2026/10/29/une-premiere-marche-canine-solidaire-organisee-a-frameries-largent-sera-distribue-aux-associations-participantes-OALSOTFEXVCM5HSC3SFTEMHB24/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+LOCATION:Centre sportif Max Audain\, Rue du Chapitre\, 7080 Frameries
+DESCRIPTION:Première marche canine solidaire de Frameries\, au profit des associations locales de bien-être animal. Avec ou sans chien : deux parcours au choix\, rencontre avec les associations et possibilité de promener un chien de refuge.\nPrix : à confirmer\nhttps://www.dhnet.be/regions/mons/borinage/2026/10/29/une-premiere-marche-canine-solidaire-organisee-a-frameries-largent-sera-distribue-aux-associations-participantes-OALSOTFEXVCM5HSC3SFTEMHB24/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Marche canine solidaire
-TRIGGER:-PT15H
+DESCRIPTION:Marche canine solidaire demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Marche canine solidaire dans 2 heures
+TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 END:VCALENDAR
