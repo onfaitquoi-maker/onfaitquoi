@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-17-rendez-vous-soins-et-sons-avec-marie-fra@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART:20261117T170000Z
+DTEND:20261117T200000Z
+SUMMARY:Rendez-vous soins et sons avec Marie Franquet
+LOCATION:Arsonic\, Rue de Nimy 138\, 7000 Mons
+DESCRIPTION:Rendez-vous musical.\nPrix : voir la page de l’événement\nhttps://www.facebook.com/events/1104066775319263/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Rendez-vous soins et sons avec Marie Franquet demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Rendez-vous soins et sons avec Marie Franquet dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

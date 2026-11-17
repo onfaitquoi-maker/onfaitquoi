@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-12-marche-de-noel-des-scouts-saint-charles@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART:20261212T170000Z
+DTEND:20261212T200000Z
+SUMMARY:Marché de Noël des scouts Saint-Charles
+LOCATION:Local des Scouts Saint-Charles\, Rue des Clercs 34\, 7000 Mons
+DESCRIPTION:3e édition du marché de Noël de l’unité scoute Saint-Charles. Marché de Noël\, scouts.\nPrix : Entrée libre\nhttps://www.facebook.com/events/1649337296637248/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Marché de Noël des scouts Saint-Charles demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Marché de Noël des scouts Saint-Charles dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

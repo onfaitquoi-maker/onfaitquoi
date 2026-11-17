@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-13-la-memoire-de-papy-spectacle-familial@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART:20261213T110000Z
+DTEND:20261213T140000Z
+SUMMARY:La mémoire de Papy — spectacle familial
+LOCATION:Centre culturel de Dour\, Rue du Marché 1\, 7370 Dour
+DESCRIPTION:Spectacle familial.\nPrix : voir la page de l’événement\nhttps://www.facebook.com/events/28401101759517777/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:La mémoire de Papy — spectacle familial demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:La mémoire de Papy — spectacle familial dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

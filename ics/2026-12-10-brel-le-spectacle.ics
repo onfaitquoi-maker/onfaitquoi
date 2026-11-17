@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-10-brel-le-spectacle@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART:20261210T190000Z
+DTEND:20261210T220000Z
+SUMMARY:Brel ! Le Spectacle
+LOCATION:Mons — salle à confirmer\, Grand-Place\, 7000 Mons
+DESCRIPTION:Spectacle musical autour de Jacques Brel. Salle à confirmer auprès de l'organisateur.\nPrix : Payant\nhttps://www.quefaire.be/brel-le-spectacle-8658332.shtml\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Brel ! Le Spectacle demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Brel ! Le Spectacle dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

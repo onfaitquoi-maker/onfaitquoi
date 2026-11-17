@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-21-maman-va-danser-2e-soiree-girls-meeting@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART:20261121T160000Z
+DTEND:20261121T170000Z
+SUMMARY:Maman va danser 🪩 — 2e soirée + Girls Meeting
+LOCATION:Citizen Fox\, Rue de la Coupe 7\, 7000 Mons
+DESCRIPTION:Deuxième soirée de la 5e édition. Nouveauté : un « Girls Meeting » de 17h à 18h (verre de bienvenue\, surprise\, rencontres en petit groupe)\, en option.\nPrix : Payant · tarifs et billets sur billetweb · Girls Meeting +3 €\nhttps://www.billetweb.fr/maman-va-danser-5eme-edition\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Maman va danser 🪩 — 2e soirée + Girls Meeting demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Maman va danser 🪩 — 2e soirée + Girls Meeting dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

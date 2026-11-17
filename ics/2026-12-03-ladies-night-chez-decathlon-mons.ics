@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-03-ladies-night-chez-decathlon-mons@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART:20261203T190000Z
+DTEND:20261203T220000Z
+SUMMARY:Ladies Night chez Decathlon Mons
+LOCATION:Decathlon Mons\, Rue de la Poire d’Or 21\, 7033 Cuesmes
+DESCRIPTION:Soirée entre copines\, sœurs ou collègues\, avec Les Copines Montoises et Aura Pilates Club. -10 % sur tout le magasin\, marché de créateurs (bijoux\, bougies\, déco)\, atelier DIY tote bag et boule de Noël (stocks limités)\, initiations Pilates Reformer\, Zumba et Kick Boxing\, et initiation au bain froid (prévoir maillot et essuie). Ateliers de 30 à 45 min sur inscription\, places limitées.\nPrix : Entrée libre · inscription gratuite en ligne\nhttps://event.decathlon.be/fr/ladies-night-mons-decembre\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Ladies Night chez Decathlon Mons demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Ladies Night chez Decathlon Mons dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

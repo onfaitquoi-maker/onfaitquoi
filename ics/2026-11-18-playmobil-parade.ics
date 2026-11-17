@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-18-playmobil-parade@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART:20261118T150000Z
+DTEND:20261118T180000Z
+SUMMARY:Playmobil Parade
+LOCATION:Grand-Place de Mons\, Grand-Place\, 7000 Mons
+DESCRIPTION:Parade dans le cadre de la Foire d'automne.\nPrix : Gratuit\nhttps://www.dhnet.be/dernieres-depeches/2026/11/05/mons-la-foire-dautomne-sera-lancee-vendredi-QMBMT2HMAZELPL6VIKTCRSJKNE/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Playmobil Parade demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Playmobil Parade dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

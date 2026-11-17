@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-14-damien-gillard-rude@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART:20261214T190000Z
+DTEND:20261214T220000Z
+SUMMARY:Damien Gillard — « Rude »
+LOCATION:Théâtre Royal de Mons\, Grand-Place 22\, 7000 Mons
+DESCRIPTION:Spectacle de stand-up.\nPrix : Payant\nhttps://www.quefaire.be/Damien-Gillard-Rude-8746308.shtml\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Damien Gillard — « Rude » demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Damien Gillard — « Rude » dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

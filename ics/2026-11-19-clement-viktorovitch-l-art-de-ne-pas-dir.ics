@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-19-clement-viktorovitch-l-art-de-ne-pas-dir@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
+SUMMARY:Clément Viktorovitch — « L’art de ne pas dire »
+LOCATION:Mons — salle à confirmer\, Grand-Place\, 7000 Mons
+DESCRIPTION:Spectacle autour de la rhétorique politique.\nPrix : Payant\nhttps://www.info-lux.com/que-faire-a-mons-ce-mois-ci-agenda-evenements/pays/belgique/wallonie/hainaut/mons/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Clément Viktorovitch — « L’art de ne pas dire »
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

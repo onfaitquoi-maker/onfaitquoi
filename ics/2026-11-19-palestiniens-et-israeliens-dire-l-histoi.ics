@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-19-palestiniens-et-israeliens-dire-l-histoi@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART:20261119T183000Z
+DTEND:20261119T213000Z
+SUMMARY:Palestiniens et Israéliens : dire l’histoire
+LOCATION:Centre culturel de Boussu\, Rue F. Dorzée 3\, 7300 Boussu
+DESCRIPTION:Conférence-débat (Festival de Résistance Mons-Borinage).\nPrix : voir la page de l’événement\nhttps://www.facebook.com/events/1437405715012957/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Palestiniens et Israéliens : dire l’histoire demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Palestiniens et Israéliens : dire l’histoire dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

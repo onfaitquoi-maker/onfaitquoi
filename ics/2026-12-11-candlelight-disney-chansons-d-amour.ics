@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-11-candlelight-disney-chansons-d-amour@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART:20261211T180000Z
+DTEND:20261211T210000Z
+SUMMARY:Candlelight — Disney Chansons d’amour
+LOCATION:Auditorium Abel Dubois\, Esplanade Anne-Charlotte de Lorraine\, 7000 Mons
+DESCRIPTION:Concert à la bougie (2e date).\nPrix : dès 19 €\nhttps://www.info-lux.com/?p=1729046\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Candlelight — Disney Chansons d’amour demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Candlelight — Disney Chansons d’amour dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-05-mons-c-ur-en-neige-marche-de-noel@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20270104
+SUMMARY:Mons Cœur en Neige — Marché de Noël
+LOCATION:Grand-Place de Mons\, Grand-Place\, 7000 Mons
+DESCRIPTION:Marché de Noël autour de la Grand-Place\, du Marché aux Herbes et de la place Léopold. Détails 2026 (patinoire\, animations) à confirmer sur monscoeurenneige.be.\nPrix : Accès libre\nhttps://www.info-lux.com/?p=1742483\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Mons Cœur en Neige — Marché de Noël
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

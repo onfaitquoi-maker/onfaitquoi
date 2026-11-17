@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-09-au-pied-des-montagnes-gouter-litteraire@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART:20261209T130000Z
+DTEND:20261209T160000Z
+SUMMARY:Au pied des montagnes — goûter littéraire
+LOCATION:Maison Culturelle de Quaregnon\, Grand-Place 1\, 7390 Quaregnon
+DESCRIPTION:Goûter littéraire.\nPrix : voir la page de l’événement\nhttps://www.facebook.com/events/1450866206881355/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Au pied des montagnes — goûter littéraire demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Au pied des montagnes — goûter littéraire dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

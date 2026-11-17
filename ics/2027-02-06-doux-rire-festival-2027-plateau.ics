@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2027-02-06-doux-rire-festival-2027-plateau@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART:20270206T190000Z
+DTEND:20270206T220000Z
+SUMMARY:Doux Rire Festival 2027 — Plateau
+LOCATION:Centre culturel de Dour\, Rue du Marché 1\, 7370 Dour
+DESCRIPTION:Plateau d’humoristes.\nPrix : voir la page de l’événement\nhttps://www.facebook.com/events/1436350142005391/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Doux Rire Festival 2027 — Plateau demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Doux Rire Festival 2027 — Plateau dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

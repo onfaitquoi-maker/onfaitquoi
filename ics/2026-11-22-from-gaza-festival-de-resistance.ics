@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-22-from-gaza-festival-de-resistance@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART:20261122T150000Z
+DTEND:20261122T180000Z
+SUMMARY:From Gaza — Festival de Résistance
+LOCATION:Théâtre des Rues\, Mons (adresse à compléter)
+DESCRIPTION:Spectacle (Festival de Résistance Mons-Borinage).\nPrix : voir la page de l’événement\nhttps://www.facebook.com/events/1561576362404693/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:From Gaza — Festival de Résistance demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:From Gaza — Festival de Résistance dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

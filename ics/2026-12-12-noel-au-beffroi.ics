@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-12-noel-au-beffroi@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART:20261212T130000Z
+DTEND:20261212T160000Z
+SUMMARY:Noël au Beffroi
+LOCATION:Beffroi de Mons\, Rue des Gades\, 7000 Mons
+DESCRIPTION:Le Père Noël donne rendez-vous au Beffroi. Une tradition montoise\, organisée par la Ville de Mons.\nPrix : à confirmer\nhttps://www.facebook.com/events/1096305956738613/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Noël au Beffroi demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Noël au Beffroi dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

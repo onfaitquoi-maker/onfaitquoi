@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-21-saint-nicolas-a-la-foire@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART:20261121T160000Z
+DTEND:20261121T190000Z
+SUMMARY:Saint-Nicolas à la foire
+LOCATION:Esplanade des Congrès\, Esplanade des Congrès\, 7000 Mons
+DESCRIPTION:Visite de Saint-Nicolas sur le site de l'Esplanade des Congrès.\nPrix : Gratuit\nhttps://www.dhnet.be/dernieres-depeches/2026/11/05/mons-la-foire-dautomne-sera-lancee-vendredi-QMBMT2HMAZELPL6VIKTCRSJKNE/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Saint-Nicolas à la foire demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Saint-Nicolas à la foire dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-03-leo-rizzuto-l-echo-d-une-voix-2026@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART:20261203T183000Z
+DTEND:20261203T213000Z
+SUMMARY:Leo Rizzuto — L’Écho d’une voix 2026
+LOCATION:Église Saint-Géry de Baudour\, Église Saint-Géry\, Baudour\, 7331 Saint-Ghislain
+DESCRIPTION:Concert de Leo Rizzuto dans le cadre de « L’Écho d’une voix 2026 »\, organisé avec la Ville de Saint-Ghislain.\nPrix : à confirmer\nhttps://www.instagram.com/villedesaintghislain/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Leo Rizzuto — L’Écho d’une voix 2026 demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Leo Rizzuto — L’Écho d’une voix 2026 dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

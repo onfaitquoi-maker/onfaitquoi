@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-10-marc-chagall-matieres@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART;VALUE=DATE:20261210
+DTEND;VALUE=DATE:20270122
+SUMMARY:Marc Chagall. Matières
+LOCATION:BAM — Beaux-Arts Mons\, Rue Neuve 8\, 7000 Mons
+DESCRIPTION:Exposition\, avec des lectures « Rêveries littéraires ».\nPrix : Payant\nhttps://www.info-lux.com/?p=1716886\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Marc Chagall. Matières
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

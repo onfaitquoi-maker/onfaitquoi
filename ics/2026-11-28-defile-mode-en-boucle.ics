@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-28-defile-mode-en-boucle@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART:20261128T180000Z
+DTEND:20261128T210000Z
+SUMMARY:Défilé Mode en Boucle
+LOCATION:Coworcoeur\, Rue Ferrer 104 D\, 7080 Frameries
+DESCRIPTION:Défilé de mode organisé par Mode en Boucle. Places assises : 5 €\, à réserver en message privé sur Instagram (@mode_en_boucle)\, déductibles d’un achat. 19h : ouverture des portes\, avec Brille Ma Jolie (créatrice de bijoux) et Julie Deschamps (styliste et conseillère en image). 20h : défilé. 21h-22h : vente des pièces présentées. 22h : DJ set et after party.\nPrix : Entrée gratuite · place assise 5 € sur réservation (déductibles d’un achat)\nhttps://www.instagram.com/mode_en_boucle/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Défilé Mode en Boucle demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Défilé Mode en Boucle dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

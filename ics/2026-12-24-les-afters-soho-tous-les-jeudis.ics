@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-24-les-afters-soho-tous-les-jeudis@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART:20261224T210000Z
+DTEND:20261225T000000Z
+SUMMARY:Les Afters Soho — tous les jeudis
+LOCATION:Soho\, Marché aux Herbes 20\, 7000 Mons
+DESCRIPTION:Soirée hebdomadaire du jeudi annoncée par le Soho (« tous les jeudis »). Vérifie la page Facebook pour une date précise.\nPrix : à confirmer\nhttps://www.facebook.com/profile.php?id=61555905931146&sk=events\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Les Afters Soho — tous les jeudis demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Les Afters Soho — tous les jeudis dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

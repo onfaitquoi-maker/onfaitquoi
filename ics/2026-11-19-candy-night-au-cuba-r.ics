@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-19-candy-night-au-cuba-r@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART:20261119T190000Z
+DTEND:20261120T020000Z
+SUMMARY:Candy Night au Cuba’r
+LOCATION:Cuba’r\, Rue de Nimy 55\, 7000 Mons
+DESCRIPTION:Soirée afro-latino hits avec DJ Oreoo et des danseuses professionnelles.\nPrix : Entrée gratuite\nhttps://www.instagram.com/cubar_mons/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Candy Night au Cuba’r demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Candy Night au Cuba’r dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

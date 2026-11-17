@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-04-laurent-gerra-se-met-a-table@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART:20261204T190000Z
+DTEND:20261204T220000Z
+SUMMARY:Laurent Gerra — « Se met à table ! »
+LOCATION:Théâtre Royal de Mons\, Grand-Place 22\, 7000 Mons
+DESCRIPTION:Spectacle d’humour.\nPrix : Payant\nhttps://www.info-lux.com/?p=1731062\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Laurent Gerra — « Se met à table ! » demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Laurent Gerra — « Se met à table ! » dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

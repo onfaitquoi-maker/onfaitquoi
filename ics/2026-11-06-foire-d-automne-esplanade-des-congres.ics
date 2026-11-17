@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-06-foire-d-automne-esplanade-des-congres@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART;VALUE=DATE:20261117
+DTEND;VALUE=DATE:20261207
+SUMMARY:Foire d'automne — Esplanade des Congrès
+LOCATION:Esplanade des Congrès\, Esplanade des Congrès\, 7000 Mons
+DESCRIPTION:Second site de la foire de Mons\, ouvert jusqu'au 6 décembre.\nPrix : Entrée libre · attractions payantes\nhttps://www.dhnet.be/dernieres-depeches/2026/11/05/mons-la-foire-dautomne-sera-lancee-vendredi-QMBMT2HMAZELPL6VIKTCRSJKNE/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Foire d'automne — Esplanade des Congrès
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

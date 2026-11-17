@@ -163,7 +163,7 @@ h2.sec small{font-family:var(--body);font-size:12px;font-weight:600;color:var(--
 .sheet p.desc{color:var(--ink-2);margin-bottom:16px}
 .actions{display:flex;gap:8px;flex-wrap:wrap}
 .badge.live{background:#E06A3F;color:#161513;border-color:#E06A3F}
-.calbox{margin-top:14px;padding:12px;border-radius:14px;border:1.5px dashed var(--line,#3a3733);display:flex;flex-direction:column;gap:10px}.calbox>span{font-weight:700;font-size:14px}
+.calbox{margin-top:14px;padding:12px;border-radius:14px;border:1.5px dashed var(--line,#3a3733);display:flex;flex-direction:column;gap:10px}.calbox>span{font-weight:700;font-size:14px}.calhint{margin:0;font-size:12.5px;line-height:1.4;opacity:.75}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border-radius:13px;font-weight:800;font-size:14px;border:1.5px solid var(--ink);text-decoration:none}
 .btn.pri{background:var(--ink);color:var(--paper)}
 .btn svg{width:18px;height:18px}
@@ -692,7 +692,7 @@ function renderFavs(){
   let h='';
   if(!evs.length&&!pl.length) h=`<div class="empty" style="margin-top:20px"><b>Rien de gardé</b>Touche le cœur sur un événement ou un lieu pour le retrouver ici.</div>`;
   if(evs.length){ const up=evs.filter(e=>(e.end?parse(e.end):parse(e.date))>=today);
-    h+=`<h2 class="sec">Événements</h2>${up.length?`<a class="btn" style="margin:0 0 12px" href="${icsHref(up)}" download="mes-sorties.ics">📅 Tout ajouter à mon agenda (${up.length})</a>`:''}<div class="list">${evs.map(e=>evRow(e)).join('')}</div>`; }
+    h+=`<h2 class="sec">Événements</h2>${up.length&&!IS_ANDROID?`<button class="btn" style="margin:0 0 12px" onclick="addAllIcs()">📅 Tout ajouter à mon agenda (${up.length})</button>`:''}<div class="list">${evs.map(e=>evRow(e)).join('')}</div>`; }
   if(pl.length) h+=`<h2 class="sec">Lieux</h2><div class="list">${pl.map(plRow).join('')}</div>`;
   $('#favs').innerHTML=h;
 }
@@ -804,7 +804,7 @@ const icsTxt=x=>String(x||'').replace(/\\/g,'\\\\').replace(/\n/g,'\\n').replace
 function icsEvent(e){
   const p=P[e.place]||{}, sl=evSlot(e), now=icsUTC(new Date());
   const desc=[e.desc, e.price?('Prix : '+e.price):'', (e.book||e.page||e.src||''), 'Agenda : ON FAIT QUOI? @onfaitquoi.be'].filter(Boolean).join('\n');
-  const L=['BEGIN:VEVENT',`UID:${e.id}@onfaitquoi`,`DTSTAMP:${now}`,
+  const L=['BEGIN:VEVENT',`UID:${icsKey(e)}@onfaitquoi.be`,`DTSTAMP:${now}`,
     sl.allDay?`DTSTART;VALUE=DATE:${icsDate(sl.start)}`:`DTSTART:${icsUTC(sl.start)}`,
     sl.allDay?`DTEND;VALUE=DATE:${icsDate(sl.end)}`:`DTEND:${icsUTC(sl.end)}`,
     `SUMMARY:${icsTxt(e.title)}`,`LOCATION:${icsTxt([e.venue,p.addr].filter(Boolean).join(', '))}`,`DESCRIPTION:${icsTxt(desc)}`];
@@ -812,10 +812,26 @@ function icsEvent(e){
   else L.push('BEGIN:VALARM','ACTION:DISPLAY',`DESCRIPTION:${icsTxt(e.title)}`,'TRIGGER:-PT15H','END:VALARM');
   L.push('END:VEVENT'); return L.join('\r\n');
 }
-function icsHref(evs){
-  const body=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//ON FAIT QUOI//Agenda des sorties//FR','CALSCALE:GREGORIAN','METHOD:PUBLISH',...evs.map(icsEvent),'END:VCALENDAR'].join('\r\n');
-  return 'data:text/calendar;charset=utf-8,'+encodeURIComponent(body);
+function icsBody(evs){
+  return ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//ON FAIT QUOI//Agenda des sorties//FR','CALSCALE:GREGORIAN','METHOD:PUBLISH',...evs.map(icsEvent),'END:VCALENDAR'].join('\r\n');
 }
+const UA=navigator.userAgent||'';
+const IS_ANDROID=/Android/i.test(UA), IS_IOS=/iPhone|iPad|iPod/i.test(UA)||(/Macintosh/.test(UA)&&navigator.maxTouchPoints>1);
+const IN_APP=/Instagram|FBAN|FBAV|FB_IAB|Line\//i.test(UA);
+const icsKey=e=>e.date+'-'+slug(e.title);
+function saveIcs(evs,name){
+  const blob=new Blob([icsBody(evs)],{type:'text/calendar;charset=utf-8'}), url=URL.createObjectURL(blob);
+  const a=document.createElement('a'); a.href=url; a.download=name; document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),60000);
+}
+async function addIcs(id){
+  const e=EVENTS.find(x=>x.id===id); if(!e) return;
+  const f='ics/'+icsKey(e)+'.ics';
+  try{ const r=await fetch(f,{method:'HEAD',cache:'no-store'}); if(r.ok){ location.href=f; return; } }catch(_){}
+  saveIcs([e], slug(e.title)+'.ics');
+}
+function favUpcoming(){ return EVENTS.filter(e=>S.favs.has(e.id)&&(e.end?parse(e.end):parse(e.date))>=today); }
+function addAllIcs(){ const up=favUpcoming(); if(up.length) saveIcs(up,'mes-sorties.ics'); }
 function gcalHref(e){
   const p=P[e.place]||{}, sl=evSlot(e);
   const dates=sl.allDay?`${icsDate(sl.start)}/${icsDate(sl.end)}`:`${icsUTC(sl.start)}/${icsUTC(sl.end)}`;
@@ -824,9 +840,11 @@ function gcalHref(e){
 }
 const slug=t=>norm(t).replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,40)||'evenement';
 function calBlock(e){
-  return `<div class="calbox"><span>📅 Ajouter à mon agenda, avec un rappel</span><div class="actions">
-    <a class="btn" href="${icsHref([e])}" download="${slug(e.title)}.ics">Agenda du téléphone</a>
-    <a class="btn" href="${gcalHref(e)}" target="_blank" rel="noopener">Google Agenda</a></div></div>`;
+  const g=`<a class="btn" href="${gcalHref(e)}" target="_blank" rel="noopener">${IS_ANDROID?'Ajouter à mon agenda':'Google Agenda'}</a>`;
+  const i=`<button class="btn" onclick="addIcs('${e.id}')">${IS_IOS?'Ajouter à mon agenda':'Fichier agenda (.ics)'}</button>`;
+  const btns = IS_ANDROID ? g : IS_IOS ? i+g : i+g;
+  const hint = IN_APP ? `<p class="calhint">Si rien ne s’ouvre, ouvre la page dans ton navigateur : menu ⋯ en haut à droite, puis « Ouvrir dans le navigateur ».</p>` : '';
+  return `<div class="calbox"><span>📅 Ajouter à mon agenda, avec un rappel</span><div class="actions">${btns}</div>${hint}</div>`;
 }
 function openEvent(id){
   const e=EVENTS.find(x=>x.id===id); if(!e) return; const p=P[e.place], c=CATS[e.cat];

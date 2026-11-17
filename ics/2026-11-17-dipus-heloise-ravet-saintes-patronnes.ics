@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-17-dipus-heloise-ravet-saintes-patronnes@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART:20261117T190000Z
+DTEND:20261117T220000Z
+SUMMARY:Œdipus — Héloïse Ravet / Saintes Patronnes
+LOCATION:Théâtre le Manège\, Rue des Passages\, 7000 Mons
+DESCRIPTION:Théâtre.\nPrix : voir la page de l’événement\nhttps://www.facebook.com/events/1634663794858107/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Œdipus — Héloïse Ravet / Saintes Patronnes demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Œdipus — Héloïse Ravet / Saintes Patronnes dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2027-01-27-mons-en-lumieres-createurs-de-temps@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART;VALUE=DATE:20270127
+DTEND;VALUE=DATE:20270201
+SUMMARY:Mons en Lumières — « Créateurs de temps »
+LOCATION:Place Léopold\, Place Léopold\, 7000 Mons
+DESCRIPTION:4e édition du festival de lumière\, départ place Léopold.\nPrix : Gratuit\nhttps://www.info-lux.com/mons-festival-de-lumiere-mons-en-lumieres-2027-createurs-de-temps/pays/belgique/wallonie/hainaut/mons/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Mons en Lumières — « Créateurs de temps »
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

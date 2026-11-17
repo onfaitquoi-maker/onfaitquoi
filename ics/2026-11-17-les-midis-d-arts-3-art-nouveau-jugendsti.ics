@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-17-les-midis-d-arts-3-art-nouveau-jugendsti@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART:20261117T111500Z
+DTEND:20261117T141500Z
+SUMMARY:Les Midis d’ARTS² #3 — Art nouveau\, Jugendstil & musique
+LOCATION:Arsonic\, Rue de Nimy 138\, 7000 Mons
+DESCRIPTION:Concert du midi.\nPrix : voir la page de l’événement\nhttps://www.facebook.com/events/2146877199590877/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Les Midis d’ARTS² #3 — Art nouveau\, Jugendstil & musique demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Les Midis d’ARTS² #3 — Art nouveau\, Jugendstil & musique dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

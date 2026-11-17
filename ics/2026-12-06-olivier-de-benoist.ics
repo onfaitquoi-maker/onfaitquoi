@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-06-olivier-de-benoist@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART;VALUE=DATE:20261206
+DTEND;VALUE=DATE:20261208
+SUMMARY:Olivier de Benoist
+LOCATION:Théâtre Royal de Mons\, Grand-Place 22\, 7000 Mons
+DESCRIPTION:Spectacle d’humour\, deux dates.\nPrix : Payant\nhttps://www.info-lux.com/?p=1716874\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Olivier de Benoist
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

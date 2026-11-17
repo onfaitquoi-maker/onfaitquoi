@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-21-marche-canine-solidaire@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261122
+SUMMARY:Marche canine solidaire
+LOCATION:Frameries\, Frameries — point de départ à confirmer
+DESCRIPTION:Deux parcours\, avec ou sans chien\, au profit des associations locales de bien-être animal. Possibilité de promener un chien de refuge.\nPrix : à confirmer\nhttps://www.dhnet.be/regions/mons/borinage/2026/10/29/une-premiere-marche-canine-solidaire-organisee-a-frameries-largent-sera-distribue-aux-associations-participantes-OALSOTFEXVCM5HSC3SFTEMHB24/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Marche canine solidaire
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

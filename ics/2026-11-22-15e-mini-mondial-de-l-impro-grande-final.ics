@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-22-15e-mini-mondial-de-l-impro-grande-final@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART:20261122T140000Z
+DTEND:20261122T170000Z
+SUMMARY:15e Mini Mondial de l’Impro — grande finale
+LOCATION:Théâtre le Manège\, Rue des Passages\, 7000 Mons
+DESCRIPTION:Festival international d’improvisation théâtrale (Belgique\, France\, Suisse\, Québec). 15h : spectacle des 3e et 4e. 16h : grande finale.\nPrix : 18 € · étudiants 14 € · -12 ans 10 €\nhttps://www.billetweb.fr/15e-mini-mondial-de-limpro-grande-finale\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:15e Mini Mondial de l’Impro — grande finale demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:15e Mini Mondial de l’Impro — grande finale dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

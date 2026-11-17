@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-25-ce-soir-c-est-nanar-street-fighter@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART:20261125T190000Z
+DTEND:20261125T220000Z
+SUMMARY:Ce soir\, c’est Nanar ! — Street Fighter
+LOCATION:Monkey's Café\, Rue de la Chaussée 32\, 7000 Mons
+DESCRIPTION:Soirée nanar : projection de Street Fighter.\nPrix : voir la page de l’événement\nhttps://www.facebook.com/events/999138423236966/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Ce soir\, c’est Nanar ! — Street Fighter demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Ce soir\, c’est Nanar ! — Street Fighter dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

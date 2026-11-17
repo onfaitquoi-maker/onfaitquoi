@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-11-borinage-comedy-club@onfaitquoi.be
+DTSTAMP:20261117T131309Z
+DTSTART:20261211T190000Z
+DTEND:20261211T220000Z
+SUMMARY:Borinage Comedy Club
+LOCATION:Maison Culturelle de Quaregnon\, Grand-Place 1\, 7390 Quaregnon
+DESCRIPTION:Soirée humour.\nPrix : voir la page de l’événement\nhttps://www.facebook.com/events/1730404294907348/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Borinage Comedy Club demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Borinage Comedy Club dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
