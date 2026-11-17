@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-11-soveida@onfaitquoi.be
-DTSTAMP:20261117T233926Z
+DTSTAMP:20261117T234016Z
 DTSTART:20261211T190000Z
 DTEND:20261211T220000Z
 SUMMARY:Soveida
-LOCATION:Arsonic\, Rue de Nimy 138\, 7000 Mons
-DESCRIPTION:Concert de musique du monde à Arsonic\, dans le cadre du Festival des musiques sacrées.\nPrix : Tarif sur la billetterie en ligne\nhttps://surmars.be/agenda/2026-12/musique/soveida\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+LOCATION:Arsonic — Grande salle\, Rue de Nimy 138\, 7000 Mons
+DESCRIPTION:Concert de musique du monde à Arsonic\, dans le cadre du Festival des musiques sacrées.\nPrix : 18 € · seniors et carte prof 15 € · étudiants et demandeurs d’emploi 5 € · enfants -12 ans 3 €\nhttps://shop.infinitix.be/SURMARSBE_INF/Q/quantity/5BFCD4DE-0B39-F02F-407C-31193E2F6F5A/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Soveida demain
