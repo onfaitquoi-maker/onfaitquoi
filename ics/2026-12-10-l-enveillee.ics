@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-10-l-enveillee@onfaitquoi.be
-DTSTAMP:20261117T234016Z
+DTSTAMP:20261117T234128Z
 DTSTART:20261210T190000Z
 DTEND:20261210T220000Z
 SUMMARY:L’Enveillée
 LOCATION:Théâtre le Manège — Grande salle\, Rue des Passages\, 7000 Mons
-DESCRIPTION:Théâtre\, proposé par Mars – Mons arts de la scène. Dès 15 ans.\nPrix : 18 € · réduit 15 € · super réduit 10 € · étudiants 5 €\nhttps://shop.infinitix.be/SURMARSBE_INF/Q/quantity/113C9DC3-1088-C472-575A-0BAD37902846/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Théâtre musical\, dans le cadre du Festival des musiques sacrées de Mars. Dès 15 ans.\nPrix : 18 € · seniors et carte prof 15 € · étudiants et demandeurs d’emploi 5 €\nhttps://shop.infinitix.be/SURMARSBE_INF/Q/quantity/113C9DC3-1088-C472-575A-0BAD37902846/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:L’Enveillée demain
