@@ -162,6 +162,7 @@ h2.sec small{font-family:var(--body);font-size:12px;font-weight:600;color:var(--
 .facts svg{width:18px;height:18px;flex:none;margin-top:2px;color:var(--muted)}
 .sheet p.desc{color:var(--ink-2);margin-bottom:16px}
 .actions{display:flex;gap:8px;flex-wrap:wrap}
+.badge.live{background:#E06A3F;color:#161513;border-color:#E06A3F}
 .calbox{margin-top:14px;padding:12px;border-radius:14px;border:1.5px dashed var(--line,#3a3733);display:flex;flex-direction:column;gap:10px}.calbox>span{font-weight:700;font-size:14px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border-radius:13px;font-weight:800;font-size:14px;border:1.5px solid var(--ink);text-decoration:none}
 .btn.pri{background:var(--ink);color:var(--paper)}
@@ -346,6 +347,7 @@ const PLACES = [
  {id:'lottoexpo', name:'Lotto Mons Expo', commune:'Mons', loc:'Grands Prés', addr:'Avenue Thomas Edison 2, 7000 Mons', lat:50.4590, lng:3.9270, kind:'Salle d’événements', acts:[]},
  {id:'coworcoeur', name:'Coworcoeur', commune:'Frameries', loc:'Frameries', addr:'Rue Ferrer 104 D, 7080 Frameries', lat:50.4089, lng:3.8963, kind:'Espace de coworking', acts:[]},
  {id:'cubar', name:'Cuba’r', commune:'Mons', loc:'Mons centre', addr:'Rue de Nimy 55, 7000 Mons', lat:50.4566, lng:3.9531, kind:'Bar & lounge afro-latino', acts:['Soirées','Danse latino']},
+ {id:'stgerybaudour', name:'Église Saint-Géry de Baudour', commune:'Saint-Ghislain', loc:'Baudour', addr:'Église Saint-Géry, Baudour, 7331 Saint-Ghislain', lat:50.4836, lng:3.8331, kind:'Église', acts:[]},
  {id:'grandplace', name:'Grand-Place de Mons', commune:'Mons', loc:'Grand-Place', addr:'Grand-Place, 7000 Mons', lat:50.4542, lng:3.9516, kind:'Place publique', acts:[]},
 ];
 const P = Object.fromEntries(PLACES.map(p=>[p.id,p]));
@@ -468,8 +470,8 @@ V({"date": "2026-12-09", "title": "Au pied des montagnes — goûter littéraire
 V({"date": "2026-12-11", "title": "Borinage Comedy Club", "cat": "standup", "place": "ccquaregnon", "time": "20:00", "price": "voir la page de l’événement", "desc": "Soirée humour.", "src": "https://www.facebook.com/maisonculturelle/events"});
 V({"date": "2026-12-16", "title": "Le jour le plus court — cinéma en famille", "cat": "culture", "place": "ccquaregnon", "time": "15:00", "price": "voir la page de l’événement", "desc": "Cinéma en famille.", "src": "https://www.facebook.com/maisonculturelle/events"});
 V({date:'2026-11-19',title:'Blind Test au Citizen Fox 🎶',cat:'soiree',place:'citizenfox',time:'20:00',price:'à confirmer · bière offerte pour un repas acheté',desc:'Blind test par équipes, à l’étage. Prix pour les 3 meilleures équipes. Réservation par e-mail : CitizenFoxMons@gmail.com.',src:'https://www.instagram.com/p/Dfz1MNIIr0N/'});
-V({date:'2026-11-20',title:'Maman va danser 🪩 — Wild & Glamour (5e édition)',cat:'soiree',place:'citizenfox',time:'18:30–00:30',price:'à confirmer',desc:'Soirée dansante entre mamans et copines, thème léopard, paillettes et boules à facettes. Organisée par Les copines Montoises ASBL.',src:'https://www.facebook.com/events/1490135003254281/'});
-V({date:'2026-11-21',title:'Maman va danser 🪩 — 2e soirée + Girls Meeting',cat:'soiree',place:'citizenfox',time:'Girls Meeting 17:00–18:00, puis soirée',price:'à confirmer · Girls Meeting +3 €',desc:'Deuxième soirée de la 5e édition. Nouveauté : un « Girls Meeting » de 17h à 18h (verre de bienvenue, surprise, rencontres en petit groupe), en option.',src:'https://www.facebook.com/events/1490135003254281/'});
+V({date:'2026-11-20',title:'Maman va danser 🪩 — Wild & Glamour (5e édition)',cat:'soiree',place:'citizenfox',time:'18:30–00:30',price:'Payant · tarifs et billets sur billetweb',book:'https://www.billetweb.fr/maman-va-danser-5-eme-edition',desc:'Soirée dansante entre mamans et copines, thème léopard, paillettes et boules à facettes. Organisée par Les copines Montoises ASBL.',src:'https://www.facebook.com/events/1490135003254281/'});
+V({date:'2026-11-21',title:'Maman va danser 🪩 — 2e soirée + Girls Meeting',cat:'soiree',place:'citizenfox',time:'Girls Meeting 17:00–18:00, puis soirée',price:'Payant · tarifs et billets sur billetweb · Girls Meeting +3 €',book:'https://www.billetweb.fr/maman-va-danser-5eme-edition',desc:'Deuxième soirée de la 5e édition. Nouveauté : un « Girls Meeting » de 17h à 18h (verre de bienvenue, surprise, rencontres en petit groupe), en option.',src:'https://www.facebook.com/events/1490135003254281/'});
 // What The Fun au Central — comedy club un samedi sur deux (2 séances)
 (function(){ for(let d=parse('2026-11-21'); d<endRange; d=add(d,14)){ if(d<today) continue;
   ['18:30','21:00'].forEach(t=>V({date:key(d),title:'What The Fun — Central Comedy Club',cat:'standup',place:'central',time:t+(t==='18:30'?'–20:00':''),price:'16 €',desc:'Le comedy club du Central : 4 humoristes de la nouvelle vague du stand-up belge par soirée. Deux séances : 18h30 et 21h. Un samedi sur deux.',src:'https://www.facebook.com/events/1072085588524089/',book:'https://www.billetweb.fr/central-comedy-club'}));
@@ -478,6 +480,7 @@ V({date:'2026-11-28',title:'Défilé Mode en Boucle',cat:'soiree',place:'coworco
 V({date:'2026-11-19',title:'Candy Night au Cuba’r',cat:'soiree',place:'cubar',time:'20:00–03:00',price:'Entrée gratuite',free:true,desc:'Soirée afro-latino hits avec DJ Oreoo et des danseuses professionnelles.',src:'https://www.instagram.com/cubar_mons/'});
 V({date:'2026-11-20',title:'Urban Mix au Cuba’r',cat:'soiree',place:'cubar',time:'20:00–04:00',price:'Entrée gratuite',free:true,desc:'Soirée Urban Mix à l’Afro Latin Social Club Cuba’r.',src:'https://www.instagram.com/cubar_mons/'});
 V({date:'2026-11-21',title:'Latino Night au Cuba’r',cat:'soiree',place:'cubar',time:'20:00–04:00',price:'Entrée gratuite',free:true,desc:'Soirée Latino Night à l’Afro Latin Social Club Cuba’r.',src:'https://www.instagram.com/cubar_mons/'});
+V({date:'2026-12-03',title:'Leo Rizzuto — L’Écho d’une voix 2026',cat:'concert',place:'stgerybaudour',time:'19:30 (portes à 19:00)',price:'à confirmer',desc:'Concert de Leo Rizzuto dans le cadre de « L’Écho d’une voix 2026 », organisé avec la Ville de Saint-Ghislain.',src:'https://www.instagram.com/villedesaintghislain/'});
 // Scouts, étudiants, Noël (vérifiés sur Facebook le 16/11)
 V({date:'2026-11-21',title:'Soirée Beaujolais des scouts Saint-Charles',cat:'soiree',place:'saintcharles',time:'18:00',price:'à confirmer',desc:'Le retour de la soirée beaujolais des pionniers de l’unité scoute Saint-Charles, au cœur de Mons. Soirée scouts.',src:'https://www.facebook.com/events/1166762129243526/'});
 V({date:'2026-11-20',title:'L’étrange Before des Jack’s — GET Mons',cat:'soiree',place:'getapinte',time:'21:00',price:'à confirmer',desc:'Before du marché de Noël des Jack’s, ambiance 100 % pop rock. Organisé par le GET et A l’ancienne.',src:'https://www.facebook.com/events/1867193607606619/'});
@@ -529,8 +532,22 @@ const esc = s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;
 
 function occursOn(e,d){ const s=parse(e.date), en=e.end?parse(e.end):s; return d>=s && d<=en; }
 function eventsOn(d){ return EVENTS.filter(e=>occursOn(e,d) && (!S.commune||e.commune===S.commune) && (!S.free||e.free)).sort((a,b)=>a.time.localeCompare(b.time)); }
+
+/* ---------- aujourd'hui : masquer ce qui est fini ou déjà commencé ---------- */
+const SHOWS=['theatre','standup','concert'];
+function todayState(e){ // 'gone' | 'live' | ''
+  if(e.end) return '';
+  const m=(e.time||'').match(/(\d{1,2})\s*[:h]\s*(\d{2})?/); if(!m) return '';
+  const now=new Date(), start=new Date(today); start.setHours(+m[1],+(m[2]||0),0,0);
+  const rest=e.time.slice(m.index+m[0].length), m2=rest.match(/^\s*[–\-→>]+\s*(\d{1,2})\s*[:h]\s*(\d{2})?/);
+  let end; if(m2){ end=new Date(today); end.setHours(+m2[1],+(m2[2]||0),0,0); if(end<=start) end.setDate(end.getDate()+1); } else end=new Date(start.getTime()+3*3600e3);
+  const fixed = SHOWS.includes(e.cat) || (e.cat==='expo');
+  if(fixed) return now>start.getTime()+15*60e3 ? 'gone' : '';
+  if(now>end) return 'gone';
+  return now>=start ? 'live' : '';
+}
 function eventsBetween(a,b){ // occurrences (event, date) sur la période
-  const out=[]; for(let d=new Date(a); d<=b; d=add(d,1)){ eventsOn(d).forEach(e=>{ if(!out.some(o=>o.e===e)) out.push({e,d:new Date(d)}) }); } return out;
+  const out=[]; for(let d=new Date(a); d<=b; d=add(d,1)){ eventsOn(d).forEach(e=>{ if(+d===+today && todayState(e)==='gone') return; if(!out.some(o=>o.e===e)) out.push({e,d:new Date(d)}) }); } return out;
 }
 function windowFor(w){
   if(w==='today') return [today,today];
@@ -557,7 +574,7 @@ function evRow(e,d){
   return `<div class="ev" data-ev="${e.id}" role="button" tabindex="0" style="--c:${c.color}">
     <div class="d"><b>${d.getDate()}</b><span>${JOURS[d.getDay()]}</span></div>
     <div><div class="t">${esc(e.title)}</div>
-      <div class="m"><span class="tag" style="--c:${c.color}">${c.label}</span><span>${vc(e.venue,e.commune)}</span><span>${esc(multi)}</span>${e.free?'<span class="badge free">Gratuit</span>':''}</div>
+      <div class="m"><span class="tag" style="--c:${c.color}">${c.label}</span><span>${vc(e.venue,e.commune)}</span><span>${esc(multi)}</span>${e.free?'<span class="badge free">Gratuit</span>':''}${(+d===+today&&todayState(e)==='live')?'<span class="badge live">En cours</span>':''}</div>
     </div>
     <button class="fav ${S.favs.has(e.id)?'on':''}" data-fav="${e.id}" aria-label="Ajouter aux favoris">${ICON.heart}</button>
   </div>`;
