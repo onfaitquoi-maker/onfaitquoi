@@ -156,6 +156,9 @@ h2.sec small{font-family:var(--body);font-size:12px;font-weight:600;color:var(--
 .sheet{position:absolute;left:0;right:0;bottom:0;background:var(--card);border-radius:22px 22px 0 0;z-index:41;transform:translateY(105%);transition:transform .28s cubic-bezier(.2,.8,.2,1);max-height:86%;overflow-y:auto;padding:10px 20px calc(24px + var(--safe-b))}
 .sheet.on{transform:none}
 .sheet .grab{width:42px;height:5px;border-radius:3px;background:var(--line);margin:0 auto 14px}
+.sheettop{position:sticky;top:-10px;z-index:2;display:flex;align-items:center;justify-content:space-between;margin:-10px -20px 10px;padding:10px 14px;background:var(--card)}
+.sheettop .grab{margin:0}
+.sheetback{white-space:nowrap;min-width:84px;border:0;background:var(--paper-2);color:var(--ink);font:inherit;font-weight:700;font-size:14px;padding:8px 12px;border-radius:999px;text-align:left;cursor:pointer}
 .sheet .band{height:8px;border-radius:4px;background:var(--c);margin-bottom:14px;width:64px}
 .sheet h3{font-family:var(--display);font-weight:900;font-size:34px;line-height:.95;text-transform:uppercase;margin:6px 0 12px}
 .facts{display:flex;flex-direction:column;gap:10px;margin:8px 0 16px}
@@ -793,9 +796,17 @@ if($('#mapMode')) $('#mapMode').onclick=e=>{const b=e.target.closest('button'); 
 
 /* ---------- fiches (bottom sheet) ---------- */
 const mapsUrl = p => 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(p.todo? p.name+' '+p.loc : p.name+', '+p.addr);
-function openSheet(html){ $('#sheet').innerHTML='<div class="grab"></div>'+html; $('#sheet').classList.add('on'); $('#scrim').classList.add('on'); $('#sheet').scrollTop=0; wireLists($('#sheet')); }
+function openSheet(html){
+  const wasOpen=$('#sheet').classList.contains('on');
+  $('#sheet').innerHTML='<div class="sheettop"><button class="sheetback" onclick="backSheet()" aria-label="Retour">← Retour</button><div class="grab"></div><span style="width:84px"></span></div>'+html;
+  $('#sheet').classList.add('on'); $('#scrim').classList.add('on'); $('#sheet').scrollTop=0; wireLists($('#sheet'));
+  // le bouton « retour » du téléphone ferme la fiche au lieu de quitter l'appli
+  if(!wasOpen){ try{ history.pushState({sheet:1},'',location.href); }catch(_){} }
+}
 function closeSheet(){ $('#sheet').classList.remove('on'); $('#scrim').classList.remove('on'); }
-$('#scrim').onclick=closeSheet;
+function backSheet(){ if(history.state&&history.state.sheet){ history.back(); } else closeSheet(); }
+window.addEventListener('popstate',()=>{ if($('#sheet').classList.contains('on')) closeSheet(); });
+$('#scrim').onclick=backSheet;
 
 /* ---------- AJOUTER À L'AGENDA (.ics + Google Agenda) ---------- */
 function evSlot(e){
