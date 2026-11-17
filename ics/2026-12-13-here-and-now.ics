@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-13-here-and-now@onfaitquoi.be
-DTSTAMP:20261117T234128Z
+DTSTAMP:20261117T234316Z
 DTSTART:20261213T190000Z
 DTEND:20261213T220000Z
 SUMMARY:Here and Now
-LOCATION:Arsonic\, Rue de Nimy 138\, 7000 Mons
-DESCRIPTION:Concert de musique du monde à Arsonic\, dans le cadre du Festival des musiques sacrées.\nPrix : Tarif sur la billetterie en ligne\nhttps://surmars.be/agenda/2026-12/musique/here-and-now\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+LOCATION:Arsonic — Grande salle\, Rue de Nimy 138\, 7000 Mons
+DESCRIPTION:Concert de musique du monde à Arsonic\, dans le cadre du Festival des musiques sacrées.\nPrix : 18 € · seniors et carte prof 15 € · étudiants et demandeurs d’emploi 5 € · enfants -12 ans 3 €\nhttps://surmars.be/agenda/2026-12/musique/here-and-now\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Here and Now demain
