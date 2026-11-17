@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2027-01-02-parade-du-carnaval-de-venise@onfaitquoi.be
+DTSTAMP:20261117T231126Z
+DTSTART;VALUE=DATE:20270102
+DTEND;VALUE=DATE:20270103
+SUMMARY:Parade du Carnaval de Venise
+LOCATION:Mons — centre-ville\, Grand-Place\, 7000 Mons
+DESCRIPTION:Parade costumée du Carnaval de Venise par l’ASBL Passione Veneziana\, dans le cadre de Mons Cœur en Neige.\nPrix : Accès libre (à confirmer)\nhttps://monscoeurenneige.be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Parade du Carnaval de Venise
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
