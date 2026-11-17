@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-03-chwallow-cirque@onfaitquoi.be
+DTSTAMP:20261117T210113Z
+DTSTART:20261203T190000Z
+DTEND:20261203T220000Z
+SUMMARY:Chwallow — cirque
+LOCATION:Théâtre le Manège\, Rue des Passages\, 7000 Mons
+DESCRIPTION:Cirque hybride de L’Habeas Corpus Compagnie (conception Julien Fournier)\, entre arts plastiques et univers sensoriel : des images entre science-fiction\, biologie cellulaire et ode au bubble gum. Dès 8 ans\, 1h10. Intro au spectacle de 15 min à 19h30. La séance du mercredi 2 décembre (18h) est en liste d’attente.\nPrix : 18 € · réduit 15 € · étudiants 5 €\nhttps://shop.infinitix.be/SURMARSBE_INF/S/F95D39BA-1ABD-4A86-0401-F091A720CC96/?d=D19DB959-92CA-8560-EAE0-1B7FFDD0D35C\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Chwallow — cirque demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Chwallow — cirque dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

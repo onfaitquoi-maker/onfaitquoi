@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-07-festival-des-musiques-sacrees@onfaitquoi.be
+DTSTAMP:20261117T210113Z
+DTSTART;VALUE=DATE:20261207
+DTEND;VALUE=DATE:20261215
+SUMMARY:Festival des musiques sacrées
+LOCATION:Arsonic\, Rue de Nimy 138\, 7000 Mons
+DESCRIPTION:Une semaine de concerts à Arsonic autour de l’ouverture aux autres et des effets apaisants du son. Au programme : Anima Baltica (lun. 7)\, Cuncordu e Tenore de Orosei (mar. 8\, liste d’attente)\, Périchorèse (mer. 9)\, L’Enveillée (jeu. 10)\, Soveida (ven. 11)\, Incantation (sam. 12) et Here and Now (13–14). Concerts confidence de Manuel Hermia du 8 au 11 à 18h (liste d’attente).\nPrix : selon le concert\nhttps://surmars.be/agenda/festival/2026-12/festival-des-musiques-sacrees\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Festival des musiques sacrées
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

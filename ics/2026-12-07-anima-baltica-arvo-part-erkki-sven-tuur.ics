@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-07-anima-baltica-arvo-part-erkki-sven-tuur@onfaitquoi.be
+DTSTAMP:20261117T210113Z
+DTSTART:20261207T190000Z
+DTEND:20261207T220000Z
+SUMMARY:Anima Baltica — Arvo Pärt & Erkki-Sven Tüür
+LOCATION:Arsonic\, Rue de Nimy 138\, 7000 Mons
+DESCRIPTION:Ensemble de cordes et percussions dirigé par Jean-Paul Dessy : la musique méditative d’Arvo Pärt face aux énergies vibrantes d’Erkki-Sven Tüür\, avec une création mondiale de Tüür. 1h15. Festival des musiques sacrées.\nPrix : 18 € · étudiants 5 €\nhttps://shop.infinitix.be/SURMARSBE_INF/S/913EE68F-758F-8512-EFB0-C61913409ADE/?d=B2DF9688-FAAB-F8D2-AB20-32AE21698D86\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Anima Baltica — Arvo Pärt & Erkki-Sven Tüür demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Anima Baltica — Arvo Pärt & Erkki-Sven Tüür dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
