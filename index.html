@@ -589,7 +589,7 @@ function renderHome(){
   $('#top5').innerHTML = picked.length ? picked.map((o,i)=>`<button class="t5" data-ev="${o.e.id}" style="--c:${CATS[o.e.cat].color}">
       <span class="k">${CATS[o.e.cat].label} · ${JOURS[o.d.getDay()]} ${o.d.getDate()}</span>
       <span class="tt">${esc(o.e.title)}</span>
-      <span class="w">${vc(o.e.venue,o.e.commune)}<br>${esc(o.e.price)}</span>
+      <span class="w">${vc(o.e.venue,o.e.commune)}${/confirmer|voir la page/i.test(o.e.price||'')?'':'<br>'+esc(o.e.price)}</span>
       <span class="n">${i+1}</span></button>`).join('') : `<div class="empty" style="width:100%"><b>Rien pour l'instant</b>Essaie une autre période.</div>`;
   catChips($('#homeCats'), S.homeCat, false, k=>{S.homeCat = S.homeCat===k?null:k; renderHome();});
   const rows = occ.filter(o=>!S.homeCat||o.e.cat===S.homeCat);
