@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-19-clement-viktorovitch-l-art-de-ne-pas-dir@onfaitquoi.be
-DTSTAMP:20261117T212229Z
+DTSTAMP:20261117T212252Z
 DTSTART:20261119T190000Z
 DTEND:20261119T220000Z
 SUMMARY:Clément Viktorovitch — « L’art de ne pas dire »
 LOCATION:Théâtre Royal de Mons\, Grand-Place 22\, 7000 Mons
-DESCRIPTION:Dans la continuité de son livre Le Pouvoir Rhétorique\, Clément Viktorovitch\, docteur en science politique\, incarne le conseiller en communication d’un président déchu qui décide de dévoiler les secrets du pouvoir.\nPrix : Tarif sur la billetterie en ligne\nhttps://www.ticketmaster.be/event/clement-viktorovitch-tickets/846264926?language=fr-be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Dans la continuité de son livre Le Pouvoir Rhétorique\, Clément Viktorovitch\, docteur en science politique\, incarne le conseiller en communication d’un président déchu qui décide de dévoiler les secrets du pouvoir.\nPrix : À partir de 39 €\nhttps://www.ticketmaster.be/event/clement-viktorovitch-tickets/846264926?language=fr-be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Clément Viktorovitch — « L’art de ne pas dire » demain

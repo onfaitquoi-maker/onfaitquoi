@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-21-felix-radu@onfaitquoi.be
-DTSTAMP:20261117T212229Z
+DTSTAMP:20261117T212252Z
 DTSTART:20261121T190000Z
 DTEND:20261121T220000Z
 SUMMARY:Félix Radu
 LOCATION:Théâtre Royal de Mons\, Grand-Place 22\, 7000 Mons
-DESCRIPTION:Spectacle de Félix Radu\, entre théâtre\, poésie et humour.\nPrix : Tarif sur la billetterie en ligne\nhttps://billetterie.arena-tour.fr/artistes/billets-felix-radu-70729/mons-theatre-royal-2026-11-21-38255\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Spectacle de Félix Radu\, entre théâtre\, poésie et humour.\nPrix : 39 € à 55 €\nhttps://billetterie.arena-tour.fr/artistes/billets-felix-radu-70729/mons-theatre-royal-2026-11-21-38255\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Félix Radu demain
