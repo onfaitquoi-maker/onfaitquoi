@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-22-philippe-raposo-trio-guitare-portugaise@onfaitquoi.be
+DTSTAMP:20261117T214348Z
+DTSTART:20261122T160000Z
+DTEND:20261122T190000Z
+SUMMARY:Philippe Raposo Trio — guitare portugaise
+LOCATION:Centre culturel de Colfontaine\, Rue du Pont d’Arcole 12\, 7340 Colfontaine
+DESCRIPTION:Concert de guitare portugaise avec le Philippe Raposo Trio\, proposé par le Patrimoine de Colfontaine.\nPrix : voir la page de l’événement\nhttps://www.patrimoinedecolfontaine.be/event-details/philippe-raposo-trio-guitare-portugaise-2\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Philippe Raposo Trio — guitare portugaise demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Philippe Raposo Trio — guitare portugaise dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
