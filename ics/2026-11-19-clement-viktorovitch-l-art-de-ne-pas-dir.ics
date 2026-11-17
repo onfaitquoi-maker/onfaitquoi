@@ -5,16 +5,21 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-19-clement-viktorovitch-l-art-de-ne-pas-dir@onfaitquoi.be
-DTSTAMP:20261117T210401Z
-DTSTART;VALUE=DATE:20261119
-DTEND;VALUE=DATE:20261120
+DTSTAMP:20261117T211423Z
+DTSTART:20261119T190000Z
+DTEND:20261119T220000Z
 SUMMARY:Clément Viktorovitch — « L’art de ne pas dire »
-LOCATION:Mons — salle à confirmer\, Grand-Place\, 7000 Mons
-DESCRIPTION:Spectacle autour de la rhétorique politique.\nPrix : Payant\nhttps://www.info-lux.com/que-faire-a-mons-ce-mois-ci-agenda-evenements/pays/belgique/wallonie/hainaut/mons/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+LOCATION:Théâtre Royal de Mons\, Grand-Place 22\, 7000 Mons
+DESCRIPTION:Dans la continuité de son livre Le Pouvoir Rhétorique\, Clément Viktorovitch\, docteur en science politique\, incarne le conseiller en communication d’un président déchu qui décide de dévoiler les secrets du pouvoir.\nPrix : Tarif sur la billetterie en ligne\nhttps://www.ticketmaster.be/event/clement-viktorovitch-tickets/846264926?language=fr-be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Clément Viktorovitch — « L’art de ne pas dire »
-TRIGGER:-PT15H
+DESCRIPTION:Clément Viktorovitch — « L’art de ne pas dire » demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Clément Viktorovitch — « L’art de ne pas dire » dans 2 heures
+TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 END:VCALENDAR
