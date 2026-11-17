@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-10-10-marc-chagall-matieres@onfaitquoi.be
+DTSTAMP:20261117T233627Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20270215
+SUMMARY:Marc Chagall. Matières
+LOCATION:CAP — Musée des Beaux-Arts de Mons\, Rue Neuve 8\, 7000 Mons
+DESCRIPTION:Plus de 200 œuvres\, documents\, études préparatoires et archives qui explorent toutes les techniques de Marc Chagall : peinture\, gravure\, céramique\, sculpture\, vitrail\, tapisserie\, costumes et décors de théâtre.\nPrix : Adultes dès 17 € · seniors dès 12 € · enfants et étudiants dès 2 €\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Marc Chagall. Matières
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
