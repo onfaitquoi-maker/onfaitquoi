@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-07-olivier-de-benoist@onfaitquoi.be
+DTSTAMP:20261117T231223Z
+DTSTART:20261207T190000Z
+DTEND:20261207T220000Z
+SUMMARY:Olivier de Benoist
+LOCATION:Théâtre Royal de Mons\, Grand-Place 22\, 7000 Mons
+DESCRIPTION:Spectacle d’humour d’Olivier de Benoist au Théâtre Royal. Dernières places pour cette date (le 6 décembre est complet).\nPrix : Tarif sur la billetterie en ligne\nhttps://www.ticketmaster.be/event/olivier-de-benoist-tickets/1202551572\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Olivier de Benoist demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Olivier de Benoist dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
