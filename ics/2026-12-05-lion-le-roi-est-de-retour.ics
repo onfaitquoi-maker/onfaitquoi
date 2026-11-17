@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-05-lion-le-roi-est-de-retour@onfaitquoi.be
-DTSTAMP:20261117T230427Z
+DTSTAMP:20261117T230625Z
 DTSTART:20261205T173000Z
 DTEND:20261205T203000Z
 SUMMARY:LION — Le Roi est de retour
 LOCATION:Théâtre Royal de Mons\, Grand-Place 22\, 7000 Mons
-DESCRIPTION:Comédie musicale familiale portée par 16 artistes (chant\, danse\, jeu)\, costumes éclatants et grands succès musicaux à chanter avec la troupe. Pour petits et grands.\nPrix : Payant · billets sur Ticketmaster\nhttps://www.info-lux.com/?p=1731062\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Comédie musicale familiale portée par 16 artistes (chant\, danse\, jeu)\, costumes éclatants et grands succès musicaux à chanter avec la troupe. Pour petits et grands.\nPrix : 29\,50 € à 45 €\nhttps://www.ticketmaster.be/event/lion-le-roi-est-de-retour-billets/1256417477?language=fr-be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:LION — Le Roi est de retour demain
