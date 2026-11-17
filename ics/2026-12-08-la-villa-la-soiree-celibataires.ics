@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-08-la-villa-la-soiree-celibataires@onfaitquoi.be
-DTSTAMP:20261117T145857Z
+DTSTAMP:20261117T150150Z
 DTSTART:20261208T200000Z
 DTEND:20261208T230000Z
 SUMMARY:LA VILLA — la soirée célibataires
 LOCATION:The Play\, Place du Marché aux Herbes 24\, 7000 Mons
-DESCRIPTION:Soirée célibataires du mardi au The Play.\nPrix : Entrée gratuite\nhttps://www.facebook.com/events/29475386508724226/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Soirée célibataires du mardi au The Play : rencontres\, flirt et bonnes vibes. Promo filles : un Lipstick ou un Porn Star acheté = le 2e offert. Promo hommes : une bouteille d’alcool achetée = une bouteille de Bellini offerte\, à offrir aux filles. Tenue correcte exigée.\nPrix : Entrée gratuite\nhttps://www.facebook.com/events/29475386508724226/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:LA VILLA — la soirée célibataires demain
