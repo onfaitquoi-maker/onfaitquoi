@@ -719,7 +719,7 @@ function renderActivites(){
   } else {
     const counts={}; PLACES.filter(inCity).forEach(p=>p.acts.forEach(a=>counts[a]=(counts[a]||0)+1));
     const all={}; PLACES.forEach(p=>p.acts.forEach(a=>all[a]=1));
-    const acts=[...new Set([...WANTED,...Object.keys(all)])].filter(a=>!['Coworking','Expos','Brasserie','Famille','Sciences','Spectacles','Football','Humour','Tennis','Accrobranche','Pickleball'].includes(a));
+    const acts=[...new Set([...WANTED,...Object.keys(all)])].filter(a=>!['Coworking','Expos','Brasserie','Famille','Sciences','Spectacles','Football','Humour','Tennis','Pickleball'].includes(a));
     acts.sort((a,b)=>(counts[b]||0)-(counts[a]||0));
     $('#actBody').innerHTML=`<div class="tiles" style="margin-top:14px">${acts.map(a=>`<button class="tile ${counts[a]?'':'zero'}" data-a="${esc(a)}"><b>${esc(a)}</b><span>${counts[a]?counts[a]+' lieu'+(counts[a]>1?'x':''):'à découvrir'}</span></button>`).join('')}</div>`;
     $('#actBody').querySelectorAll('[data-a]').forEach(b=>b.onclick=()=>{S.act=b.dataset.a; renderActivites(); $('#v-activites').scrollTo({top:0,behavior:'smooth'});});
