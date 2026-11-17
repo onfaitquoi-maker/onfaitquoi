@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-26-vanessa-wagner@onfaitquoi.be
-DTSTAMP:20261117T214348Z
+DTSTAMP:20261117T214543Z
 DTSTART;VALUE=DATE:20261126
 DTEND;VALUE=DATE:20261127
 SUMMARY:Vanessa Wagner
 LOCATION:Arsonic\, Rue de Nimy 138\, 7000 Mons
-DESCRIPTION:Récital de piano.\nPrix : Payant\nhttps://www.songkick.com/fr/metro-areas/26864-belgium-mons\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Récital de piano.\nPrix : Payant\nhttps://surmars.be/nos-lieux/arsonic\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Vanessa Wagner
