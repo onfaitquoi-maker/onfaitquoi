@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-26-td-st-nic-de-la-coupe-du-mons@onfaitquoi.be
-DTSTAMP:20261117T222426Z
+DTSTAMP:20261117T222544Z
 DTSTART:20261126T193000Z
 DTEND:20261126T223000Z
 SUMMARY:TD St-Nic de la Coupe du Mons
 LOCATION:Lotto Mons Expo\, Avenue Thomas Edison 2\, 7000 Mons
-DESCRIPTION:Le traditionnel TD (soirée étudiante) de Saint-Nicolas organisé par la Coupe du Mons\, le tournoi de foot estudiantin montois. Soirée étudiante.\nPrix : à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Le traditionnel TD (soirée étudiante) de Saint-Nicolas organisé par la Coupe du Mons\, le tournoi de foot estudiantin montois. Soirée étudiante.\nPrix : 15 € (prévente « Last Chance »\, jusqu’au 26/11)\nhttps://www.eventbrite.be/e/td-st-nic-tickets-2003571734994\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:TD St-Nic de la Coupe du Mons demain
