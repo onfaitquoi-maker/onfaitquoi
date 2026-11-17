@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-19-aleph-quintet@onfaitquoi.be
-DTSTAMP:20261117T211423Z
+DTSTAMP:20261117T211846Z
 DTSTART:20261119T190000Z
 DTEND:20261119T220000Z
 SUMMARY:Aleph Quintet
 LOCATION:Arsonic\, Rue de Nimy 138\, 7000 Mons
-DESCRIPTION:Concert de jazz.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Fusion jazz\, oud et rythmes nord-africains : improvisation jazz\, sonorités orientales\, rythmes gnawa et spiritualité soufie. Piano\, basse et batterie rencontrent le oud et le violon.\nPrix : 18 € · réduit 15 € · étudiants 5 €\nhttps://shop.infinitix.be/SURMARSBE_INF/Q/quantity/6BDD4518-2CC6-CE63-6F3C-B1AC9585BD27/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Aleph Quintet demain
