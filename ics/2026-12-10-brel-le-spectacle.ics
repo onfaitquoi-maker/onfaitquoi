@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-10-brel-le-spectacle@onfaitquoi.be
-DTSTAMP:20261117T232327Z
+DTSTAMP:20261117T232527Z
 DTSTART:20261210T190000Z
 DTEND:20261210T220000Z
 SUMMARY:Brel ! Le Spectacle
-LOCATION:Mons — salle à confirmer\, Grand-Place\, 7000 Mons
-DESCRIPTION:Spectacle musical autour de Jacques Brel. Salle à confirmer auprès de l'organisateur.\nPrix : Payant\nhttps://www.quefaire.be/brel-le-spectacle-8658332.shtml\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+LOCATION:Théâtre Royal de Mons\, Grand-Place 22\, 7000 Mons
+DESCRIPTION:Spectacle musical autour de Jacques Brel\, au Théâtre Royal de Mons.\nPrix : 45 € à 57 €\nhttps://www.ticketmaster.be/event/brel-le-spectacle-billets/754889304?language=fr-be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Brel ! Le Spectacle demain
