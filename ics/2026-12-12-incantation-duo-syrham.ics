@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-12-incantation-duo-syrham@onfaitquoi.be
+DTSTAMP:20261117T234655Z
+DTSTART:20261212T190000Z
+DTEND:20261212T220000Z
+SUMMARY:Incantation — Duo Syrham
+LOCATION:Arsonic\, Rue de Nimy 138\, 7000 Mons
+DESCRIPTION:Dialogue musical entre Orient et Occident autour du chant sacré : la doudoukiste Michèle Lubicz et la chanteuse lyrique Soumaya Hallak interprètent notamment des chants syriaques et arabes. Festival des musiques sacrées.\nPrix : 18 € · réduit 15 € (seniors\, enseignants\, demandeurs d’emploi) · super réduit et groupe 10 € · étudiants 5 €\nhttps://shop.infinitix.be/SURMARSBE_INF/Q/quantity/88CD4AD0-6E3E-0371-3525-F609CDEB8812/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Incantation — Duo Syrham demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Incantation — Duo Syrham dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
