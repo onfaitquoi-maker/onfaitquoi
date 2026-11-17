@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-22-noble-pagaille-les-illumines@onfaitquoi.be
-DTSTAMP:20261117T212252Z
+DTSTAMP:20261117T212523Z
 DTSTART:20261122T140000Z
 DTEND:20261122T170000Z
 SUMMARY:« Noble Pagaille » — Les Illuminés
 LOCATION:Salle CALVA\, Salle CALVA\, Spiennes (7032 Mons)
-DESCRIPTION:Nouvelle création 2026 de la troupe Les Illuminés.\nPrix : Réservation billetweb\nhttps://monsblog.be/information/noble-pagaille-2021-et-22-novembre-2026-salle-calva-de-spiennes/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Nouvelle création 2026 de la troupe Les Illuminés. La Comtesse de l’Escure se réfugie dans sa maison de campagne\, où les ennuis s’accumulent : une bonne excentrique\, un majordome à secrets\, une baronne envahissante\, une paroissienne gourmande\, un médecin original… et un fils qui n’aide pas. Une comédie déjantée pleine de rebondissements.\nPrix : Tarif sur la billetterie en ligne\nhttps://www.billetweb.fr/noblepagaille\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:« Noble Pagaille » — Les Illuminés demain
