@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-05-mons-c-ur-en-neige-marche-de-noel@onfaitquoi.be
-DTSTAMP:20261117T230625Z
+DTSTAMP:20261117T231005Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20270104
 SUMMARY:Mons Cœur en Neige — Marché de Noël
 LOCATION:Grand-Place de Mons\, Grand-Place\, 7000 Mons
-DESCRIPTION:Marché de Noël autour de la Grand-Place\, du Marché aux Herbes et de la place Léopold. Détails 2026 (patinoire\, animations) à confirmer sur monscoeurenneige.be.\nPrix : Accès libre\nhttps://www.info-lux.com/?p=1742483\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:22e édition du marché de Noël montois\, sur trois pôles : la Grand-Place (une cinquantaine de chalets d’artisans\, la Tour de Noël\, le Kiosque Magique\, le manège « Sapin enchanté » et le chalet de la solidarité avec soupe gratuite)\, la place Léopold (patinoire couverte de 600 m² et Luna Park) et le Marché aux Herbes (village Horeca). Un petit train gratuit relie les trois pôles le week-end. Ouverture le 5 décembre : Parade Amoureuse à 16h30\, gospel à 18h\, inauguration au Kiosque Magique à 18h30 puis DJ set jusqu’à 23h.\nPrix : Accès libre\nhttps://monscoeurenneige.be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Mons Cœur en Neige — Marché de Noël
