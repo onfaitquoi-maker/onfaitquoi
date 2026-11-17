@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-13-jingle-run-corrida-mons-c-ur-en-neige@onfaitquoi.be
-DTSTAMP:20261117T234946Z
+DTSTAMP:20261117T235041Z
 DTSTART:20261213T100000Z
 DTEND:20261213T130000Z
 SUMMARY:Jingle Run — Corrida Mons Cœur en Neige
 LOCATION:Grand-Place de Mons\, Grand-Place\, 7000 Mons
-DESCRIPTION:Course festive de Noël au départ de la Grand-Place.\nPrix : à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Course festive de Noël au départ de la Grand-Place\, sur 5 ou 10 km. Inscription en ligne jusqu’au samedi 12 décembre à 18h\, ou sur place le jour même dans la limite des places disponibles.\nPrix : Prévente 5 km 4 € · 10 km 9 € (+ frais) · sur place 6 € / 11 €\nhttps://ledossard.com/inscription/index.php?id=3874\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Jingle Run — Corrida Mons Cœur en Neige demain
