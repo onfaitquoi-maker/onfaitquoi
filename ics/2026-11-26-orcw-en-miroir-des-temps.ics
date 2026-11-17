@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-26-orcw-en-miroir-des-temps@onfaitquoi.be
+DTSTAMP:20261117T221443Z
+DTSTART:20261126T190000Z
+DTEND:20261126T220000Z
+SUMMARY:ORCW — En miroir des temps
+LOCATION:Arsonic — Grande salle\, Rue de Nimy 138\, 7000 Mons
+DESCRIPTION:Concert de l’Orchestre royal de chambre de Wallonie (ORCW) à Arsonic.\nPrix : 40 € · réduit 35 € · gratuit -25 ans (retrait sur place)\nhttps://shop.infinitix.be/SURMARSBE_INF/Q/quantity/623C685C-98FC-26B1-ADDB-EB95BC51DF8B/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:ORCW — En miroir des temps demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:ORCW — En miroir des temps dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
