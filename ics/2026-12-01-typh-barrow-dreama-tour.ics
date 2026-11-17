@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-01-typh-barrow-dreama-tour@onfaitquoi.be
-DTSTAMP:20261117T225343Z
+DTSTAMP:20261117T225455Z
 DTSTART:20261201T190000Z
 DTEND:20261201T220000Z
 SUMMARY:Typh Barrow — Dreama Tour
 LOCATION:Théâtre Royal de Mons\, Grand-Place 22\, 7000 Mons
-DESCRIPTION:Concert de Typh Barrow au Théâtre Royal de Mons (Dreama Tour).\nPrix : Tarif sur la billetterie en ligne\nhttps://www.ticketmaster.be/event/typh-barrow-dreama-tour-2026-tickets/2013736260?language=fr-be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Concert de Typh Barrow au Théâtre Royal de Mons (Dreama Tour).\nPrix : Tarif sur la billetterie en ligne\nhttps://www.ticketmaster.be/event/typh-barrow-dreama-tour-2026-tickets/1555195654?language=fr-be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Typh Barrow — Dreama Tour demain
