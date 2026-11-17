@@ -362,6 +362,7 @@ const PLACES = [
  {id:'lottoexpo', name:'Lotto Mons Expo', commune:'Mons', loc:'Grands Prés', addr:'Avenue Thomas Edison 2, 7000 Mons', lat:50.4590, lng:3.9270, kind:'Salle d’événements', acts:[]},
  {id:'coworcoeur', name:'Coworcoeur', commune:'Frameries', loc:'Frameries', addr:'Rue Ferrer 104 D, 7080 Frameries', lat:50.4089, lng:3.8963, kind:'Espace de coworking', acts:[]},
  {id:'cubar', name:'Cuba’r', commune:'Mons', loc:'Mons centre', addr:'Rue de Nimy 55, 7000 Mons', lat:50.4566, lng:3.9531, kind:'Bar & lounge afro-latino', acts:['Soirées','Danse latino']},
+ {id:'wauxhall', name:'Le Waux-Hall', commune:'Mons', loc:'Parc du Waux-Hall', addr:'Avenue Reine Astrid 22, 7000 Mons', lat:50.4560, lng:3.9445, kind:'Restaurant dans le parc', acts:['Brunch & balade'], book:'https://www.restauration-nouvelle.be/etablissement/le-waux-hall/', bookLabel:'🍳 Réserver le brunch', note:'Brunch tous les dimanches de 11h à 14h, au chalet du Waux-Hall (jusqu’au 28 février 2027). 50 € par adulte hors boissons, 35 € par enfant jusqu’à 12 ans. Réservation en ligne. Et pour digérer : une balade dans le parc.'},
  {id:'decathlonmons', name:'Decathlon Mons', commune:'Mons', loc:'Cuesmes', addr:'Rue de la Poire d’Or 21, 7033 Cuesmes', lat:50.4440, lng:3.9230, kind:'Magasin de sport', acts:[]},
  {id:'stgerybaudour', name:'Église Saint-Géry de Baudour', commune:'Saint-Ghislain', loc:'Baudour', addr:'Église Saint-Géry, Baudour, 7331 Saint-Ghislain', lat:50.4836, lng:3.8331, kind:'Église', acts:[]},
  {id:'grandplace', name:'Grand-Place de Mons', commune:'Mons', loc:'Grand-Place', addr:'Grand-Place, 7000 Mons', lat:50.4542, lng:3.9516, kind:'Place publique', acts:[]},
@@ -922,7 +923,7 @@ function openPlace(id, withEvents){
     <h3>${esc(p.name)}</h3>
     <div class="facts"><div>${ICON.pin}<span>${esc(p.addr)}</span></div></div>
     ${p.acts.length?`<div class="acts" style="margin-bottom:16px">${p.acts.map(a=>`<i>${esc(a)}</i>`).join('')}</div>`:''}
-    <div class="actions"><a class="btn pri" href="${mapsUrl(p)}" target="_blank" rel="noopener">${ICON.go} Itinéraire</a><button class="btn" data-fav="${p.id}">${ICON.heart} ${S.favs.has(p.id)?'Retirer':'Garder'}</button></div>
+    <div class="actions"><a class="btn pri" href="${mapsUrl(p)}" target="_blank" rel="noopener">${ICON.go} Itinéraire</a><button class="btn" data-fav="${p.id}">${ICON.heart} ${S.favs.has(p.id)?'Retirer':'Garder'}</button>${p.book?`<a class="btn" href="${p.book}" target="_blank" rel="noopener">${esc(p.bookLabel||'Réserver')} ↗</a>`:''}</div>
     ${up.length?`<h2 class="sec">À venir ici <small>${up.length}</small></h2><div class="list">${up.slice(0,8).map(e=>evRow(e, parse(e.date)<today?today:parse(e.date))).join('')}</div>`:''}
     ${p.note?`<p class="src">${esc(p.note)}</p>`:''}
     ${p.src?`<p class="src">Info repérée sur : <a href="${p.src}" target="_blank" rel="noopener">${new URL(p.src).hostname}</a> — à confirmer avec le lieu.</p>`:''}`);
