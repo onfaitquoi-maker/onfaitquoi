@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-27-editer-c-est-resister-40-ans-des-edition@onfaitquoi.be
-DTSTAMP:20261117T205022Z
+DTSTAMP:20261117T205232Z
 DTSTART:20261127T183000Z
 DTEND:20261127T213000Z
 SUMMARY:Éditer\, c’est résister ! — 40 ans des éditions du Cerisier
 LOCATION:Centre culturel de Boussu\, Rue F. Dorzée 3\, 7300 Boussu
-DESCRIPTION:Soirée (Festival de Résistance Mons-Borinage).\nPrix : voir la page de l’événement\nhttps://www.facebook.com/events/1466670215337756/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Les Éditions du Cerisier\, maison d’édition indépendante et engagée\, fêtent leurs 40 ans : Jean Delval\, Danièle Ricaille et des auteur·rices reviennent sur son histoire et ses combats. Puis lecture d’extraits de « Je vous écris de Gaza sous les bombes » par David Murgia\, en musique avec Noé Preszow\, Shahd Awwada et Firas Hassan\, et un court set de Noé Preszow. Festival de Résistance. Salle culturelle de l’Administration communale (2e étage).\nPrix : Entrée libre · inscription souhaitée\nhttps://forms.cloud.microsoft/e/7x3NeRTrut\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Éditer\, c’est résister ! — 40 ans des éditions du Cerisier demain

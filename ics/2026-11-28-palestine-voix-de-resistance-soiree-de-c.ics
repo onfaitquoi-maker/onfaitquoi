@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-28-palestine-voix-de-resistance-soiree-de-c@onfaitquoi.be
+DTSTAMP:20261117T205232Z
+DTSTART:20261128T183000Z
+DTEND:20261128T213000Z
+SUMMARY:Palestine\, voix de résistance — soirée de clôture
+LOCATION:Centre culturel de Boussu\, Rue F. Dorzée 3\, 7300 Boussu
+DESCRIPTION:Soirée cabaret solidaire de clôture du Festival de Résistance : avec Hanne Bosselaers (Médecine pour le Peuple\, Flotille pour Gaza)\, Jean-François Tamellini (FGTB wallonne) et les partenaires du festival. Pour finir\, concert de Zaataric\, entre oud et musique électronique. Boissons et petite restauration sur place. Salle culturelle de l’Administration communale (2e étage).\nPrix : Entrée libre · inscription souhaitée\nhttps://forms.cloud.microsoft/e/7x3NeRTrut\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Palestine\, voix de résistance — soirée de clôture demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Palestine\, voix de résistance — soirée de clôture dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

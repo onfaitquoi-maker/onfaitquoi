@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-25-soiree-feministe-violences-faites-aux-fe@onfaitquoi.be
+DTSTAMP:20261117T205232Z
+DTSTART:20261125T183000Z
+DTEND:20261125T213000Z
+SUMMARY:Soirée féministe — violences faites aux femmes
+LOCATION:Centre culturel de Boussu\, Rue F. Dorzée 3\, 7300 Boussu
+DESCRIPTION:Pour la Journée internationale de lutte contre les violences faites aux femmes : témoignages et échanges sur les violences au travail\, dans le secteur associatif\, les syndicats\, l’espace public et en ligne. Avec Florence Hainaut (journaliste\, autrice de « Cyberharcelée »)\, Vanessa Amboldi (CEPAG Mouvement) et Sandrine Lorfèvre (Bureau wallon des Femmes de la FGTB). Un dialogue avec le public plutôt qu’une suite de conférences. Festival de Résistance. Salle culturelle de l’Administration communale (2e étage).\nPrix : Entrée libre · inscription souhaitée\nhttps://forms.cloud.microsoft/e/7x3NeRTrut\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Soirée féministe — violences faites aux femmes demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Soirée féministe — violences faites aux femmes dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

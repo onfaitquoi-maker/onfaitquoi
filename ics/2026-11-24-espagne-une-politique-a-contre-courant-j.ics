@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-24-espagne-une-politique-a-contre-courant-j@onfaitquoi.be
+DTSTAMP:20261117T205232Z
+DTSTART:20261124T183000Z
+DTEND:20261124T213000Z
+SUMMARY:Espagne\, une politique à contre-courant ? — Juan Blanco
+LOCATION:Centre culturel de Boussu\, Rue F. Dorzée 3\, 7300 Boussu
+DESCRIPTION:« Et si d’autres choix politiques étaient possibles ? » Rencontre avec Juan Blanco\, ancien responsable de l’action syndicale internationale des Commissions ouvrières espagnoles (CCOO). Hausse du salaire minimum\, revalorisation des pensions\, droits sociaux : comment l’Espagne a pris une autre voie que l’austérité\, avec quelles limites\, et ce qu’on peut en retenir en Belgique. Échange avec le public. Festival de Résistance. Salle culturelle de l’Administration communale (2e étage).\nPrix : Entrée libre · inscription souhaitée\nhttps://forms.cloud.microsoft/e/7x3NeRTrut\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Espagne\, une politique à contre-courant ? — Juan Blanco demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Espagne\, une politique à contre-courant ? — Juan Blanco dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

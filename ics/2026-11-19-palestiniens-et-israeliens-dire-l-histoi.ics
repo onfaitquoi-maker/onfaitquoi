@@ -5,20 +5,20 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-19-palestiniens-et-israeliens-dire-l-histoi@onfaitquoi.be
-DTSTAMP:20261117T205022Z
+DTSTAMP:20261117T205232Z
 DTSTART:20261119T183000Z
 DTEND:20261119T213000Z
-SUMMARY:Palestiniens et Israéliens : dire l’histoire
+SUMMARY:Palestiniens et Israéliens : dire l’histoire — Michel Staszewski
 LOCATION:Centre culturel de Boussu\, Rue F. Dorzée 3\, 7300 Boussu
-DESCRIPTION:Conférence-débat (Festival de Résistance Mons-Borinage).\nPrix : voir la page de l’événement\nhttps://www.facebook.com/events/1437405715012957/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Conférence-débat avec Michel Staszewski sur les racines historiques du conflit israélo-palestinien\, le 7 octobre 2023\, la guerre à Gaza et les réactions internationales\, les mythes et préjugés qui l’entourent. Une approche historique et critique\, qui distingue la critique de la politique de l’État d’Israël de l’antisémitisme. Échange avec le public après l’exposé. Festival de Résistance. Salle culturelle de l’Administration communale (2e étage).\nPrix : Entrée libre · inscription souhaitée\nhttps://forms.cloud.microsoft/e/7x3NeRTrut\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Palestiniens et Israéliens : dire l’histoire demain
+DESCRIPTION:Palestiniens et Israéliens : dire l’histoire — Michel Staszewski demain
 TRIGGER:-P1D
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Palestiniens et Israéliens : dire l’histoire dans 2 heures
+DESCRIPTION:Palestiniens et Israéliens : dire l’histoire — Michel Staszewski dans 2 heures
 TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
