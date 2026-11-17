@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-21-marche-canine-solidaire@onfaitquoi.be
-DTSTAMP:20261117T213547Z
+DTSTAMP:20261117T213831Z
 DTSTART:20261121T080000Z
 DTEND:20261121T130000Z
 SUMMARY:Marche canine solidaire
 LOCATION:Centre sportif Max Audain\, Rue du Chapitre 3\, 7080 Frameries
-DESCRIPTION:Première marche canine solidaire\, organisée par la commune de Frameries et Frameries Sports. Avec ou sans chien : 5 ou 10 km au choix\, rencontre avec les associations locales de bien-être animal\, possibilité de promener un chien de refuge\, parcours d’agility et tombola. Tu peux apporter de la nourriture pour animaux\, redistribuée aux associations. Chiens tenus en laisse obligatoirement.\nPrix : Participation libre\, minimum 2 € (au profit des associations)\nhttps://www.dhnet.be/regions/mons/borinage/2026/10/29/une-premiere-marche-canine-solidaire-organisee-a-frameries-largent-sera-distribue-aux-associations-participantes-OALSOTFEXVCM5HSC3SFTEMHB24/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Première marche canine solidaire\, organisée par la commune de Frameries et Frameries Sports. Avec ou sans chien : 5 ou 10 km au choix\, rencontre avec les associations locales de bien-être animal\, possibilité de promener un chien de refuge\, parcours d’agility et tombola. Tu peux apporter de la nourriture pour animaux\, redistribuée aux associations. Chiens tenus en laisse obligatoirement.\nPrix : Participation libre\, minimum 2 € (au profit des associations)\nhttps://www.frameries.be/agenda/marche-canine-solidaire-a-frameries?u=c950b4464985437c87fa6d3a6b5e04d7\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Marche canine solidaire demain
