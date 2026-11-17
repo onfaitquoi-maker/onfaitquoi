@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2027-01-19-la-villa-la-soiree-celibataires@onfaitquoi.be
-DTSTAMP:20261117T144306Z
+DTSTAMP:20261117T145857Z
 DTSTART:20270119T200000Z
 DTEND:20270119T230000Z
 SUMMARY:LA VILLA — la soirée célibataires
 LOCATION:The Play\, Place du Marché aux Herbes 24\, 7000 Mons
-DESCRIPTION:Soirée célibataires du mardi au The Play.\nPrix : à confirmer\nhttps://www.facebook.com/events/29475386508724226/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Soirée célibataires du mardi au The Play.\nPrix : Entrée gratuite\nhttps://www.facebook.com/events/29475386508724226/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:LA VILLA — la soirée célibataires demain
