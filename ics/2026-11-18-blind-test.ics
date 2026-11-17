@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-18-blind-test@onfaitquoi.be
-DTSTAMP:20261117T131522Z
+DTSTAMP:20261117T131714Z
 DTSTART:20261118T190000Z
 DTEND:20261118T220000Z
 SUMMARY:Blind Test
 LOCATION:Monkey's Café\, Rue de la Chaussée 32\, 7000 Mons
-DESCRIPTION:Blind test au Monkey’s Café.\nPrix : voir la page de l’événement\nhttps://www.facebook.com/events/1196582866054799/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Blind test au Monkey’s Café.\nPrix : Gratuit\nhttps://www.facebook.com/events/1196582866054799/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Blind Test demain
