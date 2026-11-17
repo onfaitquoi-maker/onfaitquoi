@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2027-02-14-ento-mons-2027@onfaitquoi.be
-DTSTAMP:20261117T210113Z
+DTSTAMP:20261117T210401Z
 DTSTART:20270214T083000Z
 DTEND:20270214T113000Z
 SUMMARY:ENTO-MONS 2027
 LOCATION:Palais des Congrès (MICX)\, Avenue Melina Mercouri 9\, 7000 Mons
-DESCRIPTION:Bourse aux insectes (événement Facebook).\nPrix : à confirmer\nhttps://www.facebook.com/events/28600702569612834/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Bourse aux insectes (événement Facebook).\nPrix : à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:ENTO-MONS 2027 demain

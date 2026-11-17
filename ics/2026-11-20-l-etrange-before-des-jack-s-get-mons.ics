@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-20-l-etrange-before-des-jack-s-get-mons@onfaitquoi.be
-DTSTAMP:20261117T210113Z
+DTSTAMP:20261117T210401Z
 DTSTART:20261120T200000Z
 DTEND:20261120T230000Z
 SUMMARY:L’étrange Before des Jack’s — GET Mons
 LOCATION:Get a Pinte\, Marché aux Herbes 22\, 7000 Mons
-DESCRIPTION:Before du marché de Noël des Jack’s\, ambiance 100 % pop rock. Temps fort : la remise officielle des bracelets Jack’s\, qui donnent droit à des avantages tout le mois de décembre (5+1 sur les shots au chalet de Noël\, une bière offerte pour une coupe au Barbershop À l’ancienne\, un shot Jack’s offert pour une bière À l’ancienne au GET). Organisé par le GET et A l’ancienne.\nPrix : Gratuit\nhttps://www.facebook.com/events/1867193607606619/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Before du marché de Noël des Jack’s\, ambiance 100 % pop rock. Temps fort : la remise officielle des bracelets Jack’s\, qui donnent droit à des avantages tout le mois de décembre (5+1 sur les shots au chalet de Noël\, une bière offerte pour une coupe au Barbershop À l’ancienne\, un shot Jack’s offert pour une bière À l’ancienne au GET). Organisé par le GET et A l’ancienne.\nPrix : Gratuit\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:L’étrange Before des Jack’s — GET Mons demain

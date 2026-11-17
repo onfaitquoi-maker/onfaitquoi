@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2027-01-28-scene-slam@onfaitquoi.be
-DTSTAMP:20261117T210113Z
+DTSTAMP:20261117T210401Z
 DTSTART:20270128T190000Z
 DTEND:20270128T220000Z
 SUMMARY:Scène slam
 LOCATION:La Maison Folie\, Mons (adresse à compléter)
-DESCRIPTION:Scène slam (deux dates\, la 2e à confirmer).\nPrix : voir la page de l’événement\nhttps://www.facebook.com/events/1853905679326358/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Scène slam (deux dates\, la 2e à confirmer).\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Scène slam demain

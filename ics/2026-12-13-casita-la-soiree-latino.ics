@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-13-casita-la-soiree-latino@onfaitquoi.be
-DTSTAMP:20261117T210113Z
+DTSTAMP:20261117T210401Z
 DTSTART:20261213T210000Z
 DTEND:20261214T013000Z
 SUMMARY:CASITA — la soirée latino
 LOCATION:The Play\, Place du Marché aux Herbes 24\, 7000 Mons
-DESCRIPTION:Soirée latino du dimanche au The Play : sons latinos et ambiance caliente jusqu’au bout de la nuit. Promo : 1 shot de tequila acheté = 1 offert. Tenue correcte exigée.\nPrix : Entrée gratuite\nhttps://www.facebook.com/theplaymons/events\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Soirée latino du dimanche au The Play : sons latinos et ambiance caliente jusqu’au bout de la nuit. Promo : 1 shot de tequila acheté = 1 offert. Tenue correcte exigée.\nPrix : Entrée gratuite\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:CASITA — la soirée latino demain

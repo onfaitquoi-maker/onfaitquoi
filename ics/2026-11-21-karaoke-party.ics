@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-21-karaoke-party@onfaitquoi.be
-DTSTAMP:20261117T210113Z
+DTSTAMP:20261117T210401Z
 DTSTART:20261121T190000Z
 DTEND:20261121T220000Z
 SUMMARY:Karaoké Party
 LOCATION:Monkey's Café\, Rue de la Chaussée 32\, 7000 Mons
-DESCRIPTION:Soirée karaoké\, entrée gratuite.\nPrix : Gratuit\nhttps://www.facebook.com/events/1771910494109520/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Soirée karaoké\, entrée gratuite.\nPrix : Gratuit\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Karaoké Party demain

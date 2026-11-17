@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-27-just-dance-party@onfaitquoi.be
-DTSTAMP:20261117T210113Z
+DTSTAMP:20261117T210401Z
 DTSTART:20261127T190000Z
 DTEND:20261127T220000Z
 SUMMARY:Just Dance Party
 LOCATION:Monkey's Café\, Rue de la Chaussée 32\, 7000 Mons
-DESCRIPTION:Soirée Just Dance.\nPrix : voir la page de l’événement\nhttps://www.facebook.com/events/1141038948404980/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Soirée Just Dance.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Just Dance Party demain

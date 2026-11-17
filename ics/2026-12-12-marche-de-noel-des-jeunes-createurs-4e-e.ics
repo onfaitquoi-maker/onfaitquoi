@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-12-marche-de-noel-des-jeunes-createurs-4e-e@onfaitquoi.be
-DTSTAMP:20261117T210113Z
+DTSTAMP:20261117T210401Z
 DTSTART:20261212T130000Z
 DTEND:20261212T190000Z
 SUMMARY:Marché de Noël des jeunes créateurs (4e édition)
 LOCATION:Auberge de Jeunesse du Beffroi\, Rampe du Château 2\, 7000 Mons
-DESCRIPTION:Marché de Noël spécial jeunes créateurs à l’Auberge de Jeunesse du Beffroi.\nPrix : Entrée libre\nhttps://www.facebook.com/events/3535807600141197/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Marché de Noël spécial jeunes créateurs à l’Auberge de Jeunesse du Beffroi.\nPrix : Entrée libre\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Marché de Noël des jeunes créateurs (4e édition) demain

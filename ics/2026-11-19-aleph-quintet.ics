@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-19-aleph-quintet@onfaitquoi.be
-DTSTAMP:20261117T210113Z
+DTSTAMP:20261117T210401Z
 DTSTART:20261119T190000Z
 DTEND:20261119T220000Z
 SUMMARY:Aleph Quintet
 LOCATION:Arsonic\, Rue de Nimy 138\, 7000 Mons
-DESCRIPTION:Concert de jazz.\nPrix : voir la page de l’événement\nhttps://www.facebook.com/events/1098463133111469/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Concert de jazz.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Aleph Quintet demain

@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-27-toine-thys-motoi-kanamori@onfaitquoi.be
-DTSTAMP:20261117T210113Z
+DTSTAMP:20261117T210401Z
 DTSTART:20261127T190000Z
 DTEND:20261127T220000Z
 SUMMARY:Toine Thys & Motoï Kanamori
 LOCATION:Maison Culturelle de Quaregnon\, Grand-Place 1\, 7390 Quaregnon
-DESCRIPTION:Concert jazz.\nPrix : voir la page de l’événement\nhttps://www.facebook.com/events/27693399750360516/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Concert jazz : le saxophoniste belge Toine Thys en duo avec le pianiste Motoï Kanamori.\nPrix : Tarif sur la billetterie en ligne\nhttps://shop.utick.net/?pos=MAISONCULTURELLEQUAREGNON&module=ACTIVITYSERIEDETAILS&s=CA639C56-AB9A-C880-D6A2-39822C3C0FA6\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Toine Thys & Motoï Kanamori demain

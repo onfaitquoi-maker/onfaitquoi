@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2027-02-05-colibri-dave-hellebrandt-doux-rire-festi@onfaitquoi.be
-DTSTAMP:20261117T210113Z
+DTSTAMP:20261117T210401Z
 DTSTART:20270205T190000Z
 DTEND:20270205T220000Z
 SUMMARY:Colibri — Dave Hellebrandt (Doux Rire Festival)
 LOCATION:Centre culturel de Dour\, Rue du Marché 1\, 7370 Dour
-DESCRIPTION:Humour\, dans le cadre du Doux Rire Festival.\nPrix : voir la page de l’événement\nhttps://www.facebook.com/events/28918750094482019/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Humour\, dans le cadre du Doux Rire Festival.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Colibri — Dave Hellebrandt (Doux Rire Festival) demain

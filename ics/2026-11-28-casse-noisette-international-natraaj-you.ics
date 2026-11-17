@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-28-casse-noisette-international-natraaj-you@onfaitquoi.be
-DTSTAMP:20261117T210113Z
+DTSTAMP:20261117T210401Z
 DTSTART:20261128T173000Z
 DTEND:20261128T203000Z
 SUMMARY:Casse-noisette — International Natraaj Youth Ballet
 LOCATION:Centre culturel de Colfontaine\, Rue du Pont d’Arcole 12\, 7340 Colfontaine
-DESCRIPTION:Spectacle de ballet.\nPrix : voir la page de l’événement\nhttps://www.facebook.com/events/1667376584919640/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Spectacle de ballet.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Casse-noisette — International Natraaj Youth Ballet demain

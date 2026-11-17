@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2027-01-23-pour-bien-faire-hommage-a-brel-nougaro@onfaitquoi.be
-DTSTAMP:20261117T210113Z
+DTSTAMP:20261117T210401Z
 DTSTART:20270123T190000Z
 DTEND:20270123T220000Z
 SUMMARY:Pour bien faire (hommage à Brel & Nougaro)
 LOCATION:Centre culturel de Dour\, Rue du Marché 1\, 7370 Dour
-DESCRIPTION:Concert-hommage.\nPrix : voir la page de l’événement\nhttps://www.facebook.com/events/1679818300425179/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Concert-hommage.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Pour bien faire (hommage à Brel & Nougaro) demain

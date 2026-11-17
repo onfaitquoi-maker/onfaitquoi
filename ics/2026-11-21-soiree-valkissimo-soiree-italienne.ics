@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-21-soiree-valkissimo-soiree-italienne@onfaitquoi.be
-DTSTAMP:20261117T210113Z
+DTSTAMP:20261117T210401Z
 DTSTART:20261121T180000Z
 DTEND:20261121T210000Z
 SUMMARY:Soirée Valkissimo — soirée italienne
 LOCATION:Van der Valk Hotel Mons Congrès & Spa\, Avenue Melina Mercouri 7\, 7000 Mons
-DESCRIPTION:Buffet et boissons à volonté\, concert live du groupe Ciao Italia (variété italienne)\, puis soirée dansante avec DJ.\nPrix : 65 € / pers.\nhttps://www.facebook.com/events/4629979693950860/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Buffet et boissons à volonté\, concert live du groupe Ciao Italia (variété italienne)\, puis soirée dansante avec DJ.\nPrix : 65 € / pers.\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Soirée Valkissimo — soirée italienne demain

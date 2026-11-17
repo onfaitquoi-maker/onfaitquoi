@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-21-soiree-beaujolais-des-scouts-saint-charl@onfaitquoi.be
-DTSTAMP:20261117T210113Z
+DTSTAMP:20261117T210401Z
 DTSTART:20261121T170000Z
 DTEND:20261121T200000Z
 SUMMARY:Soirée Beaujolais des scouts Saint-Charles
 LOCATION:Local des Scouts Saint-Charles\, Rue des Clercs 34\, 7000 Mons
-DESCRIPTION:Le retour de la soirée beaujolais des pionniers de l’unité scoute Saint-Charles\, au cœur de Mons. Soirée scouts.\nPrix : à confirmer\nhttps://www.facebook.com/events/1166762129243526/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Le retour de la soirée beaujolais des pionniers de l’unité scoute Saint-Charles\, au cœur de Mons. Soirée scouts.\nPrix : à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Soirée Beaujolais des scouts Saint-Charles demain

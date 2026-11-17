@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-26-en-miroir-des-temps@onfaitquoi.be
-DTSTAMP:20261117T210113Z
+DTSTAMP:20261117T210401Z
 DTSTART:20261126T180000Z
 DTEND:20261126T210000Z
 SUMMARY:En miroir des temps
 LOCATION:Arsonic\, Rue de Nimy 138\, 7000 Mons
-DESCRIPTION:Concert à Arsonic.\nPrix : Tarif à confirmer\nhttps://www.facebook.com/events/1412276134094478/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Concert à Arsonic.\nPrix : Tarif à confirmer\nhttps://www.info-lux.com/?p=1716766\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:En miroir des temps demain

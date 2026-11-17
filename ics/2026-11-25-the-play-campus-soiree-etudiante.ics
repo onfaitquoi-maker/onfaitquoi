@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-25-the-play-campus-soiree-etudiante@onfaitquoi.be
-DTSTAMP:20261117T210113Z
+DTSTAMP:20261117T210401Z
 DTSTART:20261125T190000Z
 DTEND:20261125T220000Z
 SUMMARY:The Play Campus — soirée étudiante
 LOCATION:The Play\, Place du Marché aux Herbes 24\, 7000 Mons
-DESCRIPTION:Soirée étudiante du mercredi au The Play. Promos : vodka à 6 €\, 1 pils achetée = 1 pils offerte. Tenue correcte exigée.\nPrix : Entrée gratuite\nhttps://www.facebook.com/theplaymons/events\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Soirée étudiante du mercredi au The Play. Promos : vodka à 6 €\, 1 pils achetée = 1 pils offerte. Tenue correcte exigée.\nPrix : Entrée gratuite\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:The Play Campus — soirée étudiante demain

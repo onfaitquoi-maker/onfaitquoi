@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-06-les-matins-famille@onfaitquoi.be
-DTSTAMP:20261117T210113Z
+DTSTAMP:20261117T210401Z
 DTSTART:20261206T083000Z
 DTEND:20261206T113000Z
 SUMMARY:Les Matins Famille
 LOCATION:Centre culturel de Dour\, Rue du Marché 1\, 7370 Dour
-DESCRIPTION:Activité en famille.\nPrix : voir la page de l’événement\nhttps://www.facebook.com/events/1068950752584795/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Activité en famille.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Les Matins Famille demain

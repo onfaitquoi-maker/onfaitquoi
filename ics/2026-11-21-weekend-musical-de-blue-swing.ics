@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-21-weekend-musical-de-blue-swing@onfaitquoi.be
-DTSTAMP:20261117T210113Z
+DTSTAMP:20261117T210401Z
 DTSTART:20261121T180000Z
 DTEND:20261121T210000Z
 SUMMARY:Weekend musical de Blue Swing
 LOCATION:Centre culturel de Dour\, Rue du Marché 1\, 7370 Dour
-DESCRIPTION:Concert (organisé par Blue Swing - Dour).\nPrix : voir la page de l’événement\nhttps://www.facebook.com/events/1671176158043696/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Concert (organisé par Blue Swing - Dour).\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Weekend musical de Blue Swing demain

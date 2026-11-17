@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-27-hyper-harmonie-rouffiange@onfaitquoi.be
-DTSTAMP:20261117T210113Z
+DTSTAMP:20261117T210401Z
 DTSTART:20261127T190000Z
 DTEND:20261127T220000Z
 SUMMARY:Hyper — Harmonie Rouffiange
 LOCATION:Centre culturel de Dour\, Rue du Marché 1\, 7370 Dour
-DESCRIPTION:Concert.\nPrix : voir la page de l’événement\nhttps://www.facebook.com/events/1386526993536616/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Concert.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Hyper — Harmonie Rouffiange demain

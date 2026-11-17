@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-13-jingle-run-corrida-mons-c-ur-en-neige@onfaitquoi.be
-DTSTAMP:20261117T210113Z
+DTSTAMP:20261117T210401Z
 DTSTART:20261213T100000Z
 DTEND:20261213T130000Z
 SUMMARY:Jingle Run — Corrida Mons Cœur en Neige
 LOCATION:Grand-Place de Mons\, Grand-Place\, 7000 Mons
-DESCRIPTION:Course festive de Noël au départ de la Grand-Place.\nPrix : à confirmer\nhttps://www.facebook.com/events/2192935808312735/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Course festive de Noël au départ de la Grand-Place.\nPrix : à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Jingle Run — Corrida Mons Cœur en Neige demain
