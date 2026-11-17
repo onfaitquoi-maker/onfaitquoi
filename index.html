@@ -38,7 +38,7 @@ a{color:inherit}
 
 /* tabbar */
 .tabs{position:absolute;left:12px;right:12px;bottom:calc(10px + var(--safe-b));display:flex;background:var(--ink);color:var(--paper);border-radius:20px;padding:6px;z-index:30;box-shadow:0 10px 30px rgba(0,0,0,.25)}
-.tabs button{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:7px 0 5px;border-radius:14px;font-size:10.5px;font-weight:700;letter-spacing:.04em;opacity:.62}
+.tabs button{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;gap:2px;padding:7px 0 5px;border-radius:14px;font-size:10px;font-weight:700;letter-spacing:0;opacity:.62;white-space:nowrap}
 .tabs button svg{width:22px;height:22px}
 .tabs button.on{opacity:1;background:rgba(255,255,255,.1)}
 @media (prefers-color-scheme: dark){ .tabs button.on{background:rgba(0,0,0,.08)} }
@@ -246,10 +246,15 @@ h2.sec small{font-family:var(--body);font-size:12px;font-weight:600;color:var(--
       <div class="chips" id="searchCats"></div>
       <div class="lbl">Commune</div>
       <div class="chips" id="searchCities"></div>
-      
-      <h2 class="sec">Où faire quoi&nbsp;? <small>activités à l'année</small></h2>
-      <div class="tiles" id="tiles"></div>
       <div id="results"></div>
+    </section>
+
+    <!-- ACTIVITÉS À L'ANNÉE -->
+    <section class="view" id="v-activites">
+      <h1 class="big">Où faire<br>quoi&nbsp;?</h1>
+      <p class="lead">Les activités à faire toute l’année, sans attendre un événement.</p>
+      <div class="chips" id="actCities" style="margin-top:12px"></div>
+      <div id="actBody"></div>
     </section>
 
     <!-- FAVORIS -->
@@ -263,7 +268,8 @@ h2.sec small{font-family:var(--body);font-size:12px;font-weight:600;color:var(--
   <nav class="tabs" id="tabs">
     <button data-v="accueil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M3 11 12 4l9 7v9h-6v-6H9v6H3z"/></svg>Accueil</button>
     <button data-v="agenda"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4" stroke-linecap="round"/></svg>Agenda</button>
-    <button data-v="recherche"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Recherche</button>
+    <button data-v="recherche"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Chercher</button>
+    <button data-v="activites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="9" cy="9" r="1.3" fill="currentColor"/><circle cx="15" cy="15" r="1.3" fill="currentColor"/><circle cx="15" cy="9" r="1.3" fill="currentColor"/><circle cx="9" cy="15" r="1.3" fill="currentColor"/></svg>Activités</button>
     <button data-v="favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/></svg>Favoris</button>
     <button data-v="lieux"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg>Lieux</button>
   </nav>
@@ -532,7 +538,7 @@ function store(k,v){ try{ if(v===undefined) return JSON.parse(localStorage.getIt
 /* ---------- état ---------- */
 const S = {
   view:'accueil', when:'week', homeCat:null, commune:null,
-  sCats:new Set(), sCity:null, free:false, q:'', act:null,
+  sCats:new Set(), sCity:null, free:false, q:'', act:null, aCity:null,
   calMonth:new Date(today.getFullYear(),today.getMonth(),1), calSel:key(today),
   mapMode:'events', mapCats:new Set(),
   favs:new Set(store('ofq_favs')||[]),
@@ -668,21 +674,10 @@ function renderSearch(){
   catChips($('#searchCats'), S.sCats, true, k=>{ S.sCats.has(k)?S.sCats.delete(k):S.sCats.add(k); renderSearch(); });
   $('#searchCities').innerHTML = COMMUNES.map(c=>`<button class="chip plain ${S.sCity===c?'on':''}" data-c="${c}">${c}</button>`).join('');
   $('#searchCities').querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{S.sCity=S.sCity===b.dataset.c?null:b.dataset.c; renderSearch();});
-  // tuiles activités
-  const counts={}; PLACES.forEach(p=>p.acts.forEach(a=>counts[a]=(counts[a]||0)+1));
-  const acts=[...new Set([...WANTED,...Object.keys(counts)])].filter(a=>!['Coworking','Expos','Brasserie','Famille','Sciences','Spectacles','Football','Humour','Tennis','Accrobranche','Pickleball'].includes(a));
-  acts.sort((a,b)=>(counts[b]||0)-(counts[a]||0));
-  $('#tiles').innerHTML = acts.map(a=>`<button class="tile ${S.act===a?'on':''} ${counts[a]?'':'zero'}" data-a="${esc(a)}"><b>${esc(a)}</b><span>${counts[a]?counts[a]+' lieu'+(counts[a]>1?'x':''):'à découvrir'}</span></button>`).join('');
-  $('#tiles').querySelectorAll('[data-a]').forEach(b=>b.onclick=()=>{S.act=S.act===b.dataset.a?null:b.dataset.a; renderSearch(); if(S.act) setTimeout(()=>{const v=$('#v-recherche'); v.scrollTo({top:$('#results').offsetTop-10,behavior:'smooth'});},50);});
   // résultats
-  const q=norm(S.q.trim()), filtering = q||S.sCats.size||S.sCity||S.free||S.act;
+  const q=norm(S.q.trim()), filtering = q||S.sCats.size||S.sCity||S.free;
   let out='';
-  if(S.act){
-    const pl=PLACES.filter(p=>p.acts.includes(S.act)&&(!S.sCity||p.commune===S.sCity));
-    out+=`<h2 class="sec">${esc(S.act)} <small>${pl.length} lieu${pl.length>1?'x':''}</small></h2>`;
-    out+= pl.length? `<div class="list">${pl.map(plRow).join('')}</div>` : `<div class="empty"><b>On cherche encore</b>Aucun lieu « ${esc(S.act)} » répertorié${S.sCity?' à '+esc(S.sCity):''}. Tu en connais un&nbsp;?<br><button class="btn pri" data-propose="place">Proposer un lieu</button></div>`;
-  }
-  if(filtering && !S.act || (S.act && (q||S.sCats.size))){
+  if(filtering){
     const evs=EVENTS.filter(e=>{
       if(S.sCats.size&&!S.sCats.has(e.cat)) return false;
       if(S.sCity&&e.commune!==S.sCity) return false;
@@ -690,17 +685,41 @@ function renderSearch(){
       if(q&&!norm([e.title,e.venue,e.commune,e.desc,CATS[e.cat].label,e.price,e.free?'gratuit free':''].join(' ')).includes(q)) return false;
       return true;
     }).sort((a,b)=>Math.max(parse(a.date),today)-Math.max(parse(b.date),today));
-    out+=`<h2 class="sec">Événements <small>${evs.length} résultat${evs.length>1?'s':''}</small></h2>`;
-    out+= evs.length? `<div class="list">${evs.slice(0,60).map(e=>evRow(e, parse(e.date)<today?today:parse(e.date))).join('')}</div>` : `<div class="empty"><b>Aucun résultat</b>Essaie un autre mot ou retire un filtre.</div>`;
-    if(q && !S.act){
-      const pl=PLACES.filter(p=>(!S.sCity||p.commune===S.sCity) && norm([p.name,p.kind,p.loc,p.commune,...p.acts].join(' ')).includes(q));
-      if(pl.length) out+=`<h2 class="sec">Lieux <small>${pl.length}</small></h2><div class="list">${pl.map(plRow).join('')}</div>`;
+    const pl = q ? PLACES.filter(p=>(!S.sCity||p.commune===S.sCity) && norm([p.name,p.kind,p.loc,p.commune,...p.acts].join(' ')).includes(q)) : [];
+    const plHtml = pl.length ? `<h2 class="sec">Lieux <small>${pl.length}</small></h2><div class="list">${pl.map(plRow).join('')}</div>` : '';
+    if(evs.length){
+      out+=`<h2 class="sec">Événements <small>${evs.length} résultat${evs.length>1?'s':''}</small></h2><div class="list">${evs.slice(0,60).map(e=>evRow(e, parse(e.date)<today?today:parse(e.date))).join('')}</div>`+plHtml;
+    } else if(pl.length){
+      out+=plHtml+`<p class="lead" style="margin-top:14px">Aucun événement à venir pour « ${esc(S.q.trim())} ».</p>`;
+    } else {
+      out+=`<div class="empty" style="margin-top:18px"><b>Aucun résultat</b>Essaie un autre mot ou retire un filtre.</div>`;
     }
   }
   $('#results').innerHTML=out;
 }
 $('#q').oninput=e=>{S.q=e.target.value; renderSearch();};
 
+
+/* ---------- ACTIVITÉS À L'ANNÉE ---------- */
+function renderActivites(){
+  $('#actCities').innerHTML = COMMUNES.map(c=>`<button class="chip plain ${S.aCity===c?'on':''}" data-c="${c}">${c}</button>`).join('');
+  $('#actCities').querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{S.aCity=S.aCity===b.dataset.c?null:b.dataset.c; renderActivites();});
+  const inCity=p=>!S.aCity||p.commune===S.aCity;
+  if(S.act){
+    const pl=PLACES.filter(p=>p.acts.includes(S.act)&&inCity(p));
+    $('#actBody').innerHTML=`<button class="chip plain" id="actBack" style="margin:14px 0 2px">← Toutes les activités</button>
+      <h2 class="sec">${esc(S.act)} <small>${pl.length} lieu${pl.length>1?'x':''}${S.aCity?' à '+esc(S.aCity):''}</small></h2>`+
+      (pl.length? `<div class="list">${pl.map(plRow).join('')}</div>` : `<div class="empty"><b>On cherche encore</b>Aucun lieu « ${esc(S.act)} » répertorié${S.aCity?' à '+esc(S.aCity):''} pour l’instant.</div>`);
+    $('#actBack').onclick=()=>{S.act=null; renderActivites();};
+  } else {
+    const counts={}; PLACES.filter(inCity).forEach(p=>p.acts.forEach(a=>counts[a]=(counts[a]||0)+1));
+    const all={}; PLACES.forEach(p=>p.acts.forEach(a=>all[a]=1));
+    const acts=[...new Set([...WANTED,...Object.keys(all)])].filter(a=>!['Coworking','Expos','Brasserie','Famille','Sciences','Spectacles','Football','Humour','Tennis','Accrobranche','Pickleball'].includes(a));
+    acts.sort((a,b)=>(counts[b]||0)-(counts[a]||0));
+    $('#actBody').innerHTML=`<div class="tiles" style="margin-top:14px">${acts.map(a=>`<button class="tile ${counts[a]?'':'zero'}" data-a="${esc(a)}"><b>${esc(a)}</b><span>${counts[a]?counts[a]+' lieu'+(counts[a]>1?'x':''):'à découvrir'}</span></button>`).join('')}</div>`;
+    $('#actBody').querySelectorAll('[data-a]').forEach(b=>b.onclick=()=>{S.act=b.dataset.a; renderActivites(); $('#v-activites').scrollTo({top:0,behavior:'smooth'});});
+  }
+}
 /* ---------- FAVORIS ---------- */
 function renderFavs(){
   const evs=EVENTS.filter(e=>S.favs.has(e.id)), pl=PLACES.filter(p=>S.favs.has(p.id));
@@ -799,7 +818,7 @@ const mapsUrl = p => 'https://www.google.com/maps/search/?api=1&query='+encodeUR
 function openSheet(html){
   const wasOpen=$('#sheet').classList.contains('on');
   $('#sheet').innerHTML='<div class="sheettop"><button class="sheetback" onclick="backSheet()" aria-label="Retour">← Retour</button><div class="grab"></div><span style="width:84px"></span></div>'+html;
-  $('#sheet').classList.add('on'); $('#scrim').classList.add('on'); $('#sheet').scrollTop=0; wireLists($('#sheet'));
+  $('#sheet').classList.add('on'); $('#scrim').classList.add('on'); $('#sheet').scrollTop=0;
   // le bouton « retour » du téléphone ferme la fiche au lieu de quitter l'appli
   if(!wasOpen){ try{ history.pushState({sheet:1},'',location.href); }catch(_){} }
 }
@@ -924,7 +943,7 @@ function wireLists(root){ root.addEventListener('click',e=>{
   const ev=e.target.closest('[data-ev]'); if(ev){ openEvent(ev.dataset.ev); return; }
   const pl=e.target.closest('[data-pl]'); if(pl){ openPlace(pl.dataset.pl); return; }
 }); }
-document.querySelectorAll('.view').forEach(wireLists);
+document.querySelectorAll('.view').forEach(wireLists); wireLists($('#sheet'));
 $('#ctaPropose').onclick=e=>{e.stopPropagation(); openPropose('event');};
 $('#ctaReport').onclick=e=>{e.stopPropagation(); openReport();};
 let tt; function toast(m){ const t=$('#toast'); t.textContent=m; t.classList.add('on'); clearTimeout(tt); tt=setTimeout(()=>t.classList.remove('on'),2000); }
@@ -952,7 +971,7 @@ function renderLieux(){
 }
 
 /* ---------- navigation (hash) ---------- */
-const VIEWS=['accueil','agenda','recherche','favoris','lieux'];
+const VIEWS=['accueil','agenda','recherche','activites','favoris','lieux'];
 let mapBuilt=false;
 function go(v){
   if(v==='carte') v='lieux';
@@ -961,12 +980,13 @@ function go(v){
   document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));
   if(v==='lieux') renderLieux();
   if(v==='favoris') renderFavs();
+  if(v==='activites') renderActivites();
   try{ if(location.hash.slice(1)!==v) history.replaceState(null,'','#'+v); }catch(_){}
   closeSheet();
 }
 document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>go(b.dataset.v));
 window.addEventListener('hashchange',()=>go(location.hash.slice(1)));
-function renderAll(){ renderHome(); renderCal(); renderSearch(); if(S.view==='favoris') renderFavs(); if(S.view==='lieux') renderLieux(); }
+function renderAll(){ renderHome(); renderCal(); renderSearch(); if(S.view==='favoris') renderFavs(); if(S.view==='activites') renderActivites(); if(S.view==='lieux') renderLieux(); }
 renderAll(); go(location.hash.slice(1)||'accueil');
 </script>
 <script>
