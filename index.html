@@ -987,6 +987,7 @@ function go(v){
   if(v==='favoris') renderFavs();
   if(v==='activites') renderActivites();
   try{ if(location.hash.slice(1)!==v) history.replaceState(null,'','#'+v); }catch(_){}
+  if(window.ofqTrack && S.lastTracked!==v){ S.lastTracked=v; window.ofqTrack(v); }
   closeSheet();
 }
 document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>go(b.dataset.v));
@@ -1002,7 +1003,7 @@ renderAll(); go(location.hash.slice(1)||'accueil');
   s.setAttribute('data-goatcounter-settings','{"no_onload": true}');
   s.onload=function(){ var page=function(){ return '/'+((location.hash||'#accueil').slice(1).split(/[?&]/)[0]||'accueil'); };
     window.goatcounter.count({path: page()});
-    window.addEventListener('hashchange', function(){ window.goatcounter.count({path: page()}); }); };
+    window.ofqTrack=function(v){ try{ window.goatcounter.count({path:'/'+v}); }catch(_){} }; };
   document.head.appendChild(s); })();
 </script>
 </body>
