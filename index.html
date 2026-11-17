@@ -486,7 +486,7 @@ V({"date": "2026-11-17", "title": "Catch littéraire", "cat": "culture", "place"
 V({"date": "2026-11-19", "title": "Aleph Quintet", "cat": "culture", "place": "arsonic", "time": "20:00", "price": "voir la page de l’événement", "desc": "Concert de jazz.", "src": "https://www.facebook.com/surmars7000/events"});
 V({"date": "2026-11-22", "title": "15e Mini Mondial de l’Impro — grande finale", "cat": "standup", "place": "manege", "time": "15:00–18:00", "price": "18 € · étudiants 14 € · -12 ans 10 €", "desc": "Festival international d’improvisation théâtrale (Belgique, France, Suisse, Québec). 15h : spectacle des 3e et 4e. 16h : grande finale.", "src": "https://www.facebook.com/events/4389774394666825/", "book": "https://www.billetweb.fr/15e-mini-mondial-de-limpro-grande-finale"});
 V({"date": "2027-01-28", "title": "Scène slam", "cat": "culture", "place": "maisonfolie", "time": "20:00", "price": "voir la page de l’événement", "desc": "Scène slam (deux dates, la 2e à confirmer).", "src": "https://www.facebook.com/surmars7000/events"});
-V({"date": "2026-11-19", "title": "Slam en borain", "cat": "culture", "place": "ccquaregnon", "time": "18:00", "price": "voir la page de l’événement", "desc": "Slam en langue boraine.", "src": "https://www.facebook.com/maisonculturelle/events"});
+V({"date": "2026-11-19", "title": "Slam en borain", "cat": "culture", "place": "ccquaregnon", "time": "18:00 (scène ouverte à 20:00)", "price": "Tarif sur la billetterie en ligne", "book": "https://shop.utick.net/?pos=MAISONCULTURELLEQUAREGNON&module=ACTIVITYSERIEDETAILS&s=236E7BD9-D8B6-1CB3-6A65-FF27B01717DD", "bookLabel": "🎟️ Billetterie", "desc": "Les rendez-vous Slam reviennent pour une nouvelle saison, avec cette fois une soirée spéciale en borain, le dialecte de notre région : une façon de célébrer notre patrimoine vivant par la poésie et l’oralité. 18h : ateliers d’écriture. 20h : scène ouverte. Proposé par la Maison Culturelle de Quaregnon et le Centre culturel de Frameries, en collaboration avec ScènZenvies.", "src": "https://www.facebook.com/maisonculturelle/events"});
 V({"date": "2026-11-27", "title": "Toine Thys & Motoï Kanamori", "cat": "culture", "place": "ccquaregnon", "time": "20:00", "price": "voir la page de l’événement", "desc": "Concert jazz.", "src": "https://www.facebook.com/maisonculturelle/events"});
 V({"date": "2026-12-04", "title": "West Music Club", "cat": "culture", "place": "ccquaregnon", "time": "20:00", "price": "voir la page de l’événement", "desc": "Concert.", "src": "https://www.facebook.com/maisonculturelle/events"});
 V({"date": "2026-12-09", "title": "Au pied des montagnes — goûter littéraire", "cat": "culture", "place": "ccquaregnon", "time": "14:00", "price": "voir la page de l’événement", "desc": "Goûter littéraire.", "src": "https://www.facebook.com/maisonculturelle/events"});
@@ -543,7 +543,8 @@ function endMinutes(t){
   if(!m) return null;
   const st=(+m[1])*60+(+(m[2]||0));
   if(m[3]!==undefined){ let en=(+m[3])*60+(+(m[4]||0)); if(en<=st) en+=1440; return en; }
-  return st+180;
+  const all=[...String(t).matchAll(/(\d{1,2})[:h](\d{2})/g)].map(x=>(+x[1])*60+(+x[2]));
+  return Math.max(st,...all)+180;
 }
 (function(){ const now=new Date(), nowMin=now.getHours()*60+now.getMinutes();
   EVENTS = EVENTS.filter(e=>{ if(e.end || +parse(e.date)!==+today) return true; const em=endMinutes(e.time); return em===null || em>nowMin; });
