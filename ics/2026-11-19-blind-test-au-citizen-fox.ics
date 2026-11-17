@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-19-blind-test-au-citizen-fox@onfaitquoi.be
-DTSTAMP:20261117T215428Z
+DTSTAMP:20261117T220710Z
 DTSTART:20261119T190000Z
 DTEND:20261119T220000Z
 SUMMARY:Blind Test au Citizen Fox 🎶
 LOCATION:Citizen Fox\, Rue de la Coupe 7\, 7000 Mons
-DESCRIPTION:Blind test par équipes\, à l’étage. Prix pour les 3 meilleures équipes. Réservation par e-mail : CitizenFoxMons@gmail.com.\nPrix : à confirmer · bière offerte pour un repas acheté\nhttps://www.instagram.com/p/Dfz1MNIIr0N/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Blind test par équipes\, à l’étage. Prix pour les 3 meilleures équipes. Réservation par e-mail : CitizenFoxMons@gmail.com.\nPrix : Gratuit · bière offerte pour un repas acheté\nhttps://www.instagram.com/p/Dfz1MNIIr0N/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Blind Test au Citizen Fox 🎶 demain
