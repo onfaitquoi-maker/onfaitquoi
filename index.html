@@ -345,6 +345,7 @@ const PLACES = [
  {id:'beffroi', name:'Beffroi de Mons', commune:'Mons', loc:'Mons centre', addr:'Rue des Gades, 7000 Mons', lat:50.4538, lng:3.9496, kind:'Monument', acts:[]},
  {id:'lottoexpo', name:'Lotto Mons Expo', commune:'Mons', loc:'Grands Prés', addr:'Avenue Thomas Edison 2, 7000 Mons', lat:50.4590, lng:3.9270, kind:'Salle d’événements', acts:[]},
  {id:'coworcoeur', name:'Coworcoeur', commune:'Frameries', loc:'Frameries', addr:'Rue Ferrer 104 D, 7080 Frameries', lat:50.4089, lng:3.8963, kind:'Espace de coworking', acts:[]},
+ {id:'cubar', name:'Cuba’r', commune:'Mons', loc:'Mons centre', addr:'Rue de Nimy 55, 7000 Mons', lat:50.4566, lng:3.9531, kind:'Bar & lounge afro-latino', acts:['Soirées','Danse latino']},
  {id:'grandplace', name:'Grand-Place de Mons', commune:'Mons', loc:'Grand-Place', addr:'Grand-Place, 7000 Mons', lat:50.4542, lng:3.9516, kind:'Place publique', acts:[]},
 ];
 const P = Object.fromEntries(PLACES.map(p=>[p.id,p]));
@@ -474,6 +475,9 @@ V({date:'2026-11-21',title:'Maman va danser 🪩 — 2e soirée + Girls Meeting'
   ['18:30','21:00'].forEach(t=>V({date:key(d),title:'What The Fun — Central Comedy Club',cat:'standup',place:'central',time:t+(t==='18:30'?'–20:00':''),price:'16 €',desc:'Le comedy club du Central : 4 humoristes de la nouvelle vague du stand-up belge par soirée. Deux séances : 18h30 et 21h. Un samedi sur deux.',src:'https://www.facebook.com/events/1072085588524089/',book:'https://www.billetweb.fr/central-comedy-club'}));
 }})();
 V({date:'2026-11-28',title:'Défilé Mode en Boucle',cat:'soiree',place:'coworcoeur',time:'19:00 (défilé à 20:00)',price:'Entrée gratuite · place assise 5 € sur réservation (déductibles d’un achat)',free:true,desc:'Défilé de mode organisé par Mode en Boucle. Places assises : 5 €, à réserver en message privé sur Instagram (@mode_en_boucle), déductibles d’un achat. 19h : ouverture des portes, avec Brille Ma Jolie (créatrice de bijoux) et Julie Deschamps (styliste et conseillère en image). 20h : défilé. 21h-22h : vente des pièces présentées. 22h : DJ set et after party.',src:'https://www.instagram.com/mode_en_boucle/'});
+V({date:'2026-11-19',title:'Candy Night au Cuba’r',cat:'soiree',place:'cubar',time:'20:00–03:00',price:'à confirmer',desc:'Soirée afro-latino hits avec DJ Oreoo et des danseuses professionnelles.',src:''});
+V({date:'2026-11-20',title:'Urban Mix au Cuba’r',cat:'soiree',place:'cubar',time:'à confirmer',price:'à confirmer',desc:'Soirée Urban Mix à l’Afro Latin Social Club Cuba’r.',src:''});
+V({date:'2026-11-21',title:'Latino Night au Cuba’r',cat:'soiree',place:'cubar',time:'à confirmer',price:'à confirmer',desc:'Soirée Latino Night à l’Afro Latin Social Club Cuba’r.',src:''});
 // Scouts, étudiants, Noël (vérifiés sur Facebook le 16/11)
 V({date:'2026-11-21',title:'Soirée Beaujolais des scouts Saint-Charles',cat:'soiree',place:'saintcharles',time:'18:00',price:'à confirmer',desc:'Le retour de la soirée beaujolais des pionniers de l’unité scoute Saint-Charles, au cœur de Mons. Soirée scouts.',src:'https://www.facebook.com/events/1166762129243526/'});
 V({date:'2026-11-20',title:'L’étrange Before des Jack’s — GET Mons',cat:'soiree',place:'getapinte',time:'21:00',price:'à confirmer',desc:'Before du marché de Noël des Jack’s, ambiance 100 % pop rock. Organisé par le GET et A l’ancienne.',src:'https://www.facebook.com/events/1867193607606619/'});
