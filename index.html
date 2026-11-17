@@ -625,17 +625,22 @@ function renderHome(){
   $('#t5sub').textContent = sub;
   // top 5 : sélection de la semaine (celle du carrousel Instagram) si elle existe
   const picked=[], seen=new Set();
-  const wk=TOP5_WEEKS[key(weekStart(a))];
+  const wkKey=key(weekStart(a));
+  // le top 5 éditorial d'une semaine n'est dévoilé que le dimanche précédent à 18h (sortie du carrousel)
+  const reveal=add(parse(wkKey),-1); reveal.setHours(18,0,0,0);
+  const hidden = S.when==='next' && new Date()<reveal;
+  const wk = hidden ? null : TOP5_WEEKS[wkKey];
   const bonus=[];
-  if(wk && S.when==='week'){ wk.forEach(([d,re])=>{ const o=occ.find(o=>key(o.d)===d && re.test(o.e.title)); if(o) picked.push(o); });
+  if(wk && S.when!=='today'){ wk.forEach(([d,re])=>{ const o=occ.find(o=>key(o.d)===d && re.test(o.e.title)); if(o) picked.push(o); });
     (BONUS_WEEKS[key(weekStart(a))]||[]).forEach(([d,re])=>{ const o=occ.find(o=>key(o.d)===d && re.test(o.e.title)); if(o) bonus.push(o); }); }
-  else {
+  if(!picked.length) {
   const occT=occ.filter(o=>!/scout/i.test(o.e.title+' '+(o.e.desc||'')));
   [...occT].sort((x,y)=>(y.e.verified-x.e.verified)||(x.d-y.d)).forEach(o=>{ if(picked.length<5 && !seen.has(o.e.cat)){picked.push(o);seen.add(o.e.cat)} });
   occT.forEach(o=>{ if(picked.length<5 && !picked.includes(o)) picked.push(o) });
   }
   $('#t5h').innerHTML = bonus.length ? `Le top 5 <span style="color:#C2532F">+ ${bonus.length} ♥</span>` : 'Le top 5';
-  $('#top5').innerHTML = picked.length ? picked.map((o,i)=>`<button class="t5" data-ev="${o.e.id}" style="--c:${CATS[o.e.cat].color}">
+  if(hidden){ $('#t5h').innerHTML='Le top 5'; $('#top5').innerHTML=`<div class="empty" style="width:100%"><b>Surprise !</b>Le top 5 de la semaine prochaine sera dévoilé dimanche soir sur Instagram @onfaitquoi.be.</div>`; }
+  else   $('#top5').innerHTML = picked.length ? picked.map((o,i)=>`<button class="t5" data-ev="${o.e.id}" style="--c:${CATS[o.e.cat].color}">
       <span class="k">${CATS[o.e.cat].label} · ${JOURS[o.d.getDay()]} ${o.d.getDate()}</span>
       <span class="tt">${esc(o.e.title)}</span>
       <span class="w">${vc(o.e.venue,o.e.commune)}${/confirmer|voir la page/i.test(o.e.price||'')?'':'<br>'+esc(o.e.price)}</span>
