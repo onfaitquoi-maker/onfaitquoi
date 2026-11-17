@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-20-le-point-zero-seryam-vernissage@onfaitquoi.be
-DTSTAMP:20261117T211952Z
+DTSTAMP:20261117T212229Z
 DTSTART:20261120T180000Z
 DTEND:20261120T210000Z
 SUMMARY:« Le point zéro » @ Séryam — vernissage
-LOCATION:Centre culturel de Dour\, Rue du Marché 1\, 7370 Dour
-DESCRIPTION:Vernissage d’exposition.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+LOCATION:Galerie du Hall de l’Hôtel de Ville de Dour\, Rue du Marché 1\, 7370 Dour
+DESCRIPTION:Vernissage de l’exposition « Le Point Zéro » de l’artiste Séryam (Séryam Zen – À la source de Soi m’aime). Ses œuvres explorent le commencement\, l’équilibre\, la transformation et le renouveau : cet « instant suspendu » où tout redevient possible après un changement ou une épreuve. Exposition à voir ensuite jusqu’au début janvier. Proposé par le Centre culturel de Dour.\nPrix : Entrée libre\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:« Le point zéro » @ Séryam — vernissage demain
