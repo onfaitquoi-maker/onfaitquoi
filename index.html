@@ -162,6 +162,7 @@ h2.sec small{font-family:var(--body);font-size:12px;font-weight:600;color:var(--
 .facts svg{width:18px;height:18px;flex:none;margin-top:2px;color:var(--muted)}
 .sheet p.desc{color:var(--ink-2);margin-bottom:16px}
 .actions{display:flex;gap:8px;flex-wrap:wrap}
+.calbox{margin-top:14px;padding:12px;border-radius:14px;border:1.5px dashed var(--line,#3a3733);display:flex;flex-direction:column;gap:10px}.calbox>span{font-weight:700;font-size:14px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border-radius:13px;font-weight:800;font-size:14px;border:1.5px solid var(--ink);text-decoration:none}
 .btn.pri{background:var(--ink);color:var(--paper)}
 .btn svg{width:18px;height:18px}
@@ -667,7 +668,8 @@ function renderFavs(){
   const evs=EVENTS.filter(e=>S.favs.has(e.id)), pl=PLACES.filter(p=>S.favs.has(p.id));
   let h='';
   if(!evs.length&&!pl.length) h=`<div class="empty" style="margin-top:20px"><b>Rien de gardé</b>Touche le cœur sur un événement ou un lieu pour le retrouver ici.</div>`;
-  if(evs.length) h+=`<h2 class="sec">Événements</h2><div class="list">${evs.map(e=>evRow(e)).join('')}</div>`;
+  if(evs.length){ const up=evs.filter(e=>(e.end?parse(e.end):parse(e.date))>=today);
+    h+=`<h2 class="sec">Événements</h2>${up.length?`<a class="btn" style="margin:0 0 12px" href="${icsHref(up)}" download="mes-sorties.ics">📅 Tout ajouter à mon agenda (${up.length})</a>`:''}<div class="list">${evs.map(e=>evRow(e)).join('')}</div>`; }
   if(pl.length) h+=`<h2 class="sec">Lieux</h2><div class="list">${pl.map(plRow).join('')}</div>`;
   $('#favs').innerHTML=h;
 }
@@ -759,6 +761,50 @@ const mapsUrl = p => 'https://www.google.com/maps/search/?api=1&query='+encodeUR
 function openSheet(html){ $('#sheet').innerHTML='<div class="grab"></div>'+html; $('#sheet').classList.add('on'); $('#scrim').classList.add('on'); $('#sheet').scrollTop=0; wireLists($('#sheet')); }
 function closeSheet(){ $('#sheet').classList.remove('on'); $('#scrim').classList.remove('on'); }
 $('#scrim').onclick=closeSheet;
+
+/* ---------- AJOUTER À L'AGENDA (.ics + Google Agenda) ---------- */
+function evSlot(e){
+  const d=parse(e.date), t=(e.time||'');
+  const m=t.match(/(\d{1,2})\s*[:h]\s*(\d{2})?/);
+  if(e.end || !m){ const end=new Date(parse(e.end||e.date)); end.setDate(end.getDate()+1); return {allDay:true,start:(e.end&&d<today)?new Date(today):d,end}; }
+  const start=new Date(d); start.setHours(+m[1], +(m[2]||0), 0, 0);
+  const rest=t.slice(m.index+m[0].length), m2=rest.match(/^\s*[–\-→>]+\s*(\d{1,2})\s*[:h]\s*(\d{2})?/);
+  let end;
+  if(m2){ end=new Date(d); end.setHours(+m2[1], +(m2[2]||0), 0, 0); if(end<=start) end.setDate(end.getDate()+1); }
+  else end=new Date(start.getTime()+3*3600e3);
+  return {allDay:false,start,end};
+}
+const pad2=n=>String(n).padStart(2,'0');
+const icsDate=d=>`${d.getFullYear()}${pad2(d.getMonth()+1)}${pad2(d.getDate())}`;
+const icsUTC=d=>d.toISOString().replace(/[-:]/g,'').replace(/\.\d{3}/,'');
+const icsTxt=x=>String(x||'').replace(/\\/g,'\\\\').replace(/\n/g,'\\n').replace(/([,;])/g,'\\$1');
+function icsEvent(e){
+  const p=P[e.place]||{}, sl=evSlot(e), now=icsUTC(new Date());
+  const desc=[e.desc, e.price?('Prix : '+e.price):'', (e.book||e.page||e.src||''), 'Agenda : ON FAIT QUOI? @onfaitquoi.be'].filter(Boolean).join('\n');
+  const L=['BEGIN:VEVENT',`UID:${e.id}@onfaitquoi`,`DTSTAMP:${now}`,
+    sl.allDay?`DTSTART;VALUE=DATE:${icsDate(sl.start)}`:`DTSTART:${icsUTC(sl.start)}`,
+    sl.allDay?`DTEND;VALUE=DATE:${icsDate(sl.end)}`:`DTEND:${icsUTC(sl.end)}`,
+    `SUMMARY:${icsTxt(e.title)}`,`LOCATION:${icsTxt([e.venue,p.addr].filter(Boolean).join(', '))}`,`DESCRIPTION:${icsTxt(desc)}`];
+  if(!sl.allDay) L.push('BEGIN:VALARM','ACTION:DISPLAY',`DESCRIPTION:${icsTxt(e.title)} demain`,'TRIGGER:-P1D','END:VALARM','BEGIN:VALARM','ACTION:DISPLAY',`DESCRIPTION:${icsTxt(e.title)} dans 2 heures`,'TRIGGER:-PT2H','END:VALARM');
+  else L.push('BEGIN:VALARM','ACTION:DISPLAY',`DESCRIPTION:${icsTxt(e.title)}`,'TRIGGER:-PT15H','END:VALARM');
+  L.push('END:VEVENT'); return L.join('\r\n');
+}
+function icsHref(evs){
+  const body=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//ON FAIT QUOI//Agenda des sorties//FR','CALSCALE:GREGORIAN','METHOD:PUBLISH',...evs.map(icsEvent),'END:VCALENDAR'].join('\r\n');
+  return 'data:text/calendar;charset=utf-8,'+encodeURIComponent(body);
+}
+function gcalHref(e){
+  const p=P[e.place]||{}, sl=evSlot(e);
+  const dates=sl.allDay?`${icsDate(sl.start)}/${icsDate(sl.end)}`:`${icsUTC(sl.start)}/${icsUTC(sl.end)}`;
+  const q=new URLSearchParams({action:'TEMPLATE',text:e.title,dates,location:[e.venue,p.addr].filter(Boolean).join(', '),details:[e.desc,e.price?('Prix : '+e.price):'',(e.book||e.page||e.src||'')].filter(Boolean).join('\n'),ctz:'Europe/Brussels'});
+  return 'https://calendar.google.com/calendar/render?'+q.toString();
+}
+const slug=t=>norm(t).replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,40)||'evenement';
+function calBlock(e){
+  return `<div class="calbox"><span>📅 Ajouter à mon agenda, avec un rappel</span><div class="actions">
+    <a class="btn" href="${icsHref([e])}" download="${slug(e.title)}.ics">Agenda du téléphone</a>
+    <a class="btn" href="${gcalHref(e)}" target="_blank" rel="noopener">Google Agenda</a></div></div>`;
+}
 function openEvent(id){
   const e=EVENTS.find(x=>x.id===id); if(!e) return; const p=P[e.place], c=CATS[e.cat];
   const d=parse(e.date);
@@ -770,6 +816,7 @@ function openEvent(id){
     <div class="actions">${e.free?'':(e.book?`<a class="btn pri" href="${e.book}" target="_blank" rel="noopener">🎟️ Réserver</a>`:((e.page||e.src)?`<a class="btn pri" href="${e.page||e.src}" target="_blank" rel="noopener">🎟️ Infos &amp; billets ↗</a>`:''))}<a class="btn" href="${mapsUrl(p)}" target="_blank" rel="noopener">${ICON.go} Itinéraire</a>
       <button class="btn" data-fav="${e.id}">${ICON.heart} ${S.favs.has(e.id)?'Retirer':'Garder'}</button>
       <button class="btn" data-openpl="${p.id}">Voir le lieu</button></div>
+    ${(e.end?parse(e.end):parse(e.date))>=today?calBlock(e):''}
     ${e.src?`<p class="src">Source : <a href="${e.src}" target="_blank" rel="noopener">${new URL(e.src).hostname}</a></p>`:''}`);
 }
 function openPlace(id, withEvents){
