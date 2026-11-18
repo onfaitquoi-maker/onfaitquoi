@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-21-indiana-jones-et-la-derniere-croisade@onfaitquoi.be
+DTSTAMP:20261118T221852Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261123
+SUMMARY:Indiana Jones et la Dernière Croisade
+LOCATION:Plaza Arthouse Cinema\, Rue de Nimy 12\, 7000 Mons
+DESCRIPTION:Le classique de Steven Spielberg (1989) sur grand écran : Indiana Jones (Harrison Ford) part à la recherche de son père (Sean Connery) et du Saint Graal.\nPrix : Dès 7 € · Article 27 accepté\nhttps://plaza-mons.be/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Indiana Jones et la Dernière Croisade
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

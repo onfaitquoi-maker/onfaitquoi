@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-19-coward-lukas-dhont@onfaitquoi.be
+DTSTAMP:20261118T221852Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261123
+SUMMARY:Coward — Lukas Dhont
+LOCATION:Plaza Arthouse Cinema\, Rue de Nimy 12\, 7000 Mons
+DESCRIPTION:Le nouveau Lukas Dhont (Girl\, Close) : en 1916\, sur le front belge\, le jeune soldat Pierre rencontre Francis\, qui monte un spectacle de théâtre pour remonter le moral des troupes. Prix d’interprétation masculine à Cannes 2026 pour ses deux acteurs. 2h.\nPrix : Dès 7 € · Article 27 accepté\nhttps://plaza-mons.be/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Coward — Lukas Dhont
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

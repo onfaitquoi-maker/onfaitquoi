@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-19-la-gradiva-marine-atlan@onfaitquoi.be
+DTSTAMP:20261118T221852Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261123
+SUMMARY:La Gradiva — Marine Atlan
+LOCATION:Plaza Arthouse Cinema\, Rue de Nimy 12\, 7000 Mons
+DESCRIPTION:Un groupe de lycéens français en voyage scolaire à Naples découvre les ruines de Pompéi\, et le vertige les saisit. Grand Prix de la Semaine de la Critique à Cannes 2026. 2h25.\nPrix : Dès 7 € · Article 27 accepté\nhttps://plaza-mons.be/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:La Gradiva — Marine Atlan
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

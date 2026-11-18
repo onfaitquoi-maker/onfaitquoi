@@ -4,10 +4,10 @@ PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:2026-11-18-15-18-cedric-kahn@onfaitquoi.be
-DTSTAMP:20261118T214942Z
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20261125
+UID:2026-11-19-15-18-cedric-kahn@onfaitquoi.be
+DTSTAMP:20261118T221852Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261123
 SUMMARY:15/18 — Cédric Kahn
 LOCATION:Plaza Arthouse Cinema\, Rue de Nimy 12\, 7000 Mons
 DESCRIPTION:Lucia\, 17 ans\, arrive dans une unité de soins pédopsychiatriques où tous les patients ont entre 15 et 18 ans. Drame de Cédric Kahn (Le Procès Goldman)\, en compétition à Venise 2026. 1h44.\nPrix : Dès 7 € · Article 27 accepté\nhttps://plaza-mons.be/\nAgenda : ON FAIT QUOI? @onfaitquoi.be

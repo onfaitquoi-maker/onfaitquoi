@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-19-heysel-85-teodora-ana-mihai@onfaitquoi.be
+DTSTAMP:20261118T221852Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261123
+SUMMARY:Heysel 85 — Teodora Ana Mihai
+LOCATION:Plaza Arthouse Cinema\, Rue de Nimy 12\, 7000 Mons
+DESCRIPTION:Fiction belge sur le drame du stade du Heysel\, à Bruxelles\, en mai 1985 : la fille du bourgmestre et un journaliste aux racines italiennes pris dans la tragédie. Avec Josse De Pauw et Matteo Simoni. 1h31.\nPrix : Dès 7 € · Article 27 accepté\nhttps://plaza-mons.be/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Heysel 85 — Teodora Ana Mihai
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

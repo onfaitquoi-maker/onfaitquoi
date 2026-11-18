@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-19-club-kid-jordan-firstman@onfaitquoi.be
+DTSTAMP:20261118T221852Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261122
+SUMMARY:Club Kid — Jordan Firstman
+LOCATION:Plaza Arthouse Cinema\, Rue de Nimy 12\, 7000 Mons
+DESCRIPTION:Peter\, organisateur de soirées new-yorkais qui ne vit que pour la fête\, voit débarquer Arlo\, le fils de 10 ans dont il ignorait l’existence. Avec Cara Delevingne. Comédie dramatique\, 2h06.\nPrix : Dès 7 € · Article 27 accepté\nhttps://plaza-mons.be/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Club Kid — Jordan Firstman
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

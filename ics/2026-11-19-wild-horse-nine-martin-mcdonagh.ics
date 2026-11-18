@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-19-wild-horse-nine-martin-mcdonagh@onfaitquoi.be
+DTSTAMP:20261118T221852Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261123
+SUMMARY:Wild Horse Nine — Martin McDonagh
+LOCATION:Plaza Arthouse Cinema\, Rue de Nimy 12\, 7000 Mons
+DESCRIPTION:Par le réalisateur de Bons baisers de Bruges et Three Billboards : juste avant le coup d’État chilien de 1973\, deux agents de la CIA (John Malkovich et Sam Rockwell) sont envoyés sur l’île de Pâques. Comédie noire\, 1h58.\nPrix : Dès 7 € · Article 27 accepté\nhttps://plaza-mons.be/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Wild Horse Nine — Martin McDonagh
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

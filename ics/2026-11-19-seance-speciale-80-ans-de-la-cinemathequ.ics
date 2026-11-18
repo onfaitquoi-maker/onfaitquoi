@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-19-seance-speciale-80-ans-de-la-cinemathequ@onfaitquoi.be
+DTSTAMP:20261118T221852Z
+DTSTART:20261119T183000Z
+DTEND:20261119T213000Z
+SUMMARY:Séance spéciale : 80 ans de la Cinémathèque de la Fédération Wallonie-Bruxelles
+LOCATION:Plaza Arthouse Cinema\, Rue de Nimy 12\, 7000 Mons
+DESCRIPTION:Séance spéciale pour fêter les 80 ans de la Cinémathèque de la Fédération Wallonie-Bruxelles.\nPrix : Tarif sur plaza-mons.be\nhttps://plaza-mons.be/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Séance spéciale : 80 ans de la Cinémathèque de la Fédération Wallonie-Bruxelles demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Séance spéciale : 80 ans de la Cinémathèque de la Fédération Wallonie-Bruxelles dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
