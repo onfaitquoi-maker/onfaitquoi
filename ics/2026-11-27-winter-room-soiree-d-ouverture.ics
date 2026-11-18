@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-27-winter-room-soiree-d-ouverture@onfaitquoi.be
+DTSTAMP:20261118T135720Z
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20261128
+SUMMARY:Winter Room — soirée d’ouverture ❄️
+LOCATION:Lotto Mons Expo\, Avenue Thomas Edison 2\, 7000 Mons
+DESCRIPTION:Cet hiver\, la fête change de décor : la Winter Room s’installe au Lotto Mons Expo avec DJ sets et soirées chaque vendredi et samedi\, du 27 novembre au 9 janvier. Premier soir ce vendredi.\nPrix : Prix à confirmer\nhttps://www.eventbrite.com/e/winter-room-greenwood-export-tickets-2004780211580\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Winter Room — soirée d’ouverture ❄️
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
