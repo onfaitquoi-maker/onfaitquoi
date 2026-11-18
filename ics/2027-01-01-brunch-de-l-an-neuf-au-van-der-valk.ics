@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2027-01-01-brunch-de-l-an-neuf-au-van-der-valk@onfaitquoi.be
+DTSTAMP:20261118T201251Z
+DTSTART:20270101T110000Z
+DTEND:20270101T140000Z
+SUMMARY:Brunch de l’An Neuf au Van der Valk
+LOCATION:Van der Valk Hotel Mons Congrès & Spa\, Avenue Melina Mercouri 7\, 7000 Mons
+DESCRIPTION:Pour commencer 2027 en douceur : brunch à volonté avec live cooking\, coupe de bulles offerte et concert de piano live.\nPrix : À partir de 70 €\nhttps://www.hotelmons.eu/evenements/brunch-de-lan-neuf\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Brunch de l’An Neuf au Van der Valk demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Brunch de l’An Neuf au Van der Valk dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-31-reveillon-du-nouvel-an-au-van-der-valk-m@onfaitquoi.be
+DTSTAMP:20261118T201251Z
+DTSTART:20261231T180000Z
+DTEND:20270101T020000Z
+SUMMARY:Réveillon du Nouvel An au Van der Valk — menu & concert live
+LOCATION:Van der Valk Hotel Mons Congrès & Spa\, Avenue Melina Mercouri 7\, 7000 Mons
+DESCRIPTION:Menu gastronomique imaginé pour le réveillon\, avec concert live toute la soirée pour accueillir 2027. Attention : il ne reste que des places côté brasserie\, à tables et chaises hautes. Paiement à la réservation\, pas de modification possible. Formule avec nuitée disponible.\nPrix : 155 € (boissons incluses jusqu’à 3h) · paiement à la réservation\nhttps://www.hotelmons.eu/evenements/menu-reveillon-du-nouvel-an\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Réveillon du Nouvel An au Van der Valk — menu & concert live demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Réveillon du Nouvel An au Van der Valk — menu & concert live dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
