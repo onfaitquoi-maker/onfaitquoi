@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-05-mas-amor-por-favor-winter-edition@onfaitquoi.be
-DTSTAMP:20261118T203112Z
+DTSTAMP:20261118T203312Z
 DTSTART:20261205T210000Z
 DTEND:20261206T000000Z
 SUMMARY:Más Amor Por Favor — Winter Edition
 LOCATION:Mood Bar\, Rue de la Raquette 4\, 7000 Mons
-DESCRIPTION:Soirée house music au Mood Bar\, édition d’hiver de Más Amor Por Favor\, avec Toma Leone\, Don Colins et Hugo aux platines.\nPrix : Entrée gratuite\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Soirée house music au Mood Bar\, édition d’hiver de Más Amor Por Favor\, avec Toma Leone\, Don Colins et Hugo aux platines.\nPrix : Entrée gratuite\nhttps://www.instagram.com/mood.bar_mons_off/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Más Amor Por Favor — Winter Edition demain
