@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2027-02-05-colibri-dave-hellebrandt-doux-rire-festi@onfaitquoi.be
-DTSTAMP:20261117T235845Z
+DTSTAMP:20261118T000311Z
 DTSTART:20270205T190000Z
 DTEND:20270205T220000Z
 SUMMARY:Colibri — Dave Hellebrandt (Doux Rire Festival)
 LOCATION:Centre culturel de Dour\, Rue du Marché 1\, 7370 Dour
-DESCRIPTION:Humour\, dans le cadre du Doux Rire Festival.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Le nouveau spectacle de Dave Hellebrandt (ex Dave Parcoeur)\, mis en scène par Mathieu Debaty : devenu papa\, il tente de faire sa part du colibri\, entre Vinted\, vélo cargo et toilette sèche. Doux Rire Festival 2027. Sièges numérotés.\nPrix : Prévente 25 € · sur place 30 €\nhttps://shop.utick.net/?pos=CENTRECULTURELDOUR&module=ACTIVITYSERIEDETAILS&s=BAFFF850-861D-9E66-0FC2-ABDDA8C44648&d=F86DB16E-4ED2-415E-7DDE-1494BFA7D1D0\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Colibri — Dave Hellebrandt (Doux Rire Festival) demain

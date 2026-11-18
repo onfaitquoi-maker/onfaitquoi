@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-17-orcw-soyons-festifs-le-swing-classique@onfaitquoi.be
+DTSTAMP:20261118T000311Z
+DTSTART:20261217T190000Z
+DTEND:20261217T220000Z
+SUMMARY:ORCW — Soyons festifs\, le Swing classique
+LOCATION:Arsonic — Grande salle\, Rue de Nimy 138\, 7000 Mons
+DESCRIPTION:Concert de fin d’année de l’Orchestre royal de chambre de Wallonie\, dirigé par Vahan Mardirossian\, avec Baptiste Coppens au piano et Jean-Frédéric Molard au violon. Places non numérotées.\nPrix : 40 € · réduit 35 € · gratuit -25 ans (quota limité)\nhttps://shop.infinitix.be/SURMARSBE_INF/S/C0B87C79-D0D4-EB0E-7EFA-52D06D6B2203/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:ORCW — Soyons festifs\, le Swing classique demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:ORCW — Soyons festifs\, le Swing classique dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2027-02-14-ento-mons-2027-bourse-aux-insectes@onfaitquoi.be
+DTSTAMP:20261118T000311Z
+DTSTART:20270214T083000Z
+DTEND:20270214T153000Z
+SUMMARY:ENTO-MONS 2027 — bourse aux insectes
+LOCATION:Palais des Congrès (MICX)\, Avenue Melina Mercouri 9\, 7000 Mons
+DESCRIPTION:28e bourse entomologique internationale : plus de 60 exposants d’insectes naturalisés (collection\, étude\, décoration)\, au Palais des Congrès de Mons.\nPrix : Entrée 5 €\nhttps://monsblog.be/information/ento-mons-dimanche-14-fevrier-2027-palais-des-congres-mons/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:ENTO-MONS 2027 — bourse aux insectes demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:ENTO-MONS 2027 — bourse aux insectes dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

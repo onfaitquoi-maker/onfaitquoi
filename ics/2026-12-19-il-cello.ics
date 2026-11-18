@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-19-il-cello@onfaitquoi.be
-DTSTAMP:20261117T235845Z
+DTSTAMP:20261118T000311Z
 DTSTART:20261219T190000Z
 DTEND:20261219T220000Z
 SUMMARY:Il Cello
 LOCATION:Théâtre Royal de Mons\, Grand-Place 22\, 7000 Mons
-DESCRIPTION:Concert du trio vocal lyrique révélé par The Voice\, entre classique et variété.\nPrix : Payant\nhttps://www.info-lux.com/?p=1731062\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Concert du trio vocal lyrique révélé par The Voice\, entre classique et variété.\nPrix : À partir de 39 €\nhttps://www.ticketmaster.be/event/il-cello-billets/1295874314?language=fr-be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Il Cello demain

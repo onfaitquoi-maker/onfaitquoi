@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2027-01-28-scene-slam@onfaitquoi.be
-DTSTAMP:20261117T235845Z
+DTSTAMP:20261118T000311Z
 DTSTART:20270128T190000Z
 DTEND:20270128T220000Z
 SUMMARY:Scène slam
-LOCATION:La Maison Folie\, Rue des Arbalestriers 8\, 7000 Mons
-DESCRIPTION:Scène slam (deux dates\, la 2e à confirmer).\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+LOCATION:La P’tite Maison Folie\, Rue des Arbalestriers 8\, 7000 Mons
+DESCRIPTION:Trois minutes chrono pour dire son texte librement ! Scène slam ouverte à toutes et tous. Atelier d’écriture gratuit de 18h à 19h (réservation souhaitée au 065 39 59 39 ou public@surmars.be).\nPrix : Gratuit\, sans réservation\nhttps://surmars.be/agenda/2027-01/litterature/scene-slam\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Scène slam demain

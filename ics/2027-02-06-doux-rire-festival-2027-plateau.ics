@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2027-02-06-doux-rire-festival-2027-plateau@onfaitquoi.be
-DTSTAMP:20261117T235845Z
-DTSTART:20270206T190000Z
-DTEND:20270206T220000Z
+DTSTAMP:20261118T000311Z
+DTSTART:20270206T180000Z
+DTEND:20270206T210000Z
 SUMMARY:Doux Rire Festival 2027 — Plateau
 LOCATION:Centre culturel de Dour\, Rue du Marché 1\, 7370 Dour
-DESCRIPTION:Plateau d’humoristes.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Plateau 100 % humour avec RAF\, La Famille Raston\, Freddy Tougaux\, Thibaut Siplet\, Tim Doucet\, Lorenzo Mancini et Anthony Circus\, présenté par Romain Ledant. Tous les bénéfices vont à « La Joëlette du Rire ». Sièges numérotés.\nPrix : Prévente 25 € · sur place 30 €\nhttps://shop.utick.net/?pos=CENTRECULTURELDOUR&module=ACTIVITYSERIEDETAILS&s=0AF6ED5E-CEFE-C832-3DD5-940AD7989F8D&d=10CC2634-4D0C-5F72-EB93-663C55D47D7E\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Doux Rire Festival 2027 — Plateau demain
