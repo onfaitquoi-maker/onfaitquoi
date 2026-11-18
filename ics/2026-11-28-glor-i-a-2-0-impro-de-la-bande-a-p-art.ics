@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-28-glor-i-a-2-0-impro-de-la-bande-a-p-art@onfaitquoi.be
+DTSTAMP:20261118T000852Z
+DTSTART:20261128T190000Z
+DTEND:20261128T220000Z
+SUMMARY:Glor I.A. 2.0 — impro de la Bande à p’Art
+LOCATION:Centre culturel de Dour — salle d’initiatives\, Rue du Marché 1\, 7370 Dour
+DESCRIPTION:Spectacle d’improvisation théâtrale de l’équipe douroise la Bande à p’Art\, avec des équipes invitées sur des thèmes originaux. Le public est invité à « provoquer des bugs ». Petite restauration sur place\, grand parking gratuit à proximité.\nPrix : Prévente 8 € · sur place 10 €\ntel:+32485288507\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Glor I.A. 2.0 — impro de la Bande à p’Art demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Glor I.A. 2.0 — impro de la Bande à p’Art dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

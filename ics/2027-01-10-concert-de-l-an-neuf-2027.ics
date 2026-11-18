@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2027-01-10-concert-de-l-an-neuf-2027@onfaitquoi.be
+DTSTAMP:20261118T000852Z
+DTSTART:20270110T150000Z
+DTEND:20270110T170000Z
+SUMMARY:Concert de l’An Neuf 2027
+LOCATION:Centre culturel de Dour\, Rue du Marché 1\, 7370 Dour
+DESCRIPTION:La Société royale des fanfares de Dour et la Royale fanfare de l’Union de Wihéries réunissent plus de 50 musiciens sur scène\, au profit du Relais pour la Vie de Dour. Préventes à la bibliothèque communale de Dour.\nPrix : Prévente 12 € (bibliothèque de Dour) · sur place 15 €\ntel:+3265761845\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Concert de l’An Neuf 2027 demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Concert de l’An Neuf 2027 dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

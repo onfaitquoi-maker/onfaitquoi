@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2027-01-24-tournoi-chiffres-et-lettres-2027@onfaitquoi.be
+DTSTAMP:20261118T000852Z
+DTSTART;VALUE=DATE:20270124
+DTEND;VALUE=DATE:20270125
+SUMMARY:Tournoi Chiffres et Lettres 2027
+LOCATION:Centre culturel de Dour — salle d’initiatives\, Rue du Marché 1\, 7370 Dour
+DESCRIPTION:Tournoi « open » de Chiffres et Lettres\, ouvert à tous les niveaux : défiez d’autres joueurs et rencontrez de grands champions. Inscription aussi au 0496 10 01 45 ou par e-mail à moniquewantiez@skynet.be.\nPrix : Inscription obligatoire · tarif non précisé\ntel:+3265785142\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tournoi Chiffres et Lettres 2027
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
