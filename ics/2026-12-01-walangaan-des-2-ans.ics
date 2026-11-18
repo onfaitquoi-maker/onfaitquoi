@@ -5,11 +5,11 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-01-walangaan-des-2-ans@onfaitquoi.be
-DTSTAMP:20261118T000852Z
+DTSTAMP:20261118T001321Z
 DTSTART:20261201T083000Z
 DTEND:20261201T113000Z
 SUMMARY:Walangaan (dès 2 ans)
-LOCATION:Théâtre le Manège — Petite salle\, Rue des Passages\, 7000 Mons
+LOCATION:Théâtre le Manège — Petite salle\, Rue des Passages 1\, 7000 Mons
 DESCRIPTION:Spectacle musical pour les tout-petits\, poétique et sensoriel\, autour du cycle de l’eau (« walangaan » signifie « l’eau qui coule à flot » en wolof).\nPrix : 18 € · réduit 15 € · étudiants 5 € · enfants -12 ans 3 €\nhttps://shop.infinitix.be/SURMARSBE_INF/Q/quantity/229ACA35-67FB-0449-8D25-03F93044DA68/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY

@@ -5,11 +5,11 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-04-ladies-night-imagix-changer-l-eau-des-fl@onfaitquoi.be
-DTSTAMP:20261118T000852Z
+DTSTAMP:20261118T001321Z
 DTSTART:20261204T180000Z
 DTEND:20261204T214300Z
 SUMMARY:Ladies Night Imagix — « Changer l’eau des fleurs » en avant-première
-LOCATION:Imagix Mons\, Boulevard André Delvaux 1\, 7000 Mons (complexe Imagix)
+LOCATION:Imagix Mons\, Boulevard André Delvaux 1\, 7000 Mons
 DESCRIPTION:Soirée entre filles au cinéma : l’adaptation du célèbre roman de Valérie Perrin\, à découvrir en avant-première. Drink et surprises inclus. 19h : accueil et espace partenaires · 20h : introduction et concours · 20h15 : film (2h18 + 10 min d’entracte).\nPrix : Payant · drink et surprises inclus\nhttps://tickets.imagix.be/movie/29226/changer-leau-des-fleurs/special/4\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY

@@ -5,11 +5,11 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-06-bandits-les-cowboys-de-l-espace@onfaitquoi.be
-DTSTAMP:20261118T000852Z
+DTSTAMP:20261118T001321Z
 DTSTART:20261206T150000Z
 DTEND:20261206T180000Z
 SUMMARY:Bandits\, les cowboys de l’espace
-LOCATION:Théâtre le Manège\, Rue des Passages\, 7000 Mons
+LOCATION:Théâtre le Manège\, Rue des Passages 1\, 7000 Mons
 DESCRIPTION:Concert familial pour la Saint-Nicolas : des cowboys de l’espace mêlent country\, folk rock et chansons à texte\, avec beaucoup d’humour. Avec Caroline Poisson\, François Bijou Banjo et leur bande. Dès 4 ans\, 1h.\nPrix : 18 € · enfants -12 ans 3 €\nhttps://shop.infinitix.be/SURMARSBE_INF/S/5BE0794F-E0B5-F124-9D53-F6C7ABCC75FC/?d=53036519-81FC-E95B-3287-BD1EA8D241AB\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY

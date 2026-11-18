@@ -5,11 +5,11 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-12-les-20-ans-du-slam@onfaitquoi.be
-DTSTAMP:20261118T000852Z
+DTSTAMP:20261118T001321Z
 DTSTART:20261212T140000Z
 DTEND:20261212T170000Z
 SUMMARY:Les 20 ans du Slam
-LOCATION:Théâtre le Manège\, Rue des Passages\, 7000 Mons
+LOCATION:Théâtre le Manège\, Rue des Passages 1\, 7000 Mons
 DESCRIPTION:Mars et l’ASBL enV.I.E.S. fêtent 20 ans de slam à Mons. 14h30 : inscriptions des slameur·ses. 15h–18h : scène slam. 20h : scène slam avec invités\, puis after DJ set « La fièvre du SLAMedi soir » avec Miss Freak Adèle. Expo photo « 20 ans de Slam » de Gérard Adam du 1er au 14 décembre.\nPrix : Gratuit\, sans réservation\nhttps://surmars.be/agenda/2026-12/litterature/les-20-ans-du-slam\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
