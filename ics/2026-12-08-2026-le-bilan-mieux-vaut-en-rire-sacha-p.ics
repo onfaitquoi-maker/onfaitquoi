@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-08-2026-le-bilan-mieux-vaut-en-rire-sacha-p@onfaitquoi.be
+DTSTAMP:20261118T214035Z
+DTSTART:20261208T190000Z
+DTEND:20261208T220000Z
+SUMMARY:2026\, le bilan ! Mieux vaut en rire — Sacha & PE
+LOCATION:Théâtre Royal de Mons\, Grand-Place 22\, 7000 Mons
+DESCRIPTION:Les humoristes Sacha Ferra et PE passent l’année 2026 à la moulinette : un bilan de l’actualité\, version stand-up\, parce que mieux vaut en rire.\nPrix : 30 € à 37 €\nhttps://www.ticketmaster.be/event/2026-le-bilan--mieux-vaut-en-rire-sacha--pe--tickets/262646531?language=fr-be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:2026\, le bilan ! Mieux vaut en rire — Sacha & PE demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:2026\, le bilan ! Mieux vaut en rire — Sacha & PE dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
