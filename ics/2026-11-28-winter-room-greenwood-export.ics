@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-28-winter-room-greenwood-export@onfaitquoi.be
-DTSTAMP:20261118T135720Z
+DTSTAMP:20261118T185305Z
 DTSTART:20261128T210000Z
-DTEND:20261129T000000Z
+DTEND:20261129T020000Z
 SUMMARY:Winter Room — Greenwood Export
 LOCATION:Lotto Mons Expo\, Avenue Thomas Edison 2\, 7000 Mons
-DESCRIPTION:Greenwood s’exporte à la Winter Room du Lotto Mons Expo pour une Winter Édition : l’ambiance Greenwood et ses DJ habituels\, en version hiver.\nPrix : Préventes jusqu’à 11\,68 € (Eventbrite)\nhttps://www.eventbrite.com/e/winter-room-greenwood-export-tickets-2004780211580\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Greenwood s’exporte à la Winter Room du Lotto Mons Expo pour une Winter Édition : l’ambiance Greenwood et ses DJ habituels\, en version hiver.\nPrix : 10 € (11\,68 € avec les frais Eventbrite)\nhttps://www.eventbrite.com/e/winter-room-greenwood-export-tickets-2004780211580\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Winter Room — Greenwood Export demain
