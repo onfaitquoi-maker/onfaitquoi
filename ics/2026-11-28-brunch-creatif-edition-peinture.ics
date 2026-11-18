@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-28-brunch-creatif-edition-peinture@onfaitquoi.be
+DTSTAMP:20261118T012044Z
+DTSTART:20261128T100000Z
+DTEND:20261128T140000Z
+SUMMARY:Brunch créatif — édition peinture
+LOCATION:Le Hype — Bar & Food\, Rue des Chartriers 1\, 7000 Mons
+DESCRIPTION:Espace créatif libre\, bienveillant et inclusif\, pour petits et grands : brunch 100 % maison (parts de gâteaux\, quiches\, wraps\, jus et boissons chaudes\, options vegan) et atelier peinture acrylique sur toile\, tout le matériel fourni. Venez entre amis\, en famille ou seul.\nPrix : Atelier peinture 5 € · brunch à la carte\nhttps://www.instagram.com/brunch_creatif/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Brunch créatif — édition peinture demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Brunch créatif — édition peinture dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

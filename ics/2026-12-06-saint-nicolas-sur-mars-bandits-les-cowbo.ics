@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-06-saint-nicolas-sur-mars-bandits-les-cowbo@onfaitquoi.be
+DTSTAMP:20261118T012044Z
+DTSTART:20261206T150000Z
+DTEND:20261206T180000Z
+SUMMARY:Saint-Nicolas sur Mars — Bandits\, les cowboys de l’espace
+LOCATION:Théâtre le Manège\, Rue des Passages 1\, 7000 Mons
+DESCRIPTION:Concert familial pour la Saint-Nicolas : des cowboys de l’espace mêlent country\, folk rock et chansons à texte\, avec beaucoup d’humour. Avec Caroline Poisson\, François Bijou Banjo et leur bande. Dès 4 ans\, 1h. Toute l’après-midi de la Saint-Nicolas sur Mars : 13h30 Kidical Mass (balade festive à vélo au départ du Manège) · dès 14h boutique « C’est cadeau » de l’Accorderie de Mons et atelier créatif « Le Far-West à paillettes » (gratuit) · 14h30–15h30 atelier découverte folk et country (gratuit\, sur réservation) · 14h30–16h stand paillettes · 17h cougnoles\, chocolat chaud et visite surprise pour les enfants.\nPrix : 18 € · enfants -12 ans 3 €\nhttps://shop.infinitix.be/SURMARSBE_INF/S/5BE0794F-E0B5-F124-9D53-F6C7ABCC75FC/?d=53036519-81FC-E95B-3287-BD1EA8D241AB\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Saint-Nicolas sur Mars — Bandits\, les cowboys de l’espace demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Saint-Nicolas sur Mars — Bandits\, les cowboys de l’espace dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

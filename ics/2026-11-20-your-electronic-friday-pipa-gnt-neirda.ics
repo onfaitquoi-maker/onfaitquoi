@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-20-your-electronic-friday-pipa-gnt-neirda@onfaitquoi.be
+DTSTAMP:20261118T012044Z
+DTSTART:20261120T210000Z
+DTEND:20261121T020000Z
+SUMMARY:Your Electronic Friday — Pipa GNT & Neirda
+LOCATION:Le Hype — Bar & Food\, Rue des Chartriers 1\, 7000 Mons
+DESCRIPTION:Soirée électro du vendredi au Hype\, avec les DJ Pipa GNT et Neirda.\nPrix : Prix non précisé\nhttps://www.instagram.com/lehypemons/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Your Electronic Friday — Pipa GNT & Neirda demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Your Electronic Friday — Pipa GNT & Neirda dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
