@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-22-loup-garou-geant-a-la-lorgnette@onfaitquoi.be
-DTSTAMP:20261118T185305Z
+DTSTAMP:20261118T185853Z
 DTSTART:20261122T130000Z
 DTEND:20261122T160000Z
 SUMMARY:Loup-Garou géant à La Lorgnette 🐺
 LOCATION:La Lorgnette\, Rue des Clercs 2\, 7000 Mons
-DESCRIPTION:Partie géante de Loup-Garou dans une ambiance de taverne mystérieuse\, avec décor créé pour l’occasion et maître du jeu \; une seconde partie est prévue pour les premiers morts. Uniquement sur réservation préalable (pas de ticket sur place) : envoie ton nom et le nombre de personnes par message privé à La Lorgnette.\nPrix : 6 € (soft ou bière compris) · réservation obligatoire\nhttps://www.instagram.com/la.lorgnette.mons/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Partie géante de Loup-Garou dans une ambiance de taverne mystérieuse\, avec décor créé pour l’occasion et maître du jeu \; une seconde partie est prévue pour les premiers morts. Uniquement sur réservation préalable (pas de ticket sur place) : envoie ton nom et le nombre de personnes par message privé sur Messenger (page Facebook de La Lorgnette\, pas sur Instagram).\nPrix : 6 € (soft ou bière compris) · réservation obligatoire\nhttps://www.instagram.com/la.lorgnette.mons/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Loup-Garou géant à La Lorgnette 🐺 demain
