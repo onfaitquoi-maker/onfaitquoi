@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-24-buffet-du-reveillon-de-noel-au-van-der-v@onfaitquoi.be
+DTSTAMP:20261118T201815Z
+DTSTART:20261224T180000Z
+DTEND:20261225T000000Z
+SUMMARY:Buffet du Réveillon de Noël au Van der Valk 🎄
+LOCATION:Van der Valk Hotel Mons Congrès & Spa\, Avenue Melina Mercouri 7\, 7000 Mons
+DESCRIPTION:Grand buffet de réveillon à volonté (mises en bouche\, fruits de mer\, plats chauds\, fromages\, desserts) avec live cooking\, groupe live et visite du Père Noël. Softs\, bière au fût et vin maison inclus jusqu’à 1h. À partager en famille ou entre amis. Pas de modification possible après réservation.\nPrix : 85 € (boissons incluses jusqu’à 1h) · -50 % pour les moins de 12 ans · paiement à la réservation\nhttps://www.hotelmons.eu/evenements/buffet-reveillon-de-noel\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Buffet du Réveillon de Noël au Van der Valk 🎄 demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Buffet du Réveillon de Noël au Van der Valk 🎄 dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

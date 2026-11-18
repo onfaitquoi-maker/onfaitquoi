@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-24-menu-du-reveillon-de-noel-au-van-der-val@onfaitquoi.be
+DTSTAMP:20261118T201815Z
+DTSTART:20261224T180000Z
+DTEND:20261225T000000Z
+SUMMARY:Menu du Réveillon de Noël au Van der Valk
+LOCATION:Van der Valk Hotel Mons Congrès & Spa\, Avenue Melina Mercouri 7\, 7000 Mons
+DESCRIPTION:Version servie à table du réveillon : menu gastronomique de Noël\, concert live et visite du Père Noël. Formule avec nuitée disponible.\nPrix : À partir de 79 €\nhttps://www.hotelmons.eu/evenements/menu-reveillon-de-noel\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Menu du Réveillon de Noël au Van der Valk demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Menu du Réveillon de Noël au Van der Valk dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
