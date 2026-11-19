@@ -91,6 +91,7 @@ h2.sec small{font-family:var(--body);font-size:12px;font-weight:600;color:var(--
 .t5 .tt{font-family:var(--display);font-weight:800;font-size:27px;line-height:1;text-transform:uppercase;margin:8px 0 auto;max-width:90%}
 .t5 .w{font-size:12.5px;font-weight:600;margin-top:12px;opacity:.95}
 .t5.bonus{box-shadow:inset 0 0 0 3px #C2532F}.t5.bonus .n{color:#C2532F;opacity:.85;font-size:60px;bottom:4px}
+.t5.bonus .n.star{font-family:var(--body,inherit);font-size:30px;bottom:auto;top:10px;right:12px;opacity:.9}
 
 /* activity tiles */
 .tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
@@ -718,18 +719,24 @@ function renderHome(){
   const bonus=[];
   if(wk && S.when!=='today'){ wk.forEach(([d,re])=>{ const o=occ.find(o=>key(o.d)===d && re.test(o.e.title)); if(o) picked.push(o); });
     (BONUS_WEEKS[key(weekStart(a))]||[]).forEach(([d,re])=>{ const o=occ.find(o=>key(o.d)===d && re.test(o.e.title)); if(o) bonus.push(o); }); }
-  if(!picked.length) {
+  // « À faire aujourd'hui » : les sorties du top 5 (et coups de ♥) de la semaine qui ont lieu aujourd'hui passent toujours en premier
+  const must=[];
+  if(S.when==='today'){ const tk=key(a);
+    [...(TOP5_WEEKS[wkKey]||[]),...(BONUS_WEEKS[wkKey]||[])].forEach(([d,re])=>{ if(d!==tk) return; const o=occ.find(o=>key(o.d)===d && re.test(o.e.title)); if(o && !must.includes(o)) must.push(o); });
+    must.forEach(o=>{ picked.push(o); seen.add(o.e.cat); }); }
+  if(S.when==='today' || !picked.length) {
   const occT=occ.filter(o=>!/scout/i.test(o.e.title+' '+(o.e.desc||'')));
-  [...occT].sort((x,y)=>(y.e.verified-x.e.verified)||(x.d-y.d)).forEach(o=>{ if(picked.length<5 && !seen.has(o.e.cat)){picked.push(o);seen.add(o.e.cat)} });
-  occT.forEach(o=>{ if(picked.length<5 && !picked.includes(o)) picked.push(o) });
+  const cap=Math.max(5,must.length);
+  [...occT].sort((x,y)=>(y.e.verified-x.e.verified)||(x.d-y.d)).forEach(o=>{ if(picked.length<cap && !seen.has(o.e.cat) && !picked.includes(o)){picked.push(o);seen.add(o.e.cat)} });
+  occT.forEach(o=>{ if(picked.length<cap && !picked.includes(o)) picked.push(o) });
   }
-  $('#t5h').innerHTML = bonus.length ? `Le top 5 <span style="color:#C2532F">+ ${bonus.length} ♥</span>` : 'Le top 5';
+  $('#t5h').innerHTML = S.when==='today' ? 'À faire aujourd’hui' : bonus.length ? `Le top 5 <span style="color:#C2532F">+ ${bonus.length} ♥</span>` : 'Le top 5';
   if(hidden){ $('#t5h').innerHTML='Le top 5'; $('#top5').innerHTML=`<div class="empty" style="width:100%"><b>Surprise !</b>Le top 5 de la semaine prochaine sera dévoilé dimanche soir sur Instagram @onfaitquoi.be.</div>`; }
-  else   $('#top5').innerHTML = picked.length ? picked.map((o,i)=>`<button class="t5" data-ev="${o.e.id}" style="--c:${CATS[o.e.cat].color}">
-      <span class="k">${CATS[o.e.cat].label} · ${JOURS[o.d.getDay()]} ${o.d.getDate()}</span>
+  else   $('#top5').innerHTML = picked.length ? picked.map((o,i)=>`<button class="t5${must.includes(o)?' bonus':''}" data-ev="${o.e.id}" style="--c:${CATS[o.e.cat].color}">
+      <span class="k">${must.includes(o)?'Top 5 de la semaine · ':''}${CATS[o.e.cat].label}${S.when==='today'?'':' · '+JOURS[o.d.getDay()]+' '+o.d.getDate()}</span>
       <span class="tt">${esc(o.e.title)}</span>
       <span class="w">${vc(o.e.venue,o.e.commune)}${/confirmer|voir la page/i.test(o.e.price||'')?'':'<br>'+esc(o.e.price)}</span>
-      <span class="n">${i+1}</span></button>`).join('') + bonus.map(o=>`<button class="t5 bonus" data-ev="${o.e.id}" style="--c:${CATS[o.e.cat].color}">
+      <span class="n${S.when==='today'&&must.includes(o)?' star':''}">${S.when==='today'?(must.includes(o)?'★':''):i+1}</span></button>`).join('') + bonus.map(o=>`<button class="t5 bonus" data-ev="${o.e.id}" style="--c:${CATS[o.e.cat].color}">
       <span class="k">Coup de ♥ · ${JOURS[o.d.getDay()]} ${o.d.getDate()}</span>
       <span class="tt">${esc(o.e.title)}</span>
       <span class="w">${vc(o.e.venue,o.e.commune)}${/confirmer|voir la page/i.test(o.e.price||'')?'':'<br>'+esc(o.e.price)}</span>
