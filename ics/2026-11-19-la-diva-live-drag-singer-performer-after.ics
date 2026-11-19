@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-19-la-diva-live-drag-singer-performer-after@onfaitquoi.be
+DTSTAMP:20261119T133514Z
+DTSTART:20261119T203000Z
+DTEND:20261119T233000Z
+SUMMARY:La Diva Live — drag singer & performer + After Soho
+LOCATION:Soho\, Marché aux Herbes 20\, 7000 Mons
+DESCRIPTION:Live drag singer & performer\, exceptionnellement de retour au Soho. La soirée continue avec l’After Soho et DJ GV dès 23h.\nPrix : Entrée gratuite · réservation de table en ligne conseillée\nhttps://soho-mons.be/fr/reservation\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:La Diva Live — drag singer & performer + After Soho demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:La Diva Live — drag singer & performer + After Soho dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
