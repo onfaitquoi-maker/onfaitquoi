@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-09-village-de-noel-de-boussu@onfaitquoi.be
-DTSTAMP:20261119T124953Z
+DTSTAMP:20261119T125707Z
 DTSTART;VALUE=DATE:20261209
 DTEND;VALUE=DATE:20261214
 SUMMARY:Village de Noël de Boussu 🎄
 LOCATION:Place de Boussu\, Place de Boussu\, 7300 Boussu
-DESCRIPTION:La Place de Boussu se transforme en village de Noël : chalets d’artisans\, créations locales\, décorations\, idées cadeaux et spécialités gourmandes dans une ambiance festive. L’an dernier\, la patinoire synthétique\, la piste de luge\, le curling\, le train magique et le carrousel étaient gratuits\, avec le Père Noël présent tout au long de l’événement.\nPrix : Horaires et tarifs 2026 pas encore publiés\nhttps://www.boussu.be/actualites/le-village-de-noel\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Le Village de Noël revient sur la Place de Boussu : chalets pour dénicher un cadeau ou partager un chocolat chaud entre amis. Patinoire\, luge\, curling\, petit train et manège pour les petits sont gratuits. Animations lumineuses avec le Centre culturel de Boussu et le CMA de Jemappes\, balades à poney (Écuries Eliot Hador) et en calèche (Calèche Truchart)\, tarifs auprès d’eux. Le Père Noël et ses lutins sont présents\, avec une boîte aux lettres qui reste sur la place après les festivités \; il revient le dimanche 20 décembre au marché dominical\, jusqu’à 13h\, pour recevoir les lettres et poser pour une photo.\nPrix : Accès libre · patinoire\, luge\, curling\, petit train et manège des petits gratuits\nhttps://www.boussu.be/actualites/le-village-de-noel\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Village de Noël de Boussu 🎄

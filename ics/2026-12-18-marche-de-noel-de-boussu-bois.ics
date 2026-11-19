@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-18-marche-de-noel-de-boussu-bois@onfaitquoi.be
+DTSTAMP:20261119T125707Z
+DTSTART;VALUE=DATE:20261218
+DTEND;VALUE=DATE:20261221
+SUMMARY:Marché de Noël de Boussu-Bois
+LOCATION:Maison du Peuple de Boussu-Bois\, Rue Alfred Dendal 251\, 7300 Boussu
+DESCRIPTION:Marché de Noël gourmand et créatif à la Maison du Peuple de Boussu-Bois\, organisé par la Ducasse Wallonne : présence du Père Noël et restauration sur place. Renseignements : 0498/47.87.76.\nPrix : Prix non communiqué\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Marché de Noël de Boussu-Bois
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
