@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2027-02-18-after-work-a-l-ane-barre-tous-les-jeudis@onfaitquoi.be
+DTSTAMP:20261119T204226Z
+DTSTART:20270218T170000Z
+DTEND:20270218T200000Z
+SUMMARY:After work à L’Âne Barré — tous les jeudis
+LOCATION:L’Âne Barré\, Cour de l’Âne Barré 3\, 7000 Mons
+DESCRIPTION:L’after work du jeudi à L’Âne Barré : bière à 1 €\, Vodka Red Bull à 5 €\, happy hour et promos cocktails\, DJ set pour ambiancer la soirée. Entre collègues ou entre amis.\nPrix : Bière à 1 € · Vodka Red Bull à 5 € · happy hour & promos cocktails\nhttps://www.instagram.com/lanebarre/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:After work à L’Âne Barré — tous les jeudis demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:After work à L’Âne Barré — tous les jeudis dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
