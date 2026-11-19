@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-04-lancer-de-hache-ouverture-au-nexus-10@onfaitquoi.be
+DTSTAMP:20261119T202852Z
+DTSTART:20261204T130000Z
+DTEND:20261205T000000Z
+SUMMARY:Lancer de hache — ouverture au Nexus (−10 %)
+LOCATION:The Nexus\, Rue de la Chaussée 32\, 7000 Mons (à côté du Monkey’s Café)
+DESCRIPTION:Nouvelle activité au Nexus\, à côté du Monkey’s Café : lancer de hache dans 2 box privatives de 1 à 4 joueurs (jusqu’à 8 en même temps)\, 4 modèles de haches au choix. Session d’1 heure\, explications comprises\, aucune expérience requise. Dès 18 ans\, ou dès 16 ans accompagné d’un adulte. Chaussures fermées obligatoires.\nPrix : Tarifs non communiqués · −10 % sur toutes les sessions réservées pour le 4/12 (remise automatique)\nhttps://thenexus.be/lancer-de-hache/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Lancer de hache — ouverture au Nexus (−10 %) demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Lancer de hache — ouverture au Nexus (−10 %) dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
