@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-21-boombox-au-chinchin-ismet-blondelle-dige@onfaitquoi.be
+DTSTAMP:20261119T204254Z
+DTSTART:20261121T210000Z
+DTEND:20261122T030000Z
+SUMMARY:Boombox au Chinchin — Ismet\, Blondelle\, Digelato b2b Saber\, Vitali
+LOCATION:Le Chinchin\, Rue des Clercs 15\, 7000 Mons
+DESCRIPTION:Soirée Boombox au Chinchin de 22h à 4h\, avec aux platines Ismet\, Blondelle\, Digelato b2b Saber et Vitali.\nPrix : Tarif non communiqué\nhttps://www.instagram.com/chinchin.mons/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Boombox au Chinchin — Ismet\, Blondelle\, Digelato b2b Saber\, Vitali demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Boombox au Chinchin — Ismet\, Blondelle\, Digelato b2b Saber\, Vitali dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
