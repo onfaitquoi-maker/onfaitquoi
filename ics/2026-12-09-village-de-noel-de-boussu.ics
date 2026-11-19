@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-09-village-de-noel-de-boussu@onfaitquoi.be
+DTSTAMP:20261119T124953Z
+DTSTART;VALUE=DATE:20261209
+DTEND;VALUE=DATE:20261214
+SUMMARY:Village de Noël de Boussu 🎄
+LOCATION:Place de Boussu\, Place de Boussu\, 7300 Boussu
+DESCRIPTION:La Place de Boussu se transforme en village de Noël : chalets d’artisans\, créations locales\, décorations\, idées cadeaux et spécialités gourmandes dans une ambiance festive. L’an dernier\, la patinoire synthétique\, la piste de luge\, le curling\, le train magique et le carrousel étaient gratuits\, avec le Père Noël présent tout au long de l’événement.\nPrix : Horaires et tarifs 2026 pas encore publiés\nhttps://www.boussu.be/actualites/le-village-de-noel\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Village de Noël de Boussu 🎄
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
