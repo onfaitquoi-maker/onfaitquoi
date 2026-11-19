@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-09-village-de-noel-de-boussu@onfaitquoi.be
-DTSTAMP:20261119T125707Z
+DTSTAMP:20261119T130141Z
 DTSTART;VALUE=DATE:20261209
 DTEND;VALUE=DATE:20261214
 SUMMARY:Village de Noël de Boussu 🎄
 LOCATION:Place de Boussu\, Place de Boussu\, 7300 Boussu
-DESCRIPTION:Le Village de Noël revient sur la Place de Boussu : chalets pour dénicher un cadeau ou partager un chocolat chaud entre amis. Patinoire\, luge\, curling\, petit train et manège pour les petits sont gratuits. Animations lumineuses avec le Centre culturel de Boussu et le CMA de Jemappes\, balades à poney (Écuries Eliot Hador) et en calèche (Calèche Truchart)\, tarifs auprès d’eux. Le Père Noël et ses lutins sont présents\, avec une boîte aux lettres qui reste sur la place après les festivités \; il revient le dimanche 20 décembre au marché dominical\, jusqu’à 13h\, pour recevoir les lettres et poser pour une photo.\nPrix : Accès libre · patinoire\, luge\, curling\, petit train et manège des petits gratuits\nhttps://www.boussu.be/actualites/le-village-de-noel\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Le Village de Noël revient sur la Place de Boussu : chalets pour dénicher un cadeau ou partager un chocolat chaud entre amis. Patinoire\, luge\, curling\, petit train et manège pour les petits sont gratuits. Animations lumineuses avec le Centre culturel de Boussu et le CMA de Jemappes\, balades à poney (Écuries Eliot Hador) et en calèche (Calèche Truchart)\, tarifs auprès d’eux. Le Père Noël et ses lutins sont présents\, avec une boîte aux lettres qui reste sur la place après les festivités \; il revient le dimanche 20 décembre au marché dominical\, jusqu’à 13h\, pour recevoir les lettres et poser pour une photo.\nPrix : Entrée gratuite · patinoire\, luge\, curling\, petit train et manège des petits gratuits\nhttps://www.boussu.be/actualites/le-village-de-noel\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Village de Noël de Boussu 🎄
