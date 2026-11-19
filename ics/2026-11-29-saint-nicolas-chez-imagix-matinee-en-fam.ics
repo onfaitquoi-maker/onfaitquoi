@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-29-saint-nicolas-chez-imagix-matinee-en-fam@onfaitquoi.be
+DTSTAMP:20261119T234734Z
+DTSTART:20261129T090000Z
+DTEND:20261129T113600Z
+SUMMARY:Saint-Nicolas chez Imagix — matinée en famille avec « Astérix : Le Royaume de Nubie » (avant-première)
+LOCATION:Imagix Mons\, Boulevard André Delvaux 1\, 7000 Mons
+DESCRIPTION:Matinée festive en famille : 10h00 accueil et petit-déjeuner\, 10h40 animation Saint-Nicolas en salle (rencontre avec le grand Saint-Nicolas)\, 11h00 avant-première d’« Astérix – Le Royaume de Nubie » (1h26\, entracte de 10 min)\, fin à 12h36. Concours en salle pour gagner des tickets pour le Parc Astérix. Salle 12\, version française.\nPrix : Adulte 14 € · moins de 12 ans 12 €\nhttps://tickets.imagix.be/movie/24544/asterix-le-royaume-de-nubie/special/50\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Saint-Nicolas chez Imagix — matinée en famille avec « Astérix : Le Royaume de Nubie » (avant-première) demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Saint-Nicolas chez Imagix — matinée en famille avec « Astérix : Le Royaume de Nubie » (avant-première) dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
