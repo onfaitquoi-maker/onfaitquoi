@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-10-marche-de-noel-de-saint-ghislain@onfaitquoi.be
+DTSTAMP:20261119T130550Z
+DTSTART;VALUE=DATE:20261210
+DTEND;VALUE=DATE:20261214
+SUMMARY:Marché de Noël de Saint-Ghislain 🎄
+LOCATION:Grand-Place de Saint-Ghislain\, Grand-Place\, 7330 Saint-Ghislain
+DESCRIPTION:Commerçants et artisans locaux proposent produits et gourmandises de fin d’année sur la Grand-Place\, dans une ambiance festive. Nouveauté de cette édition : une piste de luges. Infos : Syndicat d’Initiative\, 065 78 41 41.\nPrix : Accès libre · tarifs des animations à vérifier sur place\nhttps://www.saint-ghislain.be/agenda/marche-de-noel\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Marché de Noël de Saint-Ghislain 🎄
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
