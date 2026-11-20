@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-06-seven-club-le-run-du-dimanche-a-la-bibli@onfaitquoi.be
-DTSTAMP:20261120T192842Z
+DTSTAMP:20261120T193010Z
 DTSTART:20261206T090000Z
 DTEND:20261206T120000Z
 SUMMARY:Seven Club — le run du dimanche à La Bibliothèque
 LOCATION:La Bibliothèque\, Grand-Place 36\, 7330 Saint-Ghislain
-DESCRIPTION:Sortie en groupe au départ du bar\, quel que soit le niveau : deux parcours de 5 ou 10 km et plusieurs groupes d’allure\, puis café ou apéro au retour vers midi. Une fois par mois\, DJ set après la course. Objectif : courir ensemble et préparer les prochaines courses\, comme le semi-marathon de Saint-Ghislain.\nPrix : Aucun tarif annoncé · inscription au groupe via le formulaire du club\nhttps://www.sevenclub.io/join\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Sortie en groupe au départ du bar\, quel que soit le niveau : deux parcours de 5 ou 10 km et plusieurs groupes d’allure\, puis café ou apéro au retour vers midi. Une fois par mois\, DJ set après la course. Objectif : courir ensemble et préparer les prochaines courses\, comme le semi-marathon de Saint-Ghislain.\nPrix : Gratuit · inscription au groupe via le formulaire du club\nhttps://www.sevenclub.io/join\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Seven Club — le run du dimanche à La Bibliothèque demain
