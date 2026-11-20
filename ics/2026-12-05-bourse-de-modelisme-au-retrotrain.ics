@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-05-bourse-de-modelisme-au-retrotrain@onfaitquoi.be
+DTSTAMP:20261120T202928Z
+DTSTART:20261205T080000Z
+DTEND:20261205T130000Z
+SUMMARY:Bourse de modélisme au Rétrotrain
+LOCATION:Musée Rétrotrain (réserve muséale ferroviaire & modélisme)\, À 300 m de la gare de Saint-Ghislain\, accès par la rampe entre les deux ponts du viaduc\, 7330 Saint-Ghislain
+DESCRIPTION:Bourse de trains miniatures\, livres et objets ferroviaires dans la réserve muséale du Rétrotrain. Réseaux miniatures accessibles\, boutique ferroviaire ouverte\, buvette et petite restauration\, et exposition du matériel en extérieur si le temps le permet.\nPrix : Entrée gratuite\nhttps://www.pfttsp.be/events/bourse-de-modelisme-3/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bourse de modélisme au Rétrotrain demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bourse de modélisme au Rétrotrain dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
