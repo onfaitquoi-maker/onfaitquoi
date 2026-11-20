@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-27-winter-room-grand-opening@onfaitquoi.be
-DTSTAMP:20261120T215427Z
+DTSTAMP:20261120T215759Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:Winter Room — Grand Opening ❄️
 LOCATION:Lotto Mons Expo\, Avenue Thomas Edison 2\, 7000 Mons
-DESCRIPTION:Cet hiver\, la fête change de décor : grand opening de la Winter Room\, le nouveau rendez-vous festif du Lotto Mons Expo. DJ sets et soirées chaque vendredi et samedi jusqu’au 9 janvier. L’hiver sera chaud !\nPrix : Payant (prix non communiqué)\nhttps://www.eventbrite.com/e/winter-room-greenwood-export-tickets-2004780211580\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Cet hiver\, la fête change de décor : grand opening de la Winter Room\, le nouveau rendez-vous festif du Lotto Mons Expo. DJ sets et soirées chaque vendredi et samedi jusqu’au 9 janvier. L’hiver sera chaud !\nPrix : Entrée gratuite\nhttps://www.eventbrite.com/e/winter-room-greenwood-export-tickets-2004780211580\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Winter Room — Grand Opening ❄️
