@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-27-get-locos-student-party-au-get@onfaitquoi.be
+DTSTAMP:20261120T123525Z
+DTSTART:20261127T220000Z
+DTEND:20261127T230000Z
+SUMMARY:GET Locos ! — Student Party au GET
+LOCATION:Le GET\, Marché aux Herbes 22\, 7000 Mons
+DESCRIPTION:Soirée étudiante au GET : reggaeton\, dembow\, salsa et hits étudiants par DJ Tarta. Happy hour de 23h à minuit et tarif étudiant sur les consommations toute la nuit.\nPrix : Entrée gratuite · tarif étudiant toute la nuit\nhttps://www.google.com/maps/search/GET+Marché+aux+Herbes+22+Mons\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:GET Locos ! — Student Party au GET demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:GET Locos ! — Student Party au GET dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
