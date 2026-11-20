@@ -418,6 +418,7 @@ function fixed(str, o){ const d=parse(str); if(d>=today && d<endRange) ev(Object
 const V = o => ev(Object.assign({verified:true}, o));
 /* Top 5 éditorial : mêmes choix que le carrousel Instagram de la semaine (clé = lundi) */
 const BONUS_WEEKS={
+  '2026-11-23':[['2026-12-03',/Ladies Night chez Decathlon/]],
   '2026-11-16':[['2026-11-21',/Maman va danser/],['2026-11-21',/What The Fun/]]
 };
 const TOP5_WEEKS={
@@ -591,7 +592,7 @@ V({date:'2026-11-19',title:'Candy Night au Cuba’r',cat:'soiree',place:'cubar',
 V({date:'2026-11-20',title:'Urban Mix au Cuba’r',cat:'soiree',place:'cubar',time:'20:00–04:00',price:'Entrée gratuite',free:true,desc:'Soirée Urban Mix à l’Afro Latin Social Club Cuba’r.',src:'https://www.instagram.com/cubar_mons/'});
 V({date:'2026-11-21',title:'Latino Night au Cuba’r',cat:'soiree',place:'cubar',time:'20:00–04:00',price:'Entrée gratuite',free:true,desc:'Soirée Latino Night à l’Afro Latin Social Club Cuba’r.',src:'https://www.instagram.com/cubar_mons/'});
 V({date:'2026-12-04',title:'Ladies Night Imagix — « Changer l’eau des fleurs » en avant-première',cat:'soiree',place:'imagix',time:'19:00–22:43 (film à 20:15)',price:'Payant · drink et surprises inclus',book:'https://tickets.imagix.be/movie/29226/changer-leau-des-fleurs/special/4',bookLabel:'🎟️ Acheter ses tickets',desc:'Soirée entre filles au cinéma : l’adaptation du célèbre roman de Valérie Perrin, à découvrir en avant-première. Drink et surprises inclus. 19h : accueil et espace partenaires · 20h : introduction et concours · 20h15 : film (2h18 + 10 min d’entracte).',src:'https://www.instagram.com/imagixbelgique/'});
-V({date:'2026-12-03',title:'Ladies Night chez Decathlon Mons',cat:'sport',place:'decathlonmons',time:'20:00–23:00',price:'Entrée libre · inscription gratuite en ligne',free:true,book:'https://event.decathlon.be/fr/ladies-night-mons-decembre',bookLabel:'✍️ S’inscrire',desc:'Soirée entre copines, sœurs ou collègues, avec Les Copines Montoises et Aura Pilates Club. -10 % sur tout le magasin, marché de créateurs (bijoux, bougies, déco), atelier DIY tote bag et boule de Noël (stocks limités), initiations Pilates Reformer, Zumba et Kick Boxing, et initiation au bain froid (prévoir maillot et essuie). Ateliers de 30 à 45 min sur inscription, places limitées.',src:'https://event.decathlon.be/fr/ladies-night-mons-decembre'});
+V({date:'2026-12-03',title:'Ladies Night chez Decathlon Mons',cat:'sport',place:'decathlonmons',time:'20:00–23:00',price:'Entrée libre · inscription gratuite en ligne',free:true,book:'https://event.decathlon.be/fr/ladies-night-mons-decembre',bookLabel:'✍️ S’inscrire',desc:'Soirée entre copines, sœurs ou collègues, avec Les Copines Montoises et Aura Pilates Club. -10 % sur tout le magasin, marché de créateurs (bijoux, bougies, déco), atelier DIY tote bag et boule de Noël (stocks limités), initiations Pilates Reformer, Zumba et Kick Boxing, et initiation au bain froid (prévoir maillot et essuie). Ateliers de 30 à 45 min sur inscription, places limitées (au 20/11, le Pilates Reformer est complet sauf le dernier créneau de 22h35).',src:'https://event.decathlon.be/fr/ladies-night-mons-decembre'});
 V({date:'2026-12-03',title:'Leo Rizzuto — L’Écho d’une voix 2026',cat:'concert',place:'stgerybaudour',time:'19:30 (portes à 19:00)',price:'Entrée gratuite, sans réservation (placement libre)',free:true,desc:'Concert gratuit exceptionnel du chanteur colfontainois Leo Rizzuto à l’église Saint-Géry de Baudour, dans le cadre de « L’Écho d’une voix ». Organisé par la bibliothèque La Rollandine et la Ville de Saint-Ghislain.',src:'https://www.saint-ghislain.be/agenda/echo-dune-voix-leo-rizzuto?u=bca762f6148443a0a411316d06228ec0'});
 // Scouts, étudiants, Noël (vérifiés sur Facebook le 16/11)
 V({date:'2026-11-21',title:'Soirée Beaujolais des scouts Saint-Charles',cat:'soiree',place:'saintcharles',time:'18:00',price:'Entrée gratuite',free:true,desc:'Le retour de la soirée beaujolais des pionniers de l’unité scoute Saint-Charles, au cœur de Mons. Soirée scouts.',src:'https://www.facebook.com/events/1166762129243526/'});
@@ -738,7 +739,7 @@ function renderHome(){
   const wk = hidden ? null : TOP5_WEEKS[wkKey];
   const bonus=[];
   if(wk && S.when!=='today'){ wk.forEach(([d,re])=>{ const o=occ.find(o=>key(o.d)===d && re.test(o.e.title)); if(o) picked.push(o); });
-    (BONUS_WEEKS[key(weekStart(a))]||[]).forEach(([d,re])=>{ const o=occ.find(o=>key(o.d)===d && re.test(o.e.title)); if(o) bonus.push(o); }); }
+    (BONUS_WEEKS[key(weekStart(a))]||[]).forEach(([d,re])=>{ const pool=occ.some(o=>key(o.d)===d)?occ:eventsBetween(parse(d),parse(d)); const o=pool.find(o=>key(o.d)===d && re.test(o.e.title)); if(o) bonus.push(o); }); }
   // « À faire aujourd'hui » : les sorties du top 5 (et coups de ♥) de la semaine qui ont lieu aujourd'hui passent toujours en premier
   const must=[];
   if(S.when==='today'){ const tk=key(a);
