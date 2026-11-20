@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2027-01-10-atelier-broderie-sur-photo-au-macs@onfaitquoi.be
+DTSTAMP:20261120T221326Z
+DTSTART:20270110T130000Z
+DTEND:20270110T153000Z
+SUMMARY:Atelier broderie sur photo au MACS
+LOCATION:MACS — Grand-Hornu\, Rue Sainte-Louise 82\, 7301 Hornu
+DESCRIPTION:Atelier d’art textile avec la brodeuse Fanny Lecharlier : découvrir l’art de broder sur la photographie et explorer ce que permettent le fil et le papier\, pour transformer une image et porter un autre regard sur un souvenir. Apporte tes photos personnelles\, ou utilise celles mises à disposition sur place. À partir de 15 ans.\nPrix : 15 €\nhttps://www.billetweb.fr/macs-broderie-sur-photo\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Atelier broderie sur photo au MACS demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Atelier broderie sur photo au MACS dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
