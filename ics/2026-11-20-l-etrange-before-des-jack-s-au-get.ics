@@ -4,21 +4,21 @@ PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:2026-11-20-l-etrange-before-des-jack-s-get-mons@onfaitquoi.be
-DTSTAMP:20261120T001034Z
+UID:2026-11-20-l-etrange-before-des-jack-s-au-get@onfaitquoi.be
+DTSTAMP:20261120T120954Z
 DTSTART:20261120T200000Z
 DTEND:20261120T230000Z
-SUMMARY:L’étrange Before des Jack’s — GET Mons
-LOCATION:Get a Pinte\, Marché aux Herbes 22\, 7000 Mons
+SUMMARY:L’étrange Before des Jack’s au GET
+LOCATION:Le GET\, Marché aux Herbes 22\, 7000 Mons
 DESCRIPTION:Before du marché de Noël des Jack’s\, ambiance 100 % pop rock. Temps fort : la remise officielle des bracelets Jack’s\, qui donnent droit à des avantages tout le mois de décembre (5+1 sur les shots au chalet de Noël\, une bière offerte pour une coupe au Barbershop À l’ancienne\, un shot Jack’s offert pour une bière À l’ancienne au GET). Organisé par le GET et A l’ancienne.\nPrix : Gratuit\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:L’étrange Before des Jack’s — GET Mons demain
+DESCRIPTION:L’étrange Before des Jack’s au GET demain
 TRIGGER:-P1D
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:L’étrange Before des Jack’s — GET Mons dans 2 heures
+DESCRIPTION:L’étrange Before des Jack’s au GET dans 2 heures
 TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
