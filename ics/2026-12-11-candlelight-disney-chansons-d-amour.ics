@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-11-candlelight-disney-chansons-d-amour@onfaitquoi.be
-DTSTAMP:20261120T214546Z
+DTSTAMP:20261120T215324Z
 DTSTART:20261211T180000Z
 DTEND:20261211T210000Z
 SUMMARY:Candlelight — Disney Chansons d’amour
 LOCATION:Auditorium Abel Dubois\, Esplanade Anne-Charlotte de Lorraine\, 7000 Mons
-DESCRIPTION:Les plus belles chansons d’amour de Disney jouées en direct par un quatuor à cordes\, à la lueur des bougies (2e date).\nPrix : dès 19 €\nhttps://feverup.com/m/771750\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Les plus belles chansons d’amour de Disney jouées en direct par un quatuor à cordes\, à la lueur des bougies (2e date).\nPrix : Zone D 27\,50 € · zone C 36\,50 € · zone B 42 € · zone A 53\,50 € (+ frais de réservation de 1\,38 € à 2\,68 €)\nhttps://feverup.com/m/771750\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Candlelight — Disney Chansons d’amour demain
