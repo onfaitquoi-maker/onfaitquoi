@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-29-seven-run-brunch-a-la-bibliotheque@onfaitquoi.be
+DTSTAMP:20261120T192208Z
+DTSTART:20261129T090000Z
+DTEND:20261129T120000Z
+SUMMARY:Seven Run & Brunch à La Bibliothèque
+LOCATION:La Bibliothèque\, Grand-Place 36\, 7330 Saint-Ghislain
+DESCRIPTION:Run de 5 ou 10 km au départ de La Bibliothèque (rendez-vous 10h\, départ 10h30)\, gratuit et sans inscription. Au retour\, brunch à 11h30\, ouvert à tous même sans courir : brunch box de 6 pièces (4 salées\, 2 sucrées)\, sur place ou à emporter. Organisé par Seven Club\, My FitFood et La Bibliothèque.\nPrix : Run gratuit\, sans inscription · brunch box 15\,90 € (offre de lancement\, sur réservation jusqu’au mardi 24/11 au soir) · boissons au bar\, non comprises\nhttps://www.sevenclub.io/run-brunch-1#inscription\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Seven Run & Brunch à La Bibliothèque demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Seven Run & Brunch à La Bibliothèque dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
