@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-28-seven-hyrox-day-1-seance-hyrox-en-duo@onfaitquoi.be
+DTSTAMP:20261120T194141Z
+DTSTART:20261128T133000Z
+DTEND:20261128T163000Z
+SUMMARY:Seven Hyrox Day #1 — séance Hyrox en duo
+LOCATION:Box of the Goat\, Rue Louis Anciaux 60d\, 7331 Baudour (Saint-Ghislain)
+DESCRIPTION:Initiation Hyrox avec le Seven Club et Box of the Goat : séance « For Time » en duos tirés au hasard\, avec du run et des ateliers\, à boucler à son rythme. Idéal pour découvrir l’Hyrox. Photographe\, vidéaste et mini-bar de La Bibliothèque (café\, matcha) sur place.\nPrix : Gratuit (offert aux membres Seven \; l’inscription au club est gratuite) · 24 places\, sur inscription\nhttps://www.sevenclub.io/hyrox#inscription\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Seven Hyrox Day #1 — séance Hyrox en duo demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Seven Hyrox Day #1 — séance Hyrox en duo dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
