@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-31-le-grand-karaoke-du-nouvel-an-a-la-lorgn@onfaitquoi.be
-DTSTAMP:20261121T113444Z
-DTSTART:20261231T220000Z
-DTEND:20270101T010000Z
+DTSTAMP:20261121T113922Z
+DTSTART:20261231T210000Z
+DTEND:20270101T000000Z
 SUMMARY:Le Grand Karaoké du Nouvel An à La Lorgnette 🎤🥂
 LOCATION:La Lorgnette\, Rue des Clercs 2\, 7000 Mons
-DESCRIPTION:Marre des menus à rallonge et des plans galères ? La Lorgnette enterre l’année avec un grand karaoké du Nouvel An\, dès 23h.\nPrix : Entrée gratuite\nhttps://www.instagram.com/la.lorgnette.mons/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Marre des menus à rallonge et des plans galères ? La Lorgnette enterre l’année avec un grand karaoké du Nouvel An\, dès 22h.\nPrix : Entrée gratuite\nhttps://www.instagram.com/la.lorgnette.mons/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Le Grand Karaoké du Nouvel An à La Lorgnette 🎤🥂 demain
