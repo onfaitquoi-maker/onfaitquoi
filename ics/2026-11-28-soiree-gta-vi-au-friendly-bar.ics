@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-28-soiree-gta-vi-au-friendly-bar@onfaitquoi.be
-DTSTAMP:20261121T200744Z
+DTSTAMP:20261121T200830Z
 DTSTART:20261128T190000Z
 DTEND:20261128T220000Z
 SUMMARY:Soirée GTA VI au Friendly Bar 🌴🚗
 LOCATION:The Friendly Bar\, Rue de la Coupe 24\, 7000 Mons
-DESCRIPTION:Soirée à thème Grand Theft Auto VI au Friendly Bar : ambiance Vice City\, néons roses et palmiers. Chemise à fleurs bienvenue.\nPrix : Entrée gratuite\nhttps://www.instagram.com/lebarfriendly/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Soirée à thème Grand Theft Auto VI au Friendly Bar\, le bar LGBTQIA+ de Mons : ambiance Vice City\, néons roses et palmiers. Chemise à fleurs bienvenue.\nPrix : Entrée gratuite\nhttps://www.instagram.com/lebarfriendly/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Soirée GTA VI au Friendly Bar 🌴🚗 demain

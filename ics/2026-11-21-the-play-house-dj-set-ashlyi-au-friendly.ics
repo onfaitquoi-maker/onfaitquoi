@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-21-the-play-house-dj-set-ashlyi-au-friendly@onfaitquoi.be
+DTSTAMP:20261121T200830Z
+DTSTART:20261121T213000Z
+DTEND:20261122T030000Z
+SUMMARY:The Play-House — DJ set Ashlyi au Friendly Bar 🌈
+LOCATION:The Friendly Bar\, Rue de la Coupe 24\, 7000 Mons
+DESCRIPTION:Soirée The Play-House au Friendly Bar\, le nouveau bar LGBTQIA+ de Mons : DJ set d’Ashlyi de 22h30 à 4h. Au programme : commercial\, house\, tech house\, EDM et techno.\nPrix : Entrée gratuite\nhttps://www.instagram.com/lebarfriendly/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:The Play-House — DJ set Ashlyi au Friendly Bar 🌈 demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:The Play-House — DJ set Ashlyi au Friendly Bar 🌈 dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
