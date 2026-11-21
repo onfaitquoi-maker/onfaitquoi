@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-03-la-cave-a-rires-14-plateau-stand-up-au-c@onfaitquoi.be
+DTSTAMP:20261121T202300Z
+DTSTART:20261203T183000Z
+DTEND:20261203T213000Z
+SUMMARY:La Cave à Rires #14 — plateau stand-up au Chinchin 🎙️
+LOCATION:Le Chinchin\, Rue des Clercs 15\, 7000 Mons
+DESCRIPTION:Le plateau stand-up mensuel du CLAC (comedy club de Mons) dans la cave du Chinchin : plusieurs humoristes se succèdent au micro. Entrée gratuite sur réservation\, chacun donne ce qu’il veut au chapeau à la fin pour rémunérer les artistes.\nPrix : Gratuit sur réservation · rémunération des humoristes au chapeau\nhttps://my.weezevent.com/le-clac-x-le-chinchin-presentent-la-cave-a-rires-14\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:La Cave à Rires #14 — plateau stand-up au Chinchin 🎙️ demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:La Cave à Rires #14 — plateau stand-up au Chinchin 🎙️ dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
