@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-21-karaoke-disney-a-la-lorgnette@onfaitquoi.be
+DTSTAMP:20261121T113444Z
+DTSTART:20261121T193000Z
+DTEND:20261121T223000Z
+SUMMARY:Karaoké Disney à La Lorgnette 🎤🏰
+LOCATION:La Lorgnette\, Rue des Clercs 2\, 7000 Mons
+DESCRIPTION:Soirée karaoké spéciale Disney au bar rock & chill La Lorgnette : le micro est à toi pour reprendre les grands classiques des films Disney\, en solo ou en chœur.\nPrix : Entrée gratuite\nhttps://www.instagram.com/la.lorgnette.mons/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Karaoké Disney à La Lorgnette 🎤🏰 demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Karaoké Disney à La Lorgnette 🎤🏰 dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
