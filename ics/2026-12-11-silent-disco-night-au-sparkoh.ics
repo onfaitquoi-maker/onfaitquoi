@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-11-silent-disco-night-au-sparkoh@onfaitquoi.be
+DTSTAMP:20261122T195352Z
+DTSTART:20261211T160000Z
+DTEND:20261212T010000Z
+SUMMARY:Silent Disco Night au Sparkoh! 🎧
+LOCATION:Sparkoh! — Trémies du Silo\, Rue de Mons 3\, 7080 Frameries
+DESCRIPTION:2e édition de la Silent Disco Night dans les Trémies\, l’ancienne salle de stockage du charbon du Sparkoh! : casque sur les oreilles (prêté gratuitement)\, deux DJs qui mixent en même temps sur deux canaux\, et tu changes d’ambiance quand tu veux. Afterwork dès 17h\, fête jusqu’à 2h. Burgers (aussi en veggie) sur place. Réservé aux 18 ans et plus (pièce d’identité possible à l’entrée). Parking gratuit\, parking vélos et vestiaire. En collaboration avec Cowor-coeur.\nPrix : Prévente 15 € (jusqu’au jeu. 10/12\, 23h59) · sur place 20 €\nhttps://sparkoh.tickeasy.com/fr-FR/accueil\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Silent Disco Night au Sparkoh! 🎧 demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Silent Disco Night au Sparkoh! 🎧 dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
