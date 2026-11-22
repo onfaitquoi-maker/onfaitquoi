@@ -694,10 +694,14 @@ function windowFor(w){
   if(w==='today') return [today,today];
   // semaines complètes, du lundi au dimanche
   const dow=(today.getDay()+6)%7; // 0 = lundi
-  const monday=add(today,-dow), sunday=add(monday,6);
+  let monday=add(today,-dow);
+  // le dimanche dès la sortie du carrousel (19h30), « Cette semaine » passe à la semaine qui commence le lendemain
+  if(afterCarousel()) monday=add(monday,7);
+  const sunday=add(monday,6);
   if(w==='next') return [add(monday,7),add(sunday,7)];
-  return [today,sunday]; // cette semaine : d'aujourd'hui à dimanche
+  return [today>monday?today:monday,sunday]; // cette semaine : d'aujourd'hui (ou lundi) à dimanche
 }
+function afterCarousel(){ const n=new Date(); return n.getDay()===0 && (n.getHours()>19 || (n.getHours()===19 && n.getMinutes()>=30)); }
 
 /* ---------- rendus communs ---------- */
 const ICON = {
@@ -740,13 +744,13 @@ function catChips(el, selected, multi, onTap, extra){
 function renderHome(){
   const [a,b]=windowFor(S.when);
   const occ = eventsBetween(a,b);
-  const sub = S.when==='today' ? `${JOURSL[a.getDay()]} ${a.getDate()} ${MOIS[a.getMonth()]}` : `du ${a.getDate()} au ${b.getDate()} ${MOIS[b.getMonth()]}`;
+  const sub = S.when==='today' ? `${JOURSL[a.getDay()]} ${a.getDate()} ${MOIS[a.getMonth()]}` : `du ${a.getDate()}${a.getMonth()!==b.getMonth()?' '+MOIS[a.getMonth()]:''} au ${b.getDate()} ${MOIS[b.getMonth()]}`;
   $('#t5sub').textContent = sub;
   // top 5 : sélection de la semaine (celle du carrousel Instagram) si elle existe
   const picked=[], seen=new Set();
   const wkKey=key(weekStart(a));
-  // le top 5 éditorial d'une semaine n'est dévoilé que le dimanche précédent à 18h (sortie du carrousel)
-  const reveal=add(parse(wkKey),-1); reveal.setHours(18,0,0,0);
+  // le top 5 éditorial d'une semaine n'est dévoilé que le dimanche précédent à 19h30 (sortie du carrousel)
+  const reveal=add(parse(wkKey),-1); reveal.setHours(19,30,0,0);
   const hidden = S.when==='next' && new Date()<reveal;
   const wk = hidden ? null : TOP5_WEEKS[wkKey];
   const bonus=[];
