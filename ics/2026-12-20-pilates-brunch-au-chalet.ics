@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-20-pilates-brunch-au-chalet@onfaitquoi.be
+DTSTAMP:20261122T134351Z
+DTSTART:20261220T083000Z
+DTEND:20261220T113000Z
+SUMMARY:Pilates & Brunch au Chalet 🤎
+LOCATION:Le Chalet du Waux-Hall\, Avenue Reine Astrid 22\, 7000 Mons
+DESCRIPTION:Korpo Studio x Le Chalet du Waux-Hall : séance de Pilates tous niveaux encadrée par Lucie Brogneaux (Korpo Studio)\, puis brunch au Chalet autour de buffets sucrés et salés à volonté. Eaux aromatisées et une coupe de Chant d’Éole incluses. Places limitées (30)\, annulation possible jusqu’à 12 h avant.\nPrix : 65 € l’expérience complète (Pilates + brunch)\nhttps://www.korpostudio.com/evenements\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Pilates & Brunch au Chalet 🤎 demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Pilates & Brunch au Chalet 🤎 dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
