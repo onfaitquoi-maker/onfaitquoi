@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-05-l-envol-des-cites-2026-soiree-de-finale@onfaitquoi.be
+DTSTAMP:20261122T114822Z
+DTSTART:20261205T170000Z
+DTEND:20261205T200000Z
+SUMMARY:L’Envol des Cités 2026 — soirée de finale
+LOCATION:Auditorium Abel Dubois\, Esplanade Anne-Charlotte de Lorraine\, 7000 Mons
+DESCRIPTION:Soirée de finale de l’Envol des Cités\, le programme d’accompagnement de jeunes groupes de la Province de Hainaut (Musiques en Province de Hainaut)\, 21e édition. Sur scène : The Committee\, Full Dawa\, Laurus\, Delaurean\, Sempai\, Wake Up\, Awid\, Vedi et Lana Cruise\, avec Ratel Reborn en invités. Le groupe qui récolte le plus de votes du public pendant la soirée remporte 3 000 € de soutien. À l’Auditorium Abel Dubois – RTBF Mons.\nPrix : Concerts gratuits\nhttps://www.instagram.com/sempairasta/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:L’Envol des Cités 2026 — soirée de finale demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:L’Envol des Cités 2026 — soirée de finale dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
