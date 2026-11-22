@@ -864,7 +864,7 @@ function renderFavs(){
   let h='';
   if(!evs.length&&!pl.length) h=`<div class="empty" style="margin-top:20px"><b>Rien de gardé</b>Touche le cœur sur un événement ou un lieu pour le retrouver ici.</div>`;
   if(evs.length){ const up=evs.filter(e=>(e.end?parse(e.end):parse(e.date))>=today);
-    h+=`<h2 class="sec">Événements</h2>${up.length&&!IS_ANDROID?`<button class="btn" style="margin:0 0 12px" onclick="addAllIcs()">📅 Tout ajouter à mon agenda (${up.length})</button>`:''}<div class="list">${evs.map(e=>evRow(e)).join('')}</div>`; }
+    h+=`<h2 class="sec">Événements</h2>${up.length&&!IS_ANDROID&&ON_PAGES?`<button class="btn" style="margin:0 0 12px" onclick="addAllIcs()">📅 Tout ajouter à mon agenda (${up.length})</button>`:''}<div class="list">${evs.map(e=>evRow(e)).join('')}</div>`; }
   if(pl.length) h+=`<h2 class="sec">Lieux</h2><div class="list">${pl.map(plRow).join('')}</div>`;
   $('#favs').innerHTML=h;
 }
@@ -1004,11 +1004,16 @@ function saveIcs(evs,name){
   const a=document.createElement('a'); a.href=url; a.download=name; document.body.appendChild(a); a.click(); a.remove();
   setTimeout(()=>URL.revokeObjectURL(url),60000);
 }
+const ICS_BASE='https://onfaitquoi-maker.github.io/onfaitquoi/';
+const ON_PAGES=/github\.io$/.test(location.hostname);
 async function addIcs(id){
   const e=EVENTS.find(x=>x.id===id); if(!e) return;
-  const f='ics/'+icsKey(e)+'.ics';
-  try{ const r=await fetch(f,{method:'HEAD',cache:'no-store'}); if(r.ok){ location.href=f; return; } }catch(_){}
-  saveIcs([e], slug(e.title)+'.ics');
+  if(ON_PAGES){
+    const f='ics/'+icsKey(e)+'.ics';
+    try{ const r=await fetch(f,{method:'HEAD',cache:'no-store'}); if(r.ok){ location.href=f; return; } }catch(_){}
+    saveIcs([e], slug(e.title)+'.ics'); return;
+  }
+  window.open(ICS_BASE+'ics/'+icsKey(e)+'.ics','_blank','noopener');
 }
 function favUpcoming(){ return EVENTS.filter(e=>S.favs.has(e.id)&&(e.end?parse(e.end):parse(e.date))>=today); }
 function addAllIcs(){ const up=favUpcoming(); if(up.length) saveIcs(up,'mes-sorties.ics'); }
@@ -1021,7 +1026,9 @@ function gcalHref(e){
 const slug=t=>norm(t).replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,40)||'evenement';
 function calBlock(e){
   const g=`<a class="btn" href="${gcalHref(e)}" target="_blank" rel="noopener">${IS_ANDROID?'Ajouter à mon agenda':'Google Agenda'}</a>`;
-  const i=`<button class="btn" onclick="addIcs('${e.id}')">${IS_IOS?'Ajouter à mon agenda':'Fichier agenda (.ics)'}</button>`;
+  const iLabel=IS_IOS?'Ajouter à mon agenda':'Fichier agenda (.ics)';
+  // Hors du site de l'appli (visionneuse Claude), un vrai lien vers le .ics hébergé : les téléchargements y sont bloqués.
+  const i= ON_PAGES ? `<button class="btn" onclick="addIcs('${e.id}')">${iLabel}</button>` : `<a class="btn" href="${ICS_BASE}ics/${icsKey(e)}.ics" target="_blank" rel="noopener">${iLabel}</a>`;
   const btns = IS_ANDROID ? g : IS_IOS ? i+g : i+g;
   const hint = IN_APP ? `<p class="calhint">Si rien ne s’ouvre, ouvre la page dans ton navigateur : menu ⋯ en haut à droite, puis « Ouvrir dans le navigateur ».</p>` : '';
   return `<div class="calbox"><span>📅 Ajouter à mon agenda, avec un rappel</span><div class="actions">${btns}</div>${hint}</div>`;
