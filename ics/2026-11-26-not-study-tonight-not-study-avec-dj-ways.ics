@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-26-not-study-tonight-not-study-avec-dj-ways@onfaitquoi.be
+DTSTAMP:20261123T181618Z
+DTSTART:20261126T200000Z
+DTEND:20261127T010000Z
+SUMMARY:Not Study — Tonight Not Study avec DJ Ways
+LOCATION:Le Hype — Bar & Food\, Rue des Chartriers 1\, 7000 Mons
+DESCRIPTION:Soirée Not Study au Hype avec DJ Ways aux platines\, de 21h à 2h. Offres au bar : alcool + soft à 5 €\, pack de 10 shots à 15 €\, 1\,5 L de bière à 13 €.\nPrix : Entrée gratuite · boissons : alcool + soft 5 €\, pack 10 shots 15 €\, 1\,5 L de bière 13 €\nhttps://www.instagram.com/lehypemons/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Not Study — Tonight Not Study avec DJ Ways demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Not Study — Tonight Not Study avec DJ Ways dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

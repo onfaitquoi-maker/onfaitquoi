@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-27-after-work-fetes-patronales-80-90-00-au-@onfaitquoi.be
+DTSTAMP:20261123T181618Z
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20261128
+SUMMARY:After work Fêtes patronales 80’90’00’ au Mood Bar
+LOCATION:Mood Bar\, Rue de la Raquette 4\, 7000 Mons
+DESCRIPTION:After work spécial fêtes patronales au Mood Bar\, ambiance années 80\, 90 et 2000\, avec la bière à 1\,50 €.\nPrix : Entrée gratuite · bière à 1\,50 €\nhttps://www.instagram.com/mood.bar_mons_off/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:After work Fêtes patronales 80’90’00’ au Mood Bar
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
