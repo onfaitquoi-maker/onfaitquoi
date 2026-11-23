@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-12-atelier-cocktails-au-cowor-coeur@onfaitquoi.be
+DTSTAMP:20261123T161122Z
+DTSTART:20261212T170000Z
+DTEND:20261212T190000Z
+SUMMARY:Atelier cocktails au Cowor-Coeur
+LOCATION:Coworcoeur\, Rue Ferrer 104 D\, 7080 Frameries
+DESCRIPTION:Atelier de mixologie avec Tharwat de Cocktail at Home : tu prépares toi-même tes cocktails\, shaker en main\, avec ses conseils. 12 cocktails au choix dont 3 sans alcool (Mai Tai from Hell\, Cucumber Spritz\, Tokyo Sunset\, Basil Smash\, Porn Star Martini\, Irish Spéculoos\, Ananas-Pêche…)\, sirops maison et recettes modulables : tes idées sont les bienvenues. Réservation via Instagram @cocktailathome2026 ou au 0494 59 18 95.\nPrix : 1 cocktail + 1 shot : 20 € · 2 cocktails + 1 shot : 35 € · 3 cocktails + 1 shot : 48 € (TTC)\nhttps://www.instagram.com/cocktailathome2026\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Atelier cocktails au Cowor-Coeur demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Atelier cocktails au Cowor-Coeur dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
