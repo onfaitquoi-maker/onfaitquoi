@@ -5,16 +5,21 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-22-viva-for-life-tour-etape-a-mons@onfaitquoi.be
-DTSTAMP:20261123T163816Z
-DTSTART;VALUE=DATE:20261222
-DTEND;VALUE=DATE:20261223
+DTSTAMP:20261123T164201Z
+DTSTART:20261222T143000Z
+DTEND:20261222T182000Z
 SUMMARY:Viva for Life Tour — étape à Mons
 LOCATION:Marché de Noël — Grand-Place\, Grand-Place\, 7000 Mons
-DESCRIPTION:Étape montoise du Viva for Life Tour\, pendant Mons Cœur en Neige.\nPrix : Accès libre (à confirmer)\nhttps://monscoeurenneige.be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Première étape du Viva for Life Tour à Mons Cœur en Neige : rencontre avec un animateur RTBF du cube\, mise à l’honneur des personnes et des défis solidaires de la région\, ambiance festive et animations de Noël. Dons libres au profit de Viva for Life\, contre la précarité infantile des 0–6 ans.\nPrix : Accès libre et gratuit · dons libres pour Viva for Life\nhttps://monscoeurenneige.be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Viva for Life Tour — étape à Mons
-TRIGGER:-PT15H
+DESCRIPTION:Viva for Life Tour — étape à Mons demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Viva for Life Tour — étape à Mons dans 2 heures
+TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 END:VCALENDAR
