@@ -5,16 +5,21 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-20-marche-aux-flambeaux-mons-c-ur-en-neige@onfaitquoi.be
-DTSTAMP:20261123T005834Z
-DTSTART;VALUE=DATE:20261220
-DTEND;VALUE=DATE:20261221
+DTSTAMP:20261123T075638Z
+DTSTART:20261220T153000Z
+DTEND:20261220T183000Z
 SUMMARY:Marche aux flambeaux — Mons Cœur en Neige
-LOCATION:Mons — centre-ville\, Grand-Place\, 7000 Mons
-DESCRIPTION:Marche aux flambeaux dans le cadre de Mons Cœur en Neige.\nPrix : Accès libre (à confirmer)\nhttps://monscoeurenneige.be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+LOCATION:Départ Collégiale Sainte-Waudru → crèche de la Grand-Place\, Grand-Place\, 7000 Mons
+DESCRIPTION:Marche aux flambeaux au départ de la Collégiale Sainte-Waudru jusqu’à la crèche de la Grand-Place\, dans le cadre de Mons Cœur en Neige.\nPrix : Accès libre (en rue)\nhttps://monscoeurenneige.be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Marche aux flambeaux — Mons Cœur en Neige
-TRIGGER:-PT15H
+DESCRIPTION:Marche aux flambeaux — Mons Cœur en Neige demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Marche aux flambeaux — Mons Cœur en Neige dans 2 heures
+TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 END:VCALENDAR

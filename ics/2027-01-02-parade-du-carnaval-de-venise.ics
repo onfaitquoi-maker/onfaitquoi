@@ -5,16 +5,21 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2027-01-02-parade-du-carnaval-de-venise@onfaitquoi.be
-DTSTAMP:20261123T005834Z
-DTSTART;VALUE=DATE:20270102
-DTEND;VALUE=DATE:20270103
+DTSTAMP:20261123T075638Z
+DTSTART:20270102T140000Z
+DTEND:20270102T150000Z
 SUMMARY:Parade du Carnaval de Venise
-LOCATION:Mons — centre-ville\, Grand-Place\, 7000 Mons
-DESCRIPTION:Parade costumée du Carnaval de Venise par l’ASBL Passione Veneziana\, dans le cadre de Mons Cœur en Neige.\nPrix : Accès libre (à confirmer)\nhttps://monscoeurenneige.be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+LOCATION:Départ de la Grand-Place vers les rues commerçantes\, Grand-Place\, 7000 Mons
+DESCRIPTION:Parade costumée du Carnaval de Venise par l’ASBL Passione Veneziana : deux passages\, au départ de la Grand-Place vers les rues commerçantes\, dans le cadre de Mons Cœur en Neige.\nPrix : Accès libre (en rue)\nhttps://monscoeurenneige.be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Parade du Carnaval de Venise
-TRIGGER:-PT15H
+DESCRIPTION:Parade du Carnaval de Venise demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Parade du Carnaval de Venise dans 2 heures
+TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 END:VCALENDAR

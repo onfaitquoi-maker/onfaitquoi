@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-11-marche-de-noel-de-colfontaine@onfaitquoi.be
-DTSTAMP:20261123T005834Z
+DTSTAMP:20261123T075638Z
 DTSTART;VALUE=DATE:20261211
 DTEND;VALUE=DATE:20261214
 SUMMARY:Marché de Noël de Colfontaine 🎄
 LOCATION:Place de Wasmes\, Place de Wasmes\, 7340 Colfontaine
-DESCRIPTION:La Place de Wasmes se transforme en village de Noël pendant trois jours : 30 chalets artisanaux et gourmands\, parades et spectacles\, accrobranche et manège\, chorales d’enfants et chalet du Père Noël.\nPrix : Tarifs non communiqués (voir le site de la commune)\nhttps://www.colfontaine.be/evenements/marche-de-noel-2026\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:La Place de Wasmes se transforme en village de Noël pendant trois jours : 30 chalets artisanaux et gourmands\, parades et spectacles\, accrobranche et manège\, chorales d’enfants et chalet du Père Noël.\nPrix : Entrée gratuite · animations et chalets payants sur place\nhttps://www.colfontaine.be/evenements/marche-de-noel-2026\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Marché de Noël de Colfontaine 🎄

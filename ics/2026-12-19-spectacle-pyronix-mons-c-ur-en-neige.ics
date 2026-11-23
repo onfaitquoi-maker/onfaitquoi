@@ -5,16 +5,21 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-19-spectacle-pyronix-mons-c-ur-en-neige@onfaitquoi.be
-DTSTAMP:20261123T005834Z
-DTSTART;VALUE=DATE:20261219
-DTEND;VALUE=DATE:20261220
+DTSTAMP:20261123T075638Z
+DTSTART:20261219T170000Z
+DTEND:20261219T180000Z
 SUMMARY:Spectacle Pyronix — Mons Cœur en Neige
 LOCATION:Place Léopold\, Place Léopold\, 7000 Mons
-DESCRIPTION:Spectacle Pyronix sur la place Léopold\, dans le cadre de Mons Cœur en Neige.\nPrix : Accès libre (à confirmer)\nhttps://monscoeurenneige.be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Spectacle de pyrotechnie froide par Pyronix sur la place Léopold (devant la gare)\, dans le cadre de Mons Cœur en Neige. Des étincelles sans brûler la doudoune : parfait en famille.\nPrix : Accès libre (spectacle en plein air sur la place)\nhttps://monscoeurenneige.be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Spectacle Pyronix — Mons Cœur en Neige
-TRIGGER:-PT15H
+DESCRIPTION:Spectacle Pyronix — Mons Cœur en Neige demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Spectacle Pyronix — Mons Cœur en Neige dans 2 heures
+TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 END:VCALENDAR
