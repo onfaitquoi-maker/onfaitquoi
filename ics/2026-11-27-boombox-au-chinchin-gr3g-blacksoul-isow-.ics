@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-27-boombox-au-chinchin-gr3g-blacksoul-isow-@onfaitquoi.be
+DTSTAMP:20261123T165549Z
+DTSTART:20261127T200000Z
+DTEND:20261127T230000Z
+SUMMARY:Boombox au Chinchin — Gr3g\, Blacksoul\, ISOW\, Sergent\, Kaptn Burns
+LOCATION:Le Chinchin\, Rue des Clercs 15\, 7000 Mons
+DESCRIPTION:Soirée Boombox (drum & bass) au Chinchin. Line-up : 21h30 open decks · 22h30 Gr3g · 23h30 Blacksoul (set baile/140) · 00h30 ISOW · 01h30 Sergent · 02h30 Kaptn Burns. Entrée gratuite.\nPrix : Entrée gratuite\nhttps://www.instagram.com/boombox.dnb/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Boombox au Chinchin — Gr3g\, Blacksoul\, ISOW\, Sergent\, Kaptn Burns demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Boombox au Chinchin — Gr3g\, Blacksoul\, ISOW\, Sergent\, Kaptn Burns dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
