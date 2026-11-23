@@ -255,7 +255,7 @@ h2.sec small{font-family:var(--body);font-size:12px;font-weight:600;color:var(--
     <!-- ACTIVITÉS À L'ANNÉE -->
     <section class="view" id="v-activites">
       <h1 class="big">Où faire<br>quoi&nbsp;?</h1>
-      <p class="lead">Les activités à faire toute l’année, sans attendre un événement.</p>
+      <p class="lead">Les activités à faire toute l’année, pour les jours où l’agenda fait la sieste.</p>
       <div class="chips" id="actCities" style="margin-top:12px"></div>
       <div id="actBody"></div>
     </section>
@@ -263,7 +263,7 @@ h2.sec small{font-family:var(--body);font-size:12px;font-weight:600;color:var(--
     <!-- FAVORIS -->
     <section class="view" id="v-favoris">
       <h1 class="big">Mes<br>sorties</h1>
-      <p class="lead">Les événements et lieux que tu as gardés. Ils restent sur cet appareil.</p>
+      <p class="lead">Les événements et lieux que tu as gardés. Ils restent sur cet appareil, comme tes bonnes résolutions.</p>
       <div id="favs"></div>
     </section>
   </main>
@@ -776,7 +776,7 @@ function renderHome(){
   occT.forEach(o=>{ if(picked.length<cap && !picked.includes(o)) picked.push(o) });
   }
   $('#t5h').innerHTML = S.when==='today' ? 'À faire aujourd’hui' : bonus.length ? `Le top 5 <span style="color:#C2532F">+ ${bonus.length} ♥</span>` : 'Le top 5';
-  if(hidden){ $('#t5h').innerHTML='Le top 5'; $('#top5').innerHTML=`<div class="empty" style="width:100%"><b>Surprise !</b>Le top 5 de la semaine prochaine sera dévoilé dimanche soir sur Instagram @onfaitquoi.be.</div>`; }
+  if(hidden){ $('#t5h').innerHTML='Le top 5'; $('#top5').innerHTML=`<div class="empty" style="width:100%"><b>Surprise !</b>Le top 5 de la semaine prochaine sera dévoilé dimanche soir sur Instagram @onfaitquoi.be. Pas de spoiler, désolé.</div>`; }
   else   $('#top5').innerHTML = picked.length ? picked.map((o,i)=>`<button class="t5${must.includes(o)?' bonus':''}" data-ev="${o.e.id}" style="--c:${CATS[o.e.cat].color}">
       <span class="k">${must.includes(o)?'Top 5 de la semaine · ':''}${CATS[o.e.cat].label}${S.when==='today'?'':' · '+JOURS[o.d.getDay()]+' '+o.d.getDate()}</span>
       <span class="tt">${esc(o.e.title)}</span>
@@ -785,10 +785,10 @@ function renderHome(){
       <span class="k">Coup de ♥ · ${JOURS[o.d.getDay()]} ${o.d.getDate()}</span>
       <span class="tt">${esc(o.e.title)}</span>
       <span class="w">${vc(o.e.venue,o.e.commune)}${/confirmer|voir la page/i.test(o.e.price||'')?'':'<br>'+esc(o.e.price)}</span>
-      <span class="n">♥</span></button>`).join('') : `<div class="empty" style="width:100%"><b>Rien pour l'instant</b>Essaie une autre période.</div>`;
+      <span class="n">♥</span></button>`).join('') : `<div class="empty" style="width:100%"><b>Rien pour l'instant</b>Même les organisateurs font une pause. Essaie une autre période.</div>`;
   catChips($('#homeCats'), S.homeCat, false, k=>{S.homeCat = S.homeCat===k?null:k; renderHome();});
   const rows = occ.filter(o=>!S.homeCat||o.e.cat===S.homeCat);
-  $('#homeList').innerHTML = rows.length ? rows.map(o=>evRow(o.e,o.d)).join('') : `<div class="empty"><b>Calme plat</b>Aucun événement de ce thème sur la période.</div>`;
+  $('#homeList').innerHTML = rows.length ? rows.map(o=>evRow(o.e,o.d)).join('') : `<div class="empty"><b>Calme plat</b>Ce thème hiberne sur cette période. Change de thème, pas de ville.</div>`;
 }
 $('#when').onclick = e=>{ const b=e.target.closest('button'); if(!b) return; S.when=b.dataset.w; $('#when').querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b)); renderHome(); };
 
@@ -811,7 +811,7 @@ function renderCal(){
   $('#calLegend').innerHTML = Object.values(CATS).map(c=>`<span style="--c:${c.color}">${c.label}</span>`).join('');
   const sd=parse(S.calSel), evs=eventsOn(sd).filter(e=>!S.calCat||e.cat===S.calCat);
   $('#calDayTitle').innerHTML = `${JOURSL[sd.getDay()]} ${sd.getDate()} ${MOIS[sd.getMonth()]} <small>${evs.length} sortie${evs.length>1?'s':''}</small>`;
-  $('#calList').innerHTML = evs.length? evs.map(e=>evRow(e,sd)).join('') : `<div class="empty"><b>Journée libre</b>Rien de prévu ce jour-là (pour l'instant).</div>`;
+  $('#calList').innerHTML = evs.length? evs.map(e=>evRow(e,sd)).join('') : `<div class="empty"><b>Journée libre</b>Rien de prévu ce jour-là (pour l'instant). Parfait pour récupérer de la veille.</div>`;
 }
 $('#calPrev').onclick=()=>{S.calMonth=new Date(S.calMonth.getFullYear(),S.calMonth.getMonth()-1,1); renderCal();};
 $('#calNext').onclick=()=>{S.calMonth=new Date(S.calMonth.getFullYear(),S.calMonth.getMonth()+1,1); renderCal();};
@@ -847,7 +847,7 @@ function renderSearch(){
     } else if(pl.length){
       out+=plHtml+`<p class="lead" style="margin-top:14px">Aucun événement à venir pour « ${esc(S.q.trim())} ».</p>`;
     } else {
-      out+=`<div class="empty" style="margin-top:18px"><b>Aucun résultat</b>Essaie un autre mot ou retire un filtre.</div>`;
+      out+=`<div class="empty" style="margin-top:18px"><b>Aucun résultat</b>Même le Doudou ne sait pas. Essaie un autre mot ou retire un filtre.</div>`;
     }
   }
   $('#results').innerHTML=out;
@@ -881,7 +881,7 @@ function renderActivites(){
 function renderFavs(){
   const evs=EVENTS.filter(e=>S.favs.has(e.id)), pl=PLACES.filter(p=>S.favs.has(p.id));
   let h='';
-  if(!evs.length&&!pl.length) h=`<div class="empty" style="margin-top:20px"><b>Rien de gardé</b>Touche le cœur sur un événement ou un lieu pour le retrouver ici.</div>`;
+  if(!evs.length&&!pl.length) h=`<div class="empty" style="margin-top:20px"><b>Rien de gardé</b>Aucun coup de cœur ? On ne juge pas. Enfin, un peu. Touche le cœur sur un événement ou un lieu pour le retrouver ici.</div>`;
   if(evs.length){ const up=evs.filter(e=>(e.end?parse(e.end):parse(e.date))>=today);
     h+=`<h2 class="sec">Événements</h2>${up.length&&!IS_ANDROID&&ON_PAGES?`<button class="btn" style="margin:0 0 12px" onclick="addAllIcs()">📅 Tout ajouter à mon agenda (${up.length})</button>`:''}<div class="list">${evs.map(e=>evRow(e)).join('')}</div>`; }
   if(pl.length) h+=`<h2 class="sec">Lieux</h2><div class="list">${pl.map(plRow).join('')}</div>`;
@@ -1130,7 +1130,7 @@ function renderLieux(){
       <div><div class="t">${esc(p.name)}</div><div class="a">${p.todo?'<em>adresse à compléter</em>':esc(p.addr)}</div>
       ${p.acts.length?`<div class="acts">${p.acts.map(a=>`<i>${esc(a)}</i>`).join('')}</div>`:''}</div>
       <a class="btn go" href="${mapsUrl(p)}" target="_blank" rel="noopener" style="align-self:center;min-height:40px;padding:0 12px;font-size:12.5px;white-space:nowrap">${ICON.go} Y aller</a></div>`).join('')}</div>`;
-  }).join('') || '<div class="empty"><b>Aucun lieu ici pour l’instant</b>Tu en connais un ? Écris-nous sur Insta.</div>';
+  }).join('') || '<div class="empty"><b>Aucun lieu ici pour l’instant</b>Tu connais le bon plan secret ? Promis, on le garde pour tout le monde. Écris-nous sur Insta.</div>';
 }
 
 /* ---------- navigation (hash) ---------- */
