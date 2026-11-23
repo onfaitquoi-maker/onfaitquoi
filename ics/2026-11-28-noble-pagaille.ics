@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-28-noble-pagaille@onfaitquoi.be
+DTSTAMP:20261123T164358Z
+DTSTART:20261128T190000Z
+DTEND:20261128T220000Z
+SUMMARY:Noble Pagaille
+LOCATION:Théâtre Royal de Mons\, Grand-Place 22\, 7000 Mons
+DESCRIPTION:Spectacle d’humour au Théâtre Royal de Mons.\nPrix : Tarif affiché sur la billetterie\nhttps://www.ticketmaster.be/venue/theatre-royal-mons-billets/trm/101?language=fr-be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Noble Pagaille demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Noble Pagaille dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
