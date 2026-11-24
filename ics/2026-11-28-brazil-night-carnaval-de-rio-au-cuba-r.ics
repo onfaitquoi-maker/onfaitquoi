@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-28-brazil-night-carnaval-de-rio-au-cuba-r@onfaitquoi.be
+DTSTAMP:20261124T174943Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:Brazil Night — Carnaval de Rio au Cuba’r
+LOCATION:Cuba’r\, Rue de Nimy 55\, 7000 Mons
+DESCRIPTION:Brazil Night au Cuba’r (Rue de Nimy 55) : carnaval de Rio avec show de danseuses et DJ Crawer.\nPrix : Entrée gratuite\nhttps://www.instagram.com/cubar_mons/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Brazil Night — Carnaval de Rio au Cuba’r
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

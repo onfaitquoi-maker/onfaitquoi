@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-01-les-mardis-latinos-bachata-a-l-embuscade@onfaitquoi.be
+DTSTAMP:20261124T174943Z
+DTSTART:20261201T183000Z
+DTEND:20261201T220000Z
+SUMMARY:Les Mardis Latinos — bachata à L’Embuscade
+LOCATION:L’Embuscade\, Place de Cuesmes 42\, 7033 Cuesmes
+DESCRIPTION:Tous les mardis soirs à L’Embuscade (Place de Cuesmes 42\, Cuesmes)\, ambiance latine : 19h30 bachata débutant · 20h30 bachata intermédiaire · 21h30 « Minuit » pratica. Cours tous niveaux\, avec des professeurs passionnés.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Les Mardis Latinos — bachata à L’Embuscade demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Les Mardis Latinos — bachata à L’Embuscade dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

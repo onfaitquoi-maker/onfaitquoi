@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-28-microphonic-au-chinchin-rym-matimotion-i@onfaitquoi.be
+DTSTAMP:20261124T174943Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:Microphonic au Chinchin — Rym\, Matimotion\, Isam Nessla
+LOCATION:Le Chinchin\, Rue des Clercs 15\, 7000 Mons
+DESCRIPTION:Soirée Microphonic au Chinchin (Rue des Clercs 15)\, avec Rym\, Matimotion et Isam Nessla aux platines.\nPrix : Entrée gratuite\nhttps://www.instagram.com/chinchin.mons/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Microphonic au Chinchin — Rym\, Matimotion\, Isam Nessla
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
