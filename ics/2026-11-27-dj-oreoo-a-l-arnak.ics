@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-27-dj-oreoo-a-l-arnak@onfaitquoi.be
+DTSTAMP:20261124T201503Z
+DTSTART:20261127T170000Z
+DTEND:20261127T200000Z
+SUMMARY:DJ Oreoo à l’ARNAK
+LOCATION:ARNAK\, Marché aux Herbes 25\, 7000 Mons
+DESCRIPTION:Soirée à l’ARNAK (Marché aux Herbes 25) avec DJ Oreoo\, dès 18h. De 20h à 23h : bouteille de vodka à 50 €.\nPrix : Entrée gratuite · bouteille de vodka à 50 € de 20h à 23h\nhttps://www.instagram.com/arnvkmons/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:DJ Oreoo à l’ARNAK demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:DJ Oreoo à l’ARNAK dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
