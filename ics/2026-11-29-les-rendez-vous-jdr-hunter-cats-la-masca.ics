@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-29-les-rendez-vous-jdr-hunter-cats-la-masca@onfaitquoi.be
+DTSTAMP:20261125T173410Z
+DTSTART:20261129T100000Z
+DTEND:20261129T130000Z
+SUMMARY:Les Rendez-vous JDR — Hunter / Cats ! La Mascarade / Chroniques Oubliées Fantasy
+LOCATION:Monkey's Café\, Rue de la Chaussée 32\, 7000 Mons
+DESCRIPTION:Un dimanche jeu de rôle au Monkey’s Café : 3 univers\, 3 maîtres du jeu\, 5 joueurs max par table. Hunter le jugement (MJ Quentin)\, Cats ! La Mascarade (MJ Marylène)\, Chroniques Oubliées Fantasy (MJ Nicolas). Débutants et vétérans bienvenus. Événement gratuit\, seule condition : consommer sur place. Inscription obligatoire\, places limitées.\nPrix : Gratuit (consommation sur place)\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Les Rendez-vous JDR — Hunter / Cats ! La Mascarade / Chroniques Oubliées Fantasy demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Les Rendez-vous JDR — Hunter / Cats ! La Mascarade / Chroniques Oubliées Fantasy dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
