@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-27-commander-quest-magic@onfaitquoi.be
+DTSTAMP:20261125T190338Z
+DTSTART:20261127T180000Z
+DTEND:20261127T210000Z
+SUMMARY:Commander Quest (Magic)
+LOCATION:Hasard Ludique Mons\, Grand’Rue 12\, 7000 Mons
+DESCRIPTION:Soirée Magic casual avec feuille de missions : récompenses (carte promo\, goodies ou booster) distribuées dès 21h. Deck de bracket 3 ou moins recommandé. Quêtes en anglais.\nPrix : Gratuit (0 €)\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Commander Quest (Magic) demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Commander Quest (Magic) dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

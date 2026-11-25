@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-18-riftbound-nexus-night@onfaitquoi.be
+DTSTAMP:20261125T190338Z
+DTSTART:20261218T180000Z
+DTEND:20261218T223000Z
+SUMMARY:Riftbound — Nexus Night
+LOCATION:Hasard Ludique Mons\, Grand’Rue 12\, 7000 Mons
+DESCRIPTION:Tournoi en rondes suisses (4 rondes max)\, chaque joueur repart avec 1 booster\, 4 boosters Nexus Night tirés au sort parmi les participants. Proxies autorisés.\nPrix : 5 €\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Riftbound — Nexus Night demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Riftbound — Nexus Night dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-23-yu-gi-oh-rogue-de-noel@onfaitquoi.be
+DTSTAMP:20261125T190338Z
+DTSTART:20261223T130000Z
+DTEND:20261223T160000Z
+SUMMARY:Yu-Gi-Oh! — Rogue de Noël
+LOCATION:Hasard Ludique Mons\, Grand’Rue 12\, 7000 Mons
+DESCRIPTION:Tournoi construit Rogue de Noël : des boosters pour tout le monde\, venez de préférence habillé sur le thème de Noël. 32 places.\nPrix : Gratuit (0 €)\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Yu-Gi-Oh! — Rogue de Noël demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Yu-Gi-Oh! — Rogue de Noël dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

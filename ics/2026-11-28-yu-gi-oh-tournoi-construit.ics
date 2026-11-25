@@ -5,16 +5,21 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-28-yu-gi-oh-tournoi-construit@onfaitquoi.be
-DTSTAMP:20261125T184234Z
-DTSTART;VALUE=DATE:20261128
-DTEND;VALUE=DATE:20261129
+DTSTAMP:20261125T190338Z
+DTSTART:20261128T130000Z
+DTEND:20261128T160000Z
 SUMMARY:Yu-Gi-Oh! — tournoi construit
 LOCATION:Hasard Ludique Mons\, Grand’Rue 12\, 7000 Mons
-DESCRIPTION:Tournoi construit Yu-Gi-Oh! chez Hasard Ludique Mons. Rendez-vous sur la section événements Facebook et Discord de Hasard Ludique Mons pour les horaires et les informations complémentaires.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Tournoi construit Yu-Gi-Oh! chez Hasard Ludique Mons : accueil dès 13h30\, début à 14h\, 32 places\, paiement sur place. 2 boosters par joueur\, 1 booster de chacun ajouté au pool du top 4.\nPrix : 10 € (à confirmer)\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Yu-Gi-Oh! — tournoi construit
-TRIGGER:-PT15H
+DESCRIPTION:Yu-Gi-Oh! — tournoi construit demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Yu-Gi-Oh! — tournoi construit dans 2 heures
+TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 END:VCALENDAR

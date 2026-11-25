@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-12-yu-gi-oh-tournoi-rogue@onfaitquoi.be
+DTSTAMP:20261125T190338Z
+DTSTART:20261212T130000Z
+DTEND:20261212T160000Z
+SUMMARY:Yu-Gi-Oh! — tournoi Rogue
+LOCATION:Hasard Ludique Mons\, Grand’Rue 12\, 7000 Mons
+DESCRIPTION:Tournoi construit format Rogue (banlist personnalisée à venir). Accueil dès 13h30\, début à 14h\, 32 places\, paiement sur place. 3 boosters par joueur\, extras pour le top.\nPrix : 10 €\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Yu-Gi-Oh! — tournoi Rogue demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Yu-Gi-Oh! — tournoi Rogue dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

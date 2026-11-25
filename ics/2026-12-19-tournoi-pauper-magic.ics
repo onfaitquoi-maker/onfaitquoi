@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-19-tournoi-pauper-magic@onfaitquoi.be
+DTSTAMP:20261125T190338Z
+DTSTART:20261219T123000Z
+DTEND:20261219T153000Z
+SUMMARY:Tournoi Pauper (Magic)
+LOCATION:Hasard Ludique Mons\, Grand’Rue 12\, 7000 Mons
+DESCRIPTION:Tournoi Pauper de Magic. Bons d'achat pour les mieux placés (ex. pour 16 joueurs : 80 €\, 40 €\, 20 €).\nPrix : 10 €\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tournoi Pauper (Magic) demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tournoi Pauper (Magic) dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

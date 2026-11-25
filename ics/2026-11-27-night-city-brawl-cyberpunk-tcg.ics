@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-27-night-city-brawl-cyberpunk-tcg@onfaitquoi.be
+DTSTAMP:20261125T190338Z
+DTSTART:20261127T183000Z
+DTEND:20261127T213000Z
+SUMMARY:Night City Brawl (Cyberpunk TCG)
+LOCATION:Hasard Ludique Mons\, Grand’Rue 12\, 7000 Mons
+DESCRIPTION:Tournoi construit casual du TCG Cyberpunk\, 3 rondes. Arrivée dès 19h\, 16 places\, compte melee.gg nécessaire.\nPrix : 6 €\nhttps://www.hasardludique.com/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Night City Brawl (Cyberpunk TCG) demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Night City Brawl (Cyberpunk TCG) dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

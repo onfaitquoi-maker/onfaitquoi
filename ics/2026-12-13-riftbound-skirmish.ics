@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-13-riftbound-skirmish@onfaitquoi.be
+DTSTAMP:20261125T190338Z
+DTSTART:20261213T100000Z
+DTEND:20261213T130000Z
+SUMMARY:Riftbound — Skirmish
+LOCATION:Hasard Ludique Mons\, Grand’Rue 12\, 7000 Mons
+DESCRIPTION:Tournoi Riftbound 1v1 construit BO3\, 16 joueurs max. Top 8 récompensé en crédit magasin\, tout le monde repart avec 4 boosters.\nPrix : 25 €\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Riftbound — Skirmish demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Riftbound — Skirmish dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

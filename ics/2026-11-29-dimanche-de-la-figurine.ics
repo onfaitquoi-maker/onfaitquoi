@@ -5,16 +5,21 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-29-dimanche-de-la-figurine@onfaitquoi.be
-DTSTAMP:20261125T184234Z
-DTSTART;VALUE=DATE:20261129
-DTEND;VALUE=DATE:20261130
+DTSTAMP:20261125T190338Z
+DTSTART:20261129T090000Z
+DTEND:20261129T170000Z
 SUMMARY:Dimanche de la figurine
 LOCATION:Hasard Ludique Mons\, Grand’Rue 12\, 7000 Mons
-DESCRIPTION:Dimanche dédié aux figurines chez Hasard Ludique Mons. Rendez-vous sur la section événements Facebook et Discord de Hasard Ludique Mons pour les horaires et les informations complémentaires.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Journée figurines au magasin : viens jouer\, peindre ou regarder\, débutants comme vétérans. Un salon Discord est créé chaque semaine pour organiser les parties.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Dimanche de la figurine
-TRIGGER:-PT15H
+DESCRIPTION:Dimanche de la figurine demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Dimanche de la figurine dans 2 heures
+TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 END:VCALENDAR

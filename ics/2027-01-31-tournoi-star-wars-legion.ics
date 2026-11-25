@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2027-01-31-tournoi-star-wars-legion@onfaitquoi.be
+DTSTAMP:20261125T190338Z
+DTSTART:20270131T080000Z
+DTEND:20270131T180000Z
+SUMMARY:Tournoi Star Wars Legion
+LOCATION:Hasard Ludique Mons\, Grand’Rue 12\, 7000 Mons
+DESCRIPTION:Tournoi Star Wars Légion en 3 manches de 2h30\, armées de 1000 points\, 16 places. Top 3 en bon d'achat\, cartes promo foil pour tous.\nPrix : 10 €\nhttps://legion.longshanks.org/event/39347\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tournoi Star Wars Legion demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tournoi Star Wars Legion dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -5,16 +5,21 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-27-tournoi-modern-magic@onfaitquoi.be
-DTSTAMP:20261125T184234Z
-DTSTART;VALUE=DATE:20261127
-DTEND;VALUE=DATE:20261128
+DTSTAMP:20261125T190338Z
+DTSTART:20261127T183000Z
+DTEND:20261127T213000Z
 SUMMARY:Tournoi Modern (Magic)
 LOCATION:Hasard Ludique Mons\, Grand’Rue 12\, 7000 Mons
-DESCRIPTION:Tournoi Modern de Magic : The Gathering chez Hasard Ludique Mons. Rendez-vous sur la section événements Facebook et Discord de Hasard Ludique Mons pour les horaires et les informations complémentaires.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Tournoi Modern de Magic en rondes suisses : chacun repart avec au moins 20 € de boosters\, 10 € de boosters ajoutés par joueur pour le top.\nPrix : 20 €\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Tournoi Modern (Magic)
-TRIGGER:-PT15H
+DESCRIPTION:Tournoi Modern (Magic) demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tournoi Modern (Magic) dans 2 heures
+TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 END:VCALENDAR

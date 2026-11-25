@@ -5,16 +5,21 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-28-tournoi-pauper-magic@onfaitquoi.be
-DTSTAMP:20261125T184234Z
-DTSTART;VALUE=DATE:20261128
-DTEND;VALUE=DATE:20261129
+DTSTAMP:20261125T190338Z
+DTSTART:20261128T123000Z
+DTEND:20261128T153000Z
 SUMMARY:Tournoi Pauper (Magic)
 LOCATION:Hasard Ludique Mons\, Grand’Rue 12\, 7000 Mons
-DESCRIPTION:Tournoi Pauper de Magic : The Gathering chez Hasard Ludique Mons. Rendez-vous sur la section événements Facebook et Discord de Hasard Ludique Mons pour les horaires et les informations complémentaires.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Tournoi Pauper de Magic. Bons d'achat pour les mieux placés (ex. pour 16 joueurs : 80 €\, 40 €\, 20 €).\nPrix : 10 €\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Tournoi Pauper (Magic)
-TRIGGER:-PT15H
+DESCRIPTION:Tournoi Pauper (Magic) demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tournoi Pauper (Magic) dans 2 heures
+TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 END:VCALENDAR

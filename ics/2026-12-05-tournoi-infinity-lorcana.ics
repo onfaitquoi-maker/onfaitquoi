@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-05-tournoi-infinity-lorcana@onfaitquoi.be
+DTSTAMP:20261125T190338Z
+DTSTART:20261205T130000Z
+DTEND:20261205T160000Z
+SUMMARY:Tournoi Infinity (Lorcana)
+LOCATION:Hasard Ludique Mons\, Grand’Rue 12\, 7000 Mons
+DESCRIPTION:Célébration du Championnat du Monde : tournoi format Infinity\, 16 places. Chaque participant repart avec 1 booster et 1 carte promo Minnie.\nPrix : 10 €\nhttps://tcg.ravensburgerplay.com/events/1242796\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tournoi Infinity (Lorcana) demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tournoi Infinity (Lorcana) dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

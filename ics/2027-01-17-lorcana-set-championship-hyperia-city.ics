@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2027-01-17-lorcana-set-championship-hyperia-city@onfaitquoi.be
+DTSTAMP:20261125T190338Z
+DTSTART:20270117T093000Z
+DTEND:20270117T123000Z
+SUMMARY:Lorcana Set Championship — Hyperia City
+LOCATION:Hasard Ludique Mons\, Grand’Rue 12\, 7000 Mons
+DESCRIPTION:Championnat Lorcana : arrivée 10h30\, rondes dès 11h\, top 8 à 17h\, fin vers 20h-20h30. 32 places\, 2 boosters par participant\, softs sur place.\nPrix : 22 €\nhttps://www.hasardludique.com/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Lorcana Set Championship — Hyperia City demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Lorcana Set Championship — Hyperia City dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

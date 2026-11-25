@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-11-lorcana-play@onfaitquoi.be
+DTSTAMP:20261125T190338Z
+DTSTART:20261211T173000Z
+DTEND:20261211T203000Z
+SUMMARY:Lorcana Play
+LOCATION:Hasard Ludique Mons\, Grand’Rue 12\, 7000 Mons
+DESCRIPTION:Soirée Lorcana Play chez Hasard Ludique Mons : format Core (1 ou 2 encres\, 60 cartes\, 4 exemplaires max)\, rondes suisses de 50 minutes en deux manches gagnantes. Des goodies sont distribués chaque semaine selon le classement.\nPrix : Gratuit (0 €)\nhttps://tcg.ravensburgerplay.com/events/1221532\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Lorcana Play demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Lorcana Play dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

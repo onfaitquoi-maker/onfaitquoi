@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-23-commander-de-noel-magic@onfaitquoi.be
+DTSTAMP:20261125T190338Z
+DTSTART:20261223T120000Z
+DTEND:20261223T150000Z
+SUMMARY:Commander de Noël (Magic)
+LOCATION:Hasard Ludique Mons\, Grand’Rue 12\, 7000 Mons
+DESCRIPTION:Magic au format Commander version Noël\, avec Eli l'elfe farceur qui risque de vous jouer des tours.\nPrix : Gratuit\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Commander de Noël (Magic) demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Commander de Noël (Magic) dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
