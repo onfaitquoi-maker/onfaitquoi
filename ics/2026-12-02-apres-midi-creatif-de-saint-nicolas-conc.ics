@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-02-apres-midi-creatif-de-saint-nicolas-conc@onfaitquoi.be
+DTSTAMP:20261125T132543Z
+DTSTART:20261202T133000Z
+DTEND:20261202T163000Z
+SUMMARY:Après-midi créatif de Saint-Nicolas + concert d’Arty Leiso
+LOCATION:Salle culturelle — Rue François Dorzée 3\, Boussu\, Rue F. Dorzée 3\, 7300 Boussu
+DESCRIPTION:Après-midi en famille au Centre culturel de Boussu (idéal pour les 6–12 ans) : atelier créatif parent-enfant (places limitées)\, goûter en famille\, concert d’Arty Leiso et visite de Saint-Nicolas avec distribution de douceurs. Réservation indispensable : 065 800 136 ou secretariat@ccboussu.be.\nPrix : 10 € par personne\nmailto:secretariat@ccboussu.be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Après-midi créatif de Saint-Nicolas + concert d’Arty Leiso demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Après-midi créatif de Saint-Nicolas + concert d’Arty Leiso dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
