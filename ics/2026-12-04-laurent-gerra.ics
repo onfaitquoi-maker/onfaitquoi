@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-04-laurent-gerra@onfaitquoi.be
+DTSTAMP:20261125T172339Z
+DTSTART:20261204T190000Z
+DTEND:20261204T220000Z
+SUMMARY:Laurent Gerra
+LOCATION:Théâtre Royal de Mons\, Grand-Place 22\, 7000 Mons
+DESCRIPTION:Retour du spectacle de Laurent Gerra après le succès de 2025.\nPrix : Tarif affiché sur la billetterie\nhttps://www.ticketmaster.be/event/laurent-gerra-tickets/1760197689\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Laurent Gerra demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Laurent Gerra dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

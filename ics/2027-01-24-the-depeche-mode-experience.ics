@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2027-01-24-the-depeche-mode-experience@onfaitquoi.be
+DTSTAMP:20261125T172339Z
+DTSTART:20270124T170000Z
+DTEND:20270124T200000Z
+SUMMARY:The Depeche Mode Experience
+LOCATION:Théâtre Royal de Mons\, Grand-Place 22\, 7000 Mons
+DESCRIPTION:« The ultimate live celebration » : un hommage live à Depeche Mode.\nPrix : Tarif affiché sur la billetterie\nhttps://www.ticketmaster.be/event/the-depeche-mode-experience-tickets/741493669\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:The Depeche Mode Experience demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:The Depeche Mode Experience dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

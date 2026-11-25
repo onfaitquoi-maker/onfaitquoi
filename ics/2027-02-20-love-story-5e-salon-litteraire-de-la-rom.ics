@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2027-02-20-love-story-5e-salon-litteraire-de-la-rom@onfaitquoi.be
+DTSTAMP:20261125T172339Z
+DTSTART;VALUE=DATE:20270220
+DTEND;VALUE=DATE:20270222
+SUMMARY:Love Story — 5e salon littéraire de la Romance
+LOCATION:Palais des Congrès (MICX)\, Avenue Melina Mercouri 9\, 7000 Mons
+DESCRIPTION:Plus de 350 auteurs et autrices\, 20 maisons d’édition et 15 invités.\nPrix : Tarif affiché sur la billetterie\nhttps://www.billetweb.fr/love-story-2027\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Love Story — 5e salon littéraire de la Romance
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

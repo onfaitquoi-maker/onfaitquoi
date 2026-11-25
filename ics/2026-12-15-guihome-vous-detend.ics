@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-15-guihome-vous-detend@onfaitquoi.be
+DTSTAMP:20261125T172339Z
+DTSTART:20261215T190000Z
+DTEND:20261215T220000Z
+SUMMARY:GuiHome vous détend
+LOCATION:Théâtre Royal de Mons\, Grand-Place 22\, 7000 Mons
+DESCRIPTION:GuiHome revient en Belgique pour une dernière salve de spectacles 100 % belge.\nPrix : Tarif affiché sur la billetterie\nhttps://www.ticketmaster.be/event/guihome-vous-detend-tickets/1890105891\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:GuiHome vous détend demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:GuiHome vous détend dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2027-01-25-julien-clerc@onfaitquoi.be
+DTSTAMP:20261125T172339Z
+DTSTART:20270125T190000Z
+DTEND:20270125T220000Z
+SUMMARY:Julien Clerc
+LOCATION:Théâtre Royal de Mons\, Grand-Place 22\, 7000 Mons
+DESCRIPTION:Julien Clerc repart sur la route avec sa tournée.\nPrix : Tarif affiché sur la billetterie\nhttps://www.ticketmaster.be/event/julien-clerc-tickets/754330766\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Julien Clerc demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Julien Clerc dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

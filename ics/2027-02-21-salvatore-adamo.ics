@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2027-02-21-salvatore-adamo@onfaitquoi.be
+DTSTAMP:20261125T172339Z
+DTSTART:20270221T170000Z
+DTEND:20270221T200000Z
+SUMMARY:Salvatore Adamo
+LOCATION:Théâtre Royal de Mons\, Grand-Place 22\, 7000 Mons
+DESCRIPTION:Une soirée d’exception avec Salvatore Adamo.\nPrix : Tarif affiché sur la billetterie\nhttps://www.ticketmaster.be/event/salvatore-adamo-tickets/144175417\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Salvatore Adamo demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Salvatore Adamo dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

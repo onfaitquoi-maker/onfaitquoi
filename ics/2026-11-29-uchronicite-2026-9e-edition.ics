@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-29-uchronicite-2026-9e-edition@onfaitquoi.be
+DTSTAMP:20261125T172339Z
+DTSTART:20261129T090000Z
+DTEND:20261129T170000Z
+SUMMARY:Uchronicité 2026 — 9e édition
+LOCATION:Sparkoh! (Frameries)\, Rue de Mons 3\, 7080 Frameries
+DESCRIPTION:Un conte de Noël à la Charles Dickens avec une touche steampunk\, organisé par l’ASBL ManifestSteam.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Uchronicité 2026 — 9e édition demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Uchronicité 2026 — 9e édition dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

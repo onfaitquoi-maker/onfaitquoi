@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2027-01-13-le-bourgeois-gentilhomme-avec-jean-paul-@onfaitquoi.be
+DTSTAMP:20261125T172339Z
+DTSTART:20270113T190000Z
+DTEND:20270113T220000Z
+SUMMARY:Le Bourgeois gentilhomme avec Jean-Paul Rouve
+LOCATION:Théâtre Royal de Mons\, Grand-Place 22\, 7000 Mons
+DESCRIPTION:Jean-Paul Rouve dans la pièce de Molière.\nPrix : Tarif affiché sur la billetterie\nhttps://www.ticketmaster.be/event/le-bourgeois-gentilhomme-tickets/1480788528\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Le Bourgeois gentilhomme avec Jean-Paul Rouve demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Le Bourgeois gentilhomme avec Jean-Paul Rouve dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

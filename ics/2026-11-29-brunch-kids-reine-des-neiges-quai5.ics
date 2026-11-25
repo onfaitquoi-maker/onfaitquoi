@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-29-brunch-kids-reine-des-neiges-quai5@onfaitquoi.be
+DTSTAMP:20261125T172339Z
+DTSTART:20261129T110000Z
+DTEND:20261129T140000Z
+SUMMARY:Brunch Kids « Reine des Neiges » — Quai5
+LOCATION:Van der Valk Hotel Mons Congrès & Spa\, Avenue Melina Mercouri 7\, 7000 Mons
+DESCRIPTION:Brunch gastronomique et ludique pour les enfants\, sur le thème de la Reine des Neiges\, au restaurant Quai5 du Van der Valk Mons.\nPrix : Tarif affiché sur la billetterie\nhttps://sevn.ly/xKuZm6h8\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Brunch Kids « Reine des Neiges » — Quai5 demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Brunch Kids « Reine des Neiges » — Quai5 dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

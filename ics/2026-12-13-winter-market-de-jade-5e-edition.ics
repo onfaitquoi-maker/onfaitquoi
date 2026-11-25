@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-13-winter-market-de-jade-5e-edition@onfaitquoi.be
+DTSTAMP:20261125T172339Z
+DTSTART:20261213T090000Z
+DTEND:20261213T180000Z
+SUMMARY:Winter Market de Jade — 5e édition
+LOCATION:Jade (boutique de cosmétiques naturels)\, Vieux Chemin de Binche 435\, 7000 Mons
+DESCRIPTION:Marché de Noël 100 % local réunissant artisanes et créatrices.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Winter Market de Jade — 5e édition demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Winter Market de Jade — 5e édition dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

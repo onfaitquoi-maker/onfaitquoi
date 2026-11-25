@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-12-marche-de-noel-des-knights@onfaitquoi.be
+DTSTAMP:20261125T172339Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261214
+SUMMARY:Marché de Noël des Knights
+LOCATION:Chapelle des Capucins\, Rue Masquelier 15\, 7000 Mons
+DESCRIPTION:Deux jours pour flâner et découvrir de jolies créations à la Chapelle des Capucins.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Marché de Noël des Knights
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

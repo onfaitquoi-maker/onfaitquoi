@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2027-01-28-tu-aimes-tellement-la-vie@onfaitquoi.be
+DTSTAMP:20261125T172339Z
+DTSTART:20270128T190000Z
+DTEND:20270128T220000Z
+SUMMARY:Tu aimes tellement la vie
+LOCATION:Théâtre Royal de Mons\, Grand-Place 22\, 7000 Mons
+DESCRIPTION:Pièce de théâtre. « Vivre ensemble\, c’est compliqué. Mourir ensemble\, c’est pire. »\nPrix : Tarif affiché sur la billetterie\nhttps://www.ticketmaster.be/event/tu-aimes-tellement-la-vie-tickets/372998383\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tu aimes tellement la vie demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tu aimes tellement la vie dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

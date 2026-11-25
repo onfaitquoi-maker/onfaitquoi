@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-05-visite-guidee-c-ur-historique-de-mons@onfaitquoi.be
+DTSTAMP:20261125T172339Z
+DTSTART:20261205T133000Z
+DTEND:20261205T153000Z
+SUMMARY:Visite guidée : Cœur historique de Mons
+LOCATION:Départ : Grand-Place 27\, Grand-Place\, 7000 Mons
+DESCRIPTION:Hôtel de Ville\, Jardin du Mayeur\, ruelles anciennes et le seul beffroi baroque de Belgique\, avec Visit Mons.\nPrix : Tarif affiché sur la billetterie\nhttps://visitmons.ticket.billetterie.io/event/83/calendar/301\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Visite guidée : Cœur historique de Mons demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Visite guidée : Cœur historique de Mons dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

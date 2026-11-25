@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-13-damien-gillard-rude@onfaitquoi.be
+DTSTAMP:20261125T172339Z
+DTSTART:20261213T190000Z
+DTEND:20261213T220000Z
+SUMMARY:Damien Gillard — Rude
+LOCATION:Théâtre Royal de Mons\, Grand-Place 22\, 7000 Mons
+DESCRIPTION:Le comédien du Grand Cactus remonte sur scène\, entouré d’instruments de musique\, pour un one-man-show corrosif.\nPrix : Tarif affiché sur la billetterie\nhttps://www.ticketmaster.be/event/damien-gillard-rude-tickets/1215476261\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Damien Gillard — Rude demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Damien Gillard — Rude dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

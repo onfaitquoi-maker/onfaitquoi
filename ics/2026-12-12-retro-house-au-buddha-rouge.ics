@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-12-retro-house-au-buddha-rouge@onfaitquoi.be
+DTSTAMP:20261125T172339Z
+DTSTART:20261212T220000Z
+DTEND:20261213T010000Z
+SUMMARY:Retro House au Buddha Rouge
+LOCATION:Buddha Rouge\, Rue Émile Wauquier 58\, 7022 Mons
+DESCRIPTION:Soirée « Back to the good times » : retour dans le temps au Buddha Rouge.\nPrix : Gratuit avant minuit\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Retro House au Buddha Rouge demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Retro House au Buddha Rouge dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

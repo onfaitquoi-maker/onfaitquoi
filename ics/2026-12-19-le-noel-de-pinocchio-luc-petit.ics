@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-19-le-noel-de-pinocchio-luc-petit@onfaitquoi.be
+DTSTAMP:20261125T172339Z
+DTSTART;VALUE=DATE:20261219
+DTEND;VALUE=DATE:20261224
+SUMMARY:Le Noël de Pinocchio — Luc Petit
+LOCATION:Collégiale Sainte-Waudru\, Place du Chapitre\, 7000 Mons
+DESCRIPTION:Spectacle de Luc Petit pour Les Nocturnales : Pinocchio comme vous ne l’avez jamais vu\, du 19 au 23 décembre.\nPrix : Tarif affiché sur la billetterie\nhttps://www.nocturnales.be/portfolio/le-noel-de-pinocchio\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Le Noël de Pinocchio — Luc Petit
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
