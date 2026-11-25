@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-05-o-grand-saint-nicolas-a-la-bibliotheque-@onfaitquoi.be
+DTSTAMP:20261125T132836Z
+DTSTART:20261205T090000Z
+DTEND:20261205T110000Z
+SUMMARY:Ô grand Saint Nicolas à la bibliothèque de Boussu
+LOCATION:Bibliothèque communale de Boussu\, Rue Léon Figue 19\, 7300 Boussu
+DESCRIPTION:Matinée de Saint-Nicolas à la bibliothèque communale de Boussu : lectures\, atelier créatif\, distribution de bonbons et d’autres surprises. À partir de 5 ans. Inscription indispensable : 065 783 947 ou bibliotheque@boussu.be.\nPrix : Gratuit · inscription indispensable\nmailto:bibliotheque@boussu.be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Ô grand Saint Nicolas à la bibliothèque de Boussu demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Ô grand Saint Nicolas à la bibliothèque de Boussu dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
