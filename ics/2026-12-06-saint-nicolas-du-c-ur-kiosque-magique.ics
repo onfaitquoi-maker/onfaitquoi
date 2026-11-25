@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-06-saint-nicolas-du-c-ur-kiosque-magique@onfaitquoi.be
+DTSTAMP:20261125T164206Z
+DTSTART:20261206T130000Z
+DTEND:20261206T170000Z
+SUMMARY:Saint-Nicolas du Cœur — Kiosque Magique
+LOCATION:Grand-Place de Mons\, Grand-Place\, 7000 Mons
+DESCRIPTION:Saint-Nicolas du Cœur sur la Grand-Place\, au Kiosque Magique\, avec une collecte de jouets au profit du CPAS.\nPrix : Gratuit\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Saint-Nicolas du Cœur — Kiosque Magique demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Saint-Nicolas du Cœur — Kiosque Magique dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2027-01-02-bachata-night-new-year-edition@onfaitquoi.be
-DTSTAMP:20261125T160423Z
-DTSTART:20270102T170000Z
-DTEND:20270102T200000Z
+DTSTAMP:20261125T164206Z
+DTSTART:20270102T164500Z
+DTEND:20270102T194500Z
 SUMMARY:Bachata Night — New Year Edition
 LOCATION:Palais des Congrès (MICX)\, Avenue Melina Mercouri 9\, 7000 Mons
-DESCRIPTION:Bachata Night édition Nouvel An au Palais des Congrès de Mons\, avec DJ et danseurs. La soirée revient le premier samedi de chaque mois.\nPrix : Tarif affiché sur la billetterie\nhttps://www.kizz-me-bachamore.be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Bachata Night édition Nouvel An au Palais des Congrès de Mons\, avec DJ et danseurs. La soirée revient le premier samedi de chaque mois.\nPrix : Soirée 13 € · bootcamp + soirée 20 € · workshop influence + soirée 15 € · Full Pass 30 € · concours + soirée 45 €/couple\nhttps://www.bachatanight.be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Bachata Night — New Year Edition demain

@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-13-dragon-boulder-contest-3h-de-blocs-2026@onfaitquoi.be
+DTSTAMP:20261125T164206Z
+DTSTART:20261213T090000Z
+DTEND:20261213T110000Z
+SUMMARY:Dragon Boulder Contest — 3H de blocs 2026
+LOCATION:Face Nord\, Chemin du Chêne aux Haies 2\, 7000 Mons
+DESCRIPTION:Après 4 ans d’absence\, le grand rendez-vous bloc revient chez Face Nord. Deux compétitions : enfants de 9 à 13 ans\, et ados dès 14 ans & adultes. T-shirt officiel inclus dans l’inscription.\nPrix : Tarif affiché sur la billetterie\nhttps://facenord.clubplanner.app/client/registration/bookingwizard/9\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Dragon Boulder Contest — 3H de blocs 2026 demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Dragon Boulder Contest — 3H de blocs 2026 dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

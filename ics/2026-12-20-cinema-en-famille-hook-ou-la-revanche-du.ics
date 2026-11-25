@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-20-cinema-en-famille-hook-ou-la-revanche-du@onfaitquoi.be
+DTSTAMP:20261125T164206Z
+DTSTART:20261220T150000Z
+DTEND:20261220T180000Z
+SUMMARY:Cinéma en famille : Hook ou la Revanche du capitaine Crochet (VF)
+LOCATION:Plaza Arthouse Cinema\, Rue de Nimy 12\, 7000 Mons
+DESCRIPTION:Séance famille de Hook\, le film de Steven Spielberg : Peter Pan\, devenu adulte\, retourne au Pays imaginaire affronter le capitaine Crochet. Goûter et surprise à prix sympa\, puis visite du Père Noël après la séance.\nPrix : Dès 7 € · Article 27 accepté\nhttps://shop.infinitix.be/PLAZAMONS/F/BF489C01-14F9-A579-0ACA-51EA90E1E776/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Cinéma en famille : Hook ou la Revanche du capitaine Crochet (VF) demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Cinéma en famille : Hook ou la Revanche du capitaine Crochet (VF) dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

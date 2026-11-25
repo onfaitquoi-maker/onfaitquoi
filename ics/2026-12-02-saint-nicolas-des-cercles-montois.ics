@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-02-saint-nicolas-des-cercles-montois@onfaitquoi.be
+DTSTAMP:20261125T164206Z
+DTSTART:20261202T130000Z
+DTEND:20261202T170000Z
+SUMMARY:Saint-Nicolas des cercles montois
+LOCATION:Place du Parc\, Place du Parc\, 7000 Mons
+DESCRIPTION:Cortège de Saint-Nicolas des cercles montois : départ à 14h Place du Parc\, 16h30 à la Collégiale Sainte-Waudru puis vers le Marché aux Poissons\, fermeture à 18h. Écocups.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Saint-Nicolas des cercles montois demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Saint-Nicolas des cercles montois dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

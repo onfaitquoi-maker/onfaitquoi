@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-10-o-chapitre-3-un-noel-borain@onfaitquoi.be
+DTSTAMP:20261125T164206Z
+DTSTART:20261210T180000Z
+DTEND:20261210T210000Z
+SUMMARY:Ô Chapitre 3 — Un Noël borain
+LOCATION:Ô Chapitre\, Place du Chapitre 2\, 7000 Mons
+DESCRIPTION:Ô Chapitre réunit la Brasserie du Borinage\, RCF\, Just Let Minot et Veuves Wuilquot pour un chapitre aux couleurs de la région : rencontres\, convivialité et de quoi trinquer (et grignoter) à l’approche des fêtes.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Ô Chapitre 3 — Un Noël borain demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Ô Chapitre 3 — Un Noël borain dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

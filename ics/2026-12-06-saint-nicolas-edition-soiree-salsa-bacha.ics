@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-06-saint-nicolas-edition-soiree-salsa-bacha@onfaitquoi.be
-DTSTAMP:20261125T160423Z
+DTSTAMP:20261125T164206Z
 DTSTART:20261206T160000Z
 DTEND:20261206T230000Z
 SUMMARY:Saint-Nicolas Edition — soirée salsa\, bachata\, kizomba
-LOCATION:Salle de la rue du Miroir\, Rue du Miroir 4\, 7000 Mons
-DESCRIPTION:Soirée Saint-Nicolas by Asi Salsa : salsa\, bachata et kizomba de 17h à minuit.\nPrix : Tarif affiché sur la billetterie\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+LOCATION:Alhambar\, Rue du Miroir 4\, 7000 Mons
+DESCRIPTION:Soirée Saint-Nicolas by Asi Salsa à l’Alhambar : salsa\, bachata et kizomba de 17h à minuit.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Saint-Nicolas Edition — soirée salsa\, bachata\, kizomba demain

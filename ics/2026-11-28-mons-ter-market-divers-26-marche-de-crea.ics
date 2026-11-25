@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-28-mons-ter-market-divers-26-marche-de-crea@onfaitquoi.be
+DTSTAMP:20261125T164206Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261130
+SUMMARY:Mons’ter Market Divers 26 — marché de créateurs
+LOCATION:Mundaneum\, Rue de Nimy 76\, 7000 Mons
+DESCRIPTION:Marché de créateurs dans un lieu art déco : bijoux\, textiles\, objets de décoration et rencontres avec les artisans\, idéal pour les cadeaux de fin d’année. Espace cafétéria géré par une association montoise de soutien aux sans-papiers. L’entrée gratuite donne aussi accès aux 2 expositions.\nPrix : Gratuit\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Mons’ter Market Divers 26 — marché de créateurs
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

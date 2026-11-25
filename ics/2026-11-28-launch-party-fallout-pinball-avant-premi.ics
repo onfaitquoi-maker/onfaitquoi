@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-28-launch-party-fallout-pinball-avant-premi@onfaitquoi.be
+DTSTAMP:20261125T164206Z
+DTSTART:20261128T130000Z
+DTEND:20261128T190000Z
+SUMMARY:Launch Party Fallout Pinball — avant-première de la borne Stern
+LOCATION:S’pace Gaming Zone\, Rue de la Chaussée 45-47\, 7000 Mons
+DESCRIPTION:La borne Stern Pinball la plus attendue de l’année\, en avant-première exclusive chez S’pace Mons : 100 % gratuit\, boissons pour survivre à la journée. « War never changes » : viens faire le plein de caps !\nPrix : Gratuit\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Launch Party Fallout Pinball — avant-première de la borne Stern demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Launch Party Fallout Pinball — avant-première de la borne Stern dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

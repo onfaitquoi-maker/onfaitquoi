@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-09-mons-speed-dating-60-hommes-60-femmes-af@onfaitquoi.be
+DTSTAMP:20261125T164206Z
+DTSTART:20261209T180000Z
+DTEND:20261209T210000Z
+SUMMARY:Mons Speed Dating (60 hommes – 60 femmes) — afterwork 30+
+LOCATION:Citizen Fox\, Rue de la Coupe 7\, 7000 Mons
+DESCRIPTION:Speed dating organisé par Cœur à Cœur au Citizen Fox : 60 hommes et 60 femmes (30 ans et +)\, sessions de 5 minutes\, puis la soirée continue. Places limitées à 120\, réservation obligatoire.\nPrix : 20 €\nhttps://www.partyfinder.com/en/event/17623\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Mons Speed Dating (60 hommes – 60 femmes) — afterwork 30+ demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Mons Speed Dating (60 hommes – 60 femmes) — afterwork 30+ dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-26-lotto-cup-1-8e-de-finale-de-coupe-de-bel@onfaitquoi.be
+DTSTAMP:20261125T164206Z
+DTSTART:20261126T183000Z
+DTEND:20261126T213000Z
+SUMMARY:Lotto Cup — 1/8e de finale de coupe de Belgique dames (tennis de table)
+LOCATION:Licorne Arena\, Rue du By 9B\, 7022 Hyon (Mons)
+DESCRIPTION:Hyon-Cuesmes reçoit TT Vedrinamur en huitième de finale de la coupe de Belgique dames\, à la Licorne Arena. Venez pousser les joueuses vers la qualification !\nPrix : Prix à confirmer\nhttps://rttaedechyoncuesmes.be/lotto-cup-tous-derriere-nos-dames-a-la-licorne-arena-le-26-novembre/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Lotto Cup — 1/8e de finale de coupe de Belgique dames (tennis de table) demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Lotto Cup — 1/8e de finale de coupe de Belgique dames (tennis de table) dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

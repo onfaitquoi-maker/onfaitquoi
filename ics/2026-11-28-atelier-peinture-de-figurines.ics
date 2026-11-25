@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-28-atelier-peinture-de-figurines@onfaitquoi.be
+DTSTAMP:20261125T164206Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:Atelier peinture de figurines
+LOCATION:Hasard Ludique Mons\, Mons — adresse à confirmer
+DESCRIPTION:Atelier peinture de figurines avec Aury chez Hasard Ludique Mons. Rendez-vous sur la section événements Facebook et Discord de Hasard Ludique Mons pour les horaires et les informations complémentaires.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Atelier peinture de figurines
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

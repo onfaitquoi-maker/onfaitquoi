@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-06-megavidedressing-walter@onfaitquoi.be
+DTSTAMP:20261125T164206Z
+DTSTART:20261206T090000Z
+DTEND:20261206T160000Z
+SUMMARY:MegaVideDressing Walter
+LOCATION:Espace Magnum\, Avenue Docteur Schweitzer 100\, 7340 Colfontaine
+DESCRIPTION:Méga vide-dressing à l’Espace Magnum de Colfontaine.\nPrix : Prix à confirmer\nhttps://megavidedressingwalter.com\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MegaVideDressing Walter demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:MegaVideDressing Walter dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

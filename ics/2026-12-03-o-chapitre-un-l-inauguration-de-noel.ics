@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-03-o-chapitre-un-l-inauguration-de-noel@onfaitquoi.be
+DTSTAMP:20261125T164206Z
+DTSTART:20261203T170000Z
+DTEND:20261203T200000Z
+SUMMARY:Ô Chapitre un — l’inauguration de Noël
+LOCATION:Ô Chapitre\, Place du Chapitre 2\, 7000 Mons
+DESCRIPTION:Ô Chapitre inaugure son sapin de Noël et ouvre le premier chapitre des festivités : verres qui tintent\, petite restauration sur place\, à deux pas de la Grand-Place.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Ô Chapitre un — l’inauguration de Noël demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Ô Chapitre un — l’inauguration de Noël dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

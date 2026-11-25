@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-12-salsa-night-meets-bachata-sabor-de-navid@onfaitquoi.be
-DTSTAMP:20261125T160423Z
-DTSTART:20261212T170000Z
-DTEND:20261212T200000Z
+DTSTAMP:20261125T164206Z
+DTSTART:20261212T153000Z
+DTEND:20261212T183000Z
 SUMMARY:Salsa Night meets Bachata — Sabor de Navidad
 LOCATION:Palais des Congrès (MICX)\, Avenue Melina Mercouri 9\, 7000 Mons
-DESCRIPTION:Soirée salsa et bachata édition de Noël (Sabor de Navidad) au Palais des Congrès de Mons\, avec DJ et danseurs.\nPrix : Tarif affiché sur la billetterie\nhttps://www.kizz-me-bachamore.be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Édition de Noël au Palais des Congrès de Mons : DJs Gianni\, El Cantante et AsiS\, shows\, dress code rouge\, doré et paillettes\, parking gratuit. À noter : pas de Bachata Night le 5/12.\nPrix : Soirée 13 € · workshops + soirée 15 €\nhttps://www.kizz-me-bachamore.be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Salsa Night meets Bachata — Sabor de Navidad demain
