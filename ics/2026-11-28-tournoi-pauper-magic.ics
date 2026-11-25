@@ -5,11 +5,11 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-28-tournoi-pauper-magic@onfaitquoi.be
-DTSTAMP:20261125T174558Z
+DTSTAMP:20261125T174925Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
 SUMMARY:Tournoi Pauper (Magic)
-LOCATION:Hasard Ludique Mons\, Mons — adresse à confirmer
+LOCATION:Hasard Ludique Mons\, Grand’Rue 12\, 7000 Mons
 DESCRIPTION:Tournoi Pauper de Magic : The Gathering chez Hasard Ludique Mons. Rendez-vous sur la section événements Facebook et Discord de Hasard Ludique Mons pour les horaires et les informations complémentaires.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY

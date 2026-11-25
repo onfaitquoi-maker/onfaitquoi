@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-19-noelan-9-nuit-de-musiques-electroniques-@onfaitquoi.be
+DTSTAMP:20261125T174925Z
+DTSTART:20261219T170000Z
+DTEND:20261220T050000Z
+SUMMARY:Noëlan 9 — nuit de musiques électroniques underground
+LOCATION:Lieu communiqué aux participants\, Mons — lieu communiqué après achat du billet
+DESCRIPTION:9e édition de Noëlan\, organisée par Ltdb System : une nuit dédiée aux musiques électroniques underground\, avec deux salles et deux murs de son. Le lieu\, à Mons\, est tenu secret et communiqué aux participants.\nPrix : Tarif affiché sur la billetterie\nhttps://noelan.eventsquare.store/ffuiv5fqnehv\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Noëlan 9 — nuit de musiques électroniques underground demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Noëlan 9 — nuit de musiques électroniques underground dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

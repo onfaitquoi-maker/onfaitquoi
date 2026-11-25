@@ -5,11 +5,11 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-06-cab-l-art-h-100-themes@onfaitquoi.be
-DTSTAMP:20261125T174558Z
+DTSTAMP:20261125T174925Z
 DTSTART:20261206T150000Z
 DTEND:20261206T180000Z
 SUMMARY:CAB’L’ART-H — « 100 thèmes »
-LOCATION:L’Art-H de ScènZenvieS\, Mons — adresse à confirmer
+LOCATION:L’Art-H de ScènZenvieS\, Rue Simonon 12\, 7011 Mons (Ghlin)
 DESCRIPTION:Spectacle CAB’L’ART-H « 100 thèmes » par L’Art-H de ScènZenvieS. Réservations : 0479/234208.\nPrix : Entrée libre — prix conseillé 8 €\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
