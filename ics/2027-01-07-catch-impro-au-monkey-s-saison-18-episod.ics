@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2027-01-07-catch-impro-au-monkey-s-saison-18-episod@onfaitquoi.be
+DTSTAMP:20261125T174452Z
+DTSTART:20270107T190000Z
+DTEND:20270107T220000Z
+SUMMARY:Catch Impro au Monkey’s — Saison 18\, épisode 09
+LOCATION:Monkey's Café\, Rue de la Chaussée 32\, 7000 Mons
+DESCRIPTION:Catch impro de la saison 18 au Monkey’s Café avec la troupe Caméléon Créations : Les Carnets de Léon et les Improsteurs (staff : la C.M.M.I.).\nPrix : Entrée au chapeau (participation libre)\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Catch Impro au Monkey’s — Saison 18\, épisode 09 demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Catch Impro au Monkey’s — Saison 18\, épisode 09 dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

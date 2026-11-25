@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-03-catch-impro-au-monkey-s-saison-18-episod@onfaitquoi.be
+DTSTAMP:20261125T174452Z
+DTSTART:20261203T190000Z
+DTEND:20261203T220000Z
+SUMMARY:Catch Impro au Monkey’s — Saison 18\, épisode 08
+LOCATION:Monkey's Café\, Rue de la Chaussée 32\, 7000 Mons
+DESCRIPTION:Catch impro de la saison 18 au Monkey’s Café avec la troupe Caméléon Créations : L’Illumina Team et les Game Cover (staff : le C.S.O.).\nPrix : Entrée au chapeau (participation libre)\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Catch Impro au Monkey’s — Saison 18\, épisode 08 demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Catch Impro au Monkey’s — Saison 18\, épisode 08 dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

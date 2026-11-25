@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-17-atelier-en-public-la-premiere-des-2emes@onfaitquoi.be
+DTSTAMP:20261125T174452Z
+DTSTART;VALUE=DATE:20261217
+DTEND;VALUE=DATE:20261218
+SUMMARY:Atelier en public — La première des 2èmes
+LOCATION:Monkey's Café\, Rue de la Chaussée 32\, 7000 Mons
+DESCRIPTION:Atelier de la troupe Caméléon Créations ouvert au public : la première des 2èmes.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Atelier en public — La première des 2èmes
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
