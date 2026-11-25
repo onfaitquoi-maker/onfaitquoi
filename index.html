@@ -876,7 +876,7 @@ function endMinutes(t){
   return Math.max(st,...all)+180;
 }
 (function(){ const now=new Date(), nowMin=now.getHours()*60+now.getMinutes();
-  EVENTS = EVENTS.filter(e=>{ if(e.end || +parse(e.date)!==+today) return true; const em=endMinutes(e.time); return em===null || em>nowMin; });
+  EVENTS = EVENTS.filter(e=>{ if(e.end || +parse(e.date)!==+today) return true; let em=endMinutes(e.time); if(em!==null && e.place==='plaza') em-=180; return em===null || em>nowMin; });
   EVENTS = EVENTS.filter(e=>{ if(!daySlots(e)) return true; const en=parse(e.end); for(let d=new Date(Math.max(+parse(e.date),+today)); d<=en; d.setDate(d.getDate()+1)) if(occursOn(e,d)) return true; return false; });
 })();
 EVENTS.forEach(e=>{ const p=P[e.place]; e.commune=p.commune; e.venue=e.venue||p.name; });
