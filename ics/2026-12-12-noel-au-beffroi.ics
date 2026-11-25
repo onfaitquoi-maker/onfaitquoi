@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-12-noel-au-beffroi@onfaitquoi.be
-DTSTAMP:20261125T152612Z
+DTSTAMP:20261125T160423Z
 DTSTART:20261212T130000Z
 DTEND:20261212T160000Z
 SUMMARY:Noël au Beffroi
 LOCATION:Beffroi de Mons\, Rue des Gades\, 7000 Mons
-DESCRIPTION:Après-midi d’animations gratuites : village d’artisans locaux à l’Auberge de Jeunesse dès 14h\, atelier « Boule de Noël »\, concert de carillon\, chants de Noël\, fanfare\, Balade des lumières au départ de la place Léopold et\, à 18h\, descente du Père Noël depuis le sommet du Beffroi.\nPrix : Gratuit (boissons et en-cas payants sur place)\nhttps://monscoeurenneige.be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Accès au Parc du Beffroi\, à l’Auberge de Jeunesse et aux animations gratuit. 14h–18h : village d’artisans locaux à l’Auberge de Jeunesse. 16h–17h : concert de carillon (Audrey Dye et les élèves de l’Académie) au Beffroi. 16h–19h : atelier « Boule de Noël » à la chapelle Saint-Calixte. 16h et 18h30 : animations dans le parc. 17h–18h : Balade des lumières depuis la place Léopold. 17h30–18h : chants de Noël par la chorale Coup de chœur Mons. 18h : descente du Père Noël depuis le haut du Beffroi. Dès 18h15 : distribution de friandises avec la Fanfardéon. Le Beffroi se visite aussi en journée (payant\, dernière entrée à 17h30\, billets à la Maison UNESCO\, rue des Clercs 32).\nPrix : Gratuit (visite du Beffroi payante · boissons et en-cas payants sur place)\nhttps://monscoeurenneige.be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Noël au Beffroi demain

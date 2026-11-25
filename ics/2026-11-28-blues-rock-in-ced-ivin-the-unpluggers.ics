@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-28-blues-rock-in-ced-ivin-the-unpluggers@onfaitquoi.be
+DTSTAMP:20261125T160423Z
+DTSTART:20261128T183000Z
+DTEND:20261128T213000Z
+SUMMARY:Blues & Rock in Céd’ivin — The Unpluggers
+LOCATION:Céd’ivin\, Rue de la Cascade 18\, 7022 Hyon (Mons)
+DESCRIPTION:Concert acoustic rock & more du duo The Unpluggers chez Céd’ivin\, à Hyon.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Blues & Rock in Céd’ivin — The Unpluggers demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Blues & Rock in Céd’ivin — The Unpluggers dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

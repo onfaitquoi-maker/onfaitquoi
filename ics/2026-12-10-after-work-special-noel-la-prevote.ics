@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-10-after-work-special-noel-la-prevote@onfaitquoi.be
+DTSTAMP:20261125T160423Z
+DTSTART:20261210T173000Z
+DTEND:20261210T230000Z
+SUMMARY:After Work spécial Noël — La Prévôté
+LOCATION:Résidence La Prévôté\, Place de la Résistance 2\, 7331 Baudour (Saint-Ghislain)
+DESCRIPTION:Premier After Work spécial Noël de la Résidence La Prévôté\, ouvert à tous (familles\, amis\, collègues\, visiteurs) : restauration\, bar\, DJ et musique\, ambiance festive et esprit de Noël.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:After Work spécial Noël — La Prévôté demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:After Work spécial Noël — La Prévôté dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

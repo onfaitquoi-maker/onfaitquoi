@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-04-soiree-soundbirds-a-la-guinguette-montoi@onfaitquoi.be
-DTSTAMP:20261125T152612Z
-DTSTART:20261204T020000Z
-DTEND:20261204T050000Z
+DTSTAMP:20261125T160423Z
+DTSTART:20261204T183000Z
+DTEND:20261204T213000Z
 SUMMARY:Soirée Soundbirds à La Guinguette Montoise
 LOCATION:La Guinguette Montoise\, Mons — adresse à confirmer
-DESCRIPTION:Concert live des Soundbirds\, puis DJ pour prolonger la soirée\, shots offerts et ambiance festive jusqu’à 3h du matin minimum. Prépare tes cordes vocales : ça va chanter et danser.\nPrix : Entrée gratuite\nhttps://www.instagram.com/laguinguettemontoise/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Concert live de The Soundbirds\, groupe belge folk-rock et pop-rock (plus de 100 concerts\, des reprises revisitées et des compositions originales)\, puis DJ pour prolonger la soirée\, shots offerts et ambiance festive jusqu’à 3h du matin minimum. Prépare tes cordes vocales : ça va chanter et danser.\nPrix : Entrée gratuite\nhttps://www.instagram.com/laguinguettemontoise/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Soirée Soundbirds à La Guinguette Montoise demain

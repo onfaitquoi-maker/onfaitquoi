@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-05-le-bal-du-club-rugby-club-frameries@onfaitquoi.be
+DTSTAMP:20261125T160423Z
+DTSTART:20261205T200000Z
+DTEND:20261205T230000Z
+SUMMARY:Le Bal du Club — Rugby Club Frameries
+LOCATION:Palais des Congrès (MICX)\, Avenue Melina Mercouri 9\, 7000 Mons
+DESCRIPTION:Le Rugby Club Frameries revient au Palais des Congrès de Mons avec le Bal du Club : 2 salles\, 2 ambiances\, tenue de lumière de rigueur. Soirée cashless réservée aux plus de 16 ans\, tenue de ville exigée.\nPrix : 15 € en prévente jusqu’au 30/11 (tarif ensuite non précisé)\nhttps://app.twizzit.com/go/Bal2026\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Le Bal du Club — Rugby Club Frameries demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Le Bal du Club — Rugby Club Frameries dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

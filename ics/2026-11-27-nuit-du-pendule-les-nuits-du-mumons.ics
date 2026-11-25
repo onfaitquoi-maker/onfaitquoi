@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-27-nuit-du-pendule-les-nuits-du-mumons@onfaitquoi.be
+DTSTAMP:20261125T160423Z
+DTSTART:20261127T183000Z
+DTEND:20261127T210000Z
+SUMMARY:Nuit du pendule — Les Nuits du MUMONS
+LOCATION:Collégiale Sainte-Waudru\, Place du Chapitre\, 7000 Mons
+DESCRIPTION:Nocturne spéciale autour du pendule de Foucault du MUMONS\, de retour dans la Collégiale Sainte-Waudru : une sphère suspendue à près de 25 mètres qui rend visible la rotation de la Terre. Des guides t’accompagnent à travers quelques expériences\, sans avoir besoin d’être physicien. Une façon de fêter les 5 ans du MUMONS.\nPrix : Gratuit\nhttps://mumons.be/museum/activites/nuit-du-pendule-edition-2026/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Nuit du pendule — Les Nuits du MUMONS demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Nuit du pendule — Les Nuits du MUMONS dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
