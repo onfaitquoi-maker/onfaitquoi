@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-28-veillee-des-rolistes-veillee-des-steameu@onfaitquoi.be
+DTSTAMP:20261125T182612Z
+DTSTART:20261128T193000Z
+DTEND:20261128T223000Z
+SUMMARY:Veillée des Rôlistes + Veillée des Steameurs
+LOCATION:La Lorgnette\, Rue des Clercs 2\, 7000 Mons
+DESCRIPTION:La Veillée des Rôlistes fusionne avec la Veillée des Steameurs : une soirée croisée entre dés\, intrigues de campagnes\, engrenages cuivrés et esthétique victorienne revisitée\, pour chauffer les moteurs avant le festival Uchronicité à Sparkhoh. Que tu viennes lancer un d20\, polir ton monocle à engrenages ou simplement refaire le monde entre passionnés\, la Lorgnette t’ouvre grand ses portes.\nPrix : Entrée gratuite\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Veillée des Rôlistes + Veillée des Steameurs demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Veillée des Rôlistes + Veillée des Steameurs dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
