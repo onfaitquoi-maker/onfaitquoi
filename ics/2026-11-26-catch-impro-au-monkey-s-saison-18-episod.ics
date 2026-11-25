@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-26-catch-impro-au-monkey-s-saison-18-episod@onfaitquoi.be
+DTSTAMP:20261125T173933Z
+DTSTART:20261126T190000Z
+DTEND:20261126T220000Z
+SUMMARY:Catch Impro au Monkey’s — Saison 18\, épisode 07
+LOCATION:Monkey's Café\, Rue de la Chaussée 32\, 7000 Mons
+DESCRIPTION:Reprise du championnat après le Mini Mondial de l’Impro : 7e catch impro de la saison 18 au Monkey’s Café\, avec la troupe Caméléon Créations.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Catch Impro au Monkey’s — Saison 18\, épisode 07 demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Catch Impro au Monkey’s — Saison 18\, épisode 07 dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
