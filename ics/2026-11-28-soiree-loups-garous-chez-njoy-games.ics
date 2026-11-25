@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-28-soiree-loups-garous-chez-njoy-games@onfaitquoi.be
+DTSTAMP:20261125T183215Z
+DTSTART:20261128T183000Z
+DTEND:20261128T213000Z
+SUMMARY:Soirée Loups-Garous chez Njoy Games
+LOCATION:Njoy Games\, Rue d’Havré 72\, 7000 Mons
+DESCRIPTION:Soirée trahison : mensonges\, accusations et coups bas\, saurez-vous démasquer les loups avant qu’il ne soit trop tard ? Une maîtresse du jeu réexplique les règles à ceux qui n’ont jamais joué. Inscription obligatoire par message privé\, 16 places. Les 5 € comprennent l’accès aux jeux de société toute la journée (venez avant la soirée) et l’animation de la maîtresse du jeu.\nPrix : 5 € (inscription obligatoire)\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Soirée Loups-Garous chez Njoy Games demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Soirée Loups-Garous chez Njoy Games dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

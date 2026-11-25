@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-28-jam-in-get-scene-ouverte@onfaitquoi.be
-DTSTAMP:20261125T182612Z
+DTSTAMP:20261125T183215Z
 DTSTART:20261128T180000Z
 DTEND:20261128T230000Z
 SUMMARY:Jam in GET — scène ouverte
 LOCATION:Le GET\, Marché aux Herbes 22\, 7000 Mons
-DESCRIPTION:Jam session et scène ouverte au GET : musiciens et chanteurs\, venez jouer\, ou venez écouter.\nPrix : Entrée gratuite\nhttps://www.google.com/maps/search/GET+Marché+aux+Herbes+22+Mons\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Jam session et scène ouverte au GET : musiciens et chanteurs\, venez jouer\, ou venez écouter.\nPrix : Entrée gratuite\nhttps://www.instagram.com/getmons7000/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Jam in GET — scène ouverte demain
