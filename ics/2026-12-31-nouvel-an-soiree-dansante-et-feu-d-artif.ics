@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-31-nouvel-an-soiree-dansante-et-feu-d-artif@onfaitquoi.be
-DTSTAMP:20261125T132836Z
+DTSTAMP:20261125T140649Z
 DTSTART:20261231T210000Z
 DTEND:20270101T000000Z
 SUMMARY:Nouvel An — soirée dansante et feu d’artifice
 LOCATION:Grand-Place de Mons\, Grand-Place\, 7000 Mons
-DESCRIPTION:Soirée dansante gratuite sur la Grand-Place dès 22h\, puis feu d’artifice à minuit pour passer en 2027\, dans le cadre de Mons Cœur en Neige. Le marché de Noël ferme à 16h ce jour-là : on mange avant !\nPrix : Gratuit\nhttps://monscoeurenneige.be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Soirée Réveillon gratuite sur la Grand-Place de 22h à 2h\, avec feu d’artifice à minuit pour passer en 2027\, dans le cadre de Mons Cœur en Neige. Le marché de Noël ferme à 16h ce jour-là : on mange avant !\nPrix : Gratuit\nhttps://monscoeurenneige.be\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Nouvel An — soirée dansante et feu d’artifice demain
