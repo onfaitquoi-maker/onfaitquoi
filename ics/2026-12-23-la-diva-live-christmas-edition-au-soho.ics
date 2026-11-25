@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-23-la-diva-live-christmas-edition-au-soho@onfaitquoi.be
+DTSTAMP:20261125T152612Z
+DTSTART:20261223T203000Z
+DTEND:20261223T233000Z
+SUMMARY:La Diva Live — Christmas Edition au Soho
+LOCATION:Soho\, Marché aux Herbes 20\, 7000 Mons
+DESCRIPTION:La Diva revient au Soho en édition de Noël : live drag singer & performer à 21h30\, puis DJ GV aux platines dès 23h.\nPrix : Entrée gratuite · réservation de table en ligne conseillée\nhttps://soho-mons.be/fr/reservation\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:La Diva Live — Christmas Edition au Soho demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:La Diva Live — Christmas Edition au Soho dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
