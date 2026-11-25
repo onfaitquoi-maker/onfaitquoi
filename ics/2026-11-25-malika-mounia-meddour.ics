@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-25-malika-mounia-meddour@onfaitquoi.be
+DTSTAMP:20261125T142009Z
+DTSTART;VALUE=DATE:20261125
+DTEND;VALUE=DATE:20261130
+SUMMARY:Malika — Mounia Meddour
+LOCATION:Plaza Arthouse Cinema\, Rue de Nimy 12\, 7000 Mons
+DESCRIPTION:Nouveauté de la semaine. L’histoire vraie de Malika Bellaribi\, la « diva des banlieues » : d’un bidonville de Nanterre au Théâtre du Châtelet\, elle s’accroche à son rêve de devenir mezzo-soprano. Avec Lilya Adad\, Camille Razat et Elsa Zylberstein. 1h26.\nPrix : Dès 7 € · Article 27 accepté\nhttps://plaza-mons.be/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Malika — Mounia Meddour
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

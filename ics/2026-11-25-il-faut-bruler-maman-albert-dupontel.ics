@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-25-il-faut-bruler-maman-albert-dupontel@onfaitquoi.be
+DTSTAMP:20261125T142009Z
+DTSTART;VALUE=DATE:20261125
+DTEND;VALUE=DATE:20261130
+SUMMARY:Il faut brûler Maman — Albert Dupontel
+LOCATION:Plaza Arthouse Cinema\, Rue de Nimy 12\, 7000 Mons
+DESCRIPTION:Comédie noire d’Albert Dupontel : dans une famille de croque-morts\, deux sœurs et un frère doivent organiser eux-mêmes les funérailles de leur mère\, car le personnel est en grève. Avec Louise Coldefy\, Julia Piaton et Artus. 1h21.\nPrix : Dès 7 € · Article 27 accepté\nhttps://plaza-mons.be/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Il faut brûler Maman — Albert Dupontel
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

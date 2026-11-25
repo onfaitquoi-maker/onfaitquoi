@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-25-minotaur-andrei-zviaguintsev@onfaitquoi.be
+DTSTAMP:20261125T142009Z
+DTSTART;VALUE=DATE:20261125
+DTEND;VALUE=DATE:20261130
+SUMMARY:Minotaur — Andreï Zviaguintsev
+LOCATION:Plaza Arthouse Cinema\, Rue de Nimy 12\, 7000 Mons
+DESCRIPTION:Russie\, 2022 : la vie bien ordonnée de Gleb\, patron d’entreprise\, s’effondre entre pressions\, guerre et infidélité de sa femme. Grand Prix du Festival de Cannes 2026. Thriller\, 2h20.\nPrix : Dès 7 € · Article 27 accepté\nhttps://plaza-mons.be/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Minotaur — Andreï Zviaguintsev
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

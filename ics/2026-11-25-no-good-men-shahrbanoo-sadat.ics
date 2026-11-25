@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-25-no-good-men-shahrbanoo-sadat@onfaitquoi.be
+DTSTAMP:20261125T142009Z
+DTSTART;VALUE=DATE:20261125
+DTEND;VALUE=DATE:20261130
+SUMMARY:No good men — Shahrbanoo Sadat
+LOCATION:Plaza Arthouse Cinema\, Rue de Nimy 12\, 7000 Mons
+DESCRIPTION:Nouveauté de la semaine. Kaboul\, 2021 : alors que la capitale vit ses derniers jours de liberté\, la relation de deux collègues change de nature. Comédie romantique de Shahrbanoo Sadat. 1h43.\nPrix : Dès 7 € · Article 27 accepté\nhttps://plaza-mons.be/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:No good men — Shahrbanoo Sadat
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

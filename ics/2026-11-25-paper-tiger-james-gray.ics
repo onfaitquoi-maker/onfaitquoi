@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-25-paper-tiger-james-gray@onfaitquoi.be
+DTSTAMP:20261125T142009Z
+DTSTART;VALUE=DATE:20261125
+DTEND;VALUE=DATE:20261130
+SUMMARY:Paper Tiger — James Gray
+LOCATION:Plaza Arthouse Cinema\, Rue de Nimy 12\, 7000 Mons
+DESCRIPTION:Nouveauté de la semaine. New York\, 1986 : un ingénieur naïf accepte la proposition d’affaires de son frère\, ancien flic\, qui semble trop belle pour être vraie\, et la famille se retrouve face à la mafia russe. Avec Adam Driver\, Scarlett Johansson et Miles Teller. Drame\, 1h55.\nPrix : Dès 7 € · Article 27 accepté\nhttps://plaza-mons.be/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Paper Tiger — James Gray
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

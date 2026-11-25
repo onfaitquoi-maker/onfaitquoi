@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-27-moulin-laszlo-nemes@onfaitquoi.be
+DTSTAMP:20261125T142009Z
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20261130
+SUMMARY:Moulin — László Nemes
+LOCATION:Plaza Arthouse Cinema\, Rue de Nimy 12\, 7000 Mons
+DESCRIPTION:Juin 1943 : Jean Moulin\, chef de la Résistance\, est arrêté et interrogé par Klaus Barbie. Avec Gilles Lellouche et Lars Eidinger. Drame historique\, 2h10.\nPrix : Dès 7 € · Article 27 accepté\nhttps://plaza-mons.be/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Moulin — László Nemes
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

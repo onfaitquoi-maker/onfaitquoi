@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-25-le-mystere-lucy-lost-olivier-clert@onfaitquoi.be
+DTSTAMP:20261125T142009Z
+DTSTART;VALUE=DATE:20261125
+DTEND;VALUE=DATE:20261130
+SUMMARY:Le Mystère Lucy Lost — Olivier Clert
+LOCATION:Plaza Arthouse Cinema\, Rue de Nimy 12\, 7000 Mons
+DESCRIPTION:Animation en 2D d’après Michael Morpurgo : sur une petite île\, Lucy\, rejetée par les villageois à cause de ses dons\, rencontre Milly\, une fillette qu’elle seule peut voir. 1h29\, dès 8 ans.\nPrix : Dès 7 € · Article 27 accepté\nhttps://plaza-mons.be/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Le Mystère Lucy Lost — Olivier Clert
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

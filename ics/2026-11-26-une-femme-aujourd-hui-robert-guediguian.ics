@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-26-une-femme-aujourd-hui-robert-guediguian@onfaitquoi.be
+DTSTAMP:20261125T142009Z
+DTSTART;VALUE=DATE:20261126
+DTEND;VALUE=DATE:20261130
+SUMMARY:Une Femme Aujourd’hui — Robert Guédiguian
+LOCATION:Plaza Arthouse Cinema\, Rue de Nimy 12\, 7000 Mons
+DESCRIPTION:Juliette\, 30 ans\, semble tout avoir : un poste prestigieux dans la finance\, une belle maison\, des voyages. Agressée par un collègue\, son monde s’effondre et elle s’engage sur un nouveau chemin. Avec Marilou Aussilloux et Ariane Ascaride. 2h03.\nPrix : Dès 7 € · Article 27 accepté\nhttps://plaza-mons.be/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Une Femme Aujourd’hui — Robert Guédiguian
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
