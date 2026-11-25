@@ -857,6 +857,7 @@ function endMinutes(t){
 }
 (function(){ const now=new Date(), nowMin=now.getHours()*60+now.getMinutes();
   EVENTS = EVENTS.filter(e=>{ if(e.end || +parse(e.date)!==+today) return true; const em=endMinutes(e.time); return em===null || em>nowMin; });
+  EVENTS = EVENTS.filter(e=>{ if(!daySlots(e)) return true; const en=parse(e.end); for(let d=new Date(Math.max(+parse(e.date),+today)); d<=en; d.setDate(d.getDate()+1)) if(occursOn(e,d)) return true; return false; });
 })();
 EVENTS.forEach(e=>{ const p=P[e.place]; e.commune=p.commune; e.venue=e.venue||p.name; });
 
@@ -875,7 +876,25 @@ const S = {
 const $ = s=>document.querySelector(s);
 const esc = s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
-function occursOn(e,d){ const s=parse(e.date), en=e.end?parse(e.end):s; return d>=s && d<=en; }
+/* Plaza : séances jour par jour (« jeu. 19:30 · ven. 15:00 »). Un film disparaît d'une journée quand il n'y a pas de séance ce jour-là, ou quand la dernière séance du jour a commencé. */
+function daySlots(e){
+  if(e.place!=='plaza'||!e.end) return null;
+  const JD={dim:0,lun:1,mar:2,mer:3,jeu:4,ven:5,sam:6}, out={}; let found=false;
+  String(e.time).split('·').forEach(p=>{
+    const m=p.trim().match(/^([a-zéû]{3})\.?\s+(.*)$/i); if(!m) return;
+    const k=m[1].toLowerCase(); if(!(k in JD)) return;
+    found=true; (out[JD[k]]=out[JD[k]]||[]).push(...[...m[2].matchAll(/(\d{1,2})[:h](\d{2})/g)].map(x=>(+x[1])*60+(+x[2])));
+  });
+  return found?out:null;
+}
+function occursOn(e,d){
+  const s=parse(e.date), en=e.end?parse(e.end):s;
+  if(!(d>=s && d<=en)) return false;
+  const ds=daySlots(e); if(!ds) return true;
+  const t=ds[d.getDay()]; if(!t||!t.length) return false;
+  if(+d===+today){ const n=new Date(); return Math.max(...t)>n.getHours()*60+n.getMinutes(); }
+  return true;
+}
 function eventsOn(d){ return EVENTS.filter(e=>occursOn(e,d) && (!S.commune||e.commune===S.commune) && (!S.free||e.free)).sort((a,b)=>a.time.localeCompare(b.time)); }
 
 /* ---------- aujourd'hui : masquer ce qui est fini ou déjà commencé ---------- */
