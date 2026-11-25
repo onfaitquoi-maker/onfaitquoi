@@ -5,7 +5,7 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-21-grand-nettoyage-d-hiver-destockage-des-j@onfaitquoi.be
-DTSTAMP:20261125T174452Z
+DTSTAMP:20261125T174558Z
 DTSTART;VALUE=DATE:20261221
 DTEND;VALUE=DATE:20270101
 SUMMARY:Grand nettoyage d’hiver : déstockage des jeux de la Taverne chez Njoy Games

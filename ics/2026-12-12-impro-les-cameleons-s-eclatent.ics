@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-12-impro-les-cameleons-s-eclatent@onfaitquoi.be
+DTSTAMP:20261125T174558Z
+DTSTART:20261212T190000Z
+DTEND:20261212T210000Z
+SUMMARY:Impro : Les caméléons s’éclatent
+LOCATION:HEH — Sciences et technologies\, Avenue Victor Maistriau 4\, 7000 Mons
+DESCRIPTION:Les plus vieux Caméléons remontent sur scène à la HEH\, avec peut-être des invités surprise et quelques dingueries. Selon la troupe Caméléon Créations\, ce sera la dernière soirée de l’année pour les Caméléons.\nPrix : 12 € · 10 € · 8 €\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Impro : Les caméléons s’éclatent demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Impro : Les caméléons s’éclatent dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
