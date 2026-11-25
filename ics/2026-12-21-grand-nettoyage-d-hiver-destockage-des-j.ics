@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-21-grand-nettoyage-d-hiver-destockage-des-j@onfaitquoi.be
+DTSTAMP:20261125T173224Z
+DTSTART;VALUE=DATE:20261221
+DTEND;VALUE=DATE:20270101
+SUMMARY:Grand nettoyage d’hiver : déstockage des jeux de la Taverne chez Njoy Games
+LOCATION:Njoy Games\, Rue d’Havré 72\, 7000 Mons
+DESCRIPTION:La Taverne trie ses anciens jeux\, à petits prix. Horaires : 21/12 12h–20h · 22 et 23/12 12h–22h · 24/12 12h–16h30 · 28/12 12h–20h · 29 et 30/12 12h–22h · 31/12 12h–16h30 (dernier jour). Fermé les 25 et 26/12. Inventaire et hibernation du 1er au 10/01/2027 inclus. Les lundis et mardis des deux dernières semaines de décembre sont exceptionnellement ouverts.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Grand nettoyage d’hiver : déstockage des jeux de la Taverne chez Njoy Games
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

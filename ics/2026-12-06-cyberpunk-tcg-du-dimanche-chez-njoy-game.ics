@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-06-cyberpunk-tcg-du-dimanche-chez-njoy-game@onfaitquoi.be
+DTSTAMP:20261125T173224Z
+DTSTART;VALUE=DATE:20261206
+DTEND;VALUE=DATE:20261207
+SUMMARY:Cyberpunk TCG du dimanche chez Njoy Games
+LOCATION:Njoy Games\, Rue d’Havré 72\, 7000 Mons
+DESCRIPTION:Au programme du calendrier de décembre de Njoy Games\, à Mons. Rendez-vous Cyberpunk TCG.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Cyberpunk TCG du dimanche chez Njoy Games
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

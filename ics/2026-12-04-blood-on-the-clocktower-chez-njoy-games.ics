@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-04-blood-on-the-clocktower-chez-njoy-games@onfaitquoi.be
+DTSTAMP:20261125T173224Z
+DTSTART;VALUE=DATE:20261204
+DTEND;VALUE=DATE:20261205
+SUMMARY:Blood on the Clocktower chez Njoy Games
+LOCATION:Njoy Games\, Rue d’Havré 72\, 7000 Mons
+DESCRIPTION:Au programme du calendrier de décembre de Njoy Games\, à Mons. Soirée Blood on the Clocktower.\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Blood on the Clocktower chez Njoy Games
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

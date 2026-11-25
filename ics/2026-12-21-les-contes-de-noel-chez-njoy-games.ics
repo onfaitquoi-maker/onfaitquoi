@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-21-les-contes-de-noel-chez-njoy-games@onfaitquoi.be
+DTSTAMP:20261125T173224Z
+DTSTART;VALUE=DATE:20261221
+DTEND;VALUE=DATE:20261222
+SUMMARY:Les contes de Noël chez Njoy Games
+LOCATION:Njoy Games\, Rue d’Havré 72\, 7000 Mons
+DESCRIPTION:Au programme du calendrier de décembre de Njoy Games\, à Mons. Les contes de Noël\, le lundi 21 décembre (boutique ouverte exceptionnellement ce jour-là).\nPrix : Prix à confirmer\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Les contes de Noël chez Njoy Games
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
