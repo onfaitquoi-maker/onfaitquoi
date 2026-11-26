@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-05-speed-dating-au-cuba-r@onfaitquoi.be
+DTSTAMP:20261126T005616Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261206
+SUMMARY:Speed Dating au Cuba’r
+LOCATION:Cuba’r\, Rue de Nimy 55\, 7000 Mons
+DESCRIPTION:Soirée speed dating au Cuba’r (Rue de Nimy 55) : des rencontres entre participants répartis équitablement entre hommes et femmes. Participation 20 €\, deux boissons au choix comprises. Places limitées\, réservation obligatoire.\nPrix : 20 € (2 boissons au choix comprises)\nhttps://www.instagram.com/cubar_mons/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Speed Dating au Cuba’r
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
