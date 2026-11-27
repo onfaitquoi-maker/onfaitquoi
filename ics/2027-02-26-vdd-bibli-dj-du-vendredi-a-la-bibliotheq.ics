@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ON FAIT QUOI//Agenda des sorties//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2027-02-26-vdd-bibli-dj-du-vendredi-a-la-bibliotheq@onfaitquoi.be
+DTSTAMP:20261127T210045Z
+DTSTART:20270226T210000Z
+DTEND:20270227T010000Z
+SUMMARY:VDD Bibli — DJ du vendredi à La Bibliothèque
+LOCATION:La Bibliothèque\, Grand-Place 36\, 7330 Saint-Ghislain
+DESCRIPTION:Tous les vendredis de 22h à 2h\, un DJ prend les platines à La Bibliothèque. Le thème de chaque soirée est annoncé en story sur leur compte Instagram.\nPrix : Entrée gratuite\nhttps://labibliothequebar.be/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:VDD Bibli — DJ du vendredi à La Bibliothèque demain
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:VDD Bibli — DJ du vendredi à La Bibliothèque dans 2 heures
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
