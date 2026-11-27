@@ -448,13 +448,13 @@ function fixed(str, o){ const d=parse(str); if(d>=today && d<endRange) ev(Object
 const V = o => ev(Object.assign({verified:true}, o));
 /* Top 5 éditorial : mêmes choix que le carrousel Instagram de la semaine (clé = lundi) */
 const BONUS_WEEKS={
-  '2026-12-07':[['2026-12-10',/Marché de Noël de Saint-Ghislain/]],
+  '2026-12-07':[['2026-12-12',/^Noël au Beffroi$/],['2026-12-12',/Marché de Noël des jeunes créateurs/]],
   '2026-11-30':[['2026-12-02',/Pendule de Foucault/],['2026-12-11',/Silent Disco Night/]],
   '2026-11-23':[['2026-12-03',/Ladies Night chez Decathlon/]],
   '2026-11-16':[['2026-11-21',/Maman va danser/],['2026-11-21',/What The Fun/]]
 };
 const TOP5_WEEKS={
-  '2026-12-07':[['2026-12-09',/Village de Noël de Boussu/],['2026-12-11',/Borinage Comedy Club/],['2026-12-11',/Silent Disco Night/],['2026-12-11',/Marché de Noël de Colfontaine/],['2026-12-13',/Jingle Run/]],
+  '2026-12-07':[['2026-12-09',/Village de Noël de Boussu/],['2026-12-10',/Marché de Noël de Saint-Ghislain/],['2026-12-11',/Marché de Noël de Colfontaine/],['2026-12-12',/Santa Claus Party/],['2026-12-13',/Jingle Run/]],
   '2026-11-30':[['2026-12-03',/La Cave à Rires #14/],['2026-12-04',/Lancer de hache/],['2026-12-05',/Envol des Cités/],['2026-12-05',/Mons Cœur en Neige/],['2026-12-06',/Saint-Nicolas sur Mars/]],
   '2026-11-23':[['2026-11-25',/Nanar/],['2026-11-26',/Pauvres fous/],['2026-11-27',/Winter Room/],['2026-11-28',/Défilé Mode en Boucle/],['2026-11-29',/Seven Run & Brunch/]],
   '2026-11-16':[['2026-11-19',/Diva Live/],['2026-11-20',/Before des Jack/],['2026-11-21',/Saint-Nicolas à la foire/],['2026-11-21',/^Karaoké Party$/],['2026-11-22',/Mini Mondial/]]
