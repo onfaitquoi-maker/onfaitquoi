@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-28-sapore-d-italia-en-live-a-no-maison@onfaitquoi.be
-DTSTAMP:20261128T110337Z
+DTSTAMP:20261128T110551Z
 DTSTART:20261128T200000Z
 DTEND:20261128T230000Z
 SUMMARY:Sapore d’Italia en live à No Maison
 LOCATION:No Maison\, Grand-Place 21\, 7000 Mons
-DESCRIPTION:Le groupe Sapore d’Italia en live au No Maison\, bar-brasserie de la Grand-Place de Mons. Entrée gratuite.\nPrix : Entrée gratuite\nAgenda : ON FAIT QUOI? @onfaitquoi.be
+DESCRIPTION:Sapore d’Italia\, cover band italien de sept amis d’enfance passionnés de musique italienne\, en live au No Maison\, bar-brasserie de la Grand-Place de Mons. Entrée gratuite.\nPrix : Entrée gratuite\nhttps://www.instagram.com/sapore_d_italia2025/\nAgenda : ON FAIT QUOI? @onfaitquoi.be
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Sapore d’Italia en live à No Maison demain
