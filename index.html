@@ -889,7 +889,7 @@ function store(k,v){ try{ if(v===undefined) return JSON.parse(localStorage.getIt
 /* ---------- état ---------- */
 const S = {
   view:'accueil', when:'week', homeCat:null, commune:null,
-  sCats:new Set(), sCity:null, free:false, q:'', act:null, aCity:null,
+  sCats:new Set(), free:false, q:'', act:null,
   calMonth:new Date(today.getFullYear(),today.getMonth(),1), calSel:key(today),
   mapMode:'events', mapCats:new Set(),
   favs:new Set(store('ofq_favs')||[]),
@@ -1059,25 +1059,25 @@ const SYN = {electro:['electro','techno','house','drum','dnb','trance','minimal'
 function qMatch(text, q){ const t=toks(text); return toks(q).every(w=>(SYN[w]||[w]).some(a=>t.some(x=>x.startsWith(a)))); }
 function renderSearch(){
   catChips($('#searchCats'), S.sCats, true, k=>{ S.sCats.has(k)?S.sCats.delete(k):S.sCats.add(k); renderSearch(); });
-  $('#searchCities').innerHTML = COMMUNES.map(c=>`<button class="chip plain ${S.sCity===c?'on':''}" data-c="${c}">${c}</button>`).join('');
-  $('#searchCities').querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{S.sCity=S.sCity===b.dataset.c?null:b.dataset.c; renderSearch();});
+  $('#searchCities').innerHTML = COMMUNES.map(c=>`<button class="chip plain ${S.commune===c?'on':''}" data-c="${c}">${c}</button>`).join('');
+  $('#searchCities').querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{S.commune=S.commune===b.dataset.c?null:b.dataset.c; $('#whereBtn').textContent=S.commune||'Région'; renderAll();});
   // résultats
-  const q=norm(S.q.trim()), filtering = q||S.sCats.size||S.sCity||S.free;
+  const q=norm(S.q.trim()), filtering = q||S.sCats.size||S.commune||S.free;
   let out='', head='';
   $('#lblCats').textContent = q ? 'Affiner par thème' : 'Thèmes';
   $('#lblCities').textContent = q ? 'Affiner par commune' : 'Commune';
   if(filtering){
     const evs=EVENTS.filter(e=>{
       if(S.sCats.size&&!S.sCats.has(e.cat)) return false;
-      if(S.sCity&&e.commune!==S.sCity) return false;
+      if(S.commune&&e.commune!==S.commune) return false;
       if(S.free&&!e.free) return false;
       if(q&&!qMatch([e.title,e.venue,e.commune,e.desc,CATS[e.cat].label,e.free?'gratuit free':''].join(' '),q)) return false;
       return true;
     }).sort((a,b)=>Math.max(parse(a.date),today)-Math.max(parse(b.date),today));
-    const pl = q ? PLACES.filter(p=>(!S.sCity||p.commune===S.sCity) && qMatch([p.name,p.kind,p.loc,p.commune,...p.acts].join(' '),q)) : [];
+    const pl = q ? PLACES.filter(p=>(!S.commune||p.commune===S.commune) && qMatch([p.name,p.kind,p.loc,p.commune,...p.acts].join(' '),q)) : [];
     const plHtml = pl.length ? `<h2 class="sec">Lieux <small>${pl.length}</small></h2><div class="list">${pl.map(plRow).join('')}</div>` : '';
     const n=evs.length+pl.length;
-    if(q) head=`<p class="lead" style="margin:2px 0 4px"><b>${n} résultat${n>1?'s':''}</b> pour « ${esc(S.q.trim())} »${S.sCats.size||S.sCity||S.free?' · filtres actifs':''}</p>`;
+    if(q) head=`<p class="lead" style="margin:2px 0 4px"><b>${n} résultat${n>1?'s':''}</b> pour « ${esc(S.q.trim())} »${S.sCats.size||S.commune||S.free?' · filtres actifs':''}</p>`;
     if(evs.length){
       out+=`<h2 class="sec">Événements <small>${evs.length} résultat${evs.length>1?'s':''}</small></h2><div class="list">${evs.slice(0,60).map(e=>evRow(e, parse(e.date)<today?today:parse(e.date))).join('')}</div>`+plHtml;
     } else if(pl.length){
@@ -1095,14 +1095,14 @@ $('#q').addEventListener('keydown',e=>{ if(e.key==='Enter'){ e.preventDefault();
 
 /* ---------- ACTIVITÉS À L'ANNÉE ---------- */
 function renderActivites(){
-  $('#actCities').innerHTML = COMMUNES.map(c=>`<button class="chip plain ${S.aCity===c?'on':''}" data-c="${c}">${c}</button>`).join('');
-  $('#actCities').querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{S.aCity=S.aCity===b.dataset.c?null:b.dataset.c; renderActivites();});
-  const inCity=p=>!S.aCity||p.commune===S.aCity;
+  $('#actCities').innerHTML = COMMUNES.map(c=>`<button class="chip plain ${S.commune===c?'on':''}" data-c="${c}">${c}</button>`).join('');
+  $('#actCities').querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{S.commune=S.commune===b.dataset.c?null:b.dataset.c; $('#whereBtn').textContent=S.commune||'Région'; renderAll();});
+  const inCity=p=>!S.commune||p.commune===S.commune;
   if(S.act){
     const pl=PLACES.filter(p=>p.acts.includes(S.act)&&inCity(p));
     $('#actBody').innerHTML=`<button class="chip plain" id="actBack" style="margin:14px 0 2px">← Toutes les activités</button>
-      <h2 class="sec">${esc(S.act)} <small>${pl.length} lieu${pl.length>1?'x':''}${S.aCity?' à '+esc(S.aCity):''}</small></h2>`+
-      (pl.length? `<div class="list">${pl.map(plRow).join('')}</div>` : `<div class="empty"><b>On cherche encore</b>Aucun lieu « ${esc(S.act)} » répertorié${S.aCity?' à '+esc(S.aCity):''} pour l’instant.</div>`);
+      <h2 class="sec">${esc(S.act)} <small>${pl.length} lieu${pl.length>1?'x':''}${S.commune?' à '+esc(S.commune):''}</small></h2>`+
+      (pl.length? `<div class="list">${pl.map(plRow).join('')}</div>` : `<div class="empty"><b>On cherche encore</b>Aucun lieu « ${esc(S.act)} » répertorié${S.commune?' à '+esc(S.commune):''} pour l’instant.</div>`);
     $('#actBack').onclick=()=>{S.act=null; renderActivites();};
   } else {
     const counts={}; PLACES.filter(inCity).forEach(p=>p.acts.forEach(a=>counts[a]=(counts[a]||0)+1));
